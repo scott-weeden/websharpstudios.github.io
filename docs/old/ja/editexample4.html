@@ -7,7 +7,7 @@
 <!--<TITLE>Building accented glyphs</TITLE> -->
     <TITLE>アクセントつきグリフの組み立て方</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -80,9 +80,9 @@
   <P>
 <!--
   Latin, Greek and Cyrillic all have a large complement of accented glyphs.
-  FontForge provides several ways to build accented glyphs out of base glyphs. -->
+  websharpstudios provides several ways to build accented glyphs out of base glyphs. -->
   ラテン文字、ギリシャ文字およびキリル文字はすべて大量の補助的なアクセントつきグリフを含んでいます。
-  FontForge は、基底グリフ (base glyphs) からアクセントつきグリフを組み立てる方法をいくつか提供しています。
+  websharpstudios は、基底グリフ (base glyphs) からアクセントつきグリフを組み立てる方法をいくつか提供しています。
   <P>
 <!--
   The most obvious mechanism is simple copy and paste:
@@ -103,11 +103,11 @@
 <!--
   This mechanism is not particularly efficient, if you change the shape of
   the letter "A" you will need to regenerate all the accented glyphs built
-  from it. FontForge has the concept of a
+  from it. websharpstudios has the concept of a
   <A HREF="overview.html#References">Reference</A> to a glyph. So you can Copy
   a Reference to "A", and Paste it, the Copy a Reference to tilde and Paste
   it Into, and then again adjust the position of the accent over the A. -->
-  このメカニズムは、文字“A”の形を変更した場合には、特に非効率になります。その文字から組み立てられたすべてのアクセントつきグリフを構築し直さなければなりません。FontForge にはグリフへの<A HREF="overview.html#References">参照</A>という概念があります。ですから、A への参照をコピーし、貼りつけ、チルダへの参照をコピーして追加貼りつけし、それから A の上のアクセントの位置を再調整するという手順が使えます。
+  このメカニズムは、文字“A”の形を変更した場合には、特に非効率になります。その文字から組み立てられたすべてのアクセントつきグリフを構築し直さなければなりません。websharpstudios にはグリフへの<A HREF="overview.html#References">参照</A>という概念があります。ですから、A への参照をコピーし、貼りつけ、チルダへの参照をコピーして追加貼りつけし、それから A の上のアクセントの位置を再調整するという手順が使えます。
   <P>
 <!--
   Then if you change the shape of the A the shape of the A in "&Atilde;" will
@@ -115,11 +115,11 @@
   その後で A の形を変更しても、“&Atilde;”に含まれる A の形や“&Atilde;”の文字幅を、勝手に更新してくれます。
   <P>
 <!--
-  But FontForge knows that "&Atilde;" is built out of "A" and the tilde accent,
+  But websharpstudios knows that "&Atilde;" is built out of "A" and the tilde accent,
   and it can easily create your accented glyphs itself by placing the references
   in "&Atilde;" and then positioning the accent over the "A". (Unicode provides
   a database which lists the components of every accented glyph (in Unicode)).-->
-  しかし FontForge は“&Atilde;”が“A”とチルダアクセントから造られていることを知っているので、これらの参照を“&Atilde;”に自動配置し、アクセントを“A”の真上に揃えることにより、アクセントつきグリフを簡単に作成することができます (Unicode 規格は、Unicode に含まれる各アクセントつきグリフの構成要素を列挙したデータベースを提供しています)。
+  しかし websharpstudios は“&Atilde;”が“A”とチルダアクセントから造られていることを知っているので、これらの参照を“&Atilde;”に自動配置し、アクセントを“A”の真上に揃えることにより、アクセントつきグリフを簡単に作成することができます (Unicode 規格は、Unicode に含まれる各アクセントつきグリフの構成要素を列挙したデータベースを提供しています)。
   <P>
 <!--
   As an example, open the file: tutorial/Ambrosia.sfd, then select all the
@@ -130,14 +130,14 @@
   例えば、ファイル <CODE>tutorial/Ambrosia.sfd</CODE> を開き、符号位置が 0xc0〜0xff の範囲にあるすべてのグリフを選択して <A HREF="elementmenu.html#Accented"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>アクセントつきグリフを構築(<U>B</U>)</CODE></A> を押せば、すべてのアクセントつき文字がお任せで現れます (この範囲にはアクセントつき文字でない物が数文字ありますが、それらは空白のままになります)。
   <P>
 <!--
-  FontForge has a heuristic for positioning accents (most accents are centered
+  websharpstudios has a heuristic for positioning accents (most accents are centered
   over the highest point of the glyph), sometimes this will produce bad results
   (if the one of the two stems of "u" is slightly taller than the other the
   accent will be placed over it rather than being centered over the glyph),
   so you should be prepared to look at your accented glyphs after creating
   them. You may need to adjust one or two (or you may even want to redesign
   your base glyphs slightly). -->
-  FontForge はアクセントの位置を決める経験的方法 (ほとんどのアクセントはグリフの最も高い位置を中心として、その上に配置する) を用いますが、時々これは悪い結果を招きます (もし“u”の 2 つのステムの片方がもう片方よりもわずかに高ければ、アクセントはグリフの中央の上に来ないで高いステムの上に来てしまいます) ので、アクセントつきグリフを作成した後は、目で確かめる心構えが必要です。
+  websharpstudios はアクセントの位置を決める経験的方法 (ほとんどのアクセントはグリフの最も高い位置を中心として、その上に配置する) を用いますが、時々これは悪い結果を招きます (もし“u”の 2 つのステムの片方がもう片方よりもわずかに高ければ、アクセントはグリフの中央の上に来ないで高いステムの上に来てしまいます) ので、アクセントつきグリフを作成した後は、目で確かめる心構えが必要です。
   <H2>
 <!--<A NAME="ligature">Creating</A> a ligature -->
     合字の<A NAME="ligature">作成</A>
@@ -150,11 +150,11 @@
   Unicode には多数の合字グリフが含まれています (ラテン文字では &AElig;, OE, fi などです。アラビア文字では数百にも及びます)。これに関しても、Unicode は各標準の合字の構成要素を列挙するデータベースを提供しています。
   <P>
 <!--
-  FontForge cannot create a nice ligature for you, but what it can do is put
+  websharpstudios cannot create a nice ligature for you, but what it can do is put
   all the components of the ligature into the glyph with
   <A HREF="elementmenu.html#Accented">Element-&gt;Build-&gt;Build Composite</A>.
   This makes it slightly easier (at least in latin) to design a ligature. -->
-  FontForge があなたのために美しい合字を作ってくれることは不可能ですが、<A HREF="elementmenu.html#Accented"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>複合グリフを構築(<U>C</U>)</CODE></A> を用いれば、その合字のすべての構成要素を 1 個のグリフ上に配置することが可能です。
+  websharpstudios があなたのために美しい合字を作ってくれることは不可能ですが、<A HREF="elementmenu.html#Accented"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>複合グリフを構築(<U>C</U>)</CODE></A> を用いれば、その合字のすべての構成要素を 1 個のグリフ上に配置することが可能です。
   これで、合字のデザインが (少なくともラテン文字では) 少しは楽になります。
   <TABLE BORDER CELLPADDING="2">
     <CAPTION>
@@ -210,18 +210,18 @@
   with a ligature and sees behavior very similar to what s/he would see if
   the components were present. But if the word processor is to be able to do
   this it must have some information from the font designer giving the locations
-  of appropriate caret positions. As soon as FontForge notices that a glyph
+  of appropriate caret positions. As soon as websharpstudios notices that a glyph
   is a ligature it will insert in it enough caret location lines to fit between
-  the ligature's components. FontForge places these on the origin, if you leave
-  them on the origin FontForge will ignore them. But once you have built your
+  the ligature's components. websharpstudios places these on the origin, if you leave
+  them on the origin websharpstudios will ignore them. But once you have built your
   ligature you might want to move the pointer tool over to the origin line,
   press the button and drag one of the caret lines to its correct location.
   (Only TrueType and OpenType support this). -->
   一部のワードプロセッサは、合字の内部 (の合字の各構成要素の間の位置) にキャレットを置いて編集することができます。
   これは、ワードプロセッサの利用者が、合字を取り扱っていることを意識する必要が無く、そこに構成要素が置かれているときとほとんど同じふるまいを目にするということです。
   しかし、ワードプロセッサーがこの機能を可能にするためには、フォントデザイナーが適切なキャレット位置として設定した地点についていくつかの情報を得る必要があります。
-  FontForge は、あるグリフが合字であることが分かっている場合、合字要素の間に配置するのに十分な個数のキャレット位置境界線をその文字に挿入します。
-  FontForge はこれらを原点に置きます。もしあなたがこれらを原点に置いたままにしている場合、FontForge はそれらを無視します。
+  websharpstudios は、あるグリフが合字であることが分かっている場合、合字要素の間に配置するのに十分な個数のキャレット位置境界線をその文字に挿入します。
+  websharpstudios はこれらを原点に置きます。もしあなたがこれらを原点に置いたままにしている場合、websharpstudios はそれらを無視します。
   しかし、合字を作成し終えたら、ポインタツールで原点に位置する線を移動し、ボタンを押してキャレット行の一つを正しい位置に移動したほうがよいでしょう。
   (TrueType と OpenType のみがこれをサポートしています)。
   <P>
@@ -245,7 +245,7 @@
   is not part of Unicode you may do so. First <A HREF="faq.html#new-name">add
   an unencoded glyph to your font</A> (or if your font is a Unicode font, use
   a code point in the private use area), and name the glyph. The name is important,
-  if you name it correctly FontForge will be able to figure out that it is
+  if you name it correctly websharpstudios will be able to figure out that it is
   a ligature and what its components are. If you want to build a ligature out
   of the glyphs "longs", "longs" and "l" then name it "longs_longs_l", if you
   want to build a ligature out of Unicode 0D15, 0D4D and 0D15 then name it
@@ -253,7 +253,7 @@
   インド系の用字系では非常に多くの合字が必要とされますが、Unicode はそれらに対してエンコーディングを割り当てていません。
   Unicode に含まれない合字が必要な場合、以下のようにすれば構築することができます。
   まず <A HREF="faq.html#new-name">エンコードされていないグリフをフォントに追加</A> し、グリフに名前をつけます (または Unicode フォントならば、私用領域のコードポイントを使用します)。
-  名前は重要です。もしあなたが正確に名前を指定したならば、FontForge はそれが合字であり、どんな要素から構成されているかを知ることができるからです。
+  名前は重要です。もしあなたが正確に名前を指定したならば、websharpstudios はそれが合字であり、どんな要素から構成されているかを知ることができるからです。
   グリフ“longs”,“longs”と“l”からなる合字を作成したい場合には、<CODE>“longs_longs_l”</CODE>と名前をつけます。Unicode 0D15, 0D4D と 0D15 からなる合字を組み立てる場合には<CODE>“uni0D15_uni0D4D_uni0D15”</CODE>と命名します。
   <P>
 <!--
@@ -266,13 +266,13 @@
   <P>
 <!--
   <IMG SRC="charinfo-akhn.png" WIDTH="307" HEIGHT="401" ALT="Char Info for Akhand ligature type"
-      ALIGN="Right">Finally you should check that FontForge has marked your glyph
+      ALIGN="Right">Finally you should check that websharpstudios has marked your glyph
   as a ligature (and, if so, as the right kind of ligature). Bring up the
   <A HREF="charinfo.html#ligature">Element-&gt;Glyph Info-&gt;Ligature</A>
   dialog. You should see a line like:<BR>
   -->
   <IMG src="../../_images/charinfo-akhn.png" WIDTH="307" HEIGHT="401" ALT="Akhand 合字タイプに対する文字情報"
-      ALIGN="Right">最後に、FontForge がこのグリフを合字として印づけたかどうか (および、合字ならば、正しい種類の合字かどうか) を確認しましょう。
+      ALIGN="Right">最後に、websharpstudios がこのグリフを合字として印づけたかどうか (および、合字ならば、正しい種類の合字かどうか) を確認しましょう。
   <A HREF="charinfo.html#ligature"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE>→<CODE>[合字]</CODE></A> サブダイアログを呼び出してください。
   以下のような行が表示されるでしょう:<BR>
   <TT>&nbsp; &nbsp; liga &nbsp;m longs longs l</TT><BR>

@@ -4,22 +4,22 @@
   <!-- AP: Created on: 13-Nov-2002 -->
   <!-- AP: Last modified: 30-May-2005 -->
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<!--<TITLE>Wacom graphics tablets and FontForge</TITLE>-->
-    <TITLE>ワコムのグラフィクスタブレットと FontForge</TITLE>
+<!--<TITLE>Wacom graphics tablets and websharpstudios</TITLE>-->
+    <TITLE>ワコムのグラフィクスタブレットと websharpstudios</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
 <H1 ALIGN=Center>
-<!--Wacom graphics tablets and FontForge-->
-    ワコムのグラフィクスタブレットと FontForge
+<!--Wacom graphics tablets and websharpstudios-->
+    ワコムのグラフィクスタブレットと websharpstudios
 </H1>
 <P>
 <!--
-I have added support to FontForge for the wacom graphics tablet. Eventually
+I have added support to websharpstudios for the wacom graphics tablet. Eventually
 I will write some drawing tools that depend on pressure (and tilt perhaps). -->
-私は FontForge にワコムのグラフィクスタブレットをサポートする機能を追加しました。そのうち、筆圧 (きっと傾きも) によって変化するような描画ツールを作るつもりです。
+私は websharpstudios にワコムのグラフィクスタブレットをサポートする機能を追加しました。そのうち、筆圧 (きっと傾きも) によって変化するような描画ツールを作るつもりです。
 <P>
 <!--
 To install a wacom tablet on your (linux) machine you must do two things: -->
@@ -43,12 +43,12 @@ To install a wacom tablet on your (linux) machine you must do two things: -->
 <P>
 <!--
 If you can't get the X11 driver to work, I have hacked a little mini-driver
-into FontForge (this can take the place of the X11 driver, it depends on
+into websharpstudios (this can take the place of the X11 driver, it depends on
 the kernel driver working). Since the configure script can't detect that
 you have a non-working X11 driver on your machine (or a tablet) you must
 configure this option by hand. So after the normal configure script has run
 (and before typing make): -->
-X11 用のドライバが動かないならば、私がハックした小さなドライバが FontForge に組み込まれているので (これは X11 のドライバの代りに使用できますが、使えるかどうかはカーネルドライバが動いているかどうかによります)。configure スクリプトはマシン上にある X11 ドライバ (またはタブレット) が動かないかどうかは検出できませんので、手動でオプションを設定する必要があります。通常の configure スクリプトを実行した後 (make をタイプする前に) 以下のようにしてください:
+X11 用のドライバが動かないならば、私がハックした小さなドライバが websharpstudios に組み込まれているので (これは X11 のドライバの代りに使用できますが、使えるかどうかはカーネルドライバが動いているかどうかによります)。configure スクリプトはマシン上にある X11 ドライバ (またはタブレット) が動かないかどうかは検出できませんので、手動でオプションを設定する必要があります。通常の configure スクリプトを実行した後 (make をタイプする前に) 以下のようにしてください:
 <BLOCKQUOTE>
   <PRE>
 $ su

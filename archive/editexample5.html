@@ -5,14 +5,14 @@
   <!-- AP: Last modified: 15-Nov-2008 -->
   <TITLE>Examining and controling metrics and kerning</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV id="in">
   <H1 ALIGN=Center>
     Tutorial #5
@@ -75,7 +75,7 @@
     <LI>
       <FORM method=GET action="http://www.google.com/search">
 	Searching the documentation:
-	<INPUT type=hidden name="as_sitesearch" value="fontforge.sourceforge.net">
+	<INPUT type=hidden name="as_sitesearch" value="websharpstudios.sourceforge.net">
 	<INPUT type=text name="as_q">
 	<INPUT type=submit name="btnG" value="Search">(Powered by
 	<A HREF="http://www.google.com/">Google</A>)
@@ -129,8 +129,8 @@
     <A NAME="Vertical">Vertical</A> Metrics
   </H3>
   <P>
-  FontForge provides some support for the vertical metrics needed for CJK fonts.
-  First you must tell FontForge that this font should contain vertical metrics,
+  websharpstudios provides some support for the vertical metrics needed for CJK fonts.
+  First you must tell websharpstudios that this font should contain vertical metrics,
   do this with <CODE>Element-&gt;Font Info-&gt;General-&gt;Has Vertical
   Metrics</CODE>. Then in each outline glyph enable VMetrics in the Layers
   palette.
@@ -149,7 +149,7 @@
     <DD>
       There is no way to set this value.<BR>
       At all, ever.<BR>
-      In traditional typography the inter-line spacing is 1em (which in FontForge
+      In traditional typography the inter-line spacing is 1em (which in websharpstudios
       is the ascent+descent of a font). Some applications will use this. Other
       applications will use the font's bounding box (summing the maximum ascender
       height with the minimum descender depth) -- a very bad, but very common approach.
@@ -163,7 +163,7 @@
 	<DD>
 	  On a mac the baseline to baseline spacing is determined again by the bounding
 	  box values of the font, specified in the 'hhea' table, possibly modified
-	  by a linegap (Which you can set in FontForge with
+	  by a linegap (Which you can set in websharpstudios with
 	  <A HREF="fontinfo.html">Element-&gt;FontInfo-&gt;OS/2</A>.
 	<DT>
 	  On Windows
@@ -172,7 +172,7 @@
 	  by the values of Typographic Ascent and Descent of the 'OS/2' table. These
 	  can be set with
 	  <A HREF="fontinfo.html">Element-&gt;FontInfo-&gt;OS/2</A>, but are usually
-	  allowed to default to the Ascent and Descent values of FontForge -- they
+	  allowed to default to the Ascent and Descent values of websharpstudios -- they
 	  generally sum to 1em and are equivalent to the traditional unleaded
 	  default.<BR>
 	  Again this may be modified by a linegap field.<BR>
@@ -230,7 +230,7 @@
   do vertical kerning).
   <P>
   Once you have created your lookup you again select it and press the [Add
-  Subtable] button (which asks you to name the subtable). Then FontForge will
+  Subtable] button (which asks you to name the subtable). Then websharpstudios will
   ask you whether you want a subtable of kerning pairs or kerning classes.
   <P>
   If you have many glyphs which have similar kerning features you might wish
@@ -239,7 +239,7 @@
   &Auml; all kern alike). However for this example you want a kerning pair
   subtable.<BR CLEAR=RIGHT>
   <P>
-  <IMG SRC="/assets/img/old/subtable-to.png" WIDTH="415" HEIGHT="441" ALIGN="Left">Then FontForge
+  <IMG SRC="/assets/img/old/subtable-to.png" WIDTH="415" HEIGHT="441" ALIGN="Left">Then websharpstudios
   will popup a dialog allowing you to set the kerning subtable directly. You
   may set your kerning pairs from here, though I prefer the metrics view myself
   because you can see more glyphs and so get a better feel for the "color"
@@ -252,7 +252,7 @@
     <A NAME="VKern">Vertical</A> Kerning
   </H3>
   <P>
-  FontForge has equivalent support for vertical kerning. It can read and write
+  websharpstudios has equivalent support for vertical kerning. It can read and write
   vertical kerning information from and to truetype, opentype and svg fonts.
   It allows you to create vertical kerning classes. The metrics window has
   a vertical mode in which you can set vertical kerning pairs. Finally it has

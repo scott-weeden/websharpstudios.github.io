@@ -5,38 +5,38 @@
   <!-- AP: Last modified: 22-Aug-2008 -->
   <TITLE>Command Line Arguments</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
     Command Line Arguments
   </H1>
   <BLOCKQUOTE>
-    <PRE>$ fontforge [-options] [filenames]
-$ fontforge [-script] scriptfile [arguments]
-$ fontforge -c script-string [arguments]
+    <PRE>$ websharpstudios [-options] [filenames]
+$ websharpstudios [-script] scriptfile [arguments]
+$ websharpstudios -c script-string [arguments]
 </PRE>
   </BLOCKQUOTE>
   <P>
   The filenames may specify any number of files in one of the font formats
-  that FontForge recognizes (various postscript formats, truetype, opentype,
+  that websharpstudios recognizes (various postscript formats, truetype, opentype,
   mac resource, bitmap, svg, etc.).
   <P>
   Some files (.ttc or mac resource) may contain more than one outline font.
   You may pick which font you want by following the filename with the fontname
   in parentheses, thus:<BR>
   <BLOCKQUOTE>
-    <PRE>$ fontforge "gulim.ttc(GulimChe)"
+    <PRE>$ websharpstudios "gulim.ttc(GulimChe)"
 </PRE>
   </BLOCKQUOTE>
   <P>
   will select the font GulimChe out of the font file gulim.ttc.
   <P>
-  FontForge recognizes the following options:
+  websharpstudios recognizes the following options:
   <DL>
     <DT>
       -allglyphs
@@ -47,12 +47,12 @@ $ fontforge -c script-string [arguments]
     <DT>
       -c script-string
     <DD>
-      If FontForge's first (or second, if the first is -lang) argument is "-c"
+      If websharpstudios's first (or second, if the first is -lang) argument is "-c"
       then the argument that follows will be treated as a string containing scripting
       commands, and those commands will be executed. All remaining arguments will
       be passed to the script.
       <BLOCKQUOTE>
-	<PRE>$ fontforge -c 'Open($1); Generate($2)' foo.sfd foo.ttf
+	<PRE>$ websharpstudios -c 'Open($1); Generate($2)' foo.sfd foo.ttf
 </PRE>
       </BLOCKQUOTE>
       <P>
@@ -68,18 +68,18 @@ $ fontforge -c script-string [arguments]
     <DT>
       -depth val
     <DD>
-      Specifies that FontForge should search for a visual with the given depth
+      Specifies that websharpstudios should search for a visual with the given depth
     <DT>
       -display name
     <DD>
-      Specifies the name of the display on which FontForge will open its windows
+      Specifies the name of the display on which websharpstudios will open its windows
     <DT>
       -dontopenxdevices
     <DD>
-      Various people have complained that when FontForge attempts to open the devices
+      Various people have complained that when websharpstudios attempts to open the devices
       of the wacom graphics tablet, the X server gives a BadDevice error. I can't
       duplicate this, the open works fine on my system, but this argument allows
-      them to tell fontforge not to try to use the tablet.
+      them to tell websharpstudios not to try to use the tablet.
     <DT>
       -help
     <DD>
@@ -89,7 +89,7 @@ $ fontforge -c script-string [arguments]
       -lang {py|ff}
     <DD>
       Specifies whether the script should be interpretted as a python script or
-      a fontforge script.
+      a websharpstudios script.
     <DT>
       -version
     <DD>
@@ -101,7 +101,7 @@ $ fontforge -c script-string [arguments]
       &nbsp; &nbsp; ibm | mac | sun | ppc | 0 | 1 | 2 | 3<BR>
       Allows you to specify the type of keyboard. Currently this is only relevent
       when generating menus. The modifier keys are in different locations on different
-      keyboards (under different operating systems) and if FontForge knows what
+      keyboards (under different operating systems) and if websharpstudios knows what
       keyboard you are using it can make the hot-keys have better labels.
       <UL>
 	<LI>
@@ -135,7 +135,7 @@ $ fontforge -c script-string [arguments]
     <DT>
       -nosplash
     <DD>
-      FontForge will not display its splash screen on startup (for slow connections)
+      websharpstudios will not display its splash screen on startup (for slow connections)
     <DT>
       -open
     <DD>
@@ -143,8 +143,8 @@ $ fontforge -c script-string [arguments]
     <DT>
       -quit
     <DD>
-      Exit fontforge (only useful if -unique is passed as well, in which case the
-      master fontforge will be asked to exit)
+      Exit websharpstudios (only useful if -unique is passed as well, in which case the
+      master websharpstudios will be asked to exit)
     <DT>
       -recover type
     <DD>
@@ -161,19 +161,19 @@ $ fontforge -c script-string [arguments]
 	<DT>
 	  auto
 	<DD>
-	  recover any files which have been changed but which fontforge crashed on
+	  recover any files which have been changed but which websharpstudios crashed on
 	  before saving.
       </DL>
     <DT>
       -<A NAME="script">script</A> script-file
     <DD>
-      If FontForge's first argument is "-script" then the argument that follows
+      If websharpstudios's first argument is "-script" then the argument that follows
       will be treated as a <A HREF="scripting.html">script file</A> and all the
       remaining arguments will be passed as arguments to that file. (The "-script"
       argument may be omitted, and if the first argument is an executable file
-      which whose first line starts with "#!" and contains "fontforge". This means
-      that fontforge may be used as an interpreter. Ie. you can create a fontforge
-      script file and type its name to your shell and fontforge will be invoked
+      which whose first line starts with "#!" and contains "websharpstudios". This means
+      that websharpstudios may be used as an interpreter. Ie. you can create a websharpstudios
+      script file and type its name to your shell and websharpstudios will be invoked
       to process that file as a script file (passing any arguments to it)).
     <DT>
       -sync
@@ -183,7 +183,7 @@ $ fontforge -c script-string [arguments]
     <DT>
       -unique
     <DD>
-      If there is already a fontforge running on this screen, then the current
+      If there is already a websharpstudios running on this screen, then the current
       version will pass its arguments to the already existing one for it to open,
       and then the current version will exit. So it looks more like a Mac/Windows
       app.
@@ -196,7 +196,7 @@ $ fontforge -c script-string [arguments]
     <DD>
       Where type may be:<BR>
       StaticGray GrayScale StaticColor PsuedoColor TrueColor DirectColor<BR>
-      (See the X manuals for a description of what these mean). FontForge will
+      (See the X manuals for a description of what these mean). websharpstudios will
       search through the visuals in an attempt to find one with the desired VisualClass
       (given here) and depth (given with the -depth option).
   </DL>
@@ -204,7 +204,7 @@ $ fontforge -c script-string [arguments]
     <A NAME="Environment">Environment Variables</A>
   </H2>
   <P>
-  FontForge examines the following environment variables:
+  websharpstudios examines the following environment variables:
   <DL>
     <DT>
       <CODE><A NAME="BROWSER">BROWSER</A></CODE>
@@ -217,7 +217,7 @@ $ fontforge -c script-string [arguments]
       <CODE><A NAME="AUTOTRACE">AUTOTRACE</A></CODE>
     <DD>
       Specifies the name and location of the autotrace program. (if not specified
-      FontForge will try to find it in the user's path)
+      websharpstudios will try to find it in the user's path)
     <DT>
       <CODE>POTRACE</CODE>
     <DD>
@@ -226,14 +226,14 @@ $ fontforge -c script-string [arguments]
       <CODE><A NAME="MF">MF</A></CODE>
     <DD>
       Specifies the name and location of the metafont program. (if not specified
-      FontForge will try to find it in the user's path)
+      websharpstudios will try to find it in the user's path)
     <DT>
-      <CODE>FONTFORGE_VERBOSE</CODE>
+      <CODE>websharpstudios_VERBOSE</CODE>
     <DD>
       Turns on verbose mode in script execution (the script will be printed to
       stdout as it is executed).
     <DT>
-      <CODE>FONTFORGE_LOADPREFS</CODE>
+      <CODE>websharpstudios_LOADPREFS</CODE>
     <DD>
       Controls loading of preference items. If set to "Always" then preferences
       will be loaded even for scripts. If set to "Never" then preferences will
@@ -241,7 +241,7 @@ $ fontforge -c script-string [arguments]
       value) then preferences will be loaded when ff starts up with a user interface,
       and will not be loaded if ff starts up executing a script.
     <DT>
-      <CODE>FONTFORGE_LANGUAGE</CODE>
+      <CODE>websharpstudios_LANGUAGE</CODE>
     <DD>
       Provides a default interpreter to use when executing a script. Must be either
       "py" or "ff"/"pe".
@@ -265,7 +265,7 @@ $ fontforge -c script-string [arguments]
     <DT>
       <CODE>HOME</CODE>
     <DD>
-      Used to figure out where to put the .FontForge directory which includes user
+      Used to figure out where to put the .websharpstudios directory which includes user
       preferences and the recovery files.
     <DT>
       <CODE>USER</CODE>

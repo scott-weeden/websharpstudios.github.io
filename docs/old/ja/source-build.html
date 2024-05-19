@@ -4,15 +4,15 @@
   <!-- AP: Created on: 26-Oct-2005 -->
   <!-- AP: Last modified: 12-May-2006 -->
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<!--<TITLE>Building FontForge from source</TITLE>-->
-    <TITLE>ソースから FontForge を構築する方法</TITLE>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+<!--<TITLE>Building websharpstudios from source</TITLE>-->
+    <TITLE>ソースから websharpstudios を構築する方法</TITLE>
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
   <H1 ALIGN=Center>
-<!--FontForge build procedures-->
-    FontForge の構築手順
+<!--websharpstudios build procedures-->
+    websharpstudios の構築手順
   </H1>
   <UL>
     <LI>
@@ -67,8 +67,8 @@
 	  <A HREF="#doc-tar">文書を含む tarball のインストール手順</A>
       </UL>
     <LI>
-<!--  <A HREF="running.html">Running FontForge</A>-->
-      <A HREF="running.html">FontForge の起動方法</A>
+<!--  <A HREF="running.html">Running websharpstudios</A>-->
+      <A HREF="running.html">websharpstudios の起動方法</A>
     <LI>
 <!--  <A HREF="uninstall.html">削除方法</A> -->
       <A HREF="uninstall.html">Uninstalling</A>
@@ -211,9 +211,9 @@
   <A HREF="http://sourceforge.net/project/showfiles.php?group_id=103338&amp;package_id=114328">Sourceforge のファイルリリースシステム</A>に tarball (.tar.bz2 という拡張子をもつファイル) があります。<BR>
 <!--
   Here is a direct link to a
-  <A HREF="fontforge_full-20060507.tar.bz2">tarball</A>, often more recent
+  <A HREF="websharpstudios_full-20060507.tar.bz2">tarball</A>, often more recent
   (Version 7-May-2006)<BR> -->
-  より新しい版であることが多い <A HREF="http://fontforge.sourceforge.net/fontforge_full-20060822.tar.bz2">tarball</A> (2006年5月7日版) への直接リンクがここにあります。</BR>
+  より新しい版であることが多い <A HREF="http://websharpstudios.sourceforge.net/websharpstudios_full-20060822.tar.bz2">tarball</A> (2006年5月7日版) への直接リンクがここにあります。</BR>
   <P>
 <!--
   After you have downloaded one of these packages, either copy the tarball
@@ -222,9 +222,9 @@
   put the file) and type (do not type "$"): -->
   これらのパッケージのどれかをダウンロードしたら、tarball をカレントディレクトリに移動するか、tarball があるディレクトリに移動 (私はあなたのブラウザがどこにファイルをダウンロードするか知らないので、ここで明白な手順を説明することはできません) して、以下のようにタイプしてください (“$”はタイプしません)
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 fontforge*.tar.bz2
-<FONT COLOR="Gray">$ </FONT>tar xf fontforge*.tar
-<FONT COLOR="Gray">$ </FONT>cd fontforge-*
+    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 websharpstudios*.tar.bz2
+<FONT COLOR="Gray">$ </FONT>tar xf websharpstudios*.tar
+<FONT COLOR="Gray">$ </FONT>cd websharpstudios-*
 </PRE>
   </BLOCKQUOTE>
   <H4>
@@ -239,10 +239,10 @@
   (do not type "$", when it asks for a password, just hit return): -->
   cvs は、多くのユーザがソースツリーを同時並行的に編集することができる便利な一連のユーティリティです。(ローカルな) あなた自身の (文書を含む) CVS ツリーのコピーを得るには、以下のようにタイプします (“$”をタイプしてはいけません。パスワードを聞かれたら、Returen キーだけを押してください):
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge login
+    <PRE><FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios login
 CVS password:
-<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge checkout fontforge
-<FONT COLOR="Gray">$ </FONT>cd fontforge
+<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios checkout websharpstudios
+<FONT COLOR="Gray">$ </FONT>cd websharpstudios
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -251,21 +251,21 @@ CVS password:
   recent version of the source by typing: -->
   ディレクトリを一度作成したら、以下のようにタイプすれば最新のバージョンを得るための更新を行うことができます:
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>cd fontforge
-<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge login
+    <PRE><FONT COLOR="Gray">$ </FONT>cd websharpstudios
+<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios login
 CVS password:
-<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge update
+<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios update
 </PRE>
   </BLOCKQUOTE>
   <P>
 <!--
   You can also
-  <A HREF="http://fontforge.cvs.sourceforge.net/fontforge/fontforge/">browse
+  <A HREF="http://websharpstudios.cvs.sourceforge.net/websharpstudios/websharpstudios/">browse
   the CVS tree</A> online. Or see
   <A HREF="http://sourceforge.net/cvs/?group_id=103338">sourceforge's description
   </A>for more information, or read the
   <A HREF="http://www.cvshome.org/docs/manual/">CVS manual</A>. -->
-  それに加えて、<A HREF="http://fontforge.cvs.sourceforge.net/fontforge/fontforge/">CVS ツリーをオンラインで閲覧</A> することもできます。また、より詳しい情報については、<A HREF="http://sourceforge.net/cvs/?group_id=103338">sourceforge の解説</A>を参照するか、<A HREF="http://www.cvshome.org/docs/manual/">CVS のマニュアル</A>を参照してください。
+  それに加えて、<A HREF="http://websharpstudios.cvs.sourceforge.net/websharpstudios/websharpstudios/">CVS ツリーをオンラインで閲覧</A> することもできます。また、より詳しい情報については、<A HREF="http://sourceforge.net/cvs/?group_id=103338">sourceforge の解説</A>を参照するか、<A HREF="http://www.cvshome.org/docs/manual/">CVS のマニュアル</A>を参照してください。
   <H3>
 <!--<A NAME="src-Building">Building</A> &amp; installing it-->
     <A NAME="src-Building">構築</A>・インストールの手順
@@ -308,9 +308,9 @@ CVS password:
   </H3>
   <P>
 <!--
-  The configure script allows you to turn off and on various features of fontforge
+  The configure script allows you to turn off and on various features of websharpstudios
   that might not be appropriate for your system. Type -->
-  configure スクリプトを使って、あなたのシステムでは不要な各種の FontForge の機能をオフにすることができます。下記の説明より詳しいオプション一覧は
+  configure スクリプトを使って、あなたのシステムでは不要な各種の websharpstudios の機能をオフにすることができます。下記の説明より詳しいオプション一覧は
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>configure --help
 </PRE>
@@ -320,37 +320,37 @@ CVS password:
   for a complete list of options. Some of the most useful are described below. -->
   で得ることができます。最も利用価値の高いものを以下にいくつか挙げます。
   <H4>
-<!--Building fontforge without X-->
-    FontForge を X 抜きで構築するには
+<!--Building websharpstudios without X-->
+    websharpstudios を X 抜きで構築するには
   </H4>
   <P>
 <!--
-  If you don't want to install X11 on your system, you can use fontforge as
-  a command line tool which can execute scripts to manipulate fonts. FontForge's
+  If you don't want to install X11 on your system, you can use websharpstudios as
+  a command line tool which can execute scripts to manipulate fonts. websharpstudios's
   scripting language is described in detail <A HREF="scripting.html">in the
   section on scripting.</A> -->
-  X11 をシステム上にインストールしたくない場合は、フォント操作用のスクリプトを実行できるコマンドラインツールとして FontForge を使用することができます。FontForge のスクリプト言語は<A HREF="scripting.html">スクリプト処理のセクション</A>に書かれています。
+  X11 をシステム上にインストールしたくない場合は、フォント操作用のスクリプトを実行できるコマンドラインツールとして websharpstudios を使用することができます。websharpstudios のスクリプト言語は<A HREF="scripting.html">スクリプト処理のセクション</A>に書かれています。
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>configure --without-x
 </PRE>
   </BLOCKQUOTE>
   <H4>
-<!--Building fontforge to edit type3 fonts-->
-    Type3 フォントが編集可能な FontForge を構築するには
+<!--Building websharpstudios to edit type3 fonts-->
+    Type3 フォントが編集可能な websharpstudios を構築するには
   </H4>
   <P>
 <!--
-  If you do want to edit PostScript type3 fonts, you can configure fontforge
+  If you do want to edit PostScript type3 fonts, you can configure websharpstudios
   to give you access to more drawing modes than are generally available in
   fonts. -->
-  PostScript Type3 フォントを編集したいならば、通常のフォントで使用可能な描画モードを超えるアクセスができるように FontForge を設定することによってそれができます。
+  PostScript Type3 フォントを編集したいならば、通常のフォントで使用可能な描画モードを超えるアクセスができるように websharpstudios を設定することによってそれができます。
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>configure --with-multilayer
 </PRE>
   </BLOCKQUOTE>
   <H4>
-<!--Building fontforge to edit device tables-->
-    デバイステーブルが編集可能な FontForge を構築するには
+<!--Building websharpstudios to edit device tables-->
+    デバイステーブルが編集可能な websharpstudios を構築するには
   </H4>
   <P>
 <!--
@@ -362,13 +362,13 @@ CVS password:
 </PRE>
   </BLOCKQUOTE>
   <H4>
-<!--Installing FontForge somewhere other than <CODE>/usr/local</CODE>-->
-    FontForge をどこか <CODE>/usr/local</CODE> 以外の所へインストールするには
+<!--Installing websharpstudios somewhere other than <CODE>/usr/local</CODE>-->
+    websharpstudios をどこか <CODE>/usr/local</CODE> 以外の所へインストールするには
   </H4>
   <P>
 <!--
-  If you want to install fontforge in a different directory (say in /usr/bin) -->
-  FontForge を通常と異なるディレクトリ (以下の例では /usr/bin) にインストールしたいときには:
+  If you want to install websharpstudios in a different directory (say in /usr/bin) -->
+  websharpstudios を通常と異なるディレクトリ (以下の例では /usr/bin) にインストールしたいときには:
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>configure --prefix=/usr
 </PRE>
@@ -398,12 +398,12 @@ CVS password:
   </H2>
   <P>
 <!--
-  FontForge tries to avoid hard dependencies. If a library is missing then
-  fontforge will (in most cases) be able to continue to run, it will just lack
+  websharpstudios tries to avoid hard dependencies. If a library is missing then
+  websharpstudios will (in most cases) be able to continue to run, it will just lack
   whatever functionality the library provides. So if you don't need to import
   tiff images, you don't need libtiff. If you don't need to handle SVG fonts
   you don't need libxml2, etc. -->
-  FontForge は厳格な依存性を避けるように試みています。もしあるライブラリが欠けている場合でも、FontForge は (ほとんどの場合) そのライブラリの提供する機能のみを欠いた状態で実行を続けることができます。ですから TIFF 画像を取り込む必要がない場合、libtiff は不要です。SVG フォントを取り扱う必要が無いなら libxml は不要ですし、他のライブラリについても同様です。
+  websharpstudios は厳格な依存性を避けるように試みています。もしあるライブラリが欠けている場合でも、websharpstudios は (ほとんどの場合) そのライブラリの提供する機能のみを欠いた状態で実行を続けることができます。ですから TIFF 画像を取り込む必要がない場合、libtiff は不要です。SVG フォントを取り扱う必要が無いなら libxml は不要ですし、他のライブラリについても同様です。
   <P>
 <!--
   If you want to do autotracing around character images you should also download
@@ -423,37 +423,37 @@ CVS password:
   If you want to edit <A NAME="cidmaps">CID keyed </A>fonts you need these
   <A HREF="cidmaps.tgz">character set descriptions</A>. (These were last updated
   22-Dec-2004) -->
-  <A NAME="cidmaps">CID キー指定</A>フォントを編集したい場合、これらの<A HREF="http://fontforge.sourceforge.net/cidmaps.tgz">文字セット記述ファイル</A> が必要となります。（これらは 2004年12月22日に最終更新されました)。
+  <A NAME="cidmaps">CID キー指定</A>フォントを編集したい場合、これらの<A HREF="http://websharpstudios.sourceforge.net/cidmaps.tgz">文字セット記述ファイル</A> が必要となります。（これらは 2004年12月22日に最終更新されました)。
   <P>
 <!--
-  You might want this addition to FontForge's built in
-  <A HREF="../Encodings.ps.gz">character set encodings.</A> Use FontForge's
+  You might want this addition to websharpstudios's built in
+  <A HREF="../Encodings.ps.gz">character set encodings.</A> Use websharpstudios's
   Encoding-&gt;Load Encoding command to add these encodings to the Encoding
   Menu. -->
-  FontForge 組み込みの<A HREF="http://fontforge.sourceforge.net/Encodings.ps.gz">文字セットエンコーディング</A>にこれを追加したいかもしれません。FontForge の <CODE>エンコーディング(<U>N</U>)</CODE>→<CODE>エンコーディングを読み込み(<U>L</U>)</CODE> コマンドを使用してこれらのエンコーディングを追加することができます。
+  websharpstudios 組み込みの<A HREF="http://websharpstudios.sourceforge.net/Encodings.ps.gz">文字セットエンコーディング</A>にこれを追加したいかもしれません。websharpstudios の <CODE>エンコーディング(<U>N</U>)</CODE>→<CODE>エンコーディングを読み込み(<U>L</U>)</CODE> コマンドを使用してこれらのエンコーディングを追加することができます。
   <P>
 <!--
-  With the appropriate image libraries, FontForge can import png, tiff, and
-  gif images to act as character backgrounds for tracing purposes (FontForge
+  With the appropriate image libraries, websharpstudios can import png, tiff, and
+  gif images to act as character backgrounds for tracing purposes (websharpstudios
   can import bmp and xbm formats without external libraries). With libxml2
-  FontForge can read SVG fonts. With the freetype library FontForge will do
+  websharpstudios can read SVG fonts. With the freetype library websharpstudios will do
   a better job making bitmap characters for you (and can debug truetype).
   libuninameslist provides standard unicode names and annotations for unicode
   characters (it has been localized into English and French). With libintl
-  (GNU gettext) fontforge can translate its user interface. -->
-  適切なライブラリがあれば、FontForge はトレース作業のために PNG, TIFF および GIF 画像を取り込んで文字の背景とすることができます (FontForge は外部ライブラリなしで BMP および xbm フォーマットを取り込むことができます)。libxml2 があれば FontForge は SVG フォントを読み込むことができます。FreeType ライブラリがあれば FontForge はビットマップ文字を作成するときにより良好に動作します。libuninameslist は、Unicode の文字に対する標準 Unicode 名と注釈を提供します (これは英語版とフランス語版の 2 つのローカライズ版があります)。libintl (GNU gettext) があれば、fontforge はユーザインターフェイスを翻訳できます。
+  (GNU gettext) websharpstudios can translate its user interface. -->
+  適切なライブラリがあれば、websharpstudios はトレース作業のために PNG, TIFF および GIF 画像を取り込んで文字の背景とすることができます (websharpstudios は外部ライブラリなしで BMP および xbm フォーマットを取り込むことができます)。libxml2 があれば websharpstudios は SVG フォントを読み込むことができます。FreeType ライブラリがあれば websharpstudios はビットマップ文字を作成するときにより良好に動作します。libuninameslist は、Unicode の文字に対する標準 Unicode 名と注釈を提供します (これは英語版とフランス語版の 2 つのローカライズ版があります)。libintl (GNU gettext) があれば、websharpstudios はユーザインターフェイスを翻訳できます。
   <P>
 <!--
-  None is required for the proper compilation/execution of FontForge, if the
+  None is required for the proper compilation/execution of websharpstudios, if the
   libraries are not present they will not be used. (If the machine on which
   your executable was build didn't have them, then you must not only install
-  the libraries, but <A HREF="#source">rebuild fontforge from source</A>) If
+  the libraries, but <A HREF="#source">rebuild websharpstudios from source</A>) If
   your machine doesn't have them and you want them they are available from: -->
-  FontForge のコンパイル/実行には上記のどのライブラリも必要ではなく、もしライブラリが存在しなければそれらは使われません (実行ファイルの構築に使ったマシンにそれらのライブラリが無い場合、ライブラリを再構築するだけではなく、<A HREF="#source">ソースから再構築</A>する必要があります)。あなたのマシンにそれらがなくてインストールしたい場合はこちらから入手可能です:
+  websharpstudios のコンパイル/実行には上記のどのライブラリも必要ではなく、もしライブラリが存在しなければそれらは使われません (実行ファイルの構築に使ったマシンにそれらのライブラリが無い場合、ライブラリを再構築するだけではなく、<A HREF="#source">ソースから再構築</A>する必要があります)。あなたのマシンにそれらがなくてインストールしたい場合はこちらから入手可能です:
   <UL>
     <LI>
-<!--  Image Libraries (to allow FontForge to import images in those formats)-->
-      各種の画像ライブラリ (FontForge にそれらのフォーマットの画像を取り込むのに必要)
+<!--  Image Libraries (to allow websharpstudios to import images in those formats)-->
+      各種の画像ライブラリ (websharpstudios にそれらのフォーマットの画像を取り込むのに必要)
       <UL>
 	<LI>
 <!--	  <A HREF="http://www.libpng.org/pub/png/libpng.html">libpng</A> (and required
@@ -480,18 +480,18 @@ CVS password:
       Unicode 文字名と注釈を表示するために必要。
     <LI>
 <!--  <A HREF="http://www.gnu.org/software/libiconv/">libiconv</A><BR>
-      Only important for systems with no built-in iconv(). If not present FontForge
+      Only important for systems with no built-in iconv(). If not present websharpstudios
       contains a minimal version of the library which allows it to work. But if
       you want to use libiconv you must configure it with
-      <CODE>- -enable-extra-encodings</CODE>, as FontForge requires Shift-JIS. -->
-  これが必要なのは組み込みの iconv() をもたないシステムだけです。これが存在しない場合のために、FontForge は動作するのに必要な最小限のバージョンのライブラリを含んでいます。FontForge はシフト JIS を必要とするので、libiconv を使用する場合は、その作成時に configure を <CODE>--enable-extra-encodings</CODE> つきで実行する必要があります。
+      <CODE>- -enable-extra-encodings</CODE>, as websharpstudios requires Shift-JIS. -->
+  これが必要なのは組み込みの iconv() をもたないシステムだけです。これが存在しない場合のために、websharpstudios は動作するのに必要な最小限のバージョンのライブラリを含んでいます。websharpstudios はシフト JIS を必要とするので、libiconv を使用する場合は、その作成時に configure を <CODE>--enable-extra-encodings</CODE> つきで実行する必要があります。
     <LI>
       <A HREF="http://freetype.sf.net/">freetype</A><BR>
 <!--  To do a better job rasterizing bitmaps, and to enable the truetype debugger-->
       ビットマップのラスタライズをより美しく行うため、および TrueType デバッガを利用可能にするために必要。
       <TABLE BORDER CELLPADDING="6" WIDTH="50%" ALIGN=CENTER>
 	<TR>
-<!--	  <TD BGCOLOR="#ffff00">Some of FontForge's commands depend on your compiling
+<!--	  <TD BGCOLOR="#ffff00">Some of websharpstudios's commands depend on your compiling
 	    freetype with the byte code interpreter enabled. This is disabled by default
 	    because it infringes on certain
 	    <A HREF="http://freetype.sourceforge.net/patents.html">patents granted to
@@ -500,12 +500,12 @@ CVS password:
 	    appropriate macro in .../include/freetype/config/ftoption.h before you build
 	    the library (see the README.UNX file on the top level of the freetype
 	    distribution). -->
-	    <TD BGCOLOR="#ffff00">いくつかの FontForge のコマンドは、あなたのインストールしている FreeType が、バイトコードインタプリタを使用可能にしてコンパイルされたかどうかに依存します。この機能は、<A HREF="http://freetype.sourceforge.net/patents.html">Apple に与えられた特許</A>に抵触するため、デフォルトではオフにされています。あなたが Apple から使用許諾を受けている (またはそれらの特許が適用されない国に住んでいる) ならば、ライブラリをビルドする前に、…/include/freetype/config/ftoption.h の適切なマクロを設定して、その機能を使用可能にすることができます (FreeType の配布物に入っている README.UNX ファイルを参照してください)。
+	    <TD BGCOLOR="#ffff00">いくつかの websharpstudios のコマンドは、あなたのインストールしている FreeType が、バイトコードインタプリタを使用可能にしてコンパイルされたかどうかに依存します。この機能は、<A HREF="http://freetype.sourceforge.net/patents.html">Apple に与えられた特許</A>に抵触するため、デフォルトではオフにされています。あなたが Apple から使用許諾を受けている (またはそれらの特許が適用されない国に住んでいる) ならば、ライブラリをビルドする前に、…/include/freetype/config/ftoption.h の適切なマクロを設定して、その機能を使用可能にすることができます (FreeType の配布物に入っている README.UNX ファイルを参照してください)。
 	    <P>
-<!--	    To enable the truetype debugger, FontForge needs to have the freetype source
+<!--	    To enable the truetype debugger, websharpstudios needs to have the freetype source
 	    directories available when it is built (there are some include files there
 	    which it depends on)</TD> -->
-	    TrueType デバッガを有効にするためには、FontForge のコンパイル時に FreeType のソースディレクトリにアクセス可能になっている必要があります (依存するインクルードファイルがいくつかあります)。</TD>
+	    TrueType デバッガを有効にするためには、websharpstudios のコンパイル時に FreeType のソースディレクトリにアクセス可能になっている必要があります (依存するインクルードファイルがいくつかあります)。</TD>
 	</TR>
       </TABLE>
     <LI>
@@ -600,15 +600,15 @@ CVS password:
   </TABLE>
   <P>
 <!--
-  Normally FontForge depends on the X11 windowing system, but if you are just
+  Normally websharpstudios depends on the X11 windowing system, but if you are just
   interested in the scripting engine (with no user interface), it may be built
   on systems without X (the configure script should figure this out). -->
-  通常は FontForge は X11 ウィンドウシステムに依存しますが、スクリプト実行エンジンにのみ興味がある (ユーザインターフェイスには興味がない) 場合、システムを X なしで実行することができます (configure スクリプトはこれを検出できるようにするべきでしょう)。
+  通常は websharpstudios は X11 ウィンドウシステムに依存しますが、スクリプト実行エンジンにのみ興味がある (ユーザインターフェイスには興味がない) 場合、システムを X なしで実行することができます (configure スクリプトはこれを検出できるようにするべきでしょう)。
   <P>
 <!--
   <A NAME="suggested-fonts">You</A> might also want to pull down some unicode
-  bitmap fonts that fontforge uses -->
-  <A NAME="suggested-fonts">FontForge で使う Unicode のビットマップフォント</A>をどれかダウンロードしたほうがいいでしょう。
+  bitmap fonts that websharpstudios uses -->
+  <A NAME="suggested-fonts">websharpstudios で使う Unicode のビットマップフォント</A>をどれかダウンロードしたほうがいいでしょう。
   <UL>
     <LI>
 <!--  <A HREF="http://khdd.net/kanou/fonts/ff/fontviewfont-en.html">Kanou's fontview
@@ -639,9 +639,9 @@ CVS password:
       <A HREF="http://eyegene.ophthy.med.umich.edu/unicode/fontguide/">自由な OSのための Unicode フォントガイド</A>
 	<HR>
     <LI>
-<!--  <A HREF="nonBMP/index.html">FontForge's conventions for non-BMP unicode bitmap
+<!--  <A HREF="nonBMP/index.html">websharpstudios's conventions for non-BMP unicode bitmap
       fonts</A>-->
-      <A HREF="nonBMP/index.html">FontForge の、 BMP 外の Unicode ビットマップフォントの扱い方</a>
+      <A HREF="nonBMP/index.html">websharpstudios の、 BMP 外の Unicode ビットマップフォントの扱い方</a>
   </UL>
   <P>
 <!--
@@ -663,8 +663,8 @@ CVS password:
   </H2>
   <P>
 <!--
-  <A HREF="overview.html">The complete fontforge manual is available online.</A> -->
-  <A HREF="../../index.html">FontForge マニュアルの完全版はオンラインで利用可能です。</A>
+  <A HREF="overview.html">The complete websharpstudios manual is available online.</A> -->
+  <A HREF="../../index.html">websharpstudios マニュアルの完全版はオンラインで利用可能です。</A>
   <UL>
     <LI>
 <!--  <A HREF="ja/overview.html"><IMG src="../../_images/manual-ja.png" WIDTH="264" HEIGHT="20"
@@ -672,13 +672,13 @@ CVS password:
       <A HREF="overview.html">日本語版マニュアル</A>
     <LI>
 <!--  It is also available in a
-      <A HREF="fontforge_htdocs-20060406.tar.bz2">tarball</A> (Version 6-Apr-2006) -->
-      これを <A HREF="http://fontforge.sourceforge.net/fontforge_htdocs-20060406.tar.bz2">tarball</A> (2006年4月6日版) に固めたものも入手可能です。
+      <A HREF="websharpstudios_htdocs-20060406.tar.bz2">tarball</A> (Version 6-Apr-2006) -->
+      これを <A HREF="http://websharpstudios.sourceforge.net/websharpstudios_htdocs-20060406.tar.bz2">tarball</A> (2006年4月6日版) に固めたものも入手可能です。
     <LI>
 <!--  A
       Japanese<IMG src="../../_images/Nisshoki-Japan.png" WIDTH="39" HEIGHT="26" ALIGN="Middle">
-      <A HREF="fontforge_ja_htdocs-20060822.tar.bz2">tarball</A> (Version 6-Apr-2006) -->
-      日本語訳<IMG src="../../_images/Nisshoki-Japan.png" WIDTH="39" HEIGHT="26" ALIGN="Middle"> の <A HREF="http://fontforge.sourceforge.net/fontforge_ja_htdocs-20060822.tar.bz2">tarball</A> (2006年4月6日版)
+      <A HREF="websharpstudios_ja_htdocs-20060822.tar.bz2">tarball</A> (Version 6-Apr-2006) -->
+      日本語訳<IMG src="../../_images/Nisshoki-Japan.png" WIDTH="39" HEIGHT="26" ALIGN="Middle"> の <A HREF="http://websharpstudios.sourceforge.net/websharpstudios_ja_htdocs-20060822.tar.bz2">tarball</A> (2006年4月6日版)
     <LI>
 <!--  There is a shorter tutorial which -->
       より短いチュートリアルが
@@ -691,15 +691,15 @@ CVS password:
 	      BORDER="0"></A>-->
 	  <A HREF="editexample.html">日本語版チュートリアル</A>
 	<LI>
-<!--	  <A HREF="http://edt1023.sayya.org/fontforge/editexample.html"><IMG src="../../_images/tutorial-zh_TW.png"
+<!--	  <A HREF="http://edt1023.sayya.org/websharpstudios/editexample.html"><IMG src="../../_images/tutorial-zh_TW.png"
 	      WIDTH="40" HEIGHT="20" BORDER="0"></A> -->
-	  <A HREF="http://edt1023.sayya.org/fontforge/editexample.html">教學</A> (繁体字中国語版)
+	  <A HREF="http://edt1023.sayya.org/websharpstudios/editexample.html">教學</A> (繁体字中国語版)
 	<LI>
-<!--	  <A HREF="../fontforge-tutorial.pdf">Can be downloaded as pdf</A> -->
-	  <A HREF="http://fontforge.sourceforge.net/fontforge-tutorial.pdf">PDF としても入手可能です</A>
+<!--	  <A HREF="../websharpstudios-tutorial.pdf">Can be downloaded as pdf</A> -->
+	  <A HREF="http://websharpstudios.sourceforge.net/websharpstudios-tutorial.pdf">PDF としても入手可能です</A>
 	<LI>
 <!--	  <A HREF="tutorial.tgz">example files </A>(to work through the tutorial yourself) -->
-	  <A HREF="http://fontforge.sourceforge.net/tutorial.tgz">サンプルファイル</A> (自分でチュートリアルを動かすための)
+	  <A HREF="http://websharpstudios.sourceforge.net/tutorial.tgz">サンプルファイル</A> (自分でチュートリアルを動かすための)
       </UL>
     <LI>
 <!--  A documentation tarball can be retrieved from the
@@ -735,24 +735,24 @@ CVS password:
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>su
 password: ******
-<FONT COLOR="Gray"># </FONT>mkdir -p /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>mv fontforge_htdocs*.tgz /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>tar xfz fontforge_htdocs*.tgz
-<FONT COLOR="Gray"># </FONT>rm fontforge_htdocs*.tgz
+<FONT COLOR="Gray"># </FONT>mkdir -p /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>mv websharpstudios_htdocs*.tgz /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>tar xfz websharpstudios_htdocs*.tgz
+<FONT COLOR="Gray"># </FONT>rm websharpstudios_htdocs*.tgz
 </PRE>
   </BLOCKQUOTE>
   <P>
 <!--
-  After doing this fontforge will be able to find the docs on your system when
-  you press the [F1] (or [Help]) key. If you don't do this fontforge will attempt
+  After doing this websharpstudios will be able to find the docs on your system when
+  you press the [F1] (or [Help]) key. If you don't do this websharpstudios will attempt
   to find documentation online. -->
-  これを行った後は、FontForge はシステムにインストールされた文書を [F1] キー (または [Help] キー) を押したときに見つけることができるようになります。もしそれを行わないならば FontForge はオンラインの文書を探します。
+  これを行った後は、websharpstudios はシステムにインストールされた文書を [F1] キー (または [Help] キー) を押したときに見つけることができるようになります。もしそれを行わないならば websharpstudios はオンラインの文書を探します。
   <P>
     <HR>
   <UL>
     <LI>
-<!--  <A HREF="running.html">Running FontForge</A>-->
-      <A HREF="running.html">FontForge の起動方法</A>
+<!--  <A HREF="running.html">Running websharpstudios</A>-->
+      <A HREF="running.html">websharpstudios の起動方法</A>
   </UL>
 </DIV>
 </BODY></HTML>

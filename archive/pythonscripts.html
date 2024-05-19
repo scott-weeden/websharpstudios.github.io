@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 30-Nov-2006 -->
   <TITLE>Tentative python object model</TITLE>
   <LINK REL="icon" href="ffanvil16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 >
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1>
@@ -18,7 +18,7 @@
   <P>
   People seem to want a python interface. I'm not a python user myself and
   probably don't understand its idioms. I envision something whose top levels
-  (the <CODE>FontForge</CODE> module and the <CODE>Font</CODE> type) will duplicate
+  (the <CODE>websharpstudios</CODE> module and the <CODE>Font</CODE> type) will duplicate
   the UI of the Font window.
   <P>
   I anticipate supporting both old and new (python) scripts. The execute scripts
@@ -26,30 +26,30 @@
   interface will have a new argument <CODE>-script=py
   &lt;filename&gt;</CODE>
   <P>
-  The module will be named "FontForge" and will expose the following
+  The module will be named "websharpstudios" and will expose the following
   <TABLE BGCOLOR="#ffff80">
     <CAPTION>
-      FontForge Module Methods
+      websharpstudios Module Methods
     </CAPTION>
     <TR>
       <TD>GetPrefs</TD>
-      <TD>Get FontForge preference items</TD>
+      <TD>Get websharpstudios preference items</TD>
     </TR>
     <TR>
       <TD>SetPrefs</TD>
-      <TD>Set FontForge preference items</TD>
+      <TD>Set websharpstudios preference items</TD>
     </TR>
     <TR>
       <TD>SavePrefs</TD>
-      <TD>Save FontForge preference items</TD>
+      <TD>Save websharpstudios preference items</TD>
     </TR>
     <TR>
       <TD>LoadPrefs</TD>
-      <TD>Load FontForge preference items</TD>
+      <TD>Load websharpstudios preference items</TD>
     </TR>
     <TR>
       <TD>DefaultOtherSubrs</TD>
-      <TD>Use FontForge's default \"othersubrs\" functions for Type1 fonts</TD>
+      <TD>Use websharpstudios's default \"othersubrs\" functions for Type1 fonts</TD>
     </TR>
     <TR>
       <TD>ReadOtherSubrsFile</TD>
@@ -69,11 +69,11 @@
     </TR>
     <TR>
       <TD>LoadPlugin</TD>
-      <TD>Load a FontForge plugin</TD>
+      <TD>Load a websharpstudios plugin</TD>
     </TR>
     <TR>
       <TD>LoadPluginDir</TD>
-      <TD>Load a directory of FontForge plugin files</TD>
+      <TD>Load a directory of websharpstudios plugin files</TD>
     </TR>
     <TR>
       <TD>PreloadCidmap</TD>
@@ -90,7 +90,7 @@
     </TR>
     <TR>
       <TD>Version</TD>
-      <TD>Returns a string containing the current version of FontForge, as 20061116</TD>
+      <TD>Returns a string containing the current version of websharpstudios, as 20061116</TD>
     </TR>
     <TR>
       <TD>Fonts</TD>
@@ -122,13 +122,13 @@
       <A HREF="#TTInstructions">TTInstructions</A>
     <LI>
       Some method for manipulating GPOS/GSUB data which I'm not going to work out
-      yet because I expect FontForge's implementation of these will change soon.
+      yet because I expect websharpstudios's implementation of these will change soon.
   </UL>
   <H2>
-    FontForge <A NAME="Font">Font</A> Type
+    websharpstudios <A NAME="Font">Font</A> Type
   </H2>
   <P>
-  The Font object is a pointer to FontForge's font data structure. Any changes
+  The Font object is a pointer to websharpstudios's font data structure. Any changes
   made to it will be made to those data.
   <TABLE BGCOLOR="#ffff80">
     <CAPTION>
@@ -265,12 +265,12 @@
     <TR>
       <TD>hhea_ascent_add</TD>
       <TD>Whether the hhea_ascent field is used as is, or as an offset applied
-	to the value FontForge thinks appropriate</TD>
+	to the value websharpstudios thinks appropriate</TD>
     </TR>
     <TR>
       <TD>hhea_descent_add</TD>
       <TD>Whether the hhea_descent field is used as is, or as an offset applied
-	to the value FontForge thinks appropriate</TD>
+	to the value websharpstudios thinks appropriate</TD>
     </TR>
     <TR>
       <TD>vhea_linegap</TD>
@@ -291,12 +291,12 @@
     <TR>
       <TD>os2_typoascent_add</TD>
       <TD>Whether the os2_typoascent field is used as is, or as an offset applied
-	to the value FontForge thinks appropriate</TD>
+	to the value websharpstudios thinks appropriate</TD>
     </TR>
     <TR>
       <TD>os2_typodescent_add</TD>
       <TD>Whether the os2_typodescent field is used as is, or as an offset applied
-	to the value FontForge thinks appropriate</TD>
+	to the value websharpstudios thinks appropriate</TD>
     </TR>
     <TR>
       <TD>os2_winascent</TD>
@@ -309,12 +309,12 @@
     <TR>
       <TD>os2_winascent_add</TD>
       <TD>Whether the os2_winascent field is used as is, or as an offset applied
-	to the value FontForge thinks appropriate</TD>
+	to the value websharpstudios thinks appropriate</TD>
     </TR>
     <TR>
       <TD>os2_windescent_add</TD>
       <TD>Whether the os2_windescent field is used as is, or as an offset applied
-	to the value FontForge thinks appropriate</TD>
+	to the value websharpstudios thinks appropriate</TD>
     </TR>
     <TR>
       <TD>os2_subxsize</TD>
@@ -460,10 +460,10 @@
     </TR>
   </TABLE>
   <H2>
-    FontForge <A NAME="Glyph">Glyph</A> Type
+    websharpstudios <A NAME="Glyph">Glyph</A> Type
   </H2>
   <P>
-  The Glyph object is a pointer to FontForge's glyph data structure. Any changes
+  The Glyph object is a pointer to websharpstudios's glyph data structure. Any changes
   made here will be made directly to those data.
   <TABLE BGCOLOR="#ffff80">
     <CAPTION>
@@ -564,16 +564,16 @@
     </TR>
   </TABLE>
   <H2>
-    FontForge <A NAME="Contour">Contour</A> Type
+    websharpstudios <A NAME="Contour">Contour</A> Type
   </H2>
   <P>
-  Contour objects are not pointers to FontForge's data, they are objects in
+  Contour objects are not pointers to websharpstudios's data, they are objects in
   their own right. If you change a contour object you will have to assign it
   back the glyph it came from before those changes are evident.
   <P>
   Contours are doubly linked lists of points. A contour may be either quadratic
   (for truetype fonts) or cubic (for postscript fonts). SVG supports fonts
-  which are mixed cubic and quadratic, but FontForge does not. A point may
+  which are mixed cubic and quadratic, but websharpstudios does not. A point may
   be either on curve or off. An off-curve point is also called a control point.
   In a cubic contour there may be either
   <UL>
@@ -770,7 +770,7 @@
     </TR>
   </TABLE>
   <H2>
-    FontForge <A NAME="Point">Point</A> Type
+    websharpstudios <A NAME="Point">Point</A> Type
   </H2>
   <P>
   Points are intended primarily to live in <A HREF="#Contour">contours</A>
@@ -820,7 +820,7 @@
     </TR>
   </TABLE>
   <H2>
-    FontForge <A NAME="Reference">Reference</A> Type
+    websharpstudios <A NAME="Reference">Reference</A> Type
   </H2>
   <TABLE BGCOLOR="#ffff80">
     <CAPTION>
@@ -853,7 +853,7 @@
     </TR>
   </TABLE>
   <H2>
-    FontForge <A NAME="Hint">Hint</A> Type
+    websharpstudios <A NAME="Hint">Hint</A> Type
   </H2>
   <P>
   These are objects in their own right; they are intended to be linked together

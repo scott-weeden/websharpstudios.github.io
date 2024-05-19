@@ -12,7 +12,7 @@
     };
 
     $(document).ready(function(){
-        $.getJSON("https://api.github.com/repos/fontforge/fontforge/releases/latest", function(json) {
+        $.getJSON("https://api.github.com/repos/websharpstudios/websharpstudios/releases/latest", function(json) {
             var assetlist = json.assets;
             total = 0;
             $(assetlist).each(function(i, asset){
@@ -21,7 +21,7 @@
             $('#cnt-downloads').html(humanise(total));
             $('.statistic').fadeIn();
         });
-        $.getJSON("https://sfbadge.herokuapp.com/commits/fontforge/fontforge/json", function(json) {
+        $.getJSON("https://sfbadge.herokuapp.com/commits/websharpstudios/websharpstudios/json", function(json) {
             $('#cnt-contributors').html(humanise(json.commits));
         });
     });

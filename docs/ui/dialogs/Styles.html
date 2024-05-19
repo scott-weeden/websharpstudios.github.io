@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Stylistic Transformations on Fonts &#8212; FontForge 20230101 documentation</title>
+    <title>Stylistic Transformations on Fonts &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -396,7 +396,7 @@ glyphs.</p>
 complex than the oblique transformation. Oblique fonts are made by the same
 simple mathematical operation applied to the entire font. The italic
 transformation can be different for each glyph.</p>
-<p>Let me further add that FontForge will never be able to do everything that
+<p>Let me further add that websharpstudios will never be able to do everything that
 should be done to make a good italic font from an upright font. It may provide a
 helpful starting point. Some of my friends who know more about typography than I
 have urged me not to write this dialog, saying that each italic font should be
@@ -422,7 +422,7 @@ visible)</p></li>
 <li><p>condensed – less obvious. Generally it will be condensed by about 90% which
 isn’t noticeable unless you look hard. Stems may be condensed at a different
 percentage than counters (indeed, different stems may be condensed differently,
-but fontforge doesn’t support that because I don’t find any consistency in
+but websharpstudios doesn’t support that because I don’t find any consistency in
 behavior to emulate).</p></li>
 <li><p>smaller x-height – because a slanted line that reaches from baseline to a given
 height is longer than the corresponding vertical line, it will also appear (to
@@ -450,7 +450,7 @@ letter forms do not change significantly (though there can be exceptions:
 <p>In typographic tradition serifed fonts have a paired italic font, while
 sans-serif fonts have an oblique font.</p>
 <img alt="../../_images/ItalicDlg.png" class="align-right" src="../../_images/ItalicDlg.png" />
-<p>The italic dialog attempts to give you control over as much of this as fontforge
+<p>The italic dialog attempts to give you control over as much of this as websharpstudios
 thinks it can do. The dialog displays the steps mentioned above, but backwards.</p>
 <p>First there are a series of check boxes for gross letterform changes. The “a”
 glyph generally turns into a something that looks like the “d” glyph without the
@@ -458,15 +458,15 @@ ascender. The “f” glyph has (at least) two variants – in one the curved to
 duplicated at the bottom, and in the other the main stem is extended below the
 baseline but the serif is removed.</p>
 <p>In actual practice these changes are more complex. If examined closely the
-bottom part of the f doesn’t look precisely like the top. FontForge isn’t up to
+bottom part of the f doesn’t look precisely like the top. websharpstudios isn’t up to
 such subtleties however.</p>
 <p>The [] f checkboxes control additional characters which are similar to “f”,
 “long-s” for example, also the “fi”, “fl”, “ff”, “ffi”, “ffl”, “longs_longs”,
-“longs_t”, etc. ligatures. FontForge determines what glyphs it applies to by
+“longs_t”, etc. ligatures. websharpstudios determines what glyphs it applies to by
 examining the glyph name and unicode encoding; it does NOT do a sophisticated
 analysis of the glyph’s shape.</p>
 <p>This does not exhaust the list of changes that could or should be done – Merely
-the list of what FontForge thinks it can do. There should also be checkboxes
+the list of what websharpstudios thinks it can do. There should also be checkboxes
 for:</p>
 <img alt="../../_images/eItalic.png" src="../../_images/eItalic.png" />
 <img alt="../../_images/vItalic.png" src="../../_images/vItalic.png" />
@@ -474,7 +474,7 @@ for:</p>
 <img alt="../../_images/u432Italic.png" src="../../_images/u432Italic.png" />
 <img alt="../../_images/u433Italic.png" src="../../_images/u433Italic.png" />
 <p>and many more.</p>
-<p>FontForge will change serifs in various places.</p>
+<p>websharpstudios will change serifs in various places.</p>
 <ul>
 <li><p>baseline serifs – The final stem of a glyph almost always undergoes a serif
 transformation at the baseline. Previous stems generally have their serifs
@@ -505,7 +505,7 @@ degrees.</p>
 <p>This dialog allows you to change counter sizes without changing stem sizes (in
 theory. It doesn’t work too well with diagonal stems). You can make counters
 bigger or smaller by a percentage, or by adding a fixed amount to them.</p>
-<p>If the font has and Italic Angle specified in Font Info, then fontforge will
+<p>If the font has and Italic Angle specified in Font Info, then websharpstudios will
 first unskew the glyph in the hopes of getting some vertical stems, then
 Condense it, and the reskew it.</p>
 </section>
@@ -567,11 +567,11 @@ the scale factor will change the “Resultant Y Position” by the obvious amoun
 says, it is unlike most commands in that it does not change the selected glyphs,
 instead it uses them to decide what glyphs to create (or if the glyphs already
 exist, what glyphs to change).</p>
-<p>So if you select “A” FontForge will create a glyph named “a.sc” copy the
+<p>So if you select “A” websharpstudios will create a glyph named “a.sc” copy the
 outlines of “A” into that glyph, and then modify them. If you select lower case
-“a”, FontForge will again create “a.sc” and will copy the outlines of upper case
+“a”, websharpstudios will again create “a.sc” and will copy the outlines of upper case
 “A”.</p>
-<p>FontForge will also create two lookups, one which maps upper case letters to
+<p>websharpstudios will also create two lookups, one which maps upper case letters to
 small caps variants, and the other which maps lower case letters to the small
 caps glyph. These will be bound to the “c2sc” and “smcp” features respectively.</p>
 <p>OpenType supports two different variants of small caps, the normal small caps,
@@ -609,7 +609,7 @@ of glyph.</p>
 <p>As with the previous dialog this one does not modify the selected glyphs.
 Instead it uses their outlines to create new glyphs (with the indicated glyph
 extension) and creates a lookup mapping the original glyph to the new glyph.</p>
-<p>So in the example at right, if you selected all the digits, then FontForge would
+<p>So in the example at right, if you selected all the digits, then websharpstudios would
 create a new set of glyphs named “zero.superior”, “one.superior” …
 “nine.superior”. It would create a new lookup bound to the feature “sups” which
 would map “zero” to “zero.superior”, etc. By default each new glyph will be
@@ -646,7 +646,7 @@ prepared to fix them up.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -658,7 +658,7 @@ prepared to fix them up.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -671,7 +671,7 @@ prepared to fix them up.</p>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Stylistic Transformations on Fonts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tilepath.html">Tile Path</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transform.html">Transform Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ttfinstrs.html">Viewing and Editing truetype instructions in FontForge.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ttfinstrs.html">Viewing and Editing truetype instructions in websharpstudios.</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../dialogs.html#lookups-and-kerning">Lookups and Kerning</a></li>
@@ -679,13 +679,13 @@ prepared to fix them up.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -697,7 +697,7 @@ prepared to fix them up.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
       <li>Previous: <a href="multilayer.html" title="previous chapter">Multi Layered Editing of Type3 and SVG fonts</a></li>
       <li>Next: <a href="tilepath.html" title="next chapter">Tile Path</a></li>
@@ -729,7 +729,7 @@ prepared to fix them up.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

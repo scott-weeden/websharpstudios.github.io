@@ -3,18 +3,18 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 06-Dec-2002 -->
   <!-- AP: Last modified: 23-Oct-2005 -->
-  <TITLE>Special issues for FontForge on Mac OS/X</TITLE>
+  <TITLE>Special issues for websharpstudios on Mac OS/X</TITLE>
   <LINK REL="icon" href="ffanvil16.png">
 </HEAD>
 >
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <H1 ALIGN=Center>
-  FontForge on Mac OS/X
+  websharpstudios on Mac OS/X
 </H1>
 <H2>
-  Building FontForge
+  Building websharpstudios
 </H2>
 <P>
 Before you do anything you must get a copy of the Mac Developer Tools. These
@@ -27,11 +27,11 @@ Then you must install X11. Again it ships with new macs, again it must be
 explicitly installed. You need to install two X packages. The first is X11User
 on the third install CD, the second is X11SDK on the XCode CD.
 <P>
-It is possible to build FontForge without X11. There will be no user interface,
+It is possible to build websharpstudios without X11. There will be no user interface,
 but you can run scripts.
 <P>
 Thirdly you may choose to install some image libraries (I recommend at least
-installing libpng). Currently FontForge only tries to link statically with
+installing libpng). Currently websharpstudios only tries to link statically with
 these libraries.
 <UL>
   <LI>
@@ -46,12 +46,12 @@ these libraries.
     complete list)
 </UL>
 <P>
-Finally you are ready to build fontforge. Download the most recent sources
+Finally you are ready to build websharpstudios. Download the most recent sources
 <A HREF="index.html#source">from this site.</A> then:
 <BLOCKQUOTE>
-  <PRE>$ gunzip fontforge_full-*.tgz
-$ tar xf fontforge_full-*.tar
-$ cd fontforge
+  <PRE>$ gunzip websharpstudios_full-*.tgz
+$ tar xf websharpstudios_full-*.tar
+$ cd websharpstudios
 $ configure
 $ make
 $ sudo make install
@@ -61,12 +61,12 @@ $ sudo make install
   Installing the Mac OS/X <A NAME="binary">binary</A> distribution
 </H2>
 <P>
-Before installing FontForge you should ensure that you have X windows up
+Before installing websharpstudios you should ensure that you have X windows up
 and running. Apple now ships this with new Macs, but it is optional software
 (CD 3) and you must explicitly request it by customizing your install. You
 can also get this <A HREF="http://www.apple.com/macosx/x11/download/">from
 apple</A>, or from <A HREF="http://www.osxgnu.org/">the GNU Mac OS/X site</A>.
-(Or you can build fontforge without X, and end up with no user interface
+(Or you can build websharpstudios without X, and end up with no user interface
 but the ability to run scripts).
 <P>
 After that you should just be able to unpack the packages provided in the
@@ -83,13 +83,13 @@ MANPATH=/usr/local/share/man:$MANPATH ; export MANPATH
 </BLOCKQUOTE>
 <P>
 See the <A HREF="index.html#Dependencies">dependencies</A> section for external
-libraries/programs you may want to add to your system to enhance FontForge's
+libraries/programs you may want to add to your system to enhance websharpstudios's
 capabilities.
 <H2>
-  <A NAME="Running">Running</A> FontForge on Mac OS/X
+  <A NAME="Running">Running</A> websharpstudios on Mac OS/X
 </H2>
 <P>
-The X server X11 (or XDarwin in older releases) must be running before FontForge
+The X server X11 (or XDarwin in older releases) must be running before websharpstudios
 can start. X11 lives in the Utilities sub-folder of the Applications folder
 and may be started by double clicking on it.
 <P>
@@ -97,12 +97,12 @@ The first time you start X11, go to the applications menu and select "Customize
 Menu..."<BR>
 then press the (Add) button in the dialog which appears<BR>
 double click in the left-most section of the blank line which just appeared
-and then type "FontForge"<BR>
-press the tab key and type "/usr/local/bin/fontforge"<BR>
+and then type "websharpstudios"<BR>
+press the tab key and type "/usr/local/bin/websharpstudios"<BR>
 press the tab key again and type "f"<BR>
 then press (Done)
 <P>
-You may start FontForge by selecting FontForge from the X11 Applications
+You may start websharpstudios by selecting websharpstudios from the X11 Applications
 menu.
 <P>
 <H2>
@@ -110,7 +110,7 @@ menu.
 </H2>
 <OL>
   <LI>
-    FontForge does not conform to Apple's Human Interface Guidelines
+    websharpstudios does not conform to Apple's Human Interface Guidelines
 </OL>
 <P>
 <A HREF="http://www.hexley.com/"><IMG SRC="/assets/img/old/hexley.png" WIDTH="113" HEIGHT="127"></A><BR>

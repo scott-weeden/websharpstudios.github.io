@@ -7,7 +7,7 @@
 <!--<TITLE>Char Info</TITLE>-->
     <TITLE>グリフ情報</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -57,10 +57,10 @@
   <P>
 <!--
   <A NAME="Unicode">This dialog </A>allows you to set the name and unicode
-  encoding of a given glyph. If you know the name of the glyph then FontForge
+  encoding of a given glyph. If you know the name of the glyph then websharpstudios
   can tell you the encoding (if you press Set From Name), similarly if you
-  know the encoding then FontForge can tell you the name. -->
-  <A NAME="Unicode">このダイアログ</A>では、既存のグリフの名前とUnicodeの符号位置を設定できます。グリフ名が決まっている場合、(<CODE>[名前で指定(<U>A</U>)]</CODE> ボタンを押せば) FontForge に符号位置を決めさせることができます。同様に、エンコーディングが分かっていれば、FontForge に名前を決めさせることができます。
+  know the encoding then websharpstudios can tell you the name. -->
+  <A NAME="Unicode">このダイアログ</A>では、既存のグリフの名前とUnicodeの符号位置を設定できます。グリフ名が決まっている場合、(<CODE>[名前で指定(<U>A</U>)]</CODE> ボタンを押せば) websharpstudios に符号位置を決めさせることができます。同様に、エンコーディングが分かっていれば、websharpstudios に名前を決めさせることができます。
   <P>
 <!--
   The name field contains a pull down list with (possibly) several synonyms
@@ -69,10 +69,10 @@
   <P>
 <!--
   The Glyph class field is for the opentype 'GDEF' table. You can usually leave
-  it set to automatic. FontForge will then figure out the class, and whether
-  it should be output into GDEF. You can see what FontForge does in
+  it set to automatic. websharpstudios will then figure out the class, and whether
+  it should be output into GDEF. You can see what websharpstudios does in
   <A HREF="showatt.html">View-&gt;Show ATT</A>.<BR CLEAR=ALL> -->
-  <CODE>OTFグリフクラス(<U>G</U>)</CODE> フィールドは OpenType の&lsquo;GDEF&rsquo;テーブルのためのものです。通常は、自動設定のままにしておいてかまいません。その場合、FontForge はクラスを推測し、GDEF にそれを出力する必要があるかどうかを判断します。FontForge が何を行うかについては、<A HREF="showatt.html"><CODE>表示(<U>V</U>)</CODE>→<CODE>ATTを表示(<U>S</U>)</CODE></A>で調べることができます。<BR CLEAR=ALL>
+  <CODE>OTFグリフクラス(<U>G</U>)</CODE> フィールドは OpenType の&lsquo;GDEF&rsquo;テーブルのためのものです。通常は、自動設定のままにしておいてかまいません。その場合、websharpstudios はクラスを推測し、GDEF にそれを出力する必要があるかどうかを判断します。websharpstudios が何を行うかについては、<A HREF="showatt.html"><CODE>表示(<U>V</U>)</CODE>→<CODE>ATTを表示(<U>S</U>)</CODE></A>で調べることができます。<BR CLEAR=ALL>
   <P>
   <IMG src="../../_images/charinfo-comment.png" WIDTH="307" HEIGHT="359" ALIGN="Right"><!--You
   can assign an arbitrary (unicode) <A NAME="comment">comment</A> to the glyph.
@@ -125,10 +125,10 @@
   単純<A NAME="substitution">置換</A> (<CODE>[置換]</CODE>) は 1 個のグリフを他のグリフと置き換えます。ここではグリフ“one”に、&lsquo;sups&rsquo;(上つき文字) 機能が起動されたときに“onesuperior”になる置換が設定されています。
   <P>
 <!--
-  FontForge recognizes a special feature tag ' RQD' to indicate that this feature
+  websharpstudios recognizes a special feature tag ' RQD' to indicate that this feature
   is required for the given script/language. Such a feature will always be
   applied. -->
-  FontForge は、その機能があるスクリプト/言語で必須であることを示すための特別な機能タグ&lsquo; RQD&rsquo;を認識します。このような機能は常に適用されます。
+  websharpstudios は、その機能があるスクリプト/言語で必須であることを示すための特別な機能タグ&lsquo; RQD&rsquo;を認識します。このような機能は常に適用されます。
   <P>
 <!--
   You can generate a substitution most easily by dragging a glyph from the
@@ -148,14 +148,14 @@
   <BR Clear=Right>
   <P>
   <IMG src="../../_images/charinfo-lig.png" WIDTH="305" HEIGHT="400" ALIGN="Right"><!-- The
-  <A NAME="ligature">ligature</A> field allows you to tell FontForge that the
-  current glyph is a ligature composed of several other glyphs. FontForge will
+  <A NAME="ligature">ligature</A> field allows you to tell websharpstudios that the
+  current glyph is a ligature composed of several other glyphs. websharpstudios will
   often be able to fill this in with the right default value, but occasionally
   you may want to change it. The value should be a list of postscript glyph
   names separated by spaces. If a glyph may be viewed as two different ligatures
   then they may both be specified in different lines. For example "ffi" may
   be viewed as a ligature of "f" "f" and "i" or of "ff" and "i". -->
-  <CODE>[<A NAME="ligature">合字</A>]</CODE> フィールドでは、FontForge が現在のグリフがいくつかの他のグリフから合成されたグリフであることを FontForge に知らせることができます。FontForge はこのとき右側のデフォルトグリフを補完することがしばしばうまくできますが、時には変更してやる必要が生じます。この値は、空白で区切られた PostScript グリフ名のリストでなければなりません。あるグリフが 2 つの異なる合字であると見なされるときには、それらを両方とも、別々の行に指定しなければなりません。例えば“ffi”は“f”“f”および“i”の合字と見ることもできますし、“ff”と“i”の合字とも見なせます。
+  <CODE>[<A NAME="ligature">合字</A>]</CODE> フィールドでは、websharpstudios が現在のグリフがいくつかの他のグリフから合成されたグリフであることを websharpstudios に知らせることができます。websharpstudios はこのとき右側のデフォルトグリフを補完することがしばしばうまくできますが、時には変更してやる必要が生じます。この値は、空白で区切られた PostScript グリフ名のリストでなければなりません。あるグリフが 2 つの異なる合字であると見なされるときには、それらを両方とも、別々の行に指定しなければなりません。例えば“ffi”は“f”“f”および“i”の合字と見ることもできますし、“ff”と“i”の合字とも見なせます。
   <P>
 <!--
   In the example at right the "m" glyph is one of a set of flags stored in
@@ -190,13 +190,13 @@
   syllables, etc.) are built up out of other glyphs (at least according to
   unicode). This pane of the dlg shows the components that Unicode says make
   up the current glyph, if those components are in the font then you can use
-  FontForge's <KBD>Element-&gt;Build-&gt;Build Accented </KBD>or
+  websharpstudios's <KBD>Element-&gt;Build-&gt;Build Accented </KBD>or
   <KBD>Element-&gt;Build-&gt;Build Composite</KBD> commands to create the current
   glyph. The information displayed here is informative only, you may not change
   this field directly (it changes when you change the unicode value or glyph
   name associated with this glyph).<BR CLEAR=ALL>
   -->
-  いくつかの<A NAME="components">グリフ</A> (合字、アクセントつきグリフ、ハングル音節文字など) は他のグリフから構築されています (少なくとも Unicode に関して言えば)。ダイアログのこのタブでは、Unicode で現在のグリフを構成することとなる要素を表示します。それらの構成要素がフォントに含まれていれば、FontForge の <CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>アクセントつきグリフを構築(<U>B</U>)</CODE> コマンドか <CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>複合グリフを構築(<U>C</U>)</CODE> コマンド を使用して現在のグリフを作成することができます。ここで表示される情報は通知目的のためだけであり、このフィールドを直接変更することは許されていません (これは、そのグリフに割り当てられている Unicode 値またはグリフ名を変更したときに自動的に変更されます)。<BR CLEAR=ALL>
+  いくつかの<A NAME="components">グリフ</A> (合字、アクセントつきグリフ、ハングル音節文字など) は他のグリフから構築されています (少なくとも Unicode に関して言えば)。ダイアログのこのタブでは、Unicode で現在のグリフを構成することとなる要素を表示します。それらの構成要素がフォントに含まれていれば、websharpstudios の <CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>アクセントつきグリフを構築(<U>B</U>)</CODE> コマンドか <CODE>エレメント(<U>L</U>)</CODE>→<CODE>組み立て(<U>U</U>)</CODE>→<CODE>複合グリフを構築(<U>C</U>)</CODE> コマンド を使用して現在のグリフを作成することができます。ここで表示される情報は通知目的のためだけであり、このフィールドを直接変更することは許されていません (これは、そのグリフに割り当てられている Unicode 値またはグリフ名を変更したときに自動的に変更されます)。<BR CLEAR=ALL>
   <P>
 <!--
   The Next and Prev buttons allow you to move from one glyph to the next (if,
@@ -303,7 +303,7 @@
   また、単独のスクリプトに限定されれないグリフがいくつか存在します。同じ数字がラテン・キリル・ギリシャ・ヘブライ (ときにはアラビアも) およびその他多数の書字システムで使用されるため、すべての数字合字 (分数など) はすべての書字システムで利用可能にしておくべきです。
   <P>
 <!--
-  The script names used by FontForge are those specified by
+  The script names used by websharpstudios are those specified by
   <A HREF="http://partners.adobe.com/public/developer/opentype/index_tag1.html">Microsoft
   and Adobe for opentype</A>. These are almost compatible with
   <A HREF="http://www.evertype.com/standards/iso15924/document/dis15924.pdf">ISO
@@ -314,7 +314,7 @@
   lower case (I have not used everything from ISO 15924 because it contains
   script variants for things which I consider to be one script (eg. fraktur
   has a separate script tag, but I consider it to be latin). -->
-  FontForgeが使用する用字系の名称は、<A HREF="http://partners.adobe.com/public/developer/opentype/index_tag1.html">Microsoft と Adobe が OpenType のために</a>規定したものです。これらは <A HREF="http://www.evertype.com/standards/iso15924/document/dis15924.pdf">ISO 15924</A> とほとんど互換ですが、OpenType では用字系の名前はすべて小文字になっている (それに対し、ISO 15924 では先頭文字はすべて大文字です) ことと、短い用字系の名前 (例えば“Lao”) が&lsquo;Laoo&rsquo;ではなく&lsquo;lao &rsquo;になっていることです。私は、ISO 15924 で規定された名前を小文字に変換することにより、OpenType の用字系セットを大幅に拡張しました。(ISO 15924 には私から見て 1 個のスクリプトの変種としか思われないものを含んでいるため、すべてを取り込んだわけではありません (例えば、フラクトゥールは独立した用字系タグをもっていますが、私はラテン文字にすぎないと思います))。
+  websharpstudiosが使用する用字系の名称は、<A HREF="http://partners.adobe.com/public/developer/opentype/index_tag1.html">Microsoft と Adobe が OpenType のために</a>規定したものです。これらは <A HREF="http://www.evertype.com/standards/iso15924/document/dis15924.pdf">ISO 15924</A> とほとんど互換ですが、OpenType では用字系の名前はすべて小文字になっている (それに対し、ISO 15924 では先頭文字はすべて大文字です) ことと、短い用字系の名前 (例えば“Lao”) が&lsquo;Laoo&rsquo;ではなく&lsquo;lao &rsquo;になっていることです。私は、ISO 15924 で規定された名前を小文字に変換することにより、OpenType の用字系セットを大幅に拡張しました。(ISO 15924 には私から見て 1 個のスクリプトの変種としか思われないものを含んでいるため、すべてを取り込んだわけではありません (例えば、フラクトゥールは独立した用字系タグをもっていますが、私はラテン文字にすぎないと思います))。
   <H3>
 <!--  <A NAME="ScriptLang">The Script Language Dialog</A>-->
       <A NAME="ScriptLang">用字系・言語ダイアログ</A>
@@ -327,7 +327,7 @@
   このダイアログは、現在のフォントで使用されているすべての用字系と言語の組合せを表示します。ボタンを押して、新しい組合せを追加したり既存の組合せを変更したりすることができます。
   <P>
 <!--
-  If you want to specify a script or language that FontForge doesn't know about,
+  If you want to specify a script or language that websharpstudios doesn't know about,
   then hold the control key down when pressing the [New...] or [Edit] buttons
   and you will get an unparsed dlg which will allow you to enter whatever you
   like (OpenType does not give a tag for the default language (it is has a
@@ -335,13 +335,13 @@
   consistency I have assigned it the tag of 'dflt'. No 'dflt' tags will appear
   in the output font, instead they will be converted to the appropriate
   representation for the default language). -->
-  FontForge が知らない用字系または言語を指定したい場合は、<CODE>[新規(<U>N</U>)...]</CODE> または <CODE>[編集(<U>E</U>)]</CODE> ボタンを押す前に Control キーを押下してください。何でも自由に入力できる解析されないダイアログが表れます。(OpenType にはデフォルト言語を表すタグはありません (それはタグには関係ない特別なデータ表現をもっています) が、一貫性を保つために、タグ&lsquo;dflt&rsquo;が割り当てられています。&lsquo;dflt&rsquo;タグは出力フォントには表れず、その代りにそれらはデフォルト言語の適切な表現に変換されます)。
+  websharpstudios が知らない用字系または言語を指定したい場合は、<CODE>[新規(<U>N</U>)...]</CODE> または <CODE>[編集(<U>E</U>)]</CODE> ボタンを押す前に Control キーを押下してください。何でも自由に入力できる解析されないダイアログが表れます。(OpenType にはデフォルト言語を表すタグはありません (それはタグには関係ない特別なデータ表現をもっています) が、一貫性を保つために、タグ&lsquo;dflt&rsquo;が割り当てられています。&lsquo;dflt&rsquo;タグは出力フォントには表れず、その代りにそれらはデフォルト言語の適切な表現に変換されます)。
   <P>
 <!--
-  The language names used by FontForge are those specified by
+  The language names used by websharpstudios are those specified by
   <A HREF="http://partners.adobe.com/public/developer/opentype/index_tag2.html">Microsoft
   and Adobe for opentype</A>.-->
-  FontForge で使用される言語名は、<A HREF="http://partners.adobe.com/public/developer/opentype/index_tag2.html">Microsoft と Adobe により OpenType のために</A>規定されたものです。
+  websharpstudios で使用される言語名は、<A HREF="http://partners.adobe.com/public/developer/opentype/index_tag2.html">Microsoft と Adobe により OpenType のために</A>規定されたものです。
   <P>
 <!--
   Note: In most cases the order of scripts in the list is irrelevant, but kerning

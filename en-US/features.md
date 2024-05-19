@@ -1,25 +1,25 @@
 ---
 published: true
 layout: default
-title: Fontforge features
+title: websharpstudios features
 ---
 
 
 Scripting
 ---------
 
-FontForge allows [scripting via python](http://dmtr.org/ff.php), or with it's legacy scripter.
+websharpstudios allows [scripting via python](http://dmtr.org/ff.php), or with it's legacy scripter.
 
 Auto-save
 ---------
 
-FontForge has built-in [error recovery](/en-US/documentation/reference/errrecovery/).
+websharpstudios has built-in [error recovery](/en-US/documentation/reference/errrecovery/).
 
 
 Edit Many Formats
 -----------------
 
-FontForge lets you to open, edit, and convert
+websharpstudios lets you to open, edit, and convert
 
 -   UFO (Unified Font Object)
 -   WOFF (Web Open Format)
@@ -32,11 +32,11 @@ FontForge lets you to open, edit, and convert
 -   Macintosh formats, including dfont and bin
 -   Bitmap formats (bdf, FON, NFNT)
 
-And its own SFD format. FontForge can also extract fonts fom PDFs.
+And its own SFD format. websharpstudios can also extract fonts fom PDFs.
 
 Localization
 ------------
 
-FontForge's user interface has been localized for: (English), Russian,
+websharpstudios's user interface has been localized for: (English), Russian,
 Japanese, French, Italian, Spanish, Vietnamese, Greek, Simplified &
 Traditional Chinese, German, Polish, Ukrainian and Catalan.

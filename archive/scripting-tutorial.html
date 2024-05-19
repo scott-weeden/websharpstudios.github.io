@@ -3,17 +3,17 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 21-Apr-2006 -->
   <!-- AP: Last modified: 31-Oct-2007 -->
-  <TITLE>FontForge Scripting Tutorial</TITLE>
+  <TITLE>websharpstudios Scripting Tutorial</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    FontForge Scripting Tutorial
+    websharpstudios Scripting Tutorial
   </H1>
   <P>
   <UL>
@@ -46,10 +46,10 @@
       <A HREF="scripting.html#Example">Examples elsewhere</A>
   </UL>
   <P>
-  Note: <EM>FontForge now provides python scripting. If you are familiar with
+  Note: <EM>websharpstudios now provides python scripting. If you are familiar with
   python that is probably a better choice. There is a lot of information available
   on <A HREF="http://www.python.org/doc/">python</A>, I shan't repeat it.
-  FontForge's own additions to python are documented
+  websharpstudios's own additions to python are documented
   <A HREF="python.html">here</A>.</EM>
   <P>
   I try to keep things at a fairly elementary level, but this is <EM>not</EM>
@@ -104,7 +104,7 @@
   But to be even more useful you should add a comment line to the beginning
   of the script (a comment line is one that starts with the '#' character:
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 Open($1)
 Generate($1:r + ".ttf")
 </PRE>
@@ -116,7 +116,7 @@ Generate($1:r + ".ttf")
 </PRE>
   </BLOCKQUOTE>
   <P>
-  This comment is not important to fontforge, but it is meaningful to the unix
+  This comment is not important to websharpstudios, but it is meaningful to the unix
   shell, as we will see in the next section.
   <H3>
     <A NAME="Invoking">Invoking a script and passing it arguments</A>
@@ -124,9 +124,9 @@ Generate($1:r + ".ttf")
   <P>
   Ok, now we've got basic script. How do we use it?
   <P>
-  Well we can pass it to FontForge directly by typing
+  Well we can pass it to websharpstudios directly by typing
   <BLOCKQUOTE id="shell">
-    <PRE>$ fontforge -script convert.pe foo.pfb
+    <PRE>$ websharpstudios -script convert.pe foo.pfb
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -136,7 +136,7 @@ Generate($1:r + ".ttf")
 </PRE>
   </BLOCKQUOTE>
   <P>
-  And the shell knows to call fontforge to process the script.
+  And the shell knows to call websharpstudios to process the script.
   <H3>
     <A NAME="loops">Using loops</A>
   </H3>
@@ -145,7 +145,7 @@ Generate($1:r + ".ttf")
   get tedious. So let's change our script so it will take lots of filenames
   which we can then process one at a time.
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 while ( i&lt;$argc )
   Open($argv[i])
@@ -189,7 +189,7 @@ endloop
   an opentype font as well as a type1 font to a truetype. Well let's make our
   script even more complex:
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 format=".ttf"
 while ( i&lt;$argc )
@@ -232,7 +232,7 @@ endloop
   </UL>
   <P>
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 format=".ttf"
 while ( i&lt;$argc )
@@ -261,7 +261,7 @@ endloop
   Now that will produce a valid postscript font from a truetype one if we want...
   But we can improve on that conversion:
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 format=".ttf"
 while ( i&lt;$argc )
@@ -306,11 +306,11 @@ endloop
   </H3>
   <P>
   Very few Type1 fonts have the full unicode range of accented characters.
-  With FontForge it is fairly easy to load a Type1 font, add as many possible
+  With websharpstudios it is fairly easy to load a Type1 font, add as many possible
   accented characters as the font permits (If the font does not contain ogonek,
   then FF won't be able to create Aogonek).
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 Open($1)
 <A HREF="scripting-alpha.html#Reencode">Reencode</A>("unicode")
 <A HREF="scripting-alpha.html#SelectWorthOutputting">SelectWorthOutputting</A>()
@@ -329,7 +329,7 @@ Generate($1:r + ".otf")
   all be stuffed into one otf font with appropriate GSUB entries linking the
   glyphs.
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 Open($1)
 <A HREF="scripting-alpha.html#MergeFonts">MergeFonts</A>($2)
 <A HREF="scripting-alpha.html#RenameGlyphs">RenameGlyphs</A>("AGL with PUA")

@@ -4,22 +4,22 @@
   <!-- AP: Created on: 19-Feb-2004 -->
   <!-- AP: Last modified: 13-Oct-2004 -->
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<!--<TITLE>Autotracing bitmaps in FontForge</TITLE>-->
-    <TITLE>FontForge でビットマップを自動トレースする方法</TITLE>
+<!--<TITLE>Autotracing bitmaps in websharpstudios</TITLE>-->
+    <TITLE>websharpstudios でビットマップを自動トレースする方法</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
 <H1 ALIGN=Center>
-<!--Autotracing bitmaps in FontForge-->
-    FontForge でビットマップを自動トレースする方法
+<!--Autotracing bitmaps in websharpstudios-->
+    websharpstudios でビットマップを自動トレースする方法
 </H1>
 <P>
 <!--
-FontForge does not have a native autotrace, but it will happily use the output
+websharpstudios does not have a native autotrace, but it will happily use the output
 of two freely available programs which do autotracing. These are: -->
-FontForge には自動トレース機能はありませんが、2 種類の無料で入手可能な自動トレースプログラムの出力を便利に使うことができます。その 2 種類は:
+websharpstudios には自動トレース機能はありませんが、2 種類の無料で入手可能な自動トレースプログラムの出力を便利に使うことができます。その 2 種類は:
 <UL>
   <LI>
 <!--Peter Selinger's <A HREF="http://potrace.sf.net/">potrace</A>-->
@@ -29,11 +29,11 @@ FontForge には自動トレース機能はありませんが、2 種類の無�
     program</A><BR> -->
     Martin Weber の <A HREF="http://sourceforge.net/projects/autotrace/">autotrace</a> プログラムです。<BR>
 <!--<FONT COLOR="Red"><STRONG>CAVEAT: </STRONG></FONT>Autotrace 2.8 changed its
-    argument conventions (around Dec 2001). New versions (after 15 Dec) of fontforge
-    will not work with autotrace2.7, old versions of fontforge will not work
-    with autotrace2.8. I see no way to make fontforge work with both or to detect
+    argument conventions (around Dec 2001). New versions (after 15 Dec) of websharpstudios
+    will not work with autotrace2.7, old versions of websharpstudios will not work
+    with autotrace2.8. I see no way to make websharpstudios work with both or to detect
     the current version...<BR> -->
-    <FONT COLOR="Red"><STRONG>警告: </STRONG></FONT>AutoTrace 2.8 はコマンドライン引数の用法を (2001年12月頃に) 変更しました。FontForge の新しいバージョン (2001年12月15日以降) は autotrace 2.7 では動作せず、FontForge の古いバージョンは autotrace 2.8 では動きません。FontForge がどちらでも動作するようにする方法も、現在のバージョンを検出する方法も見つかりませんでした……<BR>
+    <FONT COLOR="Red"><STRONG>警告: </STRONG></FONT>AutoTrace 2.8 はコマンドライン引数の用法を (2001年12月頃に) 変更しました。websharpstudios の新しいバージョン (2001年12月15日以降) は autotrace 2.7 では動作せず、websharpstudios の古いバージョンは autotrace 2.8 では動きません。websharpstudios がどちらでも動作するようにする方法も、現在のバージョンを検出する方法も見つかりませんでした……<BR>
 <!--<FONT COLOR="Red"><STRONG>CAVEAT2: </STRONG></FONT>I may not be loading the
     results of autotrace properly in all cases (I do in my test cases, of course).
     AutoTrace traces out both foreground and background regions, so I may sometimes
@@ -87,8 +87,8 @@ you want to autotrace. There are several ways of doing this: -->
   <DD>
 <!--If you have an application that supports sending image selections by mime
     type (kde does this), then you should be able to copy the image in that
-    application and paste it into the appropriate glyph window in FontForge -->
-    選択された画像を MIME タイプを指定して送信する処理 (KDE はこれを行います) をサポートしているアプリケーションがあれば、そのアプリケーションで画像をコピーして、FontForge の適切なグリフウィンドウに貼りつけることができます。
+    application and paste it into the appropriate glyph window in websharpstudios -->
+    選択された画像を MIME タイプを指定して送信する処理 (KDE はこれを行います) をサポートしているアプリケーションがあれば、そのアプリケーションで画像をコピーして、websharpstudios の適切なグリフウィンドウに貼りつけることができます。
   <DT>
 <!--From an image file-->
     画像ファイルから
@@ -107,8 +107,8 @@ you want to autotrace. There are several ways of doing this: -->
 <!--	File-&gt;Import -->
 	<CODE>ファイル(<U>F</U>)</CODE>→<CODE>取り込み(<U>I</U>)...</CODE>
       <LI>
-<!--	select Format=Image (this will show you any image format that fontforge supports) -->
-	<CODE>フォーマット</CODE> として <CODE>画像</CODE> を選択する (FontForge がサポートする全ての画像フォーマットが表示されます)。
+<!--	select Format=Image (this will show you any image format that websharpstudios supports) -->
+	<CODE>フォーマット</CODE> として <CODE>画像</CODE> を選択する (websharpstudios がサポートする全ての画像フォーマットが表示されます)。
       <LI>
 <!--	Select your file -->
 	ファイルを選択する
@@ -172,11 +172,11 @@ image. Autotrace programs work better the more resolution you give them. -->
 <!--
 If you hold down the shift key when you invoke AutoTrace from the menu then
 you will be prompted for arguments to pass to it, if you do not hold down
-the shift key FontForge will use the same arguments it used last time.
+the shift key websharpstudios will use the same arguments it used last time.
 AutoTrace's arguments are described in "$ autotrace -help" or in the README
 file that came with the program. Please do not specify input/output files
-or formats. FontForge fills these in. -->
-Shift キーを押しながら、メニューから <CODE>自動トレース(<U>R</U>)</CODE> を選ぶとプログラムに与える引数を入力するように促されます。Shift キーを押していないと、FontForge は全開し要したのと同じ引数を使用します。AutoTrace の引数は“$ <CODE>autotrace -help</CODE>”で見ることができますし、プログラムに添付されている README ファイルにも書かれています。入出力ファイルやフォーマットを指定しないでください。それらは FontForge が割り当てます。
+or formats. websharpstudios fills these in. -->
+Shift キーを押しながら、メニューから <CODE>自動トレース(<U>R</U>)</CODE> を選ぶとプログラムに与える引数を入力するように促されます。Shift キーを押していないと、websharpstudios は全開し要したのと同じ引数を使用します。AutoTrace の引数は“$ <CODE>autotrace -help</CODE>”で見ることができますし、プログラムに添付されている README ファイルにも書かれています。入出力ファイルやフォーマットを指定しないでください。それらは websharpstudios が割り当てます。
 <P>
 <P>
 <P ALIGN=Center>

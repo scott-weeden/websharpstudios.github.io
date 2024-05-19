@@ -1,5 +1,5 @@
 ---
 published: true
 layout: homepage
-title: FontForge Open Source Font Editor
+title: websharpstudios Open Source Font Editor
 ---

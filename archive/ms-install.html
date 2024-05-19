@@ -3,23 +3,23 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 26-Oct-2005 -->
   <!-- AP: Last modified: 14-Sep-2009 -->
-  <TITLE>FontForge install procedures for cygwin (MS/Windows)</TITLE>
+  <TITLE>websharpstudios install procedures for cygwin (MS/Windows)</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    FontForge install procedures<BR>
+    websharpstudios install procedures<BR>
     <SMALL>for cygwin under MS Windows</SMALL>
   </H1>
   <P>
   <STRONG><FONT color="red">I no longer provide pre-built packages. You may
   either compile from source or download a package from another site (cygwin
-  has a fontforge package).</FONT></STRONG>
+  has a websharpstudios package).</FONT></STRONG>
   <UL>
     <!--
     <LI>
@@ -51,7 +51,7 @@
     <LI>
       <A HREF="source-build.html#Documentation">Installing documentation</A>
     <LI>
-      <A HREF="running.html#cygwin">Running FontForge</A>
+      <A HREF="running.html#cygwin">Running websharpstudios</A>
     <LI>
       <A HREF="running.html#cygwin-troubles">Troubleshooting</A>
     <LI>
@@ -66,8 +66,8 @@
   <P>
   You must insure that you have <A HREF="http://www.cygwin.com/">cygwin</A>
   installed on your system. Cygwin is free. (cygwin makes MS Windows look enough
-  like unix to allow fontforge to run there). Getting all the bits of cygwin
-  seems to be the hardest part of installing fontforge -- probably because
+  like unix to allow websharpstudios to run there). Getting all the bits of cygwin
+  seems to be the hardest part of installing websharpstudios -- probably because
   it is the least expected part.
   <UL>
     <LI>
@@ -91,15 +91,15 @@
   <P>
   There are now alternatives to cygwin.
   <P>
-  Someone has ported fontforge to mingw, which is much simpler to download
+  Someone has ported websharpstudios to mingw, which is much simpler to download
   than cygwin:
   <UL>
     <LI>
-      <A HREF="http://www.geocities.jp/meir000/fontforge/">fontforge-mingw</A>
+      <A HREF="http://www.geocities.jp/meir000/websharpstudios/">websharpstudios-mingw</A>
   </UL>
   <P>
   Instead of downloading cygwin you can install one of the virtual machines
-  (or something similar) which run linux, and then install fontforge from a
+  (or something similar) which run linux, and then install websharpstudios from a
   linux package.
   <UL>
     <LI>
@@ -110,15 +110,15 @@
   </H3>
   <P>
   I used post a cygwin install package on
-  <A HREF="http://sourceforge.net/projects/fontforge/files/fontforge-executables/">sourceforge's
+  <A HREF="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-executables/">sourceforge's
   file release system</A>. <STRONG>Old versions are still there, but they are
   out of date now.</STRONG> There's a certain amount of pother involved in
   using the file release system, but you get the file eventually.
   <UL>
     <LI>
       If you follow the
-      <A HREF="http://sourceforge.net/projects/fontforge/files/fontforge-executables/">link
-      above </A>you will end up on a page showing many releases of FontForge for
+      <A HREF="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-executables/">link
+      above </A>you will end up on a page showing many releases of websharpstudios for
       many systems<BR>
       in most cases you will want the most recent release.
     <LI>
@@ -126,7 +126,7 @@
       <UL>
 	<LI>
 	  The cygwin release will be called something like
-	  "fontforge_cygwin-200xxxxx.tar.bz2
+	  "websharpstudios_cygwin-200xxxxx.tar.bz2
       </UL>
     <LI>
       Then you have the joy of choosing a mirror site (pick one that's on the same
@@ -152,14 +152,14 @@
     <LI>
       Now type (do not type the "$"):
       <BLOCKQUOTE>
-	<PRE><FONT COLOR="Gray">$ </FONT>bunzip2 fontforge_cygwin-*.tar.bz2
-<FONT COLOR="Gray">$ </FONT>tar xf fontforge_cygwin-*.tar
-<FONT COLOR="Gray">$ </FONT>cd fontforge
+	<PRE><FONT COLOR="Gray">$ </FONT>bunzip2 websharpstudios_cygwin-*.tar.bz2
+<FONT COLOR="Gray">$ </FONT>tar xf websharpstudios_cygwin-*.tar
+<FONT COLOR="Gray">$ </FONT>cd websharpstudios
 <FONT COLOR="Gray">$ </FONT>./doinstall
 </PRE>
       </BLOCKQUOTE>
     <LI>
-      Then each time you want to run fontforge, start X11
+      Then each time you want to run websharpstudios, start X11
       <UL>
 	<LI>
 	  On recent cygwin systems you may start X by invoking:
@@ -189,9 +189,9 @@
 </PRE>
 	  </BLOCKQUOTE>
 	<LI>
-	  And then you should be able start FontForge.
+	  And then you should be able start websharpstudios.
 	  <BLOCKQUOTE>
-	    <PRE><FONT COLOR="Gray">$ </FONT>fontforge -new
+	    <PRE><FONT COLOR="Gray">$ </FONT>websharpstudios -new
 </PRE>
 	  </BLOCKQUOTE>
       </UL>
@@ -211,10 +211,10 @@
       "<CODE>C:\cygwin\home\&lt;username&gt;\myfont.ttf</CODE>"
       <P>
       <STRONG><FONT COLOR="Red">Caveat</FONT>:</STRONG> Do <STRONG>NOT</STRONG>
-      try to install a font by using fontforge to write the font directly to the
+      try to install a font by using websharpstudios to write the font directly to the
       Windows\Fonts directory. This doesn't work. Windows needs to do some magic
-      when installing a font that it can't do if fontforge writes directly there.
-      Instead have fontforge create the font somewhere else and then use Windows'
+      when installing a font that it can't do if websharpstudios writes directly there.
+      Instead have websharpstudios create the font somewhere else and then use Windows'
       own drag &amp; drop technique to move the font from there into Windows\Fonts.
       <P>
       <STRONG><FONT COLOR="Red">Caveat</FONT>:</STRONG> I've been told that on
@@ -232,7 +232,7 @@
 	<LI>
 	  <A HREF="source-build.html#Documentation">Installing documentation</A>
 	<LI>
-	  <A HREF="running.html#cygwin">Running FontForge</A>
+	  <A HREF="running.html#cygwin">Running websharpstudios</A>
 	<LI>
 	  <A HREF="running.html#cygwin-troubles">Troubleshooting</A>
       </UL>

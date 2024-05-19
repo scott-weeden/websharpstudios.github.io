@@ -1,8 +1,8 @@
-[fontforge.github.io](http://fontforge.github.io)
+[websharpstudios.github.io](http://websharpstudios.github.io)
 ====================
 
-This is the FontForge website repository. To contribute, please create issues, 
-join the fontforge-devel list to discuss general topics, or simply make 
+This is the websharpstudios website repository. To contribute, please create issues, 
+join the websharpstudios-devel list to discuss general topics, or simply make 
 Pull Requests. Please don’t hesitate to ask for direct commit access. You 
 can then use GitHub to edit pages directly, like a wiki.
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Finding common font problems automagically &#8212; FontForge 20230101 documentation</title>
+    <title>Finding common font problems automagically &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -40,7 +40,7 @@
 <p>When you draw your glyphs you are likely to make some minor errors, like having
 stems with slightly different widths in different glyphs, or having lines which
 aren’t quite vertical or…</p>
-<p>FontForge’s Find Problems command can help track down some common errors. In
+<p>websharpstudios’s Find Problems command can help track down some common errors. In
 some cases it will be able to fix things for you, but it won’t do so without
 your permission (who knows, some of the so-called “problems” might actually be
 what you wanted), but it will point things out to you that you should look at.</p>
@@ -49,7 +49,7 @@ view. In the font view it will examine all selected glyphs for errors, and if it
 finds anything open a window looking at the glyph and post a (non-modal) dialog
 saying what the error is. You may then correct the problem and press the [Next]
 button in the dialog when you are done, or you may stop the command with the
-[Stop] button. Some errors FontForge will be able to fix automagically, and if
+[Stop] button. Some errors websharpstudios will be able to fix automagically, and if
 so there will be a [Fix] button in this dlg.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -59,7 +59,7 @@ the [Fix] button</p>
 </div>
 <p>Behavior in the outline and metrics views is similar, except that only one glyph
 is searched for problems.</p>
-<p>FontForge will be able to check for more problems if you:</p>
+<p>websharpstudios will be able to check for more problems if you:</p>
 <ul class="simple">
 <li><p>AutoHint the font first</p></li>
 <li><p>Bring up the <a class="reference internal" href="fontinfo.html#fontinfo-private"><span class="std std-ref">Element-&gt;Font Info-&gt;Private</span></a> sub-dialog,
@@ -69,16 +69,16 @@ each of them</p></li>
 <p>Note: Some of these problems are geared specifically to the problems of
 Latin/Greek/Cyrillic fonts. I would be happy to hear of ways to extend these to
 other script systems, or of problems that are specific to other script systems
-(<a class="reference external" href="mailto:fontforge-users&#37;&#52;&#48;lists&#46;sourceforge&#46;net">fontforge-users<span>&#64;</span>lists<span>&#46;</span>sourceforge<span>&#46;</span>net</a>
+(<a class="reference external" href="mailto:websharpstudios-users&#37;&#52;&#48;lists&#46;sourceforge&#46;net">websharpstudios-users<span>&#64;</span>lists<span>&#46;</span>sourceforge<span>&#46;</span>net</a>
 this is a public mailing list).</p>
 <img alt="../../_images/findprobs.png" class="align-right" src="../../_images/findprobs.png" />
-<p>FontForge can detect the following potential problems:</p>
+<p>websharpstudios can detect the following potential problems:</p>
 <section id="non-integral-coordinates">
 <h2>Non-Integral Coordinates<a class="headerlink" href="#non-integral-coordinates" title="Permalink to this heading">¶</a></h2>
 <p>In TrueType fonts all coordinates must be on integral coordinates. When
-FontForge generates your font it will round any non-integral coordinates –
+websharpstudios generates your font it will round any non-integral coordinates –
 sometimes this is fine, but it can also introduce small uglinesses into your
-font that you won’t be aware of in fontforge. (Implied points are allowed to
+font that you won’t be aware of in websharpstudios. (Implied points are allowed to
 have half-integral values (2.5 is ok, 2.25 is not)).</p>
 <p>PostScript fonts can have non-integral coordinates, but it will make the font
 bulkier, so even there it may be better to use integer values.</p>
@@ -88,10 +88,10 @@ bulkier, so even there it may be better to use integer values.</p>
 <p>Often there will be a set of features which should be consistent across the
 entire file. For example the left side-bearing of the glyphs “BDEFHIKLMNPR”
 should perhaps all be the same. This will let you enter in the desired
-side-bearing value, and then FontForge will find all glyphs with points that are
+side-bearing value, and then websharpstudios will find all glyphs with points that are
 near, but not exactly on the desired value. Where “near” is defined at the
 bottom of the dialog (in this case, everything within 3 em-units – in either
-direction – will be near). If it finds an errant point, FontForge will select
+direction – will be near). If it finds an errant point, websharpstudios will select
 it, stop and let you fix it.</p>
 </section>
 <section id="y-near-val">
@@ -103,16 +103,16 @@ check…</p>
 <section id="y-near-standard-heights">
 <h2>Y near standard heights<a class="headerlink" href="#y-near-standard-heights" title="Permalink to this heading">¶</a></h2>
 <p>In Latin, Greek and Cyrillic alphabets there are certain standard heights that
-FontForge expects to find: the baseline, the height of lower case letters, the
+websharpstudios expects to find: the baseline, the height of lower case letters, the
 height of capital letters, the height of lower case letters with ascenders
 (often the same as, or very close to, the capital height), and the depth of
-lower case letters with descenders. For this command FontForge defines these
+lower case letters with descenders. For this command websharpstudios defines these
 heights to be 0, the height of “x”, the height of “I”, the height of “l” and the
 depth of “p” (If you are working on a Greek or Cyrillic font and don’t include
-the Latin alphabet, FontForge will pick similar letters from your alphabet).
-Then FontForge will search for any points which are “near”, but not on, these
+the Latin alphabet, websharpstudios will pick similar letters from your alphabet).
+Then websharpstudios will search for any points which are “near”, but not on, these
 heights. Again where “near” is defined at the bottom of the dialog. If it finds
-such a point, FontForge will select it, stop and let you fix things.</p>
+such a point, websharpstudios will select it, stop and let you fix things.</p>
 </section>
 <section id="control-points-near-horizontal-vertical-italic">
 <h2>Control points near horizontal/vertical/italic<a class="headerlink" href="#control-points-near-horizontal-vertical-italic" title="Permalink to this heading">¶</a></h2>
@@ -140,10 +140,10 @@ spline controlled by this control point.</p>
 </section>
 <section id="points-too-close">
 <h2>Points Too Close<a class="headerlink" href="#points-too-close" title="Permalink to this heading">¶</a></h2>
-<p>Some of FontForge’s own commands get confused by tiny splines, on the order of
+<p>Some of websharpstudios’s own commands get confused by tiny splines, on the order of
 one unit or less, and anyway if you have several points very close together it
 is unlikely that they will make a detectable difference when the font is
-printed. Probably you should remove one of them… If FontForge detects two
+printed. Probably you should remove one of them… If websharpstudios detects two
 points on the same path which it deems to be too close it will select both, stop
 and let you fix things.</p>
 </section>
@@ -152,7 +152,7 @@ and let you fix things.</p>
 <p>Most font formats use 16 bit integers to describe the distance from one point
 (or control point) to the next. This means that each point must be within 32767
 em-units of the next point. If it is further away then it cannot be represented
-in a generated font. If FontForge detects two points too far from each other it
+in a generated font. If websharpstudios detects two points too far from each other it
 will select both (a special case – the first point in a glyph must be within
 32767 of the origin, if it is further, only the first point will be selected),
 stop and let you fix things.</p>
@@ -163,7 +163,7 @@ stop and let you fix things.</p>
 <p>All of your paths should be closed, that is they shouldn’t have any end points
 the way a line segment does, but should connect back to their beginning. This is
 often caused by being a little careless with the last point on a path, and
-instead of joining it to the first, you just put it near the first. If FontForge
+instead of joining it to the first, you just put it near the first. If websharpstudios
 detects any open paths it will select the entire path, and stop to let you fix
 things up.</p>
 </section>
@@ -177,7 +177,7 @@ font.</p>
 <p>It is very easy to create a line which is almost, but not quite, vertical. This
 will check for that situation. And for horizontal, and (if your font has an
 italic angle) for lines which are almost but not quite parallel to the italic
-angle. If it finds one of these, FontForge will select the two end points, stop
+angle. If it finds one of these, websharpstudios will select the two end points, stop
 and let you fix things.</p>
 <p>For horizontal lines it will tell you the y coordinates of the two end-points,
 for vertical lines it will show you the x coordinates.</p>
@@ -188,7 +188,7 @@ for vertical lines it will show you the x coordinates.</p>
 fashion. This sometimes doesn’t matter, but many rasterizers do a better job if
 this rule is obeyed. This command will detect whether this constraint is
 violated.</p>
-<p><strong>FontForge cannot determine path direction properly if there are
+<p><strong>websharpstudios cannot determine path direction properly if there are
 self-intersecting paths.</strong> <a class="reference internal" href="#problems-intersecting"><span class="std std-ref">Do that test first.</span></a></p>
 <p>Currently the command will report the same error several times if you do not fix
 the problem. That’s sort of a bug, but I don’t see an easy way around it yet.</p>
@@ -206,7 +206,7 @@ actually have a much higher limit, so you may change the limit to suit your
 desires. I believe that control points are included in the count. Note that when
 checking a quadratic font (ie. a truetype font) there will be at most one
 control point between any two end points, but when that font gets converted to
-PostScript there will be two. FontForge currently counts this as one point).
+PostScript there will be two. websharpstudios currently counts this as one point).
 TrueType has no such limit.</p>
 </section>
 <section id="flipped-references">
@@ -223,11 +223,11 @@ drawn with a counter-clockwise path. To fix it you should
 <p>The TrueType glyph format allows almost arbetrary transformations to be applied
 to a reference. The one restriction is that all terms of the transformation
 matrix (except for the translation terms) must have a value between -2 and 2.</p>
-<p>If you have a reference with an unexpressable transformation matrix, fontforge
+<p>If you have a reference with an unexpressable transformation matrix, websharpstudios
 will expand the reference inline, so all the contours will be present they just
 won’t be in a reference.</p>
 <p>TrueType also requires that all references be translated by integral values. If
-you have a reference with a non-integral translation vector, FontForge will
+you have a reference with a non-integral translation vector, websharpstudios will
 round it to an integer when it generates the font (this does not cause the
 reference to be unlinked).</p>
 </section>
@@ -235,7 +235,7 @@ reference to be unlinked).</p>
 <h2>Mixed contours and references<a class="headerlink" href="#mixed-contours-and-references" title="Permalink to this heading">¶</a></h2>
 <p>In TrueType glyphs may be composed either of all references or all contours (a
 reference with an unexpressable transformation matrix counts as a contour).</p>
-<p>If you have a mixed glyph, fontforge will expand all references inline.</p>
+<p>If you have a mixed glyph, websharpstudios will expand all references inline.</p>
 </section>
 <section id="refs-with-bad-ps-transformation-matrices">
 <h2>Refs with bad ps transformation matrices<a class="headerlink" href="#refs-with-bad-ps-transformation-matrices" title="Permalink to this heading">¶</a></h2>
@@ -243,7 +243,7 @@ reference with an unexpressable transformation matrix counts as a contour).</p>
 scaling is permitted). Technically the Type2 format does not allow any
 references at all, but they can be simulated by using subroutines, which also
 cannot be rotated or scaled.</p>
-<p>If you have a reference with an unexpressable transformation matrix, fontforge
+<p>If you have a reference with an unexpressable transformation matrix, websharpstudios
 will expand the reference inline, so all the contours will be present they just
 won’t be in a reference.</p>
 </section>
@@ -252,7 +252,7 @@ won’t be in a reference.</p>
 <p>Appendix B of the the
 <a class="reference external" href="http://partners.adobe.com/asn/developer/pdfs/tn/5177.Type2.pdf">Type2</a> spec
 says that an interpreter is only required to support subroutine nesting up to 10
-levels. FontForge uses subroutine calls to handle referenced glyphs and
+levels. websharpstudios uses subroutine calls to handle referenced glyphs and
 sometimes also to handle hinting. Hinting will take up a maximum of 1 level of
 subroutine calls leaving 9 available for references. TrueType has no such limit.</p>
 </section>
@@ -273,11 +273,11 @@ think is) a bug in ghostview. Consider the following glyph</p>
 <img alt="../../_images/phi-nohints-filled.png" src="../../_images/phi-nohints-filled.png" />
 <img alt="../../_images/phi-hints-outline.png" src="../../_images/phi-hints-outline.png" />
 <img alt="../../_images/phi-hints-filled.png" src="../../_images/phi-hints-filled.png" />
-<p>The first two images show the glyph with no hints, first as seen in FontForge,
+<p>The first two images show the glyph with no hints, first as seen in websharpstudios,
 then as displayed by ghostview. The result looks good. If we add hints to the
 two curved stems then ghostview gets very confused. I don’t know enough about
 hints to know whether there should be hints there. But this command will detect
-this problem if in fact it is a problem. If FontForge finds this it will select
+this problem if in fact it is a problem. If websharpstudios finds this it will select
 the offending hint and allow you to fix things (probably the best fix is to add
 curved points at the extrema of all the curved splines, this is actually
 recommended by adobe anyway
@@ -290,14 +290,14 @@ section 4.1)).</p>
 cross bar, it is all too easy to make the top part of the stem a slightly
 different width than the bottom. (The hinting process figures out all the
 stems.) So this command, in essence, is looking for points which are slightly
-off from a stem. (again, near is defined at the bottom of the dlg). If FontForge
+off from a stem. (again, near is defined at the bottom of the dlg). If websharpstudios
 finds such a point it selects it, stops, and allows you to fix it up.</p>
 </section>
 <section id="hint-width-near-val">
 <h2>Hint width near [val]<a class="headerlink" href="#hint-width-near-val" title="Permalink to this heading">¶</a></h2>
 <p>Usually one wants many of the glyphs to have a constant stem width, and this
 command will check that all stems near the indicated value are that value (again
-near is defined at the bottom of the page). If FontForge finds a bad stem it
+near is defined at the bottom of the page). If websharpstudios finds a bad stem it
 will select it, stop and allow you to fix things.</p>
 </section>
 <section id="almost-stem3-hint">
@@ -305,7 +305,7 @@ will select it, stop and allow you to fix things.</p>
 <p>PostScript has a special hint operator (hstem3 and vstem3) which is designed to
 hint the stems of things like “m” where there are three stems of equal width and
 equally far apart. It is easy for a glyph not to fit the criteria for this
-operator (which means FontForge won’t use it). This will detect cases that are
+operator (which means websharpstudios won’t use it). This will detect cases that are
 close to right. I found that I needed to adjust the “Near” value to be bigger
 than the default.</p>
 </section>
@@ -357,7 +357,7 @@ there is no guarantee which will be used.)</p>
 <h2>Check Unicode/Name mismatch<a class="headerlink" href="#check-unicode-name-mismatch" title="Permalink to this heading">¶</a></h2>
 <p>Look for glyphs whose name indicates a unicode value different from the one
 attached to a glyph. So if a glyph were named “A” but had Unicode code point
-U+0020 (space) FontForge would complain about it.</p>
+U+0020 (space) websharpstudios would complain about it.</p>
 </section>
 <section id="glyph-bb-above">
 <h2>Glyph BB Above<a class="headerlink" href="#glyph-bb-above" title="Permalink to this heading">¶</a></h2>
@@ -444,7 +444,7 @@ they are within 3 em-units of the desired value and not equal to that value.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -456,7 +456,7 @@ they are within 3 em-units of the desired value and not equal to that value.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -472,13 +472,13 @@ they are within 3 em-units of the desired value and not equal to that value.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -490,7 +490,7 @@ they are within 3 em-units of the desired value and not equal to that value.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
       <li>Previous: <a href="showatt.html" title="previous chapter">Show Advanced Typographic Features</a></li>
       <li>Next: <a href="validation.html" title="next chapter">Font Validation window</a></li>
@@ -522,7 +522,7 @@ they are within 3 em-units of the desired value and not equal to that value.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

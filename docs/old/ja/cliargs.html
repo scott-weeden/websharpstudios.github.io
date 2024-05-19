@@ -7,7 +7,7 @@
 <!--<TITLE>Command Line Arguments</TITLE>-->
     <TITLE>コマンドライン引数</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -16,17 +16,17 @@
     コマンドライン引数
   </H1>
   <BLOCKQUOTE>
-  <PRE>$ fontforge [-options] [filenames]
-$ fontforge [-script] scriptfile [arguments]
-$ fontforge -c script-string [arguments]
+  <PRE>$ websharpstudios [-options] [filenames]
+$ websharpstudios [-script] scriptfile [arguments]
+$ websharpstudios -c script-string [arguments]
 </PRE>
   </BLOCKQUOTE>
   <P>
 <!--
   The filenames may specify any number of files in one of the font formats
-  that FontForge recognizes (various postscript formats, truetype, opentype,
+  that websharpstudios recognizes (various postscript formats, truetype, opentype,
   mac resource, bitmap, svg, etc.). -->
-  filenames には、FontForge が認識する任意のフォントフォーマット (各種の PostScript フォーマット、TrueType, OpenType, Mac リソース、ビットマップ, SVG 等) のファイルを任意の個数指定することができます。
+  filenames には、websharpstudios が認識する任意のフォントフォーマット (各種の PostScript フォーマット、TrueType, OpenType, Mac リソース、ビットマップ, SVG 等) のファイルを任意の個数指定することができます。
   <P>
 <!--
   Some files (.ttc or mac resource) may contain more than one outline font.
@@ -34,7 +34,7 @@ $ fontforge -c script-string [arguments]
   in parentheses, thus:<BR> -->
   いくつかのファイル (.ttc または Mac のリソース) は 1 個より多くのアウトラインフォントを含むことができます。どのフォントを読み込みたいかを、ファイル名の後に続けて、括弧でくくってフォント名を書くことによって指定することができます。例えば:
   <BLOCKQUOTE>
-  <PRE>$ fontforge "gulim.ttc(GulimChe)"
+  <PRE>$ websharpstudios "gulim.ttc(GulimChe)"
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -43,18 +43,18 @@ $ fontforge -c script-string [arguments]
   とするとフォントファイル <CODE>gulim.ttc</CODE> から GulimChe を読み出します。
   <P>
 <!--
-  FontForge recognizes the following options: -->
-  FontForge は以下のオプションを認識します:
+  websharpstudios recognizes the following options: -->
+  websharpstudios は以下のオプションを認識します:
   <DL>
     <DT>
       -c script-string
     <DD>
-<!--  If FontForge's first argument is "-c" then the argument that follows will
+<!--  If websharpstudios's first argument is "-c" then the argument that follows will
       be treated as a string containing scripting commands, and those commands
       will be executed. All remaining arguments will be passed to the script. -->
-      FontForge への最初の引数が“-c”である場合は、その次の引数はスクリプトのコマンドとして解釈され、続いてそのコマンドが実行されます。その後ろの引数はすべてそのスクリプトに渡されます。
+      websharpstudios への最初の引数が“-c”である場合は、その次の引数はスクリプトのコマンドとして解釈され、続いてそのコマンドが実行されます。その後ろの引数はすべてそのスクリプトに渡されます。
       <BLOCKQUOTE>
-	<PRE>$ fontforge -c 'Open($1); Generate($2)' foo.sfd foo.ttf
+	<PRE>$ websharpstudios -c 'Open($1); Generate($2)' foo.sfd foo.ttf
 </PRE>
       </BLOCKQUOTE>
       <P>
@@ -74,21 +74,21 @@ $ fontforge -c script-string [arguments]
     <DT>
       -depth val
     <DD>
-<!--  Specifies that FontForge should search for a visual with the given depth-->
-      FontForge に、指定された色深度をもつビジュアルを検索するように指定します。
+<!--  Specifies that websharpstudios should search for a visual with the given depth-->
+      websharpstudios に、指定された色深度をもつビジュアルを検索するように指定します。
     <DT>
       -display name
     <DD>
-<!--  Specifies the name of the display on which FontForge will open its windows-->
-      FontForge がウィンドウを開くディスプレイの名前を指定します。
+<!--  Specifies the name of the display on which websharpstudios will open its windows-->
+      websharpstudios がウィンドウを開くディスプレイの名前を指定します。
     <DT>
       -dontopenxdevices
     <DD>
-<!--  Various people have complained that when FontForge attempts to open the devices
+<!--  Various people have complained that when websharpstudios attempts to open the devices
       of the wacom graphics tablet, the X server gives a BadDevice error. I can't
       duplicate this, the open works fine on my system, but this argument allows
-      them to tell fontforge not to try to use the tablet. -->
-      多くの人々が、FontForge がワコムのグラフィクスタブレットのデバイスを開こうとする時に X サーバが BadDevice エラーを出すことについて不満を表明していました。私の環境ではデバイスは問題なく開くことができるので、この現象を再現することができていないのですが、この引数をつけることにより、FontForge がタブレットを使おうと試みないように指定することができます。
+      them to tell websharpstudios not to try to use the tablet. -->
+      多くの人々が、websharpstudios がワコムのグラフィクスタブレットのデバイスを開こうとする時に X サーバが BadDevice エラーを出すことについて不満を表明していました。私の環境ではデバイスは問題なく開くことができるので、この現象を再現することができていないのですが、この引数をつけることにより、websharpstudios がタブレットを使おうと試みないように指定することができます。
     <DT>
       -help
     <DD>
@@ -108,9 +108,9 @@ $ fontforge -c script-string [arguments]
       のいずれかを指定することができます。<BR>
 <!--  Allows you to specify the type of keyboard. Currently this is only relevent
       when generating menus. The modifier keys are in different locations on different
-      keyboards (under different operating systems) and if FontForge knows what
+      keyboards (under different operating systems) and if websharpstudios knows what
       keyboard you are using it can make the hot-keys have better labels. -->
-      キーボードのタイプを指定することができます。現在のところ、これはメニューを生成する時にしか意味を持ちません。修飾キーは異なるキーボード (異なる OS の制御下) では異なる位置にあり、FontForge がどのキーボードが使用されているかを知っていれば、ホットキーにより適切なラベルをつけることができます。
+      キーボードのタイプを指定することができます。現在のところ、これはメニューを生成する時にしか意味を持ちません。修飾キーは異なるキーボード (異なる OS の制御下) では異なる位置にあり、websharpstudios がどのキーボードが使用されているかを知っていれば、ホットキーにより適切なラベルをつけることができます。
       <UL>
 	<LI>
 	  ibm | 0<BR>
@@ -143,8 +143,8 @@ $ fontforge -c script-string [arguments]
     <DT>
       -nosplash
     <DD>
-<!--  FontForge will not display its splash screen on startup (for slow connections)-->
-      FontForge は起動時にスプラッシュスクリーンを表示しません (低速な接続向き)
+<!--  websharpstudios will not display its splash screen on startup (for slow connections)-->
+      websharpstudios は起動時にスプラッシュスクリーンを表示しません (低速な接続向き)
     <DT>
       -recover type
     <DD>
@@ -164,23 +164,23 @@ $ fontforge -c script-string [arguments]
 	<DT>
 	  auto
 	<DD>
-<!--	  recover any files which have been changed but which fontforge crashed on
+<!--	  recover any files which have been changed but which websharpstudios crashed on
 	  before saving. -->
-	  変更を加えたが、保存する前に FontForgeo がクラッシュしたすべてのファイルを復元します。
+	  変更を加えたが、保存する前に websharpstudioso がクラッシュしたすべてのファイルを復元します。
       </DL>
       のいずれかを指定することができます。
     <DT>
       -<A NAME="script">script</A> script-file
     <DD>
-<!--  If FontForge's first argument is "-script" then the argument that follows
+<!--  If websharpstudios's first argument is "-script" then the argument that follows
       will be treated as a <A HREF="scripting.html">script file</A> and all the
       remaining arguments will be passed as arguments to that file. (The "-script"
       argument may be omitted, and if the first argument is an executable file
-      which whose first line starts with "#!" and contains "fontforge". This means
-      that fontforge may be used as an interpreter. Ie. you can create a fontforge
-      script file and type its name to your shell and fontforge will be invoked
+      which whose first line starts with "#!" and contains "websharpstudios". This means
+      that websharpstudios may be used as an interpreter. Ie. you can create a websharpstudios
+      script file and type its name to your shell and websharpstudios will be invoked
       to process that file as a script file (passing any arguments to it)). -->
-      FontForge に与えた最初の引数が“-script”である場合、その次の引数は<A HREF="scripting.html">スクリプトファイル</A>として扱われ、残りの引数すべてはそのスクリプトに引数として渡されます。(“-script”引数は省略可能です。その場合、最初の引数が実行可能ファイルであり、そのファイルの最初の行が“#!”で始まり、“fontforge”を含んでいなければなりません。これは、FontForge はインタプリタとして使用することができることを意味します。すなわち、FontForge スクリプトファイルを作成し、その名前をシェルに渡すと FonForge がそのファイルをスクリプトファイルとして処理するように起動されます (すべての引数がそれに渡されます)。
+      websharpstudios に与えた最初の引数が“-script”である場合、その次の引数は<A HREF="scripting.html">スクリプトファイル</A>として扱われ、残りの引数すべてはそのスクリプトに引数として渡されます。(“-script”引数は省略可能です。その場合、最初の引数が実行可能ファイルであり、そのファイルの最初の行が“#!”で始まり、“websharpstudios”を含んでいなければなりません。これは、websharpstudios はインタプリタとして使用することができることを意味します。すなわち、websharpstudios スクリプトファイルを作成し、その名前をシェルに渡すと FonForge がそのファイルをスクリプトファイルとして処理するように起動されます (すべての引数がそれに渡されます)。
     <DT>
       -sync
     <DD>
@@ -199,10 +199,10 @@ $ fontforge -c script-string [arguments]
       ここで type には<BR>
       StaticGray GrayScale StaticColor PsuedoColor TrueColor DirectColor<BR>
       のいずれかを指定することができます。(これらの意味については X のマニュアルを参照してください)。<BR>
-<!--  (See the X manuals for a description of what these mean). FontForge will
+<!--  (See the X manuals for a description of what these mean). websharpstudios will
       search through the visuals in an attempt to find one with the desired VisualClass
       (given here) and depth (given with the -depth option). -->
-      FontForge は望ましいビジュアルクラス (これで指定します) と色深度 (-depth オプションで指定します) をもつものを探そうと試みて、ビジュアルを検索します。
+      websharpstudios は望ましいビジュアルクラス (これで指定します) と色深度 (-depth オプションで指定します) をもつものを探そうと試みて、ビジュアルを検索します。
   </DL>
   <H2>
 <!--<A NAME="Environment">Environment Variables</A>-->
@@ -210,8 +210,8 @@ $ fontforge -c script-string [arguments]
   </H2>
   <P>
 <!--
-  FontForge examines the following environment variables: -->
-  FontForge は以下の環境変数を調べます:
+  websharpstudios examines the following environment variables: -->
+  websharpstudios は以下の環境変数を調べます:
   <DL>
     <DT>
       <CODE><A NAME="BROWSER">BROWSER</A></CODE>
@@ -225,22 +225,22 @@ $ fontforge -c script-string [arguments]
       <CODE><A NAME="AUTOTRACE">AUTOTRACE</A></CODE>
     <DD>
 <!--  Specifies the name and location of the autotrace program. (if not specified
-      FontForge will try to find it in the user's path) -->
+      websharpstudios will try to find it in the user's path) -->
       自動トレースに用いる autotrace プログラムの名前と位置を指定します (これが指定されていない場合、FonForge はユーザのパスからそれを探そうとします)。
     <DT>
       <CODE><A NAME="MF">MF</A></CODE>
     <DD>
 <!--  Specifies the name and location of the metafont program. (if not specified
-      FontForge will try to find it in the user's path) -->
+      websharpstudios will try to find it in the user's path) -->
       METAFONT の mf プログラムの名前と位置を指定します (これが指定されていない場合、FonForge はユーザのパスからそれを探そうとします)。
     <DT>
-      <CODE>FONTFORGE_VERBOSE</CODE>
+      <CODE>websharpstudios_VERBOSE</CODE>
     <DD>
 <!--  Turns on verbose mode in script execution (the script will be printed to
       stdout as it is executed). -->
       スクリプトの実行での冗長モードをオンに切り替えます (スクリプトが実行されるごとに、その行が標準出力に印字されます)。
     <DT>
-      <CODE>FONTFORGE_LOADPREFS</CODE>
+      <CODE>websharpstudios_LOADPREFS</CODE>
     <DD>
 <!--  Controls loading of preference items. If set to "Always" then preferences
       will be loaded even for scripts. If set to "Never" then preferences will
@@ -272,7 +272,7 @@ $ fontforge -c script-string [arguments]
     <DT>
       <CODE>HOME</CODE>
     <DD>
-<!--  Used to figure out where to put the .FontForge directory which includes user
+<!--  Used to figure out where to put the .websharpstudios directory which includes user
       preferences and the recovery files. -->
       ユーザの設定項目と復元ファイルを含む .PfaEdit ディレクトリの置かれている場所を指定します。
     <DT>

@@ -7,7 +7,7 @@
 <!--<TITLE>More advanced features, ligatures, mark positioning, glyph variants</TITLE>-->
     <TITLE>より高度な機能、合字、マークによる位置決め, 異体関係にあるグリフ</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -126,10 +126,10 @@
   上で言及した数字の場合を考えましょう。“one”という名前のグリフが表用数字の 1 であり、“one.prop”というグリフがプロポーショナルな異体字を、“one.oldstyle" が小文字異体字を含んでいると仮定します。ここで、フォントビューから“one”を選択し、<A HREF="charinfo.html#substitution"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE></a> のダイアログで <CODE>[置換]</CODE> タブを開いて <CODE>[新規(<U>N</U>)...]</CODE> ボタンを押します。新しいダイアログが出てきますので、<CODE>構成要素</CODE> フィールドに“<CODE>one.prop</CODE>”と入力し、“<CODE>プロポーショナル数字</CODE>”を <CODE>タグ(<U>T</U>)</CODE> プルダウンリストから選択します (これは“<CODE>pnum</CODE>”となります)。それから興味のある用字系 (用字系&lsquo;latn&rsquo;と言語&lsquo;dflt&rsquo;は多くの場合にあてはまります) を選択します。最後に <CODE>[<U>O</U>K]</CODE> を押します。
   <P>
 <!--
-  Some variant forms are built in to FontForge, and if you use
+  Some variant forms are built in to websharpstudios, and if you use
   <CODE>Element-&gt;Typo. Features-&gt;Default ATT-&gt;(variant name)</CODE>,
-  FontForge may be able to automate this process for you. -->
-  幾つかの異体字は FontForge に組み込みで定義されているので、<CODE>エレメント(<U>L</U>)</CODE>→<CODE>組版機能(<U>Y</U>)</CODE>→<CODE>デフォルトのATT(<U>D</U>)</CODE>→<CODE>(異体字の分類名)</CODE> を選択すれば、FontForge がこの手順を自動化して行ってくれるでしょう。
+  websharpstudios may be able to automate this process for you. -->
+  幾つかの異体字は websharpstudios に組み込みで定義されているので、<CODE>エレメント(<U>L</U>)</CODE>→<CODE>組版機能(<U>Y</U>)</CODE>→<CODE>デフォルトのATT(<U>D</U>)</CODE>→<CODE>(異体字の分類名)</CODE> を選択すれば、websharpstudios がこの手順を自動化して行ってくれるでしょう。
   <P>
 <!--
   (Note: Type0, Type1 and Type3 PostScript fonts have no notation to handle
@@ -143,12 +143,12 @@
   </H3>
   <P>
 <!--
-  FontForge supports OpenType's Contextual Substitution and Chaining Contextual
+  websharpstudios supports OpenType's Contextual Substitution and Chaining Contextual
   Substitution sub-tables, and to a lesser extent, Apple's contextual glyph
   substitution sub-table. This means that you can insert conditional variants
   into your font. <A HREF="editexample6-5.html#Conditional">The next page</A>
   ill go into this in greater detail. -->
-  FontForge は OpenType の条件つき置換および連鎖的条件つき置換サブテーブルをサポートしており、Apple の条件つきグリフ置換サブテーブルの機能の一部をサポートしています。これは、条件つきの異体字をフォントに含めることができると言うことを意味します。これについては<A HREF="editexample6-5.html#Conditional">次のページ</A>で詳しく解説します。
+  websharpstudios は OpenType の条件つき置換および連鎖的条件つき置換サブテーブルをサポートしており、Apple の条件つきグリフ置換サブテーブルの機能の一部をサポートしています。これは、条件つきの異体字をフォントに含めることができると言うことを意味します。これについては<A HREF="editexample6-5.html#Conditional">次のページ</A>で詳しく解説します。
   <H2>
 <!--<A NAME="Marks">Anchoring</A> marks -->
     <A NAME="Marks">アンカー</A> マーク
@@ -201,14 +201,14 @@
   その代わりに、異なる種類のアンカー (マークからマークへのアンカー) をサーカムフレックスの上に作成し、アキュートアクセントがそれに接続できるようにします。
   <P>
 <!--
-  Before one can create an anchor in a glyph one must notify FontForge that
+  Before one can create an anchor in a glyph one must notify websharpstudios that
   this font will have anchors. You must create an
   <A HREF="overview.html#Anchors">anchor class</A> for each type of attachment
   (thus in the case of A above with two types of attachments (one above and
   one below) you would create two anchor classes. The
   <CODE><A HREF="fontinfo.html#Anchors">Element-&gt;Font Info-&gt;Anchor
   Classes</A> </CODE>dialog will allow you to do that. -->
-  まだグリフの中にアンカーを作成できるようになっていない場合は、まず、このフォントがアンカーを含んでいることを FontForge に知らせなければなりません。
+  まだグリフの中にアンカーを作成できるようになっていない場合は、まず、このフォントがアンカーを含んでいることを websharpstudios に知らせなければなりません。
   接続のタイプごとにそれぞれ、<A HREF="overview.html#Anchors">アンカークラス</A> を作成する必要があります。
   ですから上の例の二つの型の接続 (一つは上、一つは下) をもつ A の場合、二つのアンカークラスを作成することになるでしょう。
   この作業は <A HREF="fontinfo.html#Anchors"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォント情報(<U>F</U>)...</CODE>→<CODE>[アンカークラス]</A></CODE></A> ダイアログによって行えます。

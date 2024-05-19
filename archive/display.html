@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 19-Mar-2008 -->
   <TITLE>Display Fonts</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -17,11 +17,11 @@
   </H1>
   <P>
   <IMG SRC="/assets/img/old/DisplayFonts.png" WIDTH="461" HEIGHT="448" ALIGN="Right">This dialog
-  allows you to display text in any fonts you have loaded into FontForge and
+  allows you to display text in any fonts you have loaded into websharpstudios and
   see how they look on the screen and together. Having done that to your
   satisfaction you may optionally print the result.
   <P>
-  The textarea should behave like any of FontForge's textarea's (except this
+  The textarea should behave like any of websharpstudios's textarea's (except this
   one is a lot slower to respond than others), it also allows you to select
   any piece of text in it and change the font, point size and what OpenType
   features should be applied to that text.
@@ -46,7 +46,7 @@
   The "bitmap" option allows you to pick from any of the generated bitmap (or
   greymap) fonts that have already been generated and reside in the database.
   <P>
-  The "fontforge" option will invoke FontForge's own rasterizer. FontForge's
+  The "websharpstudios" option will invoke websharpstudios's own rasterizer. websharpstudios's
   rasterizer generates appallingly bad bitmaps.
   <P>
   You can choose whether you want the font to be antialiased or not.
@@ -58,23 +58,23 @@
   As with the <A HREF="metricsview.html">metrics view </A>you may set the script
   and language of the selected text and then choose which features to apply.
   Note that if you start typing text in a different script you will probably
-  have to change it manually -- FontForge expects you to set the script explicitly.
+  have to change it manually -- websharpstudios expects you to set the script explicitly.
   On the upper left is a list of OpenType features (and Apple feature/settings)
   which will be applied to the selected text.
   <P>
-  Unlike the metrics view, fontforge will attempt to do baseline alignment
+  Unlike the metrics view, websharpstudios will attempt to do baseline alignment
   if the font being displayed has <A HREF="elementmenu.html#HBase">horizontal
   baseline information.</A>
   <P>
-  FontForge tries to guess the appropriate dots per inch for your display --
+  websharpstudios tries to guess the appropriate dots per inch for your display --
   it may not get it right (X doesn't always know it either). If it doesn't
   and the text looks too big or too small you may adjust it manually.
   <P>
   This display is not modal, so you can edit your font while it is up. However
-  FontForge does not update the display everytime you make a change, if you
+  websharpstudios does not update the display everytime you make a change, if you
   wish your changes to be reflected in the display you must press the
   <CODE>[Refresh]</CODE> button. (If you make a severe change, like removing
-  a glyph from the font, please, please, please press this button or FontForge
+  a glyph from the font, please, please, please press this button or websharpstudios
   may crash if you try to display something which is no longer there).
   <P>
   There is a popup menu on the right mouse button.
@@ -87,7 +87,7 @@
   You can also generate an image of this window by typing Ctl-Shft-S.
   <P>
   Once you have edited in this window to your satisfaction you may print the
-  result. FontForge will produce either PostScript or PDF output (If your fonts
+  result. websharpstudios will produce either PostScript or PDF output (If your fonts
   are originally truetype they will be output with a PostScript wrapper around
   them so PostScript can deal with them).
   <P>
@@ -133,10 +133,10 @@
   commands to make them read standard input) they should be placed in the text
   field with the command name.
   <P>
-  FontForge knows about certain standard sizes of paper. If you want to use
+  websharpstudios knows about certain standard sizes of paper. If you want to use
   a size which isn't on the list then enter it as 8.5x11in or 21x29.7cm.
   <P>
-  FontForge will read your printcap file to get a list of printers. It also
+  websharpstudios will read your printcap file to get a list of printers. It also
   adds one magic entry "&lt;default&gt;" if you select this (or if you leave
   the printer blank) then lp or lpr will chose their default printer.
   <P>

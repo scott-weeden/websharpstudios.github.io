@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 24-Jan-2008 -->
   <TITLE>Hot Keys</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
 
@@ -20,7 +20,7 @@
   <P>
     As noted in hotkey <a href="#hotkeyassign">assignment</a> you can
     nominate the hotkeys which you prefer for all items in any menu of
-    FontForge. Some default hotkeys are shipped with FontForge so that
+    websharpstudios. Some default hotkeys are shipped with websharpstudios so that
     you do not have to assign any keys yourself unless you want to
     make changes. The defaults are shown below:
   <P>
@@ -428,7 +428,7 @@
       On Suns the meta (diamond) key is equivalent to the Alt modifier key.
   </UL>
   <P>
-  FontForge will attempt to guess what keyboard you are using and produce menus
+  websharpstudios will attempt to guess what keyboard you are using and produce menus
   with hot-key indicators that match the host machine. If you are displaying
   on a different machine from the one you are running on the menu names may
   be wrong. You can fix this up with the <A HREF="xres.html#Keyboard">keyboard
@@ -608,7 +608,7 @@
   <IMG SRC="/assets/img/old/hotkeys.jpeg">
   <P>
 
-    FontForge lets you assign custom hotkeys to the menus and other
+    websharpstudios lets you assign custom hotkeys to the menus and other
     actions. Default hotkeys are provided for the menus in all windows
     which follow familiar key assignments such as Control+O to open a
     file and Control+c to "copy" something. The current hotkey for
@@ -621,13 +621,13 @@
     that appears in the menus. You can freely change the hotkey for a
     menu item or add one if you find you are using a menu item
     frequently. Your settings for hotkeys are read from and stored in
-    the ~/.FontForge/hotkeys file. In it's most basic form this file
+    the ~/.websharpstudios/hotkeys file. In it's most basic form this file
     is a sequence of lines of the form action:key. A large default
-    hotkeys file is provided with FontForge in the hotkeys/default
+    hotkeys file is provided with websharpstudios in the hotkeys/default
     file.
   <P>
 
-    The below fragment of ~/.FontForge/hotkeys will hopefully provide
+    The below fragment of ~/.websharpstudios/hotkeys will hopefully provide
     a nice example to get you started creating your own hotkey
     bindings. As you can see the action part starts with
     "CharView.Menu.", meaning that this action is to invoke a menu on
@@ -663,17 +663,17 @@ CharView.Menu.Point.Tools.HVCurve: 1
     magnification level.
   <P>
 
-    When reading hotkeys files at startup, FontForge will first load
-    many system defaults and then your ~/.FontForge/hotkeys file. Each
+    When reading hotkeys files at startup, websharpstudios will first load
+    many system defaults and then your ~/.websharpstudios/hotkeys file. Each
     file is processed from the first line to the last line. When
     reading these hotkey files, it might be the case that two or more
     lines have the exact same hotkey. For example, the system default
     is Control+o to open a file. You might like to override that
-    hotkey to open the font info dialog instead. When FontForge is
+    hotkey to open the font info dialog instead. When websharpstudios is
     reading hotkeys files, if a hotkey is encountered that is already
     in use, the current action for that hotkey is replaced with the
     new action. So if you have the below line in your
-    ~/.FontForge/hotkeys file then Control+o will open the font info
+    ~/.websharpstudios/hotkeys file then Control+o will open the font info
     dialog instead of trying to open a font.
 
     <p><code>
@@ -687,7 +687,7 @@ CharView.Menu.Element.Font Info...:Ctl+o
      case only one menu will perform a task depending on if spiro mode
      is active.
   <P>
-     There are many modifiers that FontForge recognizes which are
+     There are many modifiers that websharpstudios recognizes which are
      listed in the next paragraph. These are always the English name
      for the modifier regardless of your locale. The names are fully
      case insensitive; you can write Control, conTROL, or control and
@@ -698,7 +698,7 @@ CharView.Menu.Element.Font Info...:Ctl+o
      Shift key to be held too, you need to explicitly specify that as
      with control+shift+s as the key definition.
      <p>
-     FontForge recognizes the following standard modifiers: Alt, Esc
+     websharpstudios recognizes the following standard modifiers: Alt, Esc
      Ctl, Control, Ctrl, Shft, Shift, CapsLock, Opt (the last corresponds to the Option
      key on the mac keyboard, Cmd+ for the mac Command key Note: This
      can only be used by an X program if the X11 application does not

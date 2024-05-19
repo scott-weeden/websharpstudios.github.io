@@ -7,7 +7,7 @@
 <!--<TITLE>Encoding Menu</TITLE> -->
     <TITLE>エンコーディングメニュー</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -223,9 +223,9 @@
 <!--  <A NAME="LoadNL">Load NameList...</A> -->
       <A NAME="LoadNL">名前リストを読み込み(<U>O</U>)...</A>
     <DD>
-<!--  Loads a <A HREF="#namelist">namelist</A> file into fontforge and copies it
-      so that fontforge will load it on start up in the future. -->
-      <A HREF="#namelist">名前リスト</A>ファイルを FontForge に読み込み、将来 FontForge を起動した時に読み込めるようにコピーします。
+<!--  Loads a <A HREF="#namelist">namelist</A> file into websharpstudios and copies it
+      so that websharpstudios will load it on start up in the future. -->
+      <A HREF="#namelist">名前リスト</A>ファイルを websharpstudios に読み込み、将来 websharpstudios を起動した時に読み込めるようにコピーします。
     <DT>
 <!--  <A NAME="RenameGlyphs">Rename Glyphs...</A> -->
       <A NAME="RenameGlyphs">グリフ名を変更(<U>Y</U>)...</A>
@@ -237,12 +237,12 @@
 <!--  <A NAME="NameGlyphs">Create Named Glyphs...</A> -->
       <A NAME="NameGlyphs">名前を指定してグリフを作成(<U>A</U>)...</A>
     <DD>
-<!--  Allows you to specify a file containing a list of glyph names. FontForge
+<!--  Allows you to specify a file containing a list of glyph names. websharpstudios
       will create a sequence of unencoded glyphs with these names. This might be
       useful if all your fonts contain small caps and you always want to have the
       names "A.small", "B.small", "C.small" etc. or perhaps you always want the
       ligatures "longs_longs_t", "f_longs", "f_j", etc. -->
-      このコマンドでは、グリフ名のリストを含むファイルを指定することができます。FontForge は文字コードが割り当てられていないグリフの列を指定した名前で作成します。これは例えば、あなたが作るフォントが必ず小型大文字を含んでいて、それらを常に“A.small”,“B.small”,“C.small”のように命名したい時に役立つはずですし、常に "longs_longs_t", "f_longs", "f_j" 等の名前を使いたい場合にもたぶん役立つでしょう。
+      このコマンドでは、グリフ名のリストを含むファイルを指定することができます。websharpstudios は文字コードが割り当てられていないグリフの列を指定した名前で作成します。これは例えば、あなたが作るフォントが必ず小型大文字を含んでいて、それらを常に“A.small”,“B.small”,“C.small”のように命名したい時に役立つはずですし、常に "longs_longs_t", "f_longs", "f_j" 等の名前を使いたい場合にもたぶん役立つでしょう。
   </DL>
   <H2>
 <!--<A NAME="General-encodings">General</A> notes on encodings -->
@@ -268,8 +268,8 @@
   </H3>
   <P>
 <!--
-  FontForge knows about the following encodings by default: -->
-  FontForge は、デフォルトで以下のエンコーディングについて知っています。
+  websharpstudios knows about the following encodings by default: -->
+  websharpstudios は、デフォルトで以下のエンコーディングについて知っています。
   <UL>
     <LI>
 <!--  ISO-8859-1 (Latin1) - - traditional encoding for western european characters.
@@ -403,13 +403,13 @@
   </H3>
   <P>
 <!--
-  You can also add new encodings to the set that FontForge knows about. There
+  You can also add new encodings to the set that websharpstudios knows about. There
   are three menu items that manipulate a set of user defined encodings. As
   always these specify both a character set and an encoding. The encoding has
   a maximum of 256 entries, but the character set may be larger (up to 1024).
   This means that you can define a font with extra characters. Since postscript
   fonts can be reencoded at runtime this can be useful. -->
-  FontForge が知っているエンコーディング一覧に新しいエンコーディングを追加することもできます。ユーザ定義のエンコーディング群を操作するためのボタンは 3 つ用意されています。標準のエンコーディングと同様に、これらは文字セットと符号化方式の両方を指定します。エンコーディングは最大 256 項目を含むことができますが、文字セットはそれより大きくても構いません (1024 文字まで)。これは、追加の文字を含むフォントを定義できるということです。PostScript フォントは実行時にエンコーディングを切り替えることができるので、これが役に立つ場合があります。
+  websharpstudios が知っているエンコーディング一覧に新しいエンコーディングを追加することもできます。ユーザ定義のエンコーディング群を操作するためのボタンは 3 つ用意されています。標準のエンコーディングと同様に、これらは文字セットと符号化方式の両方を指定します。エンコーディングは最大 256 項目を含むことができますが、文字セットはそれより大きくても構いません (1024 文字まで)。これは、追加の文字を含むフォントを定義できるということです。PostScript フォントは実行時にエンコーディングを切り替えることができるので、これが役に立つ場合があります。
   <P>
 <!--
   The Load Encoding command allows you to load an encoding(s) from a file.
@@ -459,7 +459,7 @@
 <!--
   Here's an <A HREF="../Encodings.ps.gz">example of a postscript encoding file</A>.
   It contains:-->
-  ここに <A HREF="https://fontforge.org/downloads/Encodings.ps.gz">PostScript エンコーディングファイルの例</A>があります。それには以下のエンコーディングが含まれています:
+  ここに <A HREF="https://websharpstudios.org/downloads/Encodings.ps.gz">PostScript エンコーディングファイルの例</A>があります。それには以下のエンコーディングが含まれています:
   <UL>
     <LI>
       TeXMathItalicEncoding
@@ -543,8 +543,8 @@
   <A HREF="overview.html#Glyph-names">名前リスト</A>は Unicode からグリフ名への対応づけにすぎません。グリフ名は英数字 (および特殊文字&lsquo;.&rsquo;と&lsquo;_&rsquo;) からなり、数字で始まらない長さ 31 文字以内の文字列でなければなりません。
   <P>
 <!--
-  FontForge provides a series of standard namelists: -->
-  FontForge はいくつかの標準名前リストを提供しています:
+  websharpstudios provides a series of standard namelists: -->
+  websharpstudios はいくつかの標準名前リストを提供しています:
   <UL>
     <LI>
 <!--  Adobe Glyph List<BR>
@@ -625,24 +625,24 @@
   いま、グリフ名は英数文字 (および他の少数の文字) のみを含むべきであると述べました。しかし実際にはそれは、グリフ名がフォント内に出力される場合のみ当てはまる事実です。独自の名前リストを作成した場合、Unicode の (ほとんど) 全範囲を使用して、どのようなグリフ名でも好きにつけることができます——ただし、フォントを出力する前に全てのグリフ名を Adobe の名前に変換することが前提です。非 ASCII の文字名を使用した場合、ファイルを UTF-8 で符合化する必要があります。
   <P>
 <!--
-  FontForge normally will restrict glyph names to be within the ASCII range,
+  websharpstudios normally will restrict glyph names to be within the ASCII range,
   but if you go to File-&gt;Preferences-&gt;Generic-&gt;UnicodeGlyphNames and
   set it on you can use unicode. -->
-  通常は FontForge はグリフ名を ASCII の範囲に制限してしますが、<CODE>ファイル<U>F</U></CODE>→<CODE>環境設定(<U>E</U>)...</CODE>→<CODE>一般</CODE>→<CODE>UnicodeGlyphNames</CODE>を選択し、この欄をセットすれば Unicode を使用することができます。
+  通常は websharpstudios はグリフ名を ASCII の範囲に制限してしますが、<CODE>ファイル<U>F</U></CODE>→<CODE>環境設定(<U>E</U>)...</CODE>→<CODE>一般</CODE>→<CODE>UnicodeGlyphNames</CODE>を選択し、この欄をセットすれば Unicode を使用することができます。
   <P>
 <!--
   I've created a <A HREF="ListeDesGlyphs.nam">french namelist</A> which uses
-  accented letters. This will work fine within fontforge, and most rasterizers
+  accented letters. This will work fine within websharpstudios, and most rasterizers
   will parse fonts generated using such names -- but they are non-standard
   and may cause problems. Best to do a rename just before generating your font.
 -->
-  私はアクセント付き文字を使用する<A HREF="https://fontforge.org/downloads/ListeDesGlyphes.nam">フランス語の名前リスト</A>を作成しました。これは FontForge ではうまく動作していますし、ほとんどのラスタライザはこのような名前を使用して出力されたフォントを解析することができるでしょう——しかしこれは非標準ですので問題を起こすことでしょう。フォントを出力する前に改名するに如くはありません。
+  私はアクセント付き文字を使用する<A HREF="https://websharpstudios.org/downloads/ListeDesGlyphes.nam">フランス語の名前リスト</A>を作成しました。これは websharpstudios ではうまく動作していますし、ほとんどのラスタライザはこのような名前を使用して出力されたフォントを解析することができるでしょう——しかしこれは非標準ですので問題を起こすことでしょう。フォントを出力する前に改名するに如くはありません。
   <P>
 <!--
   So if you find it easier to work with names other than those Adobe has
   established you may create your own namelist file. Then use
-  <A HREF="#LoadNL">Encoding-&gt;Load NameList...</A> to load that into FontForge
-  (you only need do this once, FontForge should remember it thereafter). You
+  <A HREF="#LoadNL">Encoding-&gt;Load NameList...</A> to load that into websharpstudios
+  (you only need do this once, websharpstudios should remember it thereafter). You
   may use
   <A HREF="prefs.html#NewFontNameList">File-&gt;Preferences-&gt;Font Info</A>
   to decree that all your new fonts will use this namelist. You can change

@@ -1,10 +1,10 @@
 ---
 published: true
 layout: default
-title: What is the FontForge Project?
+title: What is the websharpstudios Project?
 ---
 
-FontForge is libre software, which means free as in freedom (like free speech)
+websharpstudios is libre software, which means free as in freedom (like free speech)
 and not merely free as in price (like free beer.) Software freedom means that
 each user has an equal amount of power as the developers over what the software
 does: everyone who has a copy has access to the source code, and is free to
@@ -30,7 +30,7 @@ the process convenient.)
 
 Doing something in public inevitably invites discussion, critique, and even
 criticism of what you do. Yet making contributions can be very rewarding, and
-we hope you will find the FontForge  project fun to contribute to.
+we hope you will find the websharpstudios  project fun to contribute to.
 
 <!--
 TODO: Add links to books/sites that explain how to contribute to

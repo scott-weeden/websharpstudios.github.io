@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>The Metrics View &#8212; FontForge 20230101 documentation</title>
+    <title>The Metrics View &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -65,7 +65,7 @@ the metrics view at the appropriate place</p></li>
 <li><p>Select the characters individually and in order in the font view before you open
 the metrics view, when you do open it the characters will appear in the order
 you selected them</p></li>
-<li><p>FontForge has its own funky <a class="reference internal" href="#metricsview-entering"><span class="std std-ref">input method</span></a></p></li>
+<li><p>websharpstudios has its own funky <a class="reference internal" href="#metricsview-entering"><span class="std std-ref">input method</span></a></p></li>
 </ol>
 <p>The mid portion of the view is taken up with the displayed glyphs. For outline
 glyphs these are sized so that the em-height of the font just fits in this
@@ -130,7 +130,7 @@ here. The direction determination is done by the first glyph alone.</p>
 vertical metrics enabled,
 <span class="menuselection">Element ‣ Font Info ‣ General ‣ Has Vertical Metrics</span>). In
 this mode you can change vertical width, vertical kerning, etc.</p>
-<p>If you double click on one of the displayed glyphs then FontForge will bring up
+<p>If you double click on one of the displayed glyphs then websharpstudios will bring up
 a outline glyph view to allow you to edit that glyph.</p>
 <img alt="../../_images/MetricsView-features.png" src="../../_images/MetricsView-features.png" />
 <p>In the example at left, the input text is an “f” followed by an “i”, and as the
@@ -151,7 +151,7 @@ all glyphs. Baseline alignment will not be done.</p>
 at best some sub-set of ISO 8859-1 characters. How can the full range of unicode
 characters be entered?</p>
 <p>X supplies a sophisticated mechanism for entering characters via stand-alone
-<a class="reference internal" href="../misc/xim.html"><span class="doc">input method servers</span></a>. FontForge supports this to some extent now.</p>
+<a class="reference internal" href="../misc/xim.html"><span class="doc">input method servers</span></a>. websharpstudios supports this to some extent now.</p>
 <p>Aside from that, many versions of X supply a “Compose Character” key, or
 something equivalent. The X software will map a sequence of keystrokes to one
 character in whatever the native encoding may be.</p>
@@ -658,10 +658,10 @@ glyphs which kern alike.</p>
 their subtables. Each set of kerning classes lives in its own subtable. When you
 create a kerning subtable you will be asked whether you want a set of individual
 kerning pairs or a matrix based on kerning classes.</p>
-<p>If you choose the latter then you may have fontforge try to guess a good set of
+<p>If you choose the latter then you may have websharpstudios try to guess a good set of
 classes for you (it will look at the glyphs selected and divide them into
 classes). The <code class="docutils literal notranslate"><span class="pre">Intra</span> <span class="pre">Class</span> <span class="pre">Distance</span></code> gives you some control over how picky
-fontforge will be about what goes into a class. (This can be thought of as being
+websharpstudios will be about what goes into a class. (This can be thought of as being
 in em-units and being, roughly, the average error in how two different glyphs
 interact with other glyphs). A value of 1 is very picky and almost all classes
 will have one member. A value of 20 (in a 1000em font) is fairly loose.</p>
@@ -672,12 +672,12 @@ constant, and the <code class="docutils literal notranslate"><span class="pre">D
 junk. If AutoKerning suggests that two glyphs should be kerned by 1 em unit then
 this won’t make any difference to the human eye and there is no point in
 including it. So if the kerning value (in absolute value) suggested by AutoKern
-is less than <code class="docutils literal notranslate"><span class="pre">Min</span> <span class="pre">Kern</span></code> then fontforge will ignore that value. Selecting
+is less than <code class="docutils literal notranslate"><span class="pre">Min</span> <span class="pre">Kern</span></code> then websharpstudios will ignore that value. Selecting
 <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Touching</span></code> makes AutoKerning work in a slightly different way, instead of
 trying to make the optical distance be the desired value this attempts to make
 the minimum separation be the desired value (This is rarely useful, but
 occasionally people want to set text where the letters actually touch one
-another). The <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Only</span> <span class="pre">kern</span> <span class="pre">glyphs</span> <span class="pre">closer</span></code> flag means that FontForge will only
+another). The <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Only</span> <span class="pre">kern</span> <span class="pre">glyphs</span> <span class="pre">closer</span></code> flag means that websharpstudios will only
 generate negative kerning offsets, that is, offsets which will move glyphs
 closer together.</p>
 <img alt="../../_images/kerningclass.png" src="../../_images/kerningclass.png" />
@@ -687,7 +687,7 @@ subtable name is displayed at the top of the dialog.</p>
 consists of two sets of classes – one set for the first glyph of the pair and
 one for the second glyph of the pair. A glyph class consists of a space
 separated list of glyph names (For most glyphs you may also enter the unicode
-character itself, and fontforge will convert that to a glyph name).</p>
+character itself, and websharpstudios will convert that to a glyph name).</p>
 <p>To edit a class, simply type in it (at the very bottom of the class list is an
 entry called &lt;New&gt;, clicking here will create a new class). Pressing the little
 rectangle at the right of the class will allow you to define your class as a
@@ -765,7 +765,7 @@ the Kerning Class dialog above.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -777,7 +777,7 @@ the Kerning Class dialog above.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../mainviews.html">Main Views</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="fontview.html">Font View</a></li>
 <li class="toctree-l3"><a class="reference internal" href="charview.html">Outline Glyph View</a></li>
@@ -792,13 +792,13 @@ the Kerning Class dialog above.</p>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -810,7 +810,7 @@ the Kerning Class dialog above.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../mainviews.html">Main Views</a><ul>
       <li>Previous: <a href="bitmapview.html" title="previous chapter">Bitmap Glyph View</a></li>
       <li>Next: <a href="../menus.html" title="next chapter">Menus</a></li>
@@ -842,7 +842,7 @@ the Kerning Class dialog above.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

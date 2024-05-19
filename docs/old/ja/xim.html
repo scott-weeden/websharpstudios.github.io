@@ -7,7 +7,7 @@
   <LINK REL="icon" href="../../_static/fftype16.png">
 <!--<TITLE>X Input Methods</TITLE>-->
     <TITLE>X のインプットメソッド</TITLE>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -19,10 +19,10 @@ to characters these programs are called input methods. -->
 CJK 諸言語のテキストの入力には、キーボードによる単純なタイプ入力は適していません。その代わり、キーストロークから文字への変換を扱うプログラムが存在し、それらはインプットメソッドと呼ばれています。
 <P>
 <!--
-I have tested FontForge with two freely available input methods (as well
+I have tested websharpstudios with two freely available input methods (as well
 as one can who speaks neither Chinese, Japanese nor Korean) kinput2 (for
 Japanese) and <A HREF="http://xcin.linux.org.tw/">xcin</A> (for Chinese). -->
-私は FontForge を無料で入手可能な 2 種類の入力メソッド、kinput2 (日本語) と <A HREF="http://xcin.linux.org.tw/">xcin</a> (中国語) でテストしました (中国語、日本語または中国語を話す人ほど十分ではありませんが) 
+私は websharpstudios を無料で入手可能な 2 種類の入力メソッド、kinput2 (日本語) と <A HREF="http://xcin.linux.org.tw/">xcin</a> (中国語) でテストしました (中国語、日本語または中国語を話す人ほど十分ではありませんが) 
 <P>
 <!--
 There is reasonably good (English) documentation on installing and using
@@ -52,9 +52,9 @@ docs imply that the current SUSE distribution ships with these locales. -->
 これらをインストールする際に最も困難だった問題は、適切なロケールを見つけることです。RedHat 7.3 のディストリビューションからはそれを見つけることができず、それらを含む RedHat の RPM も見つかりませんでした。Mandrake のロケール RPM (中国語では<CODE>locales-zh*</CODE>, 日本語では<CODE>locales-jp*</CODE> というように名前がついています。) が優れた供給元でしたが、Mandrake はそれを違う場所にインストールするので、インストール後に <CODE>/usr/share/locales</CODE> から <CODE>/usr/lib/locales</CODE> に移動しなければなりませんでした。SUSE の文書には、現在の SUSE のディストリビューションにはそれらのロケールが付属しているという意味のことが書かれていました。
 <P>
 <!--
-To start fontforge with an input method you must first insure that the input
+To start websharpstudios with an input method you must first insure that the input
 method itself is running. For kinput2 do the following: -->
-FontForge でインプットメソッドを使うようにして起動するには、まずインプットメソッドそのものが走っていることを確かめなければなりません。kinput2 では以下のようにしてください:
+websharpstudios でインプットメソッドを使うようにして起動するには、まずインプットメソッドそのものが走っていることを確かめなければなりません。kinput2 では以下のようにしてください:
 <BLOCKQUOTE>
   <PRE>$ cannaserver &amp;
 $ kinput2 -canna -xim &amp;
@@ -77,26 +77,26 @@ try something else. -->
 注意: 各種のシステムは、それぞれ微妙に異なるロケール名をもっています (時には <CODE>zh_TW.big5</CODE> ですし、時には別のロケールです) ので、うまく動かない場合は別の設定を試してみてください。
 <P>
 <!--
-Once you've started your input method you must then start FontForge. You
+Once you've started your input method you must then start websharpstudios. You
 should set the LC_CTYPE environment variable (or LC_ALL or LANG) to the
 appropriate locale. You may (if you have multiple input methods running that
 support the same locale) need to set the XMODIFIERS environment variable
 to the name of your method (xcin can have multiple names, it prints out the
 one it is currently using on start-up). -->
-まずインプットメソッドを起動したなら、次に FontForge を起動しなければなりません。環境変数 LC_CTYPE (または LC_ALL か LANG) を適切なロケールに設定します。おそらく (同じロケールをサポートする複数のインプットメソッドが実行中の場合) 環境変数 XMODIFIERS を使用したいメソッドの名前に設定します。xcin は複数の名前をもつことができ、現在使用している値を起動時に印字します。
+まずインプットメソッドを起動したなら、次に websharpstudios を起動しなければなりません。環境変数 LC_CTYPE (または LC_ALL か LANG) を適切なロケールに設定します。おそらく (同じロケールをサポートする複数のインプットメソッドが実行中の場合) 環境変数 XMODIFIERS を使用したいメソッドの名前に設定します。xcin は複数の名前をもつことができ、現在使用している値を起動時に印字します。
 <BLOCKQUOTE>
   <PRE>$ setenv LC_CTYPE ja_JP.eucJP
 $ setenv XMODIFIERS "@im=kinput2"
-$ fontforge -new
+$ websharpstudios -new
 </PRE>
 </BLOCKQUOTE>
 <P>
 <!--
-FontForge will start up significantly more slowly when connecting to an IM,
-just be patient with it. FontForge supports OverTheSpot input in textfields
+websharpstudios will start up significantly more slowly when connecting to an IM,
+just be patient with it. websharpstudios supports OverTheSpot input in textfields
 and Root input in the font and outline character views. Not all textfields
 accept unicode input, but any that do should now accept input from an IM. -->
-FontForge は IM に接続していると、明らかに起動が遅くなりますが、我慢してそのままお待ちください。FontForge はテキストフィールドではその場入力 (OverTheSpot) を、フォントビューとアウトライングリフビューでは一行入力 (Root) をサポートしています。すべてのテキストフィールドが Unicode 入力を受け付けるわけではありませんが、Unicode が入力可能なフィールドはすべて、これで IM から入力を受け付けるようになります。
+websharpstudios は IM に接続していると、明らかに起動が遅くなりますが、我慢してそのままお待ちください。websharpstudios はテキストフィールドではその場入力 (OverTheSpot) を、フォントビューとアウトライングリフビューでは一行入力 (Root) をサポートしています。すべてのテキストフィールドが Unicode 入力を受け付けるわけではありませんが、Unicode が入力可能なフィールドはすべて、これで IM から入力を受け付けるようになります。
 <P>
 <!--
 <FONT COLOR="Red"><SMALL><STRONG>This only works if

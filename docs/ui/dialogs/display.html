@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Display &amp; Print Fonts &#8212; FontForge 20230101 documentation</title>
+    <title>Display &amp; Print Fonts &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -37,9 +37,9 @@
 <h1>Display &amp; Print Fonts<a class="headerlink" href="#display-print-fonts" title="Permalink to this heading">¶</a></h1>
 <img alt="../../_images/DisplayFonts.png" class="align-right" src="../../_images/DisplayFonts.png" />
 <p>This dialog allows you to display text in any fonts you have loaded into
-FontForge and see how they look on the screen and together. Having done that to
+websharpstudios and see how they look on the screen and together. Having done that to
 your satisfaction you may optionally print the result.</p>
-<p>The textarea should behave like any of FontForge’s textarea’s (except this one
+<p>The textarea should behave like any of websharpstudios’s textarea’s (except this one
 is a lot slower to respond than others), it also allows you to select any piece
 of text in it and change the font, point size and what OpenType features should
 be applied to that text.</p>
@@ -57,7 +57,7 @@ specify in what format the font is passed to freetype:</p>
 </ul>
 <p>The “bitmap” option allows you to pick from any of the generated bitmap (or
 greymap) fonts that have already been generated and reside in the database.</p>
-<p>The “fontforge” option will invoke FontForge’s own rasterizer. FontForge’s
+<p>The “websharpstudios” option will invoke websharpstudios’s own rasterizer. websharpstudios’s
 rasterizer generates appallingly bad bitmaps.</p>
 <p>You can choose whether you want the font to be antialiased or not.</p>
 <p>And different bits of text can have different settings, so you can compare them
@@ -66,20 +66,20 @@ see how well they work together.</p>
 <p>As with the <a class="reference internal" href="../mainviews/metricsview.html"><span class="doc">metrics view</span></a> you may set the script and
 language of the selected text and then choose which features to apply. Note that
 if you start typing text in a different script you will probably have to change
-it manually – FontForge expects you to set the script explicitly. On the upper
+it manually – websharpstudios expects you to set the script explicitly. On the upper
 left is a list of OpenType features (and Apple feature/settings) which will be
 applied to the selected text.</p>
-<p>Unlike the metrics view, fontforge will attempt to do baseline alignment if the
+<p>Unlike the metrics view, websharpstudios will attempt to do baseline alignment if the
 font being displayed has
 <a class="reference internal" href="../menus/elementmenu.html#elementmenu-hbase"><span class="std std-ref">horizontal baseline information.</span></a></p>
-<p>FontForge tries to guess the appropriate dots per inch for your display – it
+<p>websharpstudios tries to guess the appropriate dots per inch for your display – it
 may not get it right (X doesn’t always know it either). If it doesn’t and the
 text looks too big or too small you may adjust it manually.</p>
 <p>This display is not modal, so you can edit your font while it is up. However
-FontForge does not update the display everytime you make a change, if you wish
+websharpstudios does not update the display everytime you make a change, if you wish
 your changes to be reflected in the display you must press the <code class="docutils literal notranslate"><span class="pre">[Refresh]</span></code>
 button. (If you make a severe change, like removing a glyph from the font,
-please, please, please press this button or FontForge may crash if you try to
+please, please, please press this button or websharpstudios may crash if you try to
 display something which is no longer there).</p>
 <p>There is a popup menu on the right mouse button.</p>
 <p>You may Import text from a file. The file must either be in the current local
@@ -88,7 +88,7 @@ character in the file must be U+FEFF. You can also save the contents of the
 field into a file (it will be in UTF8 and preceded by U+FEFF) by typing ^S.</p>
 <p>You can also generate an image of this window by typing Ctl-Shft-S.</p>
 <p>Once you have edited in this window to your satisfaction you may print the
-result. FontForge will produce either PostScript or PDF output (If your fonts
+result. websharpstudios will produce either PostScript or PDF output (If your fonts
 are originally truetype they will be output with a PostScript wrapper around
 them so PostScript can deal with them).</p>
 <img alt="../../_images/Print.png" class="align-right" src="../../_images/Print.png" />
@@ -130,9 +130,9 @@ expect to find a postscript file on its standard input, if the command needs any
 arguments (a common example might be the “-” used by many commands to make them
 read standard input) they should be placed in the text field with the command
 name.</p>
-<p>FontForge knows about certain standard sizes of paper. If you want to use a size
+<p>websharpstudios knows about certain standard sizes of paper. If you want to use a size
 which isn’t on the list then enter it as 8.5x11in or 21x29.7cm.</p>
-<p>FontForge will read your printcap file to get a list of printers. It also adds
+<p>websharpstudios will read your printcap file to get a list of printers. It also adds
 one magic entry “&lt;default&gt;” if you select this (or if you leave the printer
 blank) then lp or lpr will chose their default printer.</p>
 <p>The Printer and Copies arguments are not meaningful when using ghostview or
@@ -151,7 +151,7 @@ Copyright free, of course, and preferably in a unicode encoding…</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -163,7 +163,7 @@ Copyright free, of course, and preferably in a unicode encoding…</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -183,13 +183,13 @@ Copyright free, of course, and preferably in a unicode encoding…</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -201,7 +201,7 @@ Copyright free, of course, and preferably in a unicode encoding…</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
       <li>Previous: <a href="generate.html" title="previous chapter">Generate Font Dialog</a></li>
       <li>Next: <a href="groups.html" title="next chapter">Groups of Glyphs</a></li>
@@ -233,7 +233,7 @@ Copyright free, of course, and preferably in a unicode encoding…</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

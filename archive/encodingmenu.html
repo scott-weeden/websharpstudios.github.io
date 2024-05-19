@@ -5,24 +5,24 @@
   <!-- AP: Last modified: 23-Jul-2008 -->
   <TITLE>Encoding Menu</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="menued">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV class="menucontainer">
   <UL class="menubar">
     <LI class="menu">
-      <A href="http://sourceforge.net/projects/fontforge/files/">Download</A>
+      <A href="http://sourceforge.net/projects/websharpstudios/files/">Download</A>
       <UL>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-docs/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/"
 	      >Documentation</A>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-source/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/"
 	      >Source</A>
       </UL>
     <LI>
@@ -351,8 +351,8 @@
     <DT>
       <A NAME="LoadNL">Load NameList...</A>
     <DD>
-      Loads a <A HREF="#namelist">namelist</A> file into fontforge and copies it
-      so that fontforge will load it on start up in the future.
+      Loads a <A HREF="#namelist">namelist</A> file into websharpstudios and copies it
+      so that websharpstudios will load it on start up in the future.
     <DT>
       <A NAME="RenameGlyphs">Rename Glyphs...</A>
     <DD>
@@ -361,7 +361,7 @@
     <DT>
       <A NAME="NameGlyphs">Create Named Glyphs...</A>
     <DD>
-      Allows you to specify a file containing a list of glyph names. FontForge
+      Allows you to specify a file containing a list of glyph names. websharpstudios
       will create a sequence of unencoded glyphs with these names. This might be
       useful if all your fonts contain small caps and you always want to have the
       names "A.small", "B.small", "C.small" etc. or perhaps you always want the
@@ -384,7 +384,7 @@
     Built in <A NAME="Encodings">Encodings</A>
   </H3>
   <P>
-  FontForge knows about the following encodings by default:
+  websharpstudios knows about the following encodings by default:
   <UL>
     <LI>
       ISO-8859-1 (Latin1) -- traditional encoding for western european characters.
@@ -483,7 +483,7 @@
     <A NAME="User-def">User Defined Encodings</A>
   </H3>
   <P>
-  You can also add new encodings to the set that FontForge knows about. There
+  You can also add new encodings to the set that websharpstudios knows about. There
   are three menu items that manipulate a set of user defined encodings. As
   always these specify both a character set and an encoding. The encoding has
   a maximum of 256 entries, but the character set may be larger (up to 1024).
@@ -590,7 +590,7 @@
   (or the special characters '.' or '_'), it may not begin with a digit, and
   it must be 31 or fewer characters in length.
   <P>
-  FontForge provides a series of standard namelists:
+  websharpstudios provides a series of standard namelists:
   <UL>
     <LI>
       Adobe Glyph List<BR>
@@ -652,19 +652,19 @@
   rename all your glyphs to Adobe's names before you generate a font. If you
   use non-ASCII characters you should encode the file in utf-8.
   <P>
-  FontForge normally will restrict glyph names to be within the ASCII range,
+  websharpstudios normally will restrict glyph names to be within the ASCII range,
   but if you go to File-&gt;Preferences-&gt;Generic-&gt;UnicodeGlyphNames and
   set it on you can use unicode.
   <P>
   I've created a <A HREF="/assets/old/ListeDesGlyphs.nam">french namelist</A> which uses
-  accented letters. This will work fine within fontforge, and most rasterizers
+  accented letters. This will work fine within websharpstudios, and most rasterizers
   will parse fonts generated using such names -- but they are non-standard
   and may cause problems. Best to do a rename just before generating your font.
   <P>
   So if you find it easier to work with names other than those Adobe has
   established you may create your own namelist file. Then use
-  <A HREF="#LoadNL">Encoding-&gt;Load NameList...</A> to load that into FontForge
-  (you only need do this once, FontForge should remember it thereafter). You
+  <A HREF="#LoadNL">Encoding-&gt;Load NameList...</A> to load that into websharpstudios
+  (you only need do this once, websharpstudios should remember it thereafter). You
   may use
   <A HREF="prefs.html#NewFontNameList">File-&gt;Preferences-&gt;Font Info</A>
   to decree that all your new fonts will use this namelist. You can change

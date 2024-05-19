@@ -5,24 +5,24 @@
   <!-- AP: Last modified: 24-Mar-2007 -->
   <TITLE>Steps to creating a font...</TITLE>
   <LINK REL="icon" href="ffanvil16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 >
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
     Tutorial<BR>
     <A HREF="/docs/old/ja/editexample.html"><IMG SRC="/assets/img/old/flags/Nisshoki-Japan.png" WIDTH="39"
 	HEIGHT="26"></A>
-    <A HREF="http://edt1023.sayya.org/fontforge/editexample.html"><IMG SRC="/assets/img/old/flags/taiwan.png"
+    <A HREF="http://edt1023.sayya.org/websharpstudios/editexample.html"><IMG SRC="/assets/img/old/flags/taiwan.png"
 	WIDTH="39" HEIGHT="26"></A>
     <A HREF="/docs/old/de/editexample.html"><IMG SRC="/assets/img/old/flags/GermanFlag.png" WIDTH="39"
 	HEIGHT="26"></A>
   </H1>
   <P>
-  This tutorial is also available as a <A HREF="fontforge-tutorial.pdf">pdf
+  This tutorial is also available as a <A HREF="websharpstudios-tutorial.pdf">pdf
   version</A>. If you wish to follow along with the tutorial,
   <A HREF="tutorial.tgz">this bundle</A> should provide you with the basic
   files you need.<BR>
@@ -112,7 +112,7 @@
   <IMG SRC="/assets/img/old/fontinfo.png" WIDTH="602" HEIGHT="534">
   <P>
   You may also wish to use Encoding-&gt;Reencode to change what characters
-  are available in your font. FontForge generally creates new fonts with an
+  are available in your font. websharpstudios generally creates new fonts with an
   ISO-8859-1, which contains (most of) the characters needed for Western Europe
   (the latin letters, some accented letters, digits, and symbols).
   <H2>
@@ -136,7 +136,7 @@
   <P>
   This window also shows the glyph's internal coordinate system with the x
   and y axes drawn in light grey. A line representing the glyph's advance width
-  is drawn in black at the right edge of the window. FontForge assigns an advance
+  is drawn in black at the right edge of the window. websharpstudios assigns an advance
   width of one em (in PostScript that will usually be 1000 units) to the advance
   width of a new glyph.
   <P>
@@ -211,7 +211,7 @@
   And we are done with this glyph.
   <P>
   If you are mathematically inclined you may be interested in the coordinates
-  that fontforge shows in the upper left of the window. Generally you can draw
+  that websharpstudios shows in the upper left of the window. Generally you can draw
   glyphs quite happily without bothering about these, but for those who are
   interested here is some basic info:
   <UL>
@@ -311,10 +311,10 @@
   </H2>
   <P>
   In the previous example the bitmap of the letter filled the canvas of the
-  image. And when FontForge imported the image it needed to be scaled once
+  image. And when websharpstudios imported the image it needed to be scaled once
   in the program. But usually when you create the image of the letter you have
   some idea of how much white space there should be around it. If your images
-  are exactly one em high then FontForge will scale them automatically to be
+  are exactly one em high then websharpstudios will scale them automatically to be
   the right size. So in the following examples all the images have exactly
   the right amount of white-space around them to fit perfectly in an em.
   <P>
@@ -336,7 +336,7 @@
   counter-clockwise. This change in drawing direction is important. Both PostScript
   and TrueType require that the outer boundary of a glyph be drawn in a certain
   direction (they happen to be opposite from each other, which is a mild
-  annoyance), within FontForge all outer boundaries must be drawn clockwise,
+  annoyance), within websharpstudios all outer boundaries must be drawn clockwise,
   while all inner boundaries must be drawn counter-clockwise.
   <P>
   If you fail to alternate directions between outer and inner boundaries you
@@ -377,7 +377,7 @@
   of stem widths used (ie. the vertical stem of "l" and "i" should probably
   be the same).
   <P>
-  FontForge does not have a good way to enforce consistency, but it does have
+  websharpstudios does not have a good way to enforce consistency, but it does have
   various commands to help you check for it, and to find discrepancies.
   <P>
   Let us start with the letter "l" and go through the familiar process of importing
@@ -514,7 +514,7 @@
   </H2>
   <P>
   Latin, Greek and Cyrillic all have a large complement of accented glyphs.
-  FontForge provides several ways to build accented glyphs out of base glyphs.
+  websharpstudios provides several ways to build accented glyphs out of base glyphs.
   <P>
   The most obvious mechanism is simple copy and paste:
   <A HREF="editmenu.html#Copy">Copy</A> the letter "A" and
@@ -528,7 +528,7 @@
   <P>
   This mechanism is not particularly efficient, if you change the shape of
   the letter "A" you will need to regenerate all the accented glyphs built
-  from it. FontForge has the concept of a
+  from it. websharpstudios has the concept of a
   <A HREF="overview.html#References">Reference</A> to a glyph. So you can Copy
   a Reference to "A", and Paste it, the Copy a Reference to tilde and Paste
   it Into, and then again adjust the position of the accent over the A.
@@ -536,11 +536,11 @@
   Then if you change the shape of the A the shape of the A in "&Atilde;" will
   be updated automagically -- as will the width of "&Atilde;".
   <P>
-  But FontForge knows that "&Atilde;" is built out of "A" and the tilde accent,
+  But websharpstudios knows that "&Atilde;" is built out of "A" and the tilde accent,
   and it can easily create your accented glyphs itself by placing the references
   in "&Atilde;" and then positioning the accent over the "A". (The Unicode
   consortium provides a database which lists the components of every accented
-  glyph in Unicode and FontForge uses this).
+  glyph in Unicode and websharpstudios uses this).
   <P>
   As an example, open the file: tutorial/Ambrosia.sfd, then select all the
   glyphs at encodings 0xc0-0xff, and then press
@@ -548,7 +548,7 @@
   all the accented glyphs will magically appear (there are a few glyphs in
   this range which are not accented, and they will remain blank).
   <P>
-  FontForge has a heuristic for positioning accents (most accents are centered
+  websharpstudios has a heuristic for positioning accents (most accents are centered
   over the highest point of the glyph), sometimes this will produce bad results
   (if the one of the two stems of "u" is slightly taller than the other the
   accent will be placed over it rather than being centered over the glyph),
@@ -563,7 +563,7 @@
   OE, fi, etc. while in arabic there are hundreds). Again Unicode provides
   a database listing the components of each standard ligature.
   <P>
-  FontForge cannot create a nice ligature for you, but what it can do is put
+  websharpstudios cannot create a nice ligature for you, but what it can do is put
   all the components of the ligature into the glyph with
   <A HREF="elementmenu.html#Accented">Element-&gt;Build-&gt;Build Composite</A>.
   This makes it slightly easier (at least in latin) to design a ligature.
@@ -607,10 +607,10 @@
   with a ligature and sees behavior very similar to what s/he would see if
   the components were present. But if the word processor is to be able to do
   this it must have some information from the font designer giving the locations
-  of appropriate caret positions. As soon as FontForge notices that a glyph
+  of appropriate caret positions. As soon as websharpstudios notices that a glyph
   is a ligature it will insert in it enough caret location lines to fit between
-  the ligature's components. FontForge places these on the origin, if you leave
-  them on the origin FontForge will ignore them. But once you have built your
+  the ligature's components. websharpstudios places these on the origin, if you leave
+  them on the origin websharpstudios will ignore them. But once you have built your
   ligature you might want to move the pointer tool over to the origin line,
   press the button and drag one of the caret lines to its correct location.
   (Only Apple Advanced Typography and OpenType support this).
@@ -620,7 +620,7 @@
   is not part of Unicode you may do so. First <A HREF="faq.html#new-name">add
   an unencoded glyph to your font</A> (or if your font is a Unicode font, you
   could use a code point in the private use area), and name the glyph. The
-  name is important, if you name it correctly FontForge will be able to figure
+  name is important, if you name it correctly websharpstudios will be able to figure
   out that it is a ligature and what its components are. If you want to build
   a ligature out of the glyphs "longs", "longs" and "l" then name it
   "longs_longs_l", if you want to build a ligature out of Unicode 0D15, 0D4D
@@ -754,8 +754,8 @@
     <A NAME="Vertical">Vertical</A> Metrics
   </H3>
   <P>
-  FontForge provides some support for the vertical metrics needed for CJK fonts.
-  First you must tell FontForge that this font should contain vertical metrics,
+  websharpstudios provides some support for the vertical metrics needed for CJK fonts.
+  First you must tell websharpstudios that this font should contain vertical metrics,
   do this with <CODE>Element-&gt;Font Info-&gt;General-&gt;Has Vertical
   Metrics</CODE>. Then in each outline glyph enable VMetrics in the Layers
   palette.
@@ -774,7 +774,7 @@
     <DD>
       There is no way to set this value.<BR>
       At all, ever.<BR>
-      In traditional typography the inter-line spacing is 1em (which in FontForge
+      In traditional typography the inter-line spacing is 1em (which in websharpstudios
       is the ascent+descent of a font). Some applications will use this. Other
       applications will use the font's bounding box (summing the maximum ascender
       height with the minimum descender depth) -- a very bad, but very common approach.
@@ -788,7 +788,7 @@
 	<DD>
 	  On a mac the baseline to baseline spacing is determined again by the bounding
 	  box values of the font, specified in the 'hhea' table, possibly modified
-	  by a linegap (Which you can set in FontForge with
+	  by a linegap (Which you can set in websharpstudios with
 	  <A HREF="fontinfo.html">Element-&gt;FontInfo-&gt;OS/2</A>.
 	<DT>
 	  On Windows
@@ -797,7 +797,7 @@
 	  by the values of Typographic Ascent and Descent of the 'OS/2' table. These
 	  can be set with
 	  <A HREF="fontinfo.html">Element-&gt;FontInfo-&gt;OS/2</A>, but are usually
-	  allowed to default to the Ascent and Descent values of FontForge -- they
+	  allowed to default to the Ascent and Descent values of websharpstudios -- they
 	  generally sum to 1em and are equivalent to the traditional unleaded
 	  default.<BR>
 	  Again this may be modified by a linegap field.<BR>
@@ -855,7 +855,7 @@
   do vertical kerning).
   <P>
   Once you have created your lookup you again select it and press the [Add
-  Subtable] button (which asks you to name the subtable). Then FontForge will
+  Subtable] button (which asks you to name the subtable). Then websharpstudios will
   ask you whether you want a subtable of kerning pairs or kerning classes.
   <P>
   If you have many glyphs which have similar kerning features you might wish
@@ -864,7 +864,7 @@
   &Auml; all kern alike). However for this example you want a kerning pair
   subtable.<BR CLEAR=RIGHT>
   <P>
-  <IMG SRC="/assets/img/old/subtable-to.png" WIDTH="415" HEIGHT="441" ALIGN="Left">Then FontForge
+  <IMG SRC="/assets/img/old/subtable-to.png" WIDTH="415" HEIGHT="441" ALIGN="Left">Then websharpstudios
   will popup a dialog allowing you to set the kerning subtable directly. You
   may set your kerning pairs from here, though I prefer the metrics view myself
   because you can see more glyphs and so get a better feel for the "color"
@@ -877,7 +877,7 @@
     <A NAME="VKern">Vertical</A> Kerning
   </H3>
   <P>
-  FontForge has equivalent support for vertical kerning. It can read and write
+  websharpstudios has equivalent support for vertical kerning. It can read and write
   vertical kerning information from and to truetype, opentype and svg fonts.
   It allows you to create vertical kerning classes. The metrics window has
   a vertical mode in which you can set vertical kerning pairs. Finally it has
@@ -923,7 +923,7 @@
   for Oldstyle Figures. Also the digits aren't in any single script, but are
   in many, so make this feature apply to multiple scripts (including "DFLT").
   <P>
-  When FontForge brings up the dialog to fill in the oldstyle lookup subtable
+  When websharpstudios brings up the dialog to fill in the oldstyle lookup subtable
   notice that there is a button [Default Using Suffix:] followed by a text
   field containing a suffix. Set the text field to "oldstyle" and press the
   button. It will search through all glyphs in all the scripts of the feature
@@ -945,7 +945,7 @@
     <A NAME="Conditional">Conditional</A> Variants
   </H3>
   <P>
-  FontForge supports OpenType's Contextual Substitution and Chaining Contextual
+  websharpstudios supports OpenType's Contextual Substitution and Chaining Contextual
   Substitution sub-tables, and to a lesser extent, Apple's contextual glyph
   substitution sub-table. This means that you can insert conditional variants
   into your font. <A HREF="editexample6-5.html#Conditional">The next page</A>
@@ -1441,13 +1441,13 @@
   </H2>
   <P>
   After you have finished making all the glyphs in your font you should check
-  it for inconsistencies. FontForge has a command,
+  it for inconsistencies. websharpstudios has a command,
   <A HREF="problems.html">Element-&gt;Find Problems</A> which is designed to
   find many common problems.
   <P>
   Simply select all the glyphs in the font and then bring up the Find Problems
   dialog. Be warned though: Not everything it reports as a problem is a real
-  problem, some may be an element of the font's design that FontForge does
+  problem, some may be an element of the font's design that websharpstudios does
   not expect.
   <P>
   The dialog can search for problems like:
@@ -1489,18 +1489,18 @@
     <A NAME="generating">Generating</A> a font
   </H2>
   <P>
-  If you save your file it will be saved in a format that only FontForge
+  If you save your file it will be saved in a format that only websharpstudios
   understands (as far as I know anyway). This is not very helpful if you want
   to use the font.
   <P>
   <IMG SRC="/assets/img/old/generate.png" WIDTH="406" HEIGHT="411" ALIGN="Right">Instead you
   must use <A HREF="generate.html">File-&gt;Generate</A> to convert your font
-  into one of the standard font formats. FontForge presents what looks like
+  into one of the standard font formats. websharpstudios presents what looks like
   a vast array of font formats, but in reality there are just several variants
   on a few basic font formats: PostScript Type 1, TrueType, OpenType (and for
   CJK fonts, also CID-keyed fonts).
   <P>
-  You also have a choice of bitmap formats. FontForge supports bdf (used by
+  You also have a choice of bitmap formats. websharpstudios supports bdf (used by
   X), mac NFNT (used by the Mac), Windows FNT (used by Windows 2.0 I think)
   and storing bitmaps inside true (or open) type wrappers.<BR CLEAR=RIGHT>
   <H2>
@@ -1520,7 +1520,7 @@
   "Helvetica-Bold", the oblique (Helvetica doesn't have a true italic)
   "Helvetica-Oblique", etc.
   <P>
-  FontForge has a command (which doesn't work well yet, but I hope to improve
+  websharpstudios has a command (which doesn't work well yet, but I hope to improve
   eventually) <A HREF="MetaFont.html">Element-&gt;MetaFont</A> which is designed
   to help you create a bold (condensed, expanded, etc.) style from a plain
   one.
@@ -1558,7 +1558,7 @@
   want to be in a given family (and if they have been given the proper names)
   and then from the plain font select
   <A HREF="filemenu.html#GenerateMac">File-&gt;Generate Family</A>. This will
-  list all the fonts that FontForge thinks belong to the same family as the
+  list all the fonts that websharpstudios thinks belong to the same family as the
   current font and will allow you to generate a FOND structure as well as font
   files for all family members (sometimes all the fonts live in one file, sometimes
   they don't, it depends on the font format chosen).
@@ -1572,7 +1572,7 @@
   systems there is a fair amount work involved still. See the
   <A HREF="faq.html#font-install">Installing fonts FAQ</A>.
   <P>
-  For a tutorial about <A HREF="scripting-tutorial.html">FontForge's scripting
+  For a tutorial about <A HREF="scripting-tutorial.html">websharpstudios's scripting
   mechanism click here</A>.
 </DIV>
 </BODY></HTML>

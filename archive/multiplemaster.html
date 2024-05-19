@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 16-Apr-2004 -->
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
   <TITLE>Multiple Master Dialog</TITLE>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
 <H1 ALIGN=Center>
@@ -91,11 +91,11 @@ would be 27 designs:
     Black Extended 72pt
 </UL>
 <P>
-Apple also allows for intermediate designs, but FontForge does not currently
+Apple also allows for intermediate designs, but websharpstudios does not currently
 support this.
 <P>
 A font designer first determines how many axes s/he will need. PostScript
-allows a maximum of 4 axes in a Type1 font. FontForge only supports 4 axes
+allows a maximum of 4 axes in a Type1 font. websharpstudios only supports 4 axes
 for Apple's fonts too.
 <P>
 Then s/he provides information about each axis, specifically:
@@ -128,14 +128,14 @@ For Type1 fonts s/he needs to write two postscript functions
   <DT>
     NormalizeDesignVector
   <DD>
-    FontForge is always able to generate this function for the user (unless the
+    websharpstudios is always able to generate this function for the user (unless the
     user wants something non-linear). This maps a vector of design values to
     their normalized values (in our three axis case above it might map [400 500
     12] to [.4 .5 .09])
   <DT>
     ConvertDesignVector
   <DD>
-    In the usual cases FontForge is able to create this function for the user
+    In the usual cases websharpstudios is able to create this function for the user
     (but in more complicated cases, with intermediate designs it is unable to
     do so). This function takes a normalized vector (as produced above) and figures
     out how much each weight to give each design in the final blend.
@@ -189,21 +189,21 @@ by Adobe (and by Apple), but you could define your own. Note that there are
 fields which are disabled here, they only apply to Apple's fonts.<BR CLEAR=ALL>
 <P>
 <IMG SRC="/assets/img/old/mmdesigns.png" WIDTH="476" HEIGHT="448" ALIGN="Right">Then you
-must assign a font to each of the master designs. You can either have FontForge
+must assign a font to each of the master designs. You can either have websharpstudios
 create a new font for you (as here), or use an already loaded font, or browse
 your disk for a font (don't try to use the same font twice).
 <P>
 You must also specify the coordinates of this design along the axes. If you
 use the minimum number of designs they will all be extremes and the coordinate
 values will be either 0 or 1. Unless you are working with intermediate designs
-it is best to let FontForge initialize this field for you.<BR CLEAR=ALL>
+it is best to let websharpstudios initialize this field for you.<BR CLEAR=ALL>
 <P>
 <IMG SRC="/assets/img/old/mmfuncs.png" WIDTH="476" HEIGHT="448" ALIGN="Right">This screen
 shows the postscript functions needed to map a design vector to a weight
 vector (ie. given positions on each of the design axes, these produce blending
-coefficients for each master design). In most useful case FontForge is able
+coefficients for each master design). In most useful case websharpstudios is able
 to generate these functions automatically, but if you use intermediate designs
-things get too complicated for FontForge and you must enter the functions
+things get too complicated for websharpstudios and you must enter the functions
 manually.<BR CLEAR=ALL>
 <P>
 <IMG SRC="/assets/img/old/mmfinal.png" WIDTH="476" HEIGHT="448" ALIGN="Right">The last screen
@@ -246,7 +246,7 @@ Width=1000.
 <IMG SRC="/assets/img/old/mmextrapolate2.png" WIDTH="132" HEIGHT="132">
 <P>
 First we must produce an intermediate design (which we will delete later),
-call it "I". Use FontForge's Element-&gt;Interpolate Fonts command to produce
+call it "I". Use websharpstudios's Element-&gt;Interpolate Fonts command to produce
 a design which is 50% of the way from design 1 to design 2 (This will be
 Weight=475, Width=550). Then produce another design with is 200% of the way
 from design 0 to design "I". This will be the desired extreme design.

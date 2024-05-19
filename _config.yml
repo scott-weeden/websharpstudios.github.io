@@ -1,13 +1,13 @@
 markdown: kramdown
 highlighter: null
 permalink: pretty
-url: https://fontforge.org/
+url: https://websharpstudios.com/
 plugins:
   - jekyll-redirect-from
 include:
   - _images
   - _static
-socialTitle: FontForge
-socialDescription: FontForge is a free and open-source outline font editor.
+socialTitle: websharpstudios
+socialDescription: websharpstudios is a free and open-source outline font editor.
 socialImage: /assets/img/social-banner.png
-socialAuthor: '@fontforge'
+socialAuthor: '@websharpstudios'

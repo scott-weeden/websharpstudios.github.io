@@ -7,7 +7,7 @@
 <!--<TITLE>The histogram dialog</TITLE>-->
     <TITLE>柱状グラフダイアログ</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -54,12 +54,12 @@ StemSnap[H/V]. Shift-clicking on a bar will add that width to StemSnap[H/V]. -->
 HStem と VStem のどちらかを表示しているときは、柱状グラフバーの上でクリックすると、クリックした位置にあたる幅が Std[H/V]W の新しい値となり、StemSnap[H/V] はその値 1 個だけを含むように変更されます。Shift キーを押しながらバーをクリックした場合、StemSnap[H/V] にその幅が追加されます。
 <P>
 <!--
-For BlueValues, entries must be made in pairs, and FontForge can't tell until
+For BlueValues, entries must be made in pairs, and websharpstudios can't tell until
 the second value is selected where the pair should be placed. So for BlueValues
 you must click on two histogram bars (click on the leftmost one first). Then
 if the second value is negative both will be added to OtherBlues, otherwise
 both will be added to BlueValues. -->
-BlueValues の場合は、各項目の値はペアで指定しなければならないので、FontForge は 2 番目の値が選択されていないとどこにペアを配置するのか理解できません。ですから、BlueValues を指定するときには、柱状グラフに含まれる 2 本のバーをクリックしなければなりません (左側を先にクリックしてください)。次にクリックした 2 番目の値が負である場合は、それらは OtherBlues に追加され、それ以外の場合は BlueValues に追加されます。
+BlueValues の場合は、各項目の値はペアで指定しなければならないので、websharpstudios は 2 番目の値が選択されていないとどこにペアを配置するのか理解できません。ですから、BlueValues を指定するときには、柱状グラフに含まれる 2 本のバーをクリックしなければなりません (左側を先にクリックしてください)。次にクリックした 2 番目の値が負である場合は、それらは OtherBlues に追加され、それ以外の場合は BlueValues に追加されます。
 <P>
 <!--
 The BarWidth textfield allows you to change the width of the histogram bars.
@@ -91,14 +91,14 @@ come from all glyphs). Characters containing references will not be counted. -->
 <A HREF="fontinfo.html#Private">フォント情報ダイアログ</A>から起動したとき、これらの値はすべてのグリフに関する情報を表示します。フォントビューの <CODE>ヒント(<U>I</U>)</CODE>→<CODE>柱状グラフ</CODE> メニューから起動したときには、選択中のグリフに関する情報のみを表示します (グリフが何も選択されていないと気は、上と同様にすべてのグリフから情報を抽出します)。参照を含む文字は勘定に入りません。
 <P>
 <!--
-FontForge can automatically generate these values for you (this dialog gives
+websharpstudios can automatically generate these values for you (this dialog gives
 you the information you need to make your own choices which may be better
-than what FontForge will do on its own -- it uses essentially these data
+than what websharpstudios will do on its own -- it uses essentially these data
 itself). This will happen when you generate a postscript font and the font
 has no BlueValues or StemSnap information associated with it, or when you
 use the <A HREF="fontinfo.html#Private">Element-&gt;Font
 Info-&gt;Private</A> dialog. -->
-FontForge は自動的にこれらの値を生成することができます (このダイアログは、FontForge が自動で行う選択——本質的に、これらと同じデータを使用して行います——よりもおそらく適切な選択を手動で行いたい場合に必要となる情報を提供するものです)。この処理は、PostScript を出力する時に、フォントに BlueValues または StemSnap の情報が含まれていないときか、<A HREF="fontinfo.html#Private"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォント情報(<U>F</U>)</CODE>→<CODE>[PS Private辞書]</CODE></A> を選択したときに行われます。
+websharpstudios は自動的にこれらの値を生成することができます (このダイアログは、websharpstudios が自動で行う選択——本質的に、これらと同じデータを使用して行います——よりもおそらく適切な選択を手動で行いたい場合に必要となる情報を提供するものです)。この処理は、PostScript を出力する時に、フォントに BlueValues または StemSnap の情報が含まれていないときか、<A HREF="fontinfo.html#Private"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォント情報(<U>F</U>)</CODE>→<CODE>[PS Private辞書]</CODE></A> を選択したときに行われます。
 <P>
 <P ALIGN=Center>
 — <A HREF="hintsmenu.html">前</A> — <A HREF="overview.html">目次</A> —

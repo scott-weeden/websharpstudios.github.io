@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Outline Glyph View &#8212; FontForge 20230101 documentation</title>
+    <title>Outline Glyph View &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -66,7 +66,7 @@ control points will be collinear). (the “Next” control point will be drawn d
 cyan, and the Prev point will be magenta).</p>
 <img alt="A quadratic glyph" class="align-right" src="../../_images/charview-quadratic.png" />
 <p>In a TrueType font, an on-curve point can be implied between two control points.
-FontForge will draw these with an open circle.</p>
+websharpstudios will draw these with an open circle.</p>
 <p>The initial point in a contour will be drawn in green, and beside it will be a
 tiny arrow pointing in the direction of the contour.</p>
 <img alt="Showing extrema" class="align-left" src="../../_images/extrema-poi.png" />
@@ -95,7 +95,7 @@ ruler).</p>
 the mouse, then the effective location of the press will be the location of the
 point.</p>
 <p>If you drag a glyph from the font view and drop it into a glyph view then
-FontForge will drop a reference to the dragged glyph into the view.</p>
+websharpstudios will drop a reference to the dragged glyph into the view.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If your glyph has truetype instructions then editing it may cause those
@@ -122,7 +122,7 @@ to force a consistent x-height for example).</p>
 These do not go into the font, but may be helpful to you in tracing the outline
 of your glyph. It is possible to paste an image into the background if you have
 an image manipulation program that supports selection by mime type (the kde
-family of applications does this, perhaps others), then FontForge will be able
+family of applications does this, perhaps others), then websharpstudios will be able
 to read images in either “image/png” or “image/bmp”, otherwise you may import
 background image files.</p>
 <p>When debugging truetype (<a class="reference internal" href="../menus/hintsmenu.html#hintsmenu-debug"><span class="std std-ref">Hints-&gt;Debug</span></a>), or showing
@@ -132,7 +132,7 @@ visibility.</p>
 <p>The last is the foreground layer, this contains the splines that actually make
 up the glyph that will be placed into the font.</p>
 <p>One can actually have multiple foreground and background layers. They can be
-created and deleted with “+” and “-” buttons. FontForge, won’t delete last layer
+created and deleted with “+” and “-” buttons. websharpstudios, won’t delete last layer
 of its type, though. And care must be taken when generating a font to have the
 right foreground layer selected, if multiple are present.</p>
 <p>Layer curve type and visibility can be toggled freely with left mouse button.
@@ -153,7 +153,7 @@ magnify, and mouse button 2 with control is bound to ruler.</p>
 <p id="charview-alt-meta-capslock">Many of the tools have different behaviors if you hold the shift or alt (meta)
 key down when using the tool. On the mac there is no alt/meta key, and the
 Option and Command keys are usually bound to making a one button mouse look like
-a three button mouse. So on the mac fontforge uses the caps-lock key rather than
+a three button mouse. So on the mac websharpstudios uses the caps-lock key rather than
 alt/meta.</p>
 <section id="the-pointer-tool">
 <h3>The pointer tool<a class="headerlink" href="#the-pointer-tool" title="Permalink to this heading">¶</a></h3>
@@ -257,7 +257,7 @@ point you clicked on. Holding down the
 minify the view, again centered around the point at which you clicked. Again
 some window managers will steal meta-clicks, so you may have to use the View
 menu to minify (It’s called Zoom Out</p>
-<p>If you drag out a rectangle with this tool then when you release, FontForge will
+<p>If you drag out a rectangle with this tool then when you release, websharpstudios will
 shift and scale the view so that your rectangle just fits into the window.</p>
 <p>If your mouse has a scroll wheel then holding down the control key with the
 scroll wheel causes it to magnify or minify the window.</p>
@@ -271,9 +271,9 @@ scroll wheel causes it to magnify or minify the window.</p>
 <span id="charview-freehand"></span><h3>The freehand tool<a class="headerlink" href="#the-freehand-tool" title="Permalink to this heading">¶</a></h3>
 <img alt="../../_images/cvfreehandicon.png" class="align-left" src="../../_images/cvfreehandicon.png" />
 <img alt="../../_images/freehandctl.png" class="align-right" src="../../_images/freehandctl.png" />
-<p>You can use this tool to draw a random curve which FontForge will then attempt
+<p>You can use this tool to draw a random curve which websharpstudios will then attempt
 to convert into a set of splines. If you hold down the
-<a class="reference internal" href="#charview-alt-meta-capslock"><span class="std std-ref">Alt/Meta/CapsLock</span></a> key then FontForge will
+<a class="reference internal" href="#charview-alt-meta-capslock"><span class="std std-ref">Alt/Meta/CapsLock</span></a> key then websharpstudios will
 close the curve when you release the mouse.</p>
 <p>If you double click on the icon in the tool palette you get a dialog similar to
 the <a class="reference internal" href="../menus/elementmenu.html#elementmenu-expand"><span class="std std-ref">Element-&gt;Expand Stroke</span></a> which will give you
@@ -367,7 +367,7 @@ between using spiro (clothoid) control points.</p>
 <section id="the-knife-tool">
 <span id="charview-knife"></span><h3>The knife tool<a class="headerlink" href="#the-knife-tool" title="Permalink to this heading">¶</a></h3>
 <img alt="../../_images/cvknifeicon.png" class="align-left" src="../../_images/cvknifeicon.png" />
-<p>This tool is used to cut splines. As you drag it across the view fontforge draws
+<p>This tool is used to cut splines. As you drag it across the view websharpstudios draws
 a line showing where the cut will happen. When you release, every spline you
 intersect will be cut– that is at the location where this line intersects the
 spline two new points will be created and the old spline will be split in two
@@ -535,7 +535,7 @@ March Hare.</p>
 <p class="attribution">—Alice’s Adventures in Wonderland
 – Lewis Carroll</p>
 </div></blockquote>
-<p>FontForge has a truetype debugger – provided you have a version of freetype on
+<p>websharpstudios has a truetype debugger – provided you have a version of freetype on
 your machine with the bytecode interpreter enabled.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -554,7 +554,7 @@ horizontal and vertical metrics of the glyph (old versions of freetype will only
 display 2 points – left side bearing and advance width, while newer versions
 will display top side bearing and advance height as well).</p>
 <p>As you step through a glyph occasionally points will light up. This is
-FontForge’s attempt to show you what points will be affected (usually moved) by
+websharpstudios’s attempt to show you what points will be affected (usually moved) by
 the current instruction. Other points will have a circle drawn around them.
 These are used as reference points by the instruction.</p>
 <p>There are a series of buttons at the top of the instruction view. The first will
@@ -572,7 +572,7 @@ until:</p>
 (and what instruction will be executed next).</p>
 <p>The fifth button allows you to set a watch point. You select a point (or several
 points) in the left hand pane, and press this button. Thereafter, whenever one
-of those points is moved FontForge will stop the glyph program. (You may also
+of those points is moved websharpstudios will stop the glyph program. (You may also
 set watch points through the points window).</p>
 <p>When you are in this mode there are a few special “hot keys”</p>
 <dl class="simple">
@@ -690,13 +690,13 @@ whether the fpgm and prep tables are debugged. Usually debugging will start
 when execution reaches the instructions associated with this glyph.</p>
 <section id="debugging-composite-glyphs">
 <h3>Debugging composite glyphs<a class="headerlink" href="#debugging-composite-glyphs" title="Permalink to this heading">¶</a></h3>
-<p>FontForge is not as friendly when debugging composite glyphs as it should be –
+<p>websharpstudios is not as friendly when debugging composite glyphs as it should be –
 this is influenced by the way truetype works. Suppose you want to debug the
 “Atilde” glyph.</p>
-<p>First FontForge will load and grid fit the “A” glyph, points from the “tilde”
+<p>First websharpstudios will load and grid fit the “A” glyph, points from the “tilde”
 will not be displayed and behavior will be exactly the same as if you were
 debugging a stand alone “A”.</p>
-<p>Then FontForge will load and grid fit the “tilde” glyph, and now points from the
+<p>Then websharpstudios will load and grid fit the “tilde” glyph, and now points from the
 “A” glyph will not be visible. The point numbers on the “tilde” will be the same
 as they are in a stand-alone “tilde” (whereas in a true representation of
 “Atilde”, the points numbering in the “tilde” component will be offset by the
@@ -704,14 +704,14 @@ number of points in the “A” component). The “tilde” may appear oddly pos
 this is caused by rounding: the “tilde” will usually be translated, and this
 translation will usually be rounded to fit the pixel grid. The width line will
 show the width of the “tilde” and not of the “Atilde”.</p>
-<p>Finally FontForge will execute any instructions in the composite itself, now all
+<p>Finally websharpstudios will execute any instructions in the composite itself, now all
 sub-components will be displayed, and all points will be numbered as they should
 be.</p>
 <p>Several words of caution:</p>
 <ul class="simple">
-<li><p>If a component, or the composite as a whole, has no instructions then FontForge
+<li><p>If a component, or the composite as a whole, has no instructions then websharpstudios
 will not debug that piece (there will be nothing to debug).</p></li>
-<li><p>FontForge does not translate references which do point matching properly until
+<li><p>websharpstudios does not translate references which do point matching properly until
 the entire glyph has been loaded.</p></li>
 </ul>
 <figure class="align-default" id="id1">
@@ -733,7 +733,7 @@ Skia).</p>
 <section id="multiple-layer-editing">
 <span id="charview-multilayer"></span><h2>Multiple Layer Editing<a class="headerlink" href="#multiple-layer-editing" title="Permalink to this heading">¶</a></h2>
 <img alt="../../_images/charview-multilayer.png" class="align-right" src="../../_images/charview-multilayer.png" />
-<p>If you wish to <a class="reference internal" href="../dialogs/multilayer.html"><span class="doc">edit type3 fonts</span></a>, FontForge can display a
+<p>If you wish to <a class="reference internal" href="../dialogs/multilayer.html"><span class="doc">edit type3 fonts</span></a>, websharpstudios can display a
 glyph broken down into a series of strokes and fills and allow you to edit each
 one.</p>
 </section>
@@ -746,7 +746,7 @@ one.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -758,7 +758,7 @@ one.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../mainviews.html">Main Views</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="fontview.html">Font View</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Outline Glyph View</a><ul>
@@ -778,13 +778,13 @@ one.</p>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -796,7 +796,7 @@ one.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../mainviews.html">Main Views</a><ul>
       <li>Previous: <a href="fontview.html" title="previous chapter">Font View</a></li>
       <li>Next: <a href="bitmapview.html" title="next chapter">Bitmap Glyph View</a></li>
@@ -828,7 +828,7 @@ one.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

@@ -3,17 +3,17 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 26-Oct-2005 -->
   <!-- AP: Last modified: 8-Dec-2008 -->
-  <TITLE>Building FontForge from source</TITLE>
+  <TITLE>Building websharpstudios from source</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    FontForge build procedures
+    websharpstudios build procedures
   </H1>
   <UL>
     <LI>
@@ -63,7 +63,7 @@
 	  <A HREF="#doc-tar">Installing a documentation tarball</A>
       </UL>
     <LI>
-      <A HREF="running.html">Running FontForge</A>
+      <A HREF="running.html">Running websharpstudios</A>
     <LI>
       <A HREF="uninstall.html">Uninstalling</A>
   </UL>
@@ -198,7 +198,7 @@
     <A NAME="src-tarball">tarball</A>
   </H4>
   <P>
-  <A HREF="http://sourceforge.net/projects/fontforge/files/">Sourceforge's
+  <A HREF="http://sourceforge.net/projects/websharpstudios/files/">Sourceforge's
   file release system </A>will contain a tarball (a file with the extension
   for .tar.bz2).
   <P>
@@ -207,9 +207,9 @@
   provide explicit instructions here, because I don't know where your browser
   put the file) and type (do not type "$"):
   <BLOCKQUOTE id="shell">
-    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 fontforge*.tar.bz2
-<FONT COLOR="Gray">$ </FONT>tar xf fontforge*.tar
-<FONT COLOR="Gray">$ </FONT>cd fontforge-*
+    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 websharpstudios*.tar.bz2
+<FONT COLOR="Gray">$ </FONT>tar xf websharpstudios*.tar
+<FONT COLOR="Gray">$ </FONT>cd websharpstudios-*
 </PRE>
   </BLOCKQUOTE>
   <H4>
@@ -221,11 +221,11 @@
   cd into it and type the following (do not type "$", when it asks for a password,
   just hit return):
   <BLOCKQUOTE id="shell">
-    <PRE><FONT COLOR="Gray">$ </FONT>https://github.com/fontforge/fontforge.git</PRE>
+    <PRE><FONT COLOR="Gray">$ </FONT>https://github.com/websharpstudios/websharpstudios.git</PRE>
   </BLOCKQUOTE>
   <P>
   You can also
-  <A HREF="http://github.com/fontforge/fontforge">browse
+  <A HREF="http://github.com/websharpstudios/websharpstudios">browse
   the git repository</A> online. Or read the
   <A HREF="http://git-scm.com/documentation">git documentation</A>.
   <H4>
@@ -243,25 +243,25 @@
   following (do not type "$", when it asks for a password, just hit
   return):</DEL>
   <BLOCKQUOTE id="shell">
-    <PRE><FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge login
+    <PRE><FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios login
 CVS password:
-<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge checkout fontforge
-<FONT COLOR="Gray">$ </FONT>cd fontforge
+<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios checkout websharpstudios
+<FONT COLOR="Gray">$ </FONT>cd websharpstudios
 </PRE>
   </BLOCKQUOTE>
   <P>
   <DEL>Once you have established a directory you may update it to obtain the
   most recent version of the source by typing:</DEL>
   <BLOCKQUOTE id="shell">
-    <PRE><FONT COLOR="Gray">$ </FONT>cd fontforge
-<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge login
+    <PRE><FONT COLOR="Gray">$ </FONT>cd websharpstudios
+<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios login
 CVS password:
-<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge update
+<FONT COLOR="Gray">$ </FONT>cvs -d:pserver:anonymous@websharpstudios.cvs.sourceforge.net:/cvsroot/websharpstudios update
 </PRE>
   </BLOCKQUOTE>
   <P>
   <DEL>You can also
-  <A HREF="http://fontforge.cvs.sourceforge.net/fontforge/fontforge/">browse
+  <A HREF="http://websharpstudios.cvs.sourceforge.net/websharpstudios/websharpstudios/">browse
   the CVS tree</A> online. Or see
   <A HREF="http://sourceforge.net/cvs/?group_id=103338">sourceforge's description
   </A>for more information, or read the
@@ -306,7 +306,7 @@ CVS password:
     More complicated <A NAME="src-installs">installs</A>
   </H3>
   <P>
-  The configure script allows you to turn off and on various features of fontforge
+  The configure script allows you to turn off and on various features of websharpstudios
   that might not be appropriate for your system. Type
   <BLOCKQUOTE id="shell">
     <PRE><FONT COLOR="Gray">$ </FONT>./configure --help
@@ -315,11 +315,11 @@ CVS password:
   <P>
   for a complete list of options. Some of the most useful are described below.
   <H4>
-    Building fontforge without X
+    Building websharpstudios without X
   </H4>
   <P>
-  If you don't want to install X11 on your system, you can use fontforge as
-  a command line tool which can execute scripts to manipulate fonts. FontForge's
+  If you don't want to install X11 on your system, you can use websharpstudios as
+  a command line tool which can execute scripts to manipulate fonts. websharpstudios's
   scripting language is described in detail <A HREF="scripting.html">in the
   section on scripting</A>, or the <A HREF="python.html">section on python
   scripting</A>.
@@ -328,20 +328,20 @@ CVS password:
 </PRE>
   </BLOCKQUOTE>
   <H4>
-    Building fontforge to use higher precision internally
+    Building websharpstudios to use higher precision internally
   </H4>
   <P>
-  FontForge generally uses floats to represent coordinates. If you need greater
+  websharpstudios generally uses floats to represent coordinates. If you need greater
   accuracy...
   <BLOCKQUOTE id="shell">
     <PRE><FONT COLOR="Gray">$ </FONT>./configure --enable-double
 </PRE>
   </BLOCKQUOTE>
   <H4>
-    Building fontforge with the tile path command available
+    Building websharpstudios with the tile path command available
   </H4>
   <P>
-  FontForge has a command which lets you tile a pattern along a path. Generally
+  websharpstudios has a command which lets you tile a pattern along a path. Generally
   this is disabled as it isn't what most fonts will use, but for some decorative
   fonts it can be useful.
   <BLOCKQUOTE id="shell">
@@ -349,20 +349,20 @@ CVS password:
 </PRE>
   </BLOCKQUOTE>
   <H4>
-    Building fontforge (also) as a python extension
+    Building websharpstudios (also) as a python extension
   </H4>
   <P>
   If you want to write python scripts in normal python (as opposed to within
-  the python embedded in fontforge)
+  the python embedded in websharpstudios)
   <BLOCKQUOTE id="shell">
     <PRE><FONT COLOR="Gray">$ </FONT>./configure --enable-pyextension
 </PRE>
   </BLOCKQUOTE>
   <H4>
-    Installing FontForge somewhere other than <CODE>/usr/local</CODE>
+    Installing websharpstudios somewhere other than <CODE>/usr/local</CODE>
   </H4>
   <P>
-  If you want to install fontforge in a different directory (say in /usr/bin)
+  If you want to install websharpstudios in a different directory (say in /usr/bin)
   <BLOCKQUOTE id="shell">
     <PRE><FONT COLOR="Gray">$ </FONT>./configure --prefix=/usr
 </PRE>
@@ -391,7 +391,7 @@ CVS password:
   <P>
   patch is a standard unix utility (Try typing $ man patch, for more info)
   which will make changes to text files. I use it to modify the source files
-  of FontForge.
+  of websharpstudios.
   <P>
   So before you can apply the patch you must
   <A HREF="source-build.html#src-distribution">have the source code </A>available
@@ -400,9 +400,9 @@ CVS password:
   to do anything with it). But if you download one of my tarballs then you
   will need to apply the patch:
   <BLOCKQUOTE id="shell">
-    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 fontforge*.tar.bz2
-<FONT COLOR="Gray">$ </FONT>tar xf fontforge*.tar
-<FONT COLOR="Gray">$ </FONT>cd fontforge-*/fontforge
+    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 websharpstudios*.tar.bz2
+<FONT COLOR="Gray">$ </FONT>tar xf websharpstudios*.tar
+<FONT COLOR="Gray">$ </FONT>cd websharpstudios-*/websharpstudios
 <FONT COLOR="Gray">$ </FONT>patch &lt;foobar.patch 
 <FONT COLOR="Gray">$ </FONT>cd ..
 <FONT COLOR="Gray">$ </FONT>./configure
@@ -414,8 +414,8 @@ CVS password:
     <A NAME="Dependencies">Dependencies</A> (external libraries/helper programs)
   </H2>
   <P>
-  FontForge tries to avoid hard dependencies. If a library is missing then
-  fontforge will (in most cases, but not on cygwin) be able to continue to
+  websharpstudios tries to avoid hard dependencies. If a library is missing then
+  websharpstudios will (in most cases, but not on cygwin) be able to continue to
   run, it will just lack whatever functionality the library provides. So if
   you don't need to import tiff images, you don't need libtiff. If you don't
   need to handle SVG fonts you don't need libxml2, etc.
@@ -436,14 +436,14 @@ CVS password:
     Libraries
   </H3>
   <P>
-  None is required for the proper compilation/execution of FontForge, if the
+  None is required for the proper compilation/execution of websharpstudios, if the
   libraries are not present they will not be used. (If the machine on which
   your executable was build didn't have them, then you must not only install
-  the libraries, but <A HREF="#source">rebuild fontforge from source</A>) If
+  the libraries, but <A HREF="#source">rebuild websharpstudios from source</A>) If
   your machine doesn't have them and you want them they are available from:
   <UL>
     <LI>
-      Image Libraries (to allow FontForge to import images in those formats generally
+      Image Libraries (to allow websharpstudios to import images in those formats generally
       used as backgrounds for autotracing)
       <UL>
 	<LI>
@@ -462,22 +462,22 @@ CVS password:
     <LI>
       <A HREF="http://libspiro.sf.net/">libspiro</A><BR>
       Raph Levien's clothoid to bezier spline conversion routines. If this is available
-      fontforge will allow you to edit with clothoid splines (spiro).
+      websharpstudios will allow you to edit with clothoid splines (spiro).
     <LI>
       <A HREF="http://libuninameslist.sf.net">libuninameslist</A><BR>
       To display unicode names and annotations.
     <LI>
       <A HREF="http://www.gnu.org/software/libiconv/">libiconv</A><BR>
-      Only important for systems with no built-in iconv(). If not present FontForge
+      Only important for systems with no built-in iconv(). If not present websharpstudios
       contains a minimal version of the library which allows it to work. But if
       you want to use libiconv you must configure it with
-      <CODE>--enable-extra-encodings</CODE>, as FontForge requires Shift-JIS.
+      <CODE>--enable-extra-encodings</CODE>, as websharpstudios requires Shift-JIS.
     <LI>
       <A HREF="http://freetype.sf.net/">freetype</A><BR>
       To do a better job rasterizing bitmaps, and to enable the truetype debugger.
       <TABLE BORDER CELLPADDING="6" WIDTH="50%" ALIGN=CENTER>
 	<TR>
-	  <TD BGCOLOR="#ffff00">Some of FontForge's commands depend on you
+	  <TD BGCOLOR="#ffff00">Some of websharpstudios's commands depend on you
 	    compiling freetype with the byte code interpreter enabled. It
 	    used to be disabled by default because of some
 	    <A HREF="http://freetype.sourceforge.net/patents.html">patents
@@ -488,7 +488,7 @@ CVS password:
 	    before you build the library (see the README.UNX file on the top
 	    level of the freetype distribution).
 	    <P>
-	    To enable the truetype debugger, FontForge needs to have the freetype source
+	    To enable the truetype debugger, websharpstudios needs to have the freetype source
 	    directories available when it is built (there are some include files there
 	    which it depends on)</TD>
 	</TR>
@@ -503,13 +503,13 @@ CVS password:
       UI localization.
     <LI>
       <A HREF="http://www.python.org/">libpython</A><BR>
-      If present when FontForge is compiled, allows the user to execute python
-      scripts within fontforge (and you can configure fontforge so that fontforge's
-      functionality can be imported into python -- that is fontforge both
+      If present when websharpstudios is compiled, allows the user to execute python
+      scripts within websharpstudios (and you can configure websharpstudios so that websharpstudios's
+      functionality can be imported into python -- that is websharpstudios both
       <I>extends</I> and <I>embeds</I> python)
     <LI>
       <A HREF="http://x.org/">libX</A><BR>
-      Normally FontForge depends on the X11 windowing system, but if you are just
+      Normally websharpstudios depends on the X11 windowing system, but if you are just
       interested in the scripting engines (with no user interface), it may be built
       on systems without X (the configure script should figure this out).
     <LI>
@@ -534,7 +534,7 @@ CVS password:
   <A HREF="/assets/old/cidmaps.tgz">character set descriptions</A>. (These were last updated
   22-Dec-2004)
   <P>
-  <A NAME="suggested-fonts">Once</A> upon a time, fontforge only used X11 bitmap
+  <A NAME="suggested-fonts">Once</A> upon a time, websharpstudios only used X11 bitmap
   fonts, on most systems in now uses fontconfig.
   <P>
   There seem plenty of good unicode outline fonts, so I shan't provide any
@@ -573,7 +573,7 @@ CVS password:
       Font Guide for Free/Libre Open Source Operating Systems</A> 
 	<HR>
     <LI>
-      <A HREF="nonBMP/index.html">FontForge's conventions for non-BMP unicode bitmap
+      <A HREF="nonBMP/index.html">websharpstudios's conventions for non-BMP unicode bitmap
       fonts</A>
   </UL>
   <P>
@@ -590,16 +590,16 @@ CVS password:
     <A NAME="Documentation">Documentation</A>
   </H2>
   <P>
-  <A HREF="overview.html">The complete fontforge manual is available online.</A>
+  <A HREF="overview.html">The complete websharpstudios manual is available online.</A>
   <UL>
     <LI>
       A documentation tarball can be retrieved from the
-      <A HREF="http://sourceforge.net/projects/fontforge/files/fontforge-docs/">file
+      <A HREF="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/">file
       release system</A>
     <LI>
       A
       Japanese<IMG SRC="/assets/img/old/flags/Nisshoki-Japan.png" WIDTH="39" HEIGHT="26" ALIGN="Middle">
-      <A HREF="/assets/old/fontforge_ja_htdocs-20060822.tar.bz2">tarball</A> (Version 22-Aug-2006)
+      <A HREF="/assets/old/websharpstudios_ja_htdocs-20060822.tar.bz2">tarball</A> (Version 22-Aug-2006)
       <STRONG>Out of Date!</STRONG>
     <LI>
       There is a shorter tutorial which
@@ -611,7 +611,7 @@ CVS password:
 	  </SPAN></SPAN></A><IMG SRC="/assets/img/old/spacer1x20.png" HEIGHT=20 WIDTH=1 ALIGN="Top"><STRONG>Out
 	  of Date!</STRONG>
 	<LI>
-	  <A HREF="http://edt1023.sayya.org/fontforge/editexample.html"><SPAN class="zhtutorial"><SPAN>
+	  <A HREF="http://edt1023.sayya.org/websharpstudios/editexample.html"><SPAN class="zhtutorial"><SPAN>
 	  </SPAN></SPAN>
 	  </A><IMG SRC="/assets/img/old/spacer1x20.png" HEIGHT=20 WIDTH=1 ALIGN="Top"><STRONG>Out of
 	  Date!</STRONG>
@@ -619,7 +619,7 @@ CVS password:
 	  <A HREF="/docs/old/de/editexample.html"><IMG SRC="/assets/img/old/flags/GermanFlag.png" WIDTH="39"
 	      HEIGHT="26" BORDER="0"></A><STRONG>Out of Date!</STRONG>
 	<LI>
-	  <A HREF="/assets/old/fontforge-tutorial.pdf">Can be downloaded as pdf</A>
+	  <A HREF="/assets/old/websharpstudios-tutorial.pdf">Can be downloaded as pdf</A>
 	<LI>
 	  <A HREF="/assets/old/tutorial.tgz">example files </A>(to work through the tutorial yourself)
       </UL>
@@ -646,35 +646,35 @@ CVS password:
   <BLOCKQUOTE id="shell">
     <PRE><FONT COLOR="Gray">$ </FONT>su
 password: ******
-<FONT COLOR="Gray"># </FONT>mkdir -p /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>mv fontforge_htdocs*.tar.bz2 /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>cd /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>tar xfj fontforge_htdocs*.tar.bz2
-<FONT COLOR="Gray"># </FONT>rm fontforge_htdocs*.tar.bz2
+<FONT COLOR="Gray"># </FONT>mkdir -p /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>mv websharpstudios_htdocs*.tar.bz2 /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>cd /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>tar xfj websharpstudios_htdocs*.tar.bz2
+<FONT COLOR="Gray"># </FONT>rm websharpstudios_htdocs*.tar.bz2
 </PRE>
   </BLOCKQUOTE>
   <P>
-  After doing this fontforge will be able to find the docs on your system when
-  you press the [F1] (or [Help]) key. If you don't do this fontforge will attempt
+  After doing this websharpstudios will be able to find the docs on your system when
+  you press the [F1] (or [Help]) key. If you don't do this websharpstudios will attempt
   to find documentation online.
   <P>
   (on some strict unix systems you may need to do the following instead)
   <BLOCKQUOTE id="shell">
     <PRE><FONT COLOR="Gray">$ </FONT>su
 password: ******
-<FONT COLOR="Gray"># </FONT>mkdir -p /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>mv fontforge_htdocs*.tar.bz2 /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>cd /usr/local/share/doc/fontforge
-<FONT COLOR="Gray"># </FONT>bunzip2 fontforge_htdocs*.tar.bz2
-<FONT COLOR="Gray"># </FONT>tar xf fontforge_htdocs*.tar
-<FONT COLOR="Gray"># </FONT>rm fontforge_htdocs*.tar
+<FONT COLOR="Gray"># </FONT>mkdir -p /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>mv websharpstudios_htdocs*.tar.bz2 /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>cd /usr/local/share/doc/websharpstudios
+<FONT COLOR="Gray"># </FONT>bunzip2 websharpstudios_htdocs*.tar.bz2
+<FONT COLOR="Gray"># </FONT>tar xf websharpstudios_htdocs*.tar
+<FONT COLOR="Gray"># </FONT>rm websharpstudios_htdocs*.tar
 </PRE>
   </BLOCKQUOTE>
   <P>
     <HR>
   <UL>
     <LI>
-      <A HREF="running.html">Running FontForge</A>
+      <A HREF="running.html">Running websharpstudios</A>
   </UL>
 </DIV>
 </BODY></HTML>

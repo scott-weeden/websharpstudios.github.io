@@ -5,14 +5,14 @@
   <!-- AP: Last modified: 31-Oct-2007 -->
   <TITLE>Bitmap strikes</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV id="in">
   <H1 ALIGN=Center>
     Tutorial #9
@@ -82,9 +82,9 @@
     <A NAME="Opening">Opening</A> &amp; Importing Bitmap strikes
   </H2>
   <P>
-  FontForge is primarily an outline font editor, but it does have some facility
+  websharpstudios is primarily an outline font editor, but it does have some facility
   for editing bitmap (and greymap, or anti-aliased) fonts. A useful term here
-  is a "strike"; a strike is one particular size of a bitmap font. When FontForge
+  is a "strike"; a strike is one particular size of a bitmap font. When websharpstudios
   displays a font, that font will contain at most one outline but potentially
   many bitmap (or greymap) strikes (for several different pixel sizes).
   <P>
@@ -106,14 +106,14 @@
   <P>
   If you have an sfnt with both an outline font and bitmap strikes you can
   open it directly with the <A HREF="filemenu.html#Open">File-&gt;Open</A>
-  command and FontForge will load all the bits and pieces.
+  command and websharpstudios will load all the bits and pieces.
   <P>
   You can also open a bitmap only font directly with the
   <A HREF="filemenu.html#Open">File-&gt;Open</A> command, however if you have
   multiple strikes of the same underlying font in separate files, you will
   probably want to open only the first (or only the outline version) with Open,
   and use <A HREF="filemenu.html#Import">File-&gt;Import</A> to merge the other
-  strikes into one FontForge font.
+  strikes into one websharpstudios font.
   <P>
   Suppose you have <CODE>Ambrosia.pfb</CODE> (an outline font),
   <CODE>Ambrosia-12.bdf</CODE>, and <CODE>Ambrosia-24.bdf </CODE>(two bitmap
@@ -153,7 +153,7 @@
   sizes if you no longer want them.
   <P>
   Normally when you create a new strike it will be rasterized from the outline
-  font -- if there is no outline font then FontForge will attempt to scale
+  font -- if there is no outline font then websharpstudios will attempt to scale
   the biggest strike available to the new size (in most cases this will be
   fairly ugly, but it may be better than nothing.
   <P>
@@ -167,9 +167,9 @@
   <P>
   In the old days of bdf and pcf fonts on X11 each font had a set of properties
   attached to it. It is not clear to me whether these properties are still
-  useful as X11 moves to OpenType Bitmaps. They may be. At any rate FontForge
+  useful as X11 moves to OpenType Bitmaps. They may be. At any rate websharpstudios
   will store them both in BDF fonts and in OpenType Bitmap fonts. Each strike
-  may have its own set of properties. FontForge will generate them automatically
+  may have its own set of properties. websharpstudios will generate them automatically
   when you create a strike (and will retain them when it reads in a font that
   has them). You may override the current values with the
   <A HREF="elementmenu.html#BDF-Info"><CODE>Element-Bdf Info </CODE></A>dialog.
@@ -211,10 +211,10 @@
   outline glyphs.
   <P>
   If the Font View is displaying a bitmap strike and you double click on a
-  character, then FontForge will bring up a <A HREF="bitmapview.html">bitmap
+  character, then websharpstudios will bring up a <A HREF="bitmapview.html">bitmap
   editing window</A> displaying that character in the current strike (rather
   than opening an outline editing window). If the character does not have a
-  matching glyph in the current strike FontForge will create one by rasterizing
+  matching glyph in the current strike websharpstudios will create one by rasterizing
   the outline version of the font.
   <H2>
     <A NAME="Editing">Editing</A> Bitmaps

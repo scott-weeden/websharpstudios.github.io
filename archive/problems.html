@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 5-Sep-2009 -->
   <TITLE>Finding common font problems automagically</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -24,7 +24,7 @@
   having stems with slightly different widths in different glyphs, or having
   lines which aren't quite vertical or...
   <P>
-  FontForge's Find Problems command can help track down some common errors.
+  websharpstudios's Find Problems command can help track down some common errors.
   In some cases it will be able to fix things for you, but it won't do so without
   your permission (who knows, some of the so-called "problems" might actually
   be what you wanted), but it will point things out to you that you should
@@ -35,7 +35,7 @@
   if it finds anything open a window looking at the glyph and post a (non-modal)
   dialog saying what the error is. You may then correct the problem and press
   the [Next] button in the dialog when you are done, or you may stop the command
-  with the [Stop] button. Some errors FontForge will be able to fix automagically,
+  with the [Stop] button. Some errors websharpstudios will be able to fix automagically,
   and if so there will be a [Fix] button in this dlg
   (<FONT COLOR="Red"><SMALL><STRONG>NOTE</STRONG></SMALL></FONT>: You should
   not assume that all problems are in fact errors. Some "problems" may be intended
@@ -43,7 +43,7 @@
   Behavior in the outline and metrics views is similar, except that only one
   glyph is searched for problems.
   <P>
-  FontForge will be able to check for more problems if you:
+  websharpstudios will be able to check for more problems if you:
   <UL>
     <LI>
       AutoHint the font first
@@ -57,18 +57,18 @@
   Latin/Greek/Cyrillic fonts. I would be happy to hear of ways to extend these
   to other script systems, or of problems that are specific to other script
   systems
-  (<A HREF="mailto:fontforge-users@lists.sourceforge.net">fontforge-users@lists.sourceforge.net</A>
+  (<A HREF="mailto:websharpstudios-users@lists.sourceforge.net">websharpstudios-users@lists.sourceforge.net</A>
   this is a public mailing list).
   <P>
-  <IMG SRC="/assets/img/old/findprobs.png" WIDTH="314" HEIGHT="479" ALIGN="Right">FontForge
+  <IMG SRC="/assets/img/old/findprobs.png" WIDTH="314" HEIGHT="479" ALIGN="Right">websharpstudios
   can detect the following potential problems:
   <P>
   <STRONG><BIG>Non-Integral Coordinates</BIG></STRONG>
   <P>
-  In TrueType fonts all coordinates must be on integral coordinates. When FontForge
+  In TrueType fonts all coordinates must be on integral coordinates. When websharpstudios
   generates your font it will round any non-integral coordinates -- sometimes
   this is fine, but it can also introduce small uglinesses into your font that
-  you won't be aware of in fontforge. (Implied points are allowed to have
+  you won't be aware of in websharpstudios. (Implied points are allowed to have
   half-integral values (2.5 is ok, 2.25 is not)).
   <P>
   PostScript fonts can have non-integral coordinates, but it will make the
@@ -79,10 +79,10 @@
   Often there will be a set of features which should be consistent across the
   entire file. For example the left side-bearing of the glyphs "BDEFHIKLMNPR"
   should perhaps all be the same. This will let you enter in the desired
-  side-bearing value, and then FontForge will find all glyphs with points that
+  side-bearing value, and then websharpstudios will find all glyphs with points that
   are near, but not exactly on the desired value. Where "near" is defined at
   the bottom of the dialog (in this case, everything within 3 em-units -- in
-  either direction -- will be near). If it finds an errant point, FontForge
+  either direction -- will be near). If it finds an errant point, websharpstudios
   will select it, stop and let you fix it.
   <P>
   <STRONG><BIG>Y near [val]</BIG></STRONG>
@@ -94,16 +94,16 @@
   <STRONG><BIG>Y near standard heights</BIG></STRONG>
   <P>
   In Latin, Greek and Cyrillic alphabets there are certain standard heights
-  that FontForge expects to find: the baseline, the height of lower case letters,
+  that websharpstudios expects to find: the baseline, the height of lower case letters,
   the height of capital letters, the height of lower case letters with ascenders
   (often the same as, or very close to, the capital height), and the depth
-  of lower case letters with descenders. For this command FontForge defines
+  of lower case letters with descenders. For this command websharpstudios defines
   these heights to be 0, the height of "x", the height of "I", the height of
   "l" and the depth of "p" (If you are working on a Greek or Cyrillic font
-  and don't include the Latin alphabet, FontForge will pick similar letters
-  from your alphabet). Then FontForge will search for any points which are
+  and don't include the Latin alphabet, websharpstudios will pick similar letters
+  from your alphabet). Then websharpstudios will search for any points which are
   "near", but not on, these heights. Again where "near" is defined at the bottom
-  of the dialog. If it finds such a point, FontForge will select it, stop and
+  of the dialog. If it finds such a point, websharpstudios will select it, stop and
   let you fix things.
   <P>
   <STRONG><BIG>Control points near horizontal/vertical/italic</BIG></STRONG>
@@ -133,10 +133,10 @@
   <P>
   <STRONG><BIG>Points Too Close</BIG></STRONG>
   <P>
-  Some of FontForge's own commands get confused by tiny splines, on the order
+  Some of websharpstudios's own commands get confused by tiny splines, on the order
   of one unit or less, and anyway if you have several points very close together
   it is unlikely that they will make a detectable difference when the font
-  is printed. Probably you should remove one of them... If FontForge detects
+  is printed. Probably you should remove one of them... If websharpstudios detects
   two points on the same path which it deems to be too close it will select
   both, stop and let you fix things.
   <P>
@@ -145,7 +145,7 @@
   Most font formats use 16 bit integers to describe the distance from one point
   (or control point) to the next. This means that each point must be within
   32767 em-units of the next point. If it is further away then it cannot be
-  represented in a generated font. If FontForge detects two points too far
+  represented in a generated font. If websharpstudios detects two points too far
   from each other it will select both (a special case -- the first point in
   a glyph must be within 32767 of the origin, if it is further, only the first
   point will be selected), stop and let you fix things.<BR Clear=Right>
@@ -157,7 +157,7 @@
   the way a line segment does, but should connect back to their beginning.
   This is often caused by being a little careless with the last point on a
   path, and instead of joining it to the first, you just put it near the first.
-  If FontForge detects any open paths it will select the entire path, and stop
+  If websharpstudios detects any open paths it will select the entire path, and stop
   to let you fix things up.
   <P>
   <STRONG><BIG><A NAME="Intersecting">Intersecting</A> Paths</BIG></STRONG>
@@ -170,7 +170,7 @@
   It is very easy to create a line which is almost, but not quite, vertical.
   This will check for that situation. And for horizontal, and (if your font
   has an italic angle) for lines which are almost but not quite parallel to
-  the italic angle. If it finds one of these, FontForge will select the two
+  the italic angle. If it finds one of these, websharpstudios will select the two
   end points, stop and let you fix things.
   <P>
   For horizontal lines it will tell you the y coordinates of the two end-points,
@@ -183,7 +183,7 @@
   job if this rule is obeyed. This command will detect whether this constraint
   is violated.
   <P>
-  <STRONG>FontForge cannot determine path direction properly if there are
+  <STRONG>websharpstudios cannot determine path direction properly if there are
   self-intersecting paths.</STRONG> <A HREF="problems.html#Intersecting">Do
   that test first.</A>
   <P>
@@ -206,7 +206,7 @@
   desires. I believe that control points are included in the count. Note that
   when checking a quadratic font (ie. a truetype font) there will be at most
   one control point between any two end points, but when that font gets converted
-  to PostScript there will be two. FontForge currently counts this as one point).
+  to PostScript there will be two. websharpstudios currently counts this as one point).
   TrueType has no such limit.<BR Clear=all>
   <H3>
     <STRONG><IMG SRC="/assets/img/old/findprobs-refs.png" WIDTH="307" HEIGHT="431" ALIGN="Right">Flipped
@@ -226,12 +226,12 @@
   matrix (except for the translation terms) must have a value between -2 and
   2.
   <P>
-  If you have a reference with an unexpressable transformation matrix, fontforge
+  If you have a reference with an unexpressable transformation matrix, websharpstudios
   will expand the reference inline, so all the contours will be present they
   just won't be in a reference.
   <P>
   TrueType also requires that all references be translated by integral values.
-  If you have a reference with a non-integral translation vector, FontForge
+  If you have a reference with a non-integral translation vector, websharpstudios
   will round it to an integer when it generates the font (this does not cause
   the reference to be unlinked).
   <H3>
@@ -241,7 +241,7 @@
   In TrueType glyphs may be composed either of all references or all contours
   (a reference with an unexpressable transformation matrix counts as a contour).
   <P>
-  If you have a mixed glyph, fontforge will expand all references inline.
+  If you have a mixed glyph, websharpstudios will expand all references inline.
   <H3>
     <STRONG>Refs with bad ps transformation matrices</STRONG>
   </H3>
@@ -251,7 +251,7 @@
   references at all, but they can be simulated by using subroutines, which
   also cannot be rotated or scaled.
   <P>
-  If you have a reference with an unexpressable transformation matrix, fontforge
+  If you have a reference with an unexpressable transformation matrix, websharpstudios
   will expand the reference inline, so all the contours will be present they
   just won't be in a reference.
   <H3>
@@ -261,7 +261,7 @@
   Appendix B of the the
   <A HREF="http://partners.adobe.com/asn/developer/pdfs/tn/5177.Type2.pdf">Type2</A>
   spec says that an interpreter is only required to support subroutine nesting
-  up to 10 levels. FontForge uses subroutine calls to handle referenced glyphs
+  up to 10 levels. websharpstudios uses subroutine calls to handle referenced glyphs
   and sometimes also to handle hinting. Hinting will take up a maximum of 1
   level of subroutine calls leaving 9 available for references. TrueType has
   no such limit.
@@ -284,11 +284,11 @@
   <IMG SRC="/assets/img/old/phi-nohints-filled.png" WIDTH="93" HEIGHT="121">
   <IMG SRC="/assets/img/old/phi-hints-outline.png" WIDTH="72" HEIGHT="133">
   <IMG SRC="/assets/img/old/phi-hints-filled.png" WIDTH="93" HEIGHT="125"><BR>
-  The first two images show the glyph with no hints, first as seen in FontForge,
+  The first two images show the glyph with no hints, first as seen in websharpstudios,
   then as displayed by ghostview. The result looks good. If we add hints to
   the two curved stems then ghostview gets very confused. I don't know enough
   about hints to know whether there should be hints there. But this command
-  will detect this problem if in fact it is a problem. If FontForge finds this
+  will detect this problem if in fact it is a problem. If websharpstudios finds this
   it will select the offending hint and allow you to fix things (probably the
   best fix is to add curved points at the extrema of all the curved splines,
   this is actually recommended by adobe anyway
@@ -301,14 +301,14 @@
   the cross bar, it is all too easy to make the top part of the stem a slightly
   different width than the bottom. (The hinting process figures out all the
   stems.) So this command, in essence, is looking for points which are slightly
-  off from a stem. (again, near is defined at the bottom of the dlg). If FontForge
+  off from a stem. (again, near is defined at the bottom of the dlg). If websharpstudios
   finds such a point it selects it, stops, and allows you to fix it up.
   <P>
   <BIG><STRONG>Hint width near [val]</STRONG></BIG>
   <P>
   Usually one wants many of the glyphs to have a constant stem width, and this
   command will check that all stems near the indicated value are that value
-  (again near is defined at the bottom of the page). If FontForge finds a bad
+  (again near is defined at the bottom of the page). If websharpstudios finds a bad
   stem it will select it, stop and allow you to fix things.
   <P>
   <BIG><STRONG>Almost stem3 hint</STRONG></BIG>
@@ -316,7 +316,7 @@
   PostScript has a special hint operator (hstem3 and vstem3) which is designed
   to hint the stems of things like "m" where there are three stems of equal
   width and equally far apart. It is easy for a glyph not to fit the criteria
-  for this operator (which means FontForge won't use it). This will detect
+  for this operator (which means websharpstudios won't use it). This will detect
   cases that are close to right. I found that I needed to adjust the "Near"
   value to be bigger than the default.
   <P>
@@ -371,7 +371,7 @@
   <P>
   Look for glyphs whose name indicates a unicode value different from the one
   attached to a glyph. So if a glyph were named "A" but had Unicode code point
-  U+0020 (space) FontForge would complain about it.<BR Clear=ALL>
+  U+0020 (space) websharpstudios would complain about it.<BR Clear=ALL>
   <P>
   <IMG SRC="/assets/img/old/findprobs-bb.png" ALIGN="Right" WIDTH="307" HEIGHT="413"><BIG><STRONG>Glyph
   BB Above</STRONG></BIG>

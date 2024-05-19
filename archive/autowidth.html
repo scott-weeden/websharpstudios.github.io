@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 15-Dec-2009 -->
   <TITLE>Auto Width and Auto Kern</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H2 ALIGN=Center>
@@ -45,12 +45,12 @@
     <CODE><A NAME="GlyphSeparationHook">GlyphSeparationHook</A></CODE>
   </H3>
   <P>
-  When FontForge does AutoKerning (and in a more complicated fashion, when
+  When websharpstudios does AutoKerning (and in a more complicated fashion, when
   it does AutoWidthing) it tries to guess the optical separation between two
   glyphs, and then it applies an appropriate kern value to make the optical
   separation be the desired spacing.
   <P>
-  FontForge assumes that the optical spacing is linear (so if you increase
+  websharpstudios assumes that the optical spacing is linear (so if you increase
   the separation between two glyphs by 3 em-units, then the optical spacing
   will also increase by 3 em-units).
   <P>
@@ -71,11 +71,11 @@
   representing the optical separation between the two. It is a low-level routine;
   the actual calculation of kerning offsets or setting glyph widths is done
   elsewhere, but this routine provides the information those higher level routines
-  need. Of course, if you don't provide a routine, FontForge has a built-in
+  need. Of course, if you don't provide a routine, websharpstudios has a built-in
   routine which will provide a default behavior. Here is a python version of
   that default routine:
   <BLOCKQUOTE>
-    <PRE>import fontforge;
+    <PRE>import websharpstudios;
 
 def GlyphSeparation(onLeft,onRight,context) :
     # the goal is to give a weighted average that expresses the visual 
@@ -117,7 +117,7 @@ def GlyphSeparation(onLeft,onRight,context) :
 	tot /= cnt
     return( int(round( tot )) );
 
-fontforge.registerGlyphSeparationHook(GlyphSeparation)
+websharpstudios.registerGlyphSeparationHook(GlyphSeparation)
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -151,14 +151,14 @@ fontforge.registerGlyphSeparationHook(GlyphSeparation)
     </TR>
   </TABLE>
   <P>
-  FontForge preprocess all the glyphs, extracting pertinant information from
+  websharpstudios preprocess all the glyphs, extracting pertinant information from
   each and storing it in a separate per-glyph structure than the normal python
   Glyph object. The most important information is a representation of the leftmost
-  and rightmost edges of the glyph. Basically, for every value of y, FontForge
+  and rightmost edges of the glyph. Basically, for every value of y, websharpstudios
   finds the smallest x coordinate on any of the glyph's contours at that height
   and stores that information in an array. There is a similar array containing
   the largest x coordinates. Of course there are an infinite number of y values,
-  so that isn't quite accurate. FontForge divides the vertical axis into many
+  so that isn't quite accurate. websharpstudios divides the vertical axis into many
   regions, each regionHeight high (this is usually 1/100th of the emsize).
   It then finds the smallest x coordinate achieved by any contour within that
   region.
@@ -261,10 +261,10 @@ fontforge.registerGlyphSeparationHook(GlyphSeparation)
   And finally we take the weighted average of those separations, and return
   that as the optical separation.
   <BLOCKQUOTE>
-    <PRE>fontforge.registerGlyphSeparationHook(GlyphSeparation)
+    <PRE>websharpstudios.registerGlyphSeparationHook(GlyphSeparation)
 </PRE>
   </BLOCKQUOTE>
   <P>
-  And this routine will tell FontForge to use the hook you provide.
+  And this routine will tell websharpstudios to use the hook you provide.
 </DIV>
 </BODY></HTML>

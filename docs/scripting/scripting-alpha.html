@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Scripting functions &#8212; FontForge 20230101 documentation</title>
+    <title>Scripting functions &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python Scripting" href="python.html" />
-    <link rel="prev" title="Scripting FontForge" href="scripting.html" />
+    <link rel="prev" title="Scripting websharpstudios" href="scripting.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -163,7 +163,7 @@ selected characters will be used.</p>
 <p>Where replace is an integer. If zero then the instructions will be appended
 to any already present. If non-zero then the instructions will replace those
 already present.</p>
-<p>And instrs is a string containing fontforge’s human readable version of tt
+<p>And instrs is a string containing websharpstudios’s human readable version of tt
 instructions, as “<code class="docutils literal notranslate"><span class="pre">IUP[x]\nIUP[y]</span></code>”</p>
 </dd></dl>
 
@@ -310,7 +310,7 @@ matches the script and language combination) then it will apply the
 substitution– that is it will find the variant glyph specified in the
 substitution and replace the current glyph with the variant, and clear the
 variant.</p>
-<p>FontForge recognizes the string “*” as a wildcard for both the script and the
+<p>websharpstudios recognizes the string “*” as a wildcard for both the script and the
 language (not for the tag though). So if you wish to replace all glyphs with
 their vertical variants:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SelectAll</span><span class="p">()</span>
@@ -374,7 +374,7 @@ current font.</p>
 <dd><p>(AutoKern doesn’t work well in general)</p>
 <p>Guesses at kerning pairs by looking at all selected glyphs, store the new
 kerning pairs in the indicated subtable, or if a kernfile is specified,
-FontForge will read the kern pairs out of the file.</p>
+websharpstudios will read the kern pairs out of the file.</p>
 </dd></dl>
 
 <dl class="ff function">
@@ -513,7 +513,7 @@ in the current font</p>
 <span class="sig-name descname"><span class="pre">Chr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">array</span></em><span class="sig-paren">)</span></dt>
 <dd><p>Takes an integer [-128,255] and returns a single character string containing
 that byte. Negative numbers are treated as signed bytes in two’s complement.
-Internally FontForge interprets strings as if they were in UTF-8, so it is
+Internally websharpstudios interprets strings as if they were in UTF-8, so it is
 possible to construct higher code points and strings that are not valid UTF-8
 by passing in appropriate values. If passed an array, it should be an array
 of integers and the result is the string. It can execute with no current
@@ -853,7 +853,7 @@ execute with no current font.</p>
 <dt class="sig sig-object ff" id="DefaultRoundToGrid">
 <span class="sig-name descname"><span class="pre">DefaultRoundToGrid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DefaultRoundToGrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Looks at all selected glyphs, if any reference is not positioned by point
-matching, then FontForge will set the truetype “ROUND-TO-GRID” flag for the
+matching, then websharpstudios will set the truetype “ROUND-TO-GRID” flag for the
 reference.</p>
 </dd></dl>
 
@@ -949,7 +949,7 @@ second argument is not interpreted as a width, but as the identifier of a
 convex nib context: 0=&gt; the default context, -10=&gt; the “FreeHand” nib,
 -11=&gt; the Expand Stroke nib. (The negative contexts are only available
 when the UI is enabled.) The nibs cannot currently be altered with native
-scripting functions, but when executing scripts in interactive FontForge
+scripting functions, but when executing scripts in interactive websharpstudios
 the Expand Stroke and FreeHand nibs can be changed using their respective
 dialogs.</p>
 </dd></dl>
@@ -978,7 +978,7 @@ dialogs.</p>
 <dd><p>In the legacy parameter sets these two values specify a ratio between the
 height and the width of a calligraphic pen:</p>
 <p>height = numerator * width / denominator</p>
-<p>This syntax stems from a point in FontForge development before floating
+<p>This syntax stems from a point in websharpstudios development before floating
 point numbers could be passed to a script function.</p>
 </dd></dl>
 
@@ -1047,7 +1047,7 @@ the file type as an extension:</p>
 <span class="s2">&quot;U+%U.bmp&quot;</span>
 </pre></div>
 </div>
-<p>If the format consists entirely of a filetype then FontForge will use a
+<p>If the format consists entirely of a filetype then websharpstudios will use a
 format of <code class="docutils literal notranslate"><span class="pre">&quot;%n_%f.&lt;filetype&gt;&quot;</span></code></p>
 <p>All characters in the format string except for % are copied verbatim. If
 there is a % then the following character controls behavior:</p>
@@ -1061,7 +1061,7 @@ names)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">%%</span></code> – inserts a single ‘%’</p></li>
 </ul>
 <p>If you select one of the types that generate an image (xbm, bmp, png) then
-you must specify a second argument contain a bitmap-size. FontForge will
+you must specify a second argument contain a bitmap-size. websharpstudios will
 search the list of bitmap strikes in the font data base and use the images in
 the matching strike. It will NOT rasterize an image for you here. For bitmap
 strikes just use the pixel size, for grey scale strikes use the
@@ -1146,7 +1146,7 @@ filename. Valid extensions are:</p>
 <li><p>.pfa</p></li>
 <li><p>.pfb</p></li>
 <li><p>.bin (a mac postscript (pfb) resource in a mac binary wrapper)</p>
-<p>.res (on the Mac itself FontForge will put the result directly into a font
+<p>.res (on the Mac itself websharpstudios will put the result directly into a font
 suitcase file, and the extension should be “.res” rather than “.bin”)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1170,7 +1170,7 @@ The “%s” will be replaced by the fontnumber specified in the mult-sfd-file.<
 <li><p>.ttf</p></li>
 <li><p>.sym.ttf (a truetype file with a symbol (custom) encoding)</p></li>
 <li><p>.ttf.bin (a mac truetype resource in a mac binary wrapper)</p>
-<p>suit (on the Mac itself FontForge will put the result directly into a font
+<p>suit (on the Mac itself websharpstudios will put the result directly into a font
 suitcase file, and the extension should be “.suit” not “.ttf.bin”)</p>
 </li>
 <li><p>.dfont (a mac truetype resource in a dfont file)</p></li>
@@ -1264,12 +1264,12 @@ table</p></li>
 table</p></li>
 </ul>
 <p>res controls the resolution of generated bdf fonts. A value of -1 means
-fontforge will guess for each strike.</p>
+websharpstudios will guess for each strike.</p>
 <p>If the filename contains a “%s” and has either a “.pf[ab]” extension then a
 “mult-sfd-file” may be present. This is the filename of a file containing the
 mapping from the current encoding into the subfonts.
-<a class="reference external" href="https://fontforge.org/downloads/Big5.txt">Here is an example</a>. If this file is not present
-FontForge will go through its default search process to find a file for the
+<a class="reference external" href="https://websharpstudios.org/downloads/Big5.txt">Here is an example</a>. If this file is not present
+websharpstudios will go through its default search process to find a file for the
 encoding, and if it fails the fonts will not be saved.</p>
 </dd></dl>
 
@@ -1279,7 +1279,7 @@ encoding, and if it fails the fonts will not be saved.</p>
 <dd><p>Generates a mac font family (FOND) from the fonts (which must be loaded) in
 the array-of-font-filenames. filename, bitmaptype, fmflags are as in
 <a class="reference internal" href="#Generate" title="Generate"><code class="xref ff ff-func docutils literal notranslate"><span class="pre">Generate()</span></code></a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/local/bin/fontforge
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/local/bin/websharpstudios
 a = Array($argc-1)
 i = 1
 j = 0
@@ -1514,7 +1514,7 @@ that a default value will be used)</p></li>
 <li><p>“BBox” returns a 4 element array containing [minimum-x-value,
 minimum-y-value, maximum-x-value, maximum-y-value] of the glyph.</p></li>
 <li><p>“ValidationState” returns a bitmask of the glyph’s validation state. (See the
-<a class="reference internal" href="python/fontforge.html#fontforge.glyph.validation_state" title="fontforge.glyph.validation_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">fontforge.glyph.validation_state</span></code></a> for the bit break down)</p></li>
+<a class="reference internal" href="python/websharpstudios.html#websharpstudios.glyph.validation_state" title="websharpstudios.glyph.validation_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">websharpstudios.glyph.validation_state</span></code></a> for the bit break down)</p></li>
 <li><p>“Kern” (there must be a second argument here which specifies another glyph as
 in Select()) Returns the kern offset between the two glyphs (or 0 if none).</p></li>
 <li><p>“VKern” (there must be a second argument here which specifies another glyph
@@ -1588,7 +1588,7 @@ argument&gt;. The array is sorted.</p></li>
 <dl class="ff function">
 <dt class="sig sig-object ff" id="HasSpiro">
 <span class="sig-name descname"><span class="pre">HasSpiro</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HasSpiro" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true if Raph Levien’s spiro package is available in FontForge.</p>
+<dd><p>Returns true if Raph Levien’s spiro package is available in websharpstudios.</p>
 </dd></dl>
 
 <dl class="ff function">
@@ -1626,7 +1626,7 @@ the background of the second selected glyph, …</p></li>
 </li>
 <li><p>If the extension is “eps” then an encapsulated postscript file will be merged
 into the foreground. The file may be specified as for images (except the
-extension should be “eps” rather than an image extension). FontForge is
+extension should be “eps” rather than an image extension). websharpstudios is
 limited in its ability to read eps files.</p></li>
 <li><p>If the extension is “svg” then an svg file will be read into the foreground.</p></li>
 </ul>
@@ -1878,7 +1878,7 @@ only need to be within fudge em-units of each other to be merged.</p>
 <dl class="ff function">
 <dt class="sig sig-object ff" id="LoadEncodingFile">
 <span class="sig-name descname"><span class="pre">LoadEncodingFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">filename</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">encname</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#LoadEncodingFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads an encoding file and stores it in FontForge’s list of possible
+<dd><p>Reads an encoding file and stores it in websharpstudios’s list of possible
 encodings. See
 <span class="menuselection">Encoding ‣ `:ref:`LoadEncoding &lt;encodingmenu.Load&gt;</span> for
 more info. When loading encodings in Unicode consortium format an encname has
@@ -1895,7 +1895,7 @@ current font.</p>
 <dl class="ff function">
 <dt class="sig sig-object ff" id="LoadNamelistDir">
 <span class="sig-name descname"><span class="pre">LoadNamelistDir</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="pre">directory-name</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#LoadNamelistDir" title="Permalink to this definition">¶</a></dt>
-<dd><p>Searches the given directory for things that look like fontforge namelists
+<dd><p>Searches the given directory for things that look like websharpstudios namelists
 and loads them. If directory is omitted then it will load the default
 directory. It can execute with no current font.</p>
 </dd></dl>
@@ -1914,7 +1914,7 @@ request. It can execute with no current font. it.</p>
 <dd><p>Reads the entire file into a string. Returns a null string for a non-existant
 or empty file. The returned string will have enough bytes allocated to hold
 the entire file plus one trailing NUL byte. If the file contains a NUL
-itself, fontforge will think the string ends there. It can execute with no
+itself, websharpstudios will think the string ends there. It can execute with no
 current font.</p>
 </dd></dl>
 
@@ -2015,7 +2015,7 @@ font and sets the current font to the new font.</p>
 <dt class="sig sig-object ff" id="MMChangeInstance">
 <span class="sig-name descname"><span class="pre">MMChangeInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">instance</span></em><span class="sig-paren">)</span><a class="headerlink" href="#MMChangeInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Where instance is either a font name or a small integer. If passed a string
-FontForge searches through all fonts in the multi master font set (instance
+websharpstudios searches through all fonts in the multi master font set (instance
 fonts and the weighted font) and changes the current font to the indicated
 one. If passed a small integer, then -1 indicates the weighted font and
 values between [0,$mmcount) represent that specific instance in the font set.</p>
@@ -2155,7 +2155,7 @@ and transforms all selected glyphs using those expressions.</p>
 </pre></div>
 </div>
 <p>This command is not available in the default build, you must modify the file
-<code class="docutils literal notranslate"><span class="pre">configure-fontforge.h</span></code> and then rebuild FontForge.</p>
+<code class="docutils literal notranslate"><span class="pre">configure-websharpstudios.h</span></code> and then rebuild websharpstudios.</p>
 </dd></dl>
 
 <dl class="ff function">
@@ -2299,7 +2299,7 @@ be chosen. The font display will only look at one value.</p>
 <p>If you selected print type 3 then you may provide the name of a file
 containing sample text. This file may either be in ucs2 format (preceded by a
 0xfeff value), or in the current default encoding. A null string or an
-omitted argument will cause FontForge to use a default value.</p>
+omitted argument will cause websharpstudios to use a default value.</p>
 <p>If your PrintSetup specified printing to a file (either PostScript or pdf)
 then the fourth argument provides the filename of the output file.</p>
 </dd></dl>
@@ -2331,14 +2331,14 @@ respectively. Units are in 1/72 inches (almost points), so 8.5x11” paper is
 <dt class="sig sig-object ff" id="PrivateGuess">
 <span class="sig-name descname"><span class="pre">PrivateGuess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#PrivateGuess" title="Permalink to this definition">¶</a></dt>
 <dd><p>key should be a string containing the name of a standard thing in the PS
-Private dictionary that fontforge can guess a value for. “BlueValues” for
+Private dictionary that websharpstudios can guess a value for. “BlueValues” for
 example.</p>
 </dd></dl>
 
 <dl class="ff function">
 <dt class="sig sig-object ff" id="Quit">
 <span class="sig-name descname"><span class="pre">Quit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">status</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Quit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Causes FontForge to exit with the given status (no attempt is made to save
+<dd><p>Causes websharpstudios to exit with the given status (no attempt is made to save
 unsaved files). This command can execute with no current font.</p>
 </dd></dl>
 
@@ -2743,7 +2743,7 @@ current selection.</p>
 <dl class="ff function">
 <dt class="sig sig-object ff" id="SelectHintingNeeded">
 <span class="sig-name descname"><span class="pre">SelectHintingNeeded</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="pre">merge</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#SelectHintingNeeded" title="Permalink to this definition">¶</a></dt>
-<dd><p>Selects all glyphs which FontForge thinks need their hints updated.</p>
+<dd><p>Selects all glyphs which websharpstudios thinks need their hints updated.</p>
 </dd></dl>
 
 <dl class="ff function">
@@ -3013,7 +3013,7 @@ of bits expressing styles as defined on the mac</p>
 </ul>
 </dd>
 <dt>-1</dt><dd><ul class="simple">
-<li><p>FontForge should guess the styles from the fontname</p></li>
+<li><p>websharpstudios should guess the styles from the fontname</p></li>
 </ul>
 </dd>
 </dl>
@@ -3140,7 +3140,7 @@ the name and the ligature string to match the value.</p>
 <dt class="sig sig-object ff" id="SetUniqueID">
 <span class="sig-name descname"><span class="pre">SetUniqueID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SetUniqueID" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the postscript uniqueid field as requested. If you give a value of 0
-then FontForge will pick a reasonable random number for you.</p>
+then websharpstudios will pick a reasonable random number for you.</p>
 </dd></dl>
 
 <dl class="ff function">
@@ -3272,11 +3272,11 @@ defaults to the value of stemw-scale.</p>
 <dl class="ff function">
 <dt class="sig sig-object ff" id="SpiroVersion">
 <span class="sig-name descname"><span class="pre">SpiroVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SpiroVersion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the version of LibSpiro available to FontForge.</p>
+<dd><p>Returns the version of LibSpiro available to websharpstudios.</p>
 <p>Versions 0.1 to 0.5 do not have a method to indicate version numbers, but
 there is a limited method to estimate versions {‘0.0’..’0.5’}.</p>
 <ul class="simple">
-<li><p>‘0.0’ if FontForge has no LibSpiro available.</p></li>
+<li><p>‘0.0’ if websharpstudios has no LibSpiro available.</p></li>
 <li><p>‘0.1’ if LibSpiro 20071029 is available.</p></li>
 <li><p>‘0.2’ if LibSpiro 0.2 to 0.5 is available.</p></li>
 <li><p>LibSpiro 0.6 and higher reports back it’s version available.</p></li>
@@ -3469,7 +3469,7 @@ transformed by this matrix</p>
 \[\begin{split}x' &amp;= \frac{t_1}{100}x + \frac{t_3}{100}y + \frac{t_5}{100} \\
 y' &amp;= \frac{t_2}{100}x + \frac{t_4}{100}y + \frac{t_6}{100}\end{split}\]</div>
 <p>The peculiar notion of dividing by 100 was to overcome the fact that
-fontforge’s scripting language formerly could not handle real numbers. We’ve
+websharpstudios’s scripting language formerly could not handle real numbers. We’ve
 overcome that limitation since, but it seemed best to leave the behavior of
 the function as it was.</p>
 </dd></dl>
@@ -3546,7 +3546,7 @@ with no current font.</p>
 <dl class="ff function">
 <dt class="sig sig-object ff" id="UnicodeFromName">
 <span class="sig-name descname"><span class="pre">UnicodeFromName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#UnicodeFromName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Looks the string “name” up in FontForge’s database of commonly used glyph
+<dd><p>Looks the string “name” up in websharpstudios’s database of commonly used glyph
 names and returns the unicode value associated with that name, or -1 if not
 found. This does <em>not</em> check the current font (if any). It can execute with
 no current font.</p>
@@ -3656,7 +3656,7 @@ font.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../index.html">websharpstudios</a></h1>
 
 
 
@@ -3668,8 +3668,8 @@ font.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ui.html">FontForge’s User Interface</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="scripting.html">Scripting FontForge</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ui.html">websharpstudios’s User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="scripting.html">Scripting websharpstudios</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Scripting functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="python.html">Python Scripting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scripting.html#invoking-scripts">Invoking scripts</a></li>
@@ -3690,8 +3690,8 @@ font.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="scripting.html">Scripting FontForge</a><ul>
-      <li>Previous: <a href="scripting.html" title="previous chapter">Scripting FontForge</a></li>
+  <li><a href="scripting.html">Scripting websharpstudios</a><ul>
+      <li>Previous: <a href="scripting.html" title="previous chapter">Scripting websharpstudios</a></li>
       <li>Next: <a href="python.html" title="next chapter">Python Scripting</a></li>
   </ul></li>
   </ul></li>
@@ -3720,7 +3720,7 @@ font.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

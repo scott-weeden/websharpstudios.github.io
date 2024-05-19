@@ -7,7 +7,7 @@
 <!--<TITLE>Building Accented and other Composite Characters</TITLE>-->
     <TITLE>アクセントつき文字およびその他の複合文字を構築する方法</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -42,9 +42,9 @@
 <!--  Sometimes Unicode's normative definition is not as informative as it might
       be (many of the greek accents are "unified" with latin accents that they
       don't really look like, the result is that following Unicode slavishly will
-      yield the wrong glyph). So in some cases FontForge will use a slightly different
+      yield the wrong glyph). So in some cases websharpstudios will use a slightly different
       set of glyphs than the normative decomposition.<BR> -->
-      Unicode の正規分解の定義は、期待されるほど情報として役立たない場合があります (ギリシャ文字のアクセントの多くは形が全然違うラテン文字のアクセントと「統合」されているので、考えなしに Unicode に従うと間違ったグリフが出来上がります)。そのような場合は、FontForge は正規分解と少し異なるグリフの組合せを使用します。<BR>
+      Unicode の正規分解の定義は、期待されるほど情報として役立たない場合があります (ギリシャ文字のアクセントの多くは形が全然違うラテン文字のアクセントと「統合」されているので、考えなしに Unicode に従うと間違ったグリフが出来上がります)。そのような場合は、websharpstudios は正規分解と少し異なるグリフの組合せを使用します。<BR>
 <!--  This includes:-->
       以下のような物が含まれています:
       <UL>
@@ -76,7 +76,7 @@
     <LI>
 <!--  Many of the Korean Jamo are actually ligatures of other Jamo (ssangkiyoeok
       (0x1101) is composed of two kiyoeok (0x1100)). For some reason this information
-      is not normative unicode, but FontForge is aware of it anyway and will build
+      is not normative unicode, but websharpstudios is aware of it anyway and will build
       those glyphs if you ask it to. -->
       ハングル字母(Jamo)の多くは実際には他の字母の合字です (ssangkiyeok (0x1101) は、2 個の kiyoeok (0x1100) の組合せからなります。いくつかの理由によりこの情報は Unicode の正規分解に含まれていませんが、FotnForge はこの事実を知っているので、適切な指示により、そのグリフを組み立てることができます。
     <LI>
@@ -88,20 +88,20 @@
       "i" or "j" glyph -->
        dotlessi と dotlessj のグリフは、“i”と“j”のグリフからドットを取り除くことによって組み立てることができます。
     <LI>
-<!--  FontForge knows a few other things. It knows that Greek "Alpha" and Cyrillic
+<!--  websharpstudios knows a few other things. It knows that Greek "Alpha" and Cyrillic
       A both look like the Latin "A" and will replace either if you ask. (as well
       as all the other similar glyphs in latin, greek, cyrillic, cherokee, etc.) -->
-      FontForge はそれ以外にもいくばくかの事柄を知っています。ギリシャ文字の“アルファ”とキリル文字のАはどちらもラテン文字の“A”と同じ形をしていることを知っているので、指定すればどれか 1 つで他を置き換えることができます (ラテン、ギリシャ、キリル、チェロキーなどの用字系に含まれるその他の同形のグリフも同様です)。
+      websharpstudios はそれ以外にもいくばくかの事柄を知っています。ギリシャ文字の“アルファ”とキリル文字のАはどちらもラテン文字の“A”と同じ形をしていることを知っているので、指定すればどれか 1 つで他を置き換えることができます (ラテン、ギリシャ、キリル、チェロキーなどの用字系に含まれるその他の同形のグリフも同様です)。
     <LI>
 <!--  Some glyphs are just extremely simple to build. There are a whole slew of
-      glyphs which correspond to zero-width spaces. FontForge will build any of
+      glyphs which correspond to zero-width spaces. websharpstudios will build any of
       them. More usefully it will build any of the fixed size spaces 0x2000-0x200f,
       and the fixed sized rules 0x2010-0x2015). -->
-      いくつかのグリフは非常に簡単に組み立てることができます。幅ゼロのスペースに対応する文字がたくさんあります。FontForge はそのどれでも組み立てることができます。もっと役に立つ例としては、0x2000〜0x200f の固定幅のスペース と、0x2010〜0x2015 にある固定幅の罫線です。
+      いくつかのグリフは非常に簡単に組み立てることができます。幅ゼロのスペースに対応する文字がたくさんあります。websharpstudios はそのどれでも組み立てることができます。もっと役に立つ例としては、0x2000〜0x200f の固定幅のスペース と、0x2010〜0x2015 にある固定幅の罫線です。
     <LI>
 <!--  You may use the Element-&gt;Char Info dialog to define a ligature yourself,
-      and FontForge will build it for you. -->
-      <CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE> を使って、自分で合字を定義すれば、FontForge はそれを組み立ててくれます。
+      and websharpstudios will build it for you. -->
+      <CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE> を使って、自分で合字を定義すれば、websharpstudios はそれを組み立ててくれます。
     <LI>
 <!--  In Adobe's CID glyph sets there are some pre-rotated versions of latin glyphs.
       When CJK text is written vertically the convention is that any text in western
@@ -135,27 +135,27 @@
   letters should be built out of the accents in the range 0x300-0x340, but
   this does not work too well in postscript. A Type1 font works better if the
   accented glyph is in the Adobe Standard Encoding, which means either using
-  accents around 0x2d0 or ascii glyphs. FontForge will first attempt to find
+  accents around 0x2d0 or ascii glyphs. websharpstudios will first attempt to find
   an accent around 0x2d0, then in ascii and finally in the 0x300-0x340 range.
   Even worse, Unicode unifies the greek and latin accents, so for greek letters
-  FontForge will look for accents around 0x1fbd (FontForge will also require
+  websharpstudios will look for accents around 0x1fbd (websharpstudios will also require
   the presence of the double accents like 0x1fdd). -->
-  アクセントの選択では、わずかに込み入った処理が行われることがあります。Unicode は、アクセントつき文字は 0x300〜0x340 の範囲に含まれるアクセントから組み立てなければならないと定義していますが、PostScript ではこれはあまりうまく動作しません。Type1 フォントは、アクセントつきグリフが Adobe Standard Encoding に従って配置されているとき (つまり、0x2d0 付近のアクセントまたは ASCII のグリフを使用しているとき) のほうがうまく動作します。FontForge はまず 0x2d0 近くのアクセントを探そうとし、次に ASCII の中を探し、最後に 0x300〜0x340 の範囲を探します。更に悪いことに、Unicode はギリシャ文字とラテン文字のアクセントを統合しているので、ギリシャ文字に対しては FontForge は 0x1fbd 付近のアクセントを探します (FontForge は、その他にも 0x1fdd のような二重アクセントの存在を要求することがあります)。
+  アクセントの選択では、わずかに込み入った処理が行われることがあります。Unicode は、アクセントつき文字は 0x300〜0x340 の範囲に含まれるアクセントから組み立てなければならないと定義していますが、PostScript ではこれはあまりうまく動作しません。Type1 フォントは、アクセントつきグリフが Adobe Standard Encoding に従って配置されているとき (つまり、0x2d0 付近のアクセントまたは ASCII のグリフを使用しているとき) のほうがうまく動作します。websharpstudios はまず 0x2d0 近くのアクセントを探そうとし、次に ASCII の中を探し、最後に 0x300〜0x340 の範囲を探します。更に悪いことに、Unicode はギリシャ文字とラテン文字のアクセントを統合しているので、ギリシャ文字に対しては websharpstudios は 0x1fbd 付近のアクセントを探します (websharpstudios は、その他にも 0x1fdd のような二重アクセントの存在を要求することがあります)。
   <P>
 <!--
   Some of Adobe's fonts have accents designed for use over upper case letters
   (the nomal accents are designed for lower case), and accents designed for
   use over cyrillic letters. So in such a font, if you attempt to build "Agrave"
-  FontForge will build it out of "A" and "Grave" (or "grave.cap", not the standard
+  websharpstudios will build it out of "A" and "Grave" (or "grave.cap", not the standard
   "grave"). -->
-  Adobe のフォントのいくつかは大文字用にデザインされたアクセント (通常のアクセントは小文字用にデザインされています) および、キリル文字用のアクセントを含んでいます。そのようなフォントにおいては、“Agrave”を組み立てようとした時、FontForge は“A”と (標準の“grave”ではなく)“Grave”(または“grave.cap”) からそれを組み立てます。
+  Adobe のフォントのいくつかは大文字用にデザインされたアクセント (通常のアクセントは小文字用にデザインされています) および、キリル文字用のアクセントを含んでいます。そのようなフォントにおいては、“Agrave”を組み立てようとした時、websharpstudios は“A”と (標準の“grave”ではなく)“Grave”(または“grave.cap”) からそれを組み立てます。
   <P>
 <!--
   Not all accents should be centered above the base glyph, a cedilla is (usually)
   centered underneath the base, while other accents need to be placed to the
-  left or right, or even overstruck. FontForge should know about proper placement
+  left or right, or even overstruck. websharpstudios should know about proper placement
   of most accents (or at least a rough approximation thereto). -->
-  すべてのアクセントが基底文字と中央揃えで配置されるわけではありません。セディラは (通常) 基底文字の下に中央揃えで置かれますが、他のアクセントは右か左に置く必要があったり、重ねて印字する場合すらあります。FontForge はほとんどのアクセントの正しい配置 (または、少なくともその粗い近似) を知っているはずです。
+  すべてのアクセントが基底文字と中央揃えで配置されるわけではありません。セディラは (通常) 基底文字の下に中央揃えで置かれますが、他のアクセントは右か左に置く必要があったり、重ねて印字する場合すらあります。websharpstudios はほとんどのアクセントの正しい配置 (または、少なくともその粗い近似) を知っているはずです。
   <P>
 <!--
   Some Unicode glyphs contain more than one accent. Additional accents will
@@ -177,11 +177,11 @@
   the accent should actually go above the highest part of the "a" which is
   almost but not quite in the center of the glyph. And when placing an acute
   on top of a "k" (a rare combination, but still used) the accent is centered
-  on the stem of the "k". Greek accents are even more baroque. FontForge knows
+  on the stem of the "k". Greek accents are even more baroque. websharpstudios knows
   many oddities of accent placement, but it will never know all of them (some
   letters have multiple forms depending on the font, or perhaps on the humidity
   and phase of the moon). -->
-  アクセントをグリフの上部に配置する処理は驚くほど込み入っています。中央揃えのアクセント (グレーブアクセント、アキュートアクセントなど) はグリフのちょうど真中に配置してはならないからです。例えば、アキュートアクセントを“a”の上に置く時には、実際のアクセントの位置は“a”の最も高い部分 (グリフのほぼ中央ですが、正確な中心ではありません) の上に配置しなければなりません。また、“k”の上にアキュートアクセントを配置する場合 (めったに見ない組合せですが、実在します) 、アクセントは“k”のステムに中央揃えで配置されます。ギリシャ語のアクセントはそれよりはるかに複雑怪奇です。FontForge は特異なアクセント配置をたくさん知っていますが、すべてを知ることは永久に無いでしょう (複数の形が存在する文字がいくつかあり、それはフォントにより、またはおそらく湿度や月相により異なります)。
+  アクセントをグリフの上部に配置する処理は驚くほど込み入っています。中央揃えのアクセント (グレーブアクセント、アキュートアクセントなど) はグリフのちょうど真中に配置してはならないからです。例えば、アキュートアクセントを“a”の上に置く時には、実際のアクセントの位置は“a”の最も高い部分 (グリフのほぼ中央ですが、正確な中心ではありません) の上に配置しなければなりません。また、“k”の上にアキュートアクセントを配置する場合 (めったに見ない組合せですが、実在します) 、アクセントは“k”のステムに中央揃えで配置されます。ギリシャ語のアクセントはそれよりはるかに複雑怪奇です。websharpstudios は特異なアクセント配置をたくさん知っていますが、すべてを知ることは永久に無いでしょう (複数の形が存在する文字がいくつかあり、それはフォントにより、またはおそらく湿度や月相により異なります)。
   <TABLE BORDER CELLPADDING="2" ALIGN=Center>
     <TR>
       <TD><P ALIGN=Center>
@@ -196,12 +196,12 @@
   </TABLE>
   <P>
 <!--
-  And how accents are centered depends on the accents themselves. Usually FontForge
+  And how accents are centered depends on the accents themselves. Usually websharpstudios
   will try to center an accent so that the accent's center is over the base
   glyph's "center". But that doesn't always work either. The grave and acute
   accents are usually (but not always) centered only on the bottom part of
   the glyph. -->
-  さらに、アクセントの中央揃えの方法はアクセントそのものに依存します。FontForge は通常、アクセントの中央をグリフの「中央」に揃えようとしますが、これは常にうまく動くわけではありません。グレーブアクセントおよびアキュートアクセントは通常 (常にではありませんが) そのグリフの最下部のみが中央揃えの対象となります。
+  さらに、アクセントの中央揃えの方法はアクセントそのものに依存します。websharpstudios は通常、アクセントの中央をグリフの「中央」に揃えようとしますが、これは常にうまく動くわけではありません。グレーブアクセントおよびアキュートアクセントは通常 (常にではありませんが) そのグリフの最下部のみが中央揃えの対象となります。
   <TABLE BORDER CELLPADDING="2" ALIGN=Center>
     <TR>
       <TD><P ALIGN=Center>
@@ -216,10 +216,10 @@
   </TABLE>
   <P>
 <!--
-  FontForge gives you a minuscule amount of control over where it puts accents.
+  websharpstudios gives you a minuscule amount of control over where it puts accents.
   There are two preference items you can set
   (<A HREF="filemenu.html#prefs">File-&gt;Preferences</A>) -->
-  FontForge は、アクセントをどこに置くかごくわずかな調整手段を与えています。(<A HREF="filemenu.html#prefs"><CODE>ファイル(<U>F</U>)</CODE>→<CODE>環境設定(<U>E</U>)</CODE></A> で) 設定可能な環境設定項目が 2 つ存在します。
+  websharpstudios は、アクセントをどこに置くかごくわずかな調整手段を与えています。(<A HREF="filemenu.html#prefs"><CODE>ファイル(<U>F</U>)</CODE>→<CODE>環境設定(<U>E</U>)</CODE></A> で) 設定可能な環境設定項目が 2 つ存在します。
   <UL>
     <LI>
 <!--  AccentOffsetPercent - - This allows you to control the amount of space between
@@ -239,18 +239,18 @@
   </UL>
   <P>
 <!--
-  <FONT COLOR="Red"><STRONG><SMALL>NOTE:</SMALL></STRONG></FONT> So FontForge
+  <FONT COLOR="Red"><STRONG><SMALL>NOTE:</SMALL></STRONG></FONT> So websharpstudios
   is going to do something wrong. There are just too many areas where I am
   ignorant or my taste doesn't match yours or the program has a bug. I strongly
   recommend that you examine all your accented glyphs after building them and
   be prepared to adjust things. -->
-  <FONT COLOR="Red"><STRONG><SMALL>注意:</SMALL></STRONG></FONT> ここで FontForge は何か間違いを犯すに違いありません。私が知らない領域はあまりにたくさんありますし、私の趣味があなたのお気に召さない場合もありますし、プログラムにバグがある可能性もあります。アクセントつきの文字を作成したらそれらをすべて確かめ、まずい点があったら修正する心構えでいるように強く推奨します。
+  <FONT COLOR="Red"><STRONG><SMALL>注意:</SMALL></STRONG></FONT> ここで websharpstudios は何か間違いを犯すに違いありません。私が知らない領域はあまりにたくさんありますし、私の趣味があなたのお気に召さない場合もありますし、プログラムにバグがある可能性もあります。アクセントつきの文字を作成したらそれらをすべて確かめ、まずい点があったら修正する心構えでいるように強く推奨します。
   <P>
 <!--
   The algorithms take some account of the italicangle, but when working on
-  an italic (or oblique) font FontForge is even more likely to do something
+  an italic (or oblique) font websharpstudios is even more likely to do something
   you don't like. -->
-  アルゴリズムは italicangle の値にある程度影響を受けますが、イタリック (またはオブリーク) のフォントで作業をしている時は、FontForge はあなたの望むとおりに動作しない可能性がはるかに高くなります。
+  アルゴリズムは italicangle の値にある程度影響を受けますが、イタリック (またはオブリーク) のフォントで作業をしている時は、websharpstudios はあなたの望むとおりに動作しない可能性がはるかに高くなります。
   <P>
 <!--
   If all else fails you can build your own accented glyphs with

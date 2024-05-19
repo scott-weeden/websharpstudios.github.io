@@ -7,7 +7,7 @@
 <!--<TITLE>The Mac State Machine dialog</TITLE>-->
     <TITLE>Mac の状態機械ダイアログ</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -23,10 +23,10 @@ an initial or medial short-s into a long-s (for doing renaissance printing). -->
 OpenType では文脈依存の参照を用いているのに対し、Mac では状態機械を用いています。右に示す例 は (それに付随する適切な置換と組み合わさって) 単語の先頭または中間にある短い s を (ルネッサンス調の印刷を行うために) 長い s に置換します。
 <P>
 <!--
-FontForge currently supports 4 types of state machines: contextual glyph
+websharpstudios currently supports 4 types of state machines: contextual glyph
 substitution, indic rearrangement, contextual glyph insertion, and contextual
 kerning. The example at right is of contextual glyph substitution. -->
-FontForge は現在 4 つのタイプの状態機械をサポートしています: 文脈依存のグリフ置換、インド系文字の再配置、文脈依存のグリフ挿入、そして文脈依存のカーニングです。右に示す例は文脈依存のグリフ置換です。
+websharpstudios は現在 4 つのタイプの状態機械をサポートしています: 文脈依存のグリフ置換、インド系文字の再配置、文脈依存のグリフ挿入、そして文脈依存のカーニングです。右に示す例は文脈依存のグリフ置換です。
 <P>
 <!--
 State machines have certain similar features. All but kerning be assigned
@@ -129,12 +129,12 @@ machine. -->
     ある状態遷移が“印つき置換”と“現在のグリフに印をつける”フラグの両方をもっていた場合、現在のグリフではなく、前回印づけされたグリフに置換が適用されるのだと私は解釈しています。(Apple の文書にはこれに関する記述がありません)<BR>
 <FONT COLOR="Red">
 <!--<STRONG>Caveat: </STRONG></FONT>Apple's 'mort' format was not designed to
-    allow fonteditors to figure out what a state machine did. FontForge can usually
+    allow fonteditors to figure out what a state machine did. websharpstudios can usually
     make a good guess of what substitutions do which apply to the current glyph,
     but it will often include extraneous glyph substitutions when a substitution
     applies to a marked glyph. These should not be harmful (they should never
     get invoked) but they are annoying ('morx' tables should not have this problem). -->
-    <STRONG>警告: </STRONG></FONT>Apple の&lsquo;mort&rsquo;フォーマットは、状態機械が何を行ったかをフォントエディタが表示できるように設計されていません。FontForge は多くの場合は現在のグリフにどの置換が適用されるかをうまく推測できますが、マークつきグリフに置換が適用される場合は余分なグリフ置換が含まれることがしばしばあります。これらは有害ではありません (それらが起動されることは決してありません) が、煩わしい余計物ではあります (&lsquo;morx&rsquo;テーブルにはこのような問題は無いはずです)。
+    <STRONG>警告: </STRONG></FONT>Apple の&lsquo;mort&rsquo;フォーマットは、状態機械が何を行ったかをフォントエディタが表示できるように設計されていません。websharpstudios は多くの場合は現在のグリフにどの置換が適用されるかをうまく推測できますが、マークつきグリフに置換が適用される場合は余分なグリフ置換が含まれることがしばしばあります。これらは有害ではありません (それらが起動されることは決してありません) が、煩わしい余計物ではあります (&lsquo;morx&rsquo;テーブルにはこのような問題は無いはずです)。
   <LI>
 <!--For insertion transitions the lines specify the glyphs that are to be inserted.
     The first line applies to the marked glyph, the second line to current glyph
@@ -298,9 +298,9 @@ what the fields mean. -->
 <P>
 <!--
 If you wish to add a new state, simply edit a transition so that its next
-state field is the state number desired. FontForge will automatically create
+state field is the state number desired. websharpstudios will automatically create
 the state for you. -->
-新しい状態を追加したい場合、次状態のフィールドに必要な状態番号を入力してください。FontForge は必要な状態欄を自動的に追加します。
+新しい状態を追加したい場合、次状態のフィールドに必要な状態番号を入力してください。websharpstudios は必要な状態欄を自動的に追加します。
 <H2>
 <!--<A NAME="EditClass">Classes</A>-->
     <A NAME="EditClass">クラス</A>

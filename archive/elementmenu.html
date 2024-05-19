@@ -5,24 +5,24 @@
   <!-- AP: Last modified: 5-Apr-2010 -->
   <TITLE>The Element Menu</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="menued">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV class="menucontainer">
   <UL class="menubar">
     <LI class="menu">
-      <A href="http://sourceforge.net/projects/fontforge/files/">Download</A>
+      <A href="http://sourceforge.net/projects/websharpstudios/files/">Download</A>
       <UL>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-docs/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/"
 	      >Documentation</A>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-source/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/"
 	      >Source</A>
       </UL>
     <LI>
@@ -391,8 +391,8 @@
   </UL>
   <P>
   There are also two menu entries which are not part of the default build but
-  which may be configured by modifying <CODE>configure-fontforge.h</CODE> before
-  compiling FontForge.
+  which may be configured by modifying <CODE>configure-websharpstudios.h</CODE> before
+  compiling websharpstudios.
   <UL>
     <LI>
       <A HREF="#TilePath">Tile Path</A>
@@ -514,12 +514,12 @@
       you add a size then that size font will be created and stored in the sfd
       file.
       <P>
-      FontForge deals in pixel sizes, not point sizes. The conversion between pixels
+      websharpstudios deals in pixel sizes, not point sizes. The conversion between pixels
       and points differs on different systems and indeed on different screens.
       A point is (approximately) 1/72 of an inch, a pixel is however big a pixel
       happens to be on your screen. Usually pixels range from about 1/72 of an
       inch to about 1/144 of an inch. Different systems support different screen
-      resolutions as "standard", and FontForge tries to know about these standards.
+      resolutions as "standard", and websharpstudios tries to know about these standards.
       <TABLE BORDER CELLPADDING="2" ALIGN=Center>
 	<CAPTION>
 	  Some conversions between points and pixels
@@ -580,8 +580,8 @@
       <P>
       Normally the new glyphs are created by rasterizing the outline font. If your
       system has the freetype2 library installed (and you checked the "Use FreeType"
-      box) then FontForge will use the FreeType rasterizer to generate bitmaps,
-      otherwise it will use FontForge's built-in rasterizer (which isn't as good,
+      box) then websharpstudios will use the FreeType rasterizer to generate bitmaps,
+      otherwise it will use websharpstudios's built-in rasterizer (which isn't as good,
       but involves a little less overhead).
       <P>
       Finally, if you have no outline font then the new glyphs will be created
@@ -593,10 +593,10 @@
       In CID keyed fonts there will not be a set of bitmaps for each sub font,
       instead the entire complex of sub-fonts share bitmaps. <BR Clear=Right>
       <P>
-      <IMG SRC="/assets/img/old/greymapsavail.png" WIDTH="263" HEIGHT="366" ALIGN="Right">FontForge
+      <IMG SRC="/assets/img/old/greymapsavail.png" WIDTH="263" HEIGHT="366" ALIGN="Right">websharpstudios
       also supports anti-aliased bitmap fonts, and you can use this dialog to generate
       them. If you want to generate a 12 point anti-aliased font with 8 bits per
-      pixel you would type 12@8 into the dialog above. FontForge supports 1, 2,
+      pixel you would type 12@8 into the dialog above. websharpstudios supports 1, 2,
       4 and 8 bit per pixel fonts (a 1 bit per pixel font is a standard bitmap,
       the others are greymaps).<BR>
       (New greymaps can not be created by scaling old greymaps, if you wish to
@@ -639,7 +639,7 @@
 	  then moves everything below a certain point up, and everything above another
 	  point down. This is based on heuristics and will fail if a glyph is even
 	  the slightest bit unexpected.<BR>
-	  For other writing systems FontForge will do something, currently it will
+	  For other writing systems websharpstudios will do something, currently it will
 	  fall into one of the two cases above.<BR>
 	  See the <A HREF="Styles.html#Embolden">Change Weight dialog</A>.
 	<DT>
@@ -769,7 +769,7 @@
       <A NAME="NonLinear">Non Linear </A>Transform...
     <DD>
       This command is not available in the default build, you must modify the file
-      <CODE>configure-fontforge.h</CODE> and then rebuild FontForge. This command
+      <CODE>configure-websharpstudios.h</CODE> and then rebuild websharpstudios. This command
       allows the user to specify a non-linear transformation as a pair of expressions
       (the first specifies the transformation for the x coordinate, the second
       for the y coordinate). These expressions may be fairly general functions
@@ -815,7 +815,7 @@
       <A NAME="TilePath">Tile Path</A>
     <DD>
       This command is not available in the default build, you must reconfigure
-      $ <CODE>configure --with-tilepath</CODE> and then rebuild FontForge. Not
+      $ <CODE>configure --with-tilepath</CODE> and then rebuild websharpstudios. Not
       available in quadratic (truetype) fonts. This command brings up a
       <A HREF="tilepath.html">dialog</A> which allows you to specify a tile to
       be applied to any selected contours.
@@ -849,7 +849,7 @@
 	  <P>
 	  <IMG SRC="/assets/img/old/expandedlines.png" WIDTH="247" HEIGHT="247">
 	  <IMG SRC="/assets/img/old/overlappedlines.png" WIDTH="247" HEIGHT="247"><BR>
-	  This command is probably the buggiest in FontForge. So before FontForge invokes
+	  This command is probably the buggiest in websharpstudios. So before websharpstudios invokes
 	  the command it will save the state to the error recovery file.<BR>
 	  Warning: Splines which are tangent (or nearly so) cause problems. Points
 	  which are close together can cause problems.
@@ -940,7 +940,7 @@
 	      the code expressing the glyph slightly. (I don't think it can increase the
 	      code, but there are certainly cases where the optimization will have no effect).
 	    <LI>
-	      It will enable FontForge to find more reusable bits of code which it can
+	      It will enable websharpstudios to find more reusable bits of code which it can
 	      put in subroutines
 	  </UL>
 	<DT>
@@ -961,7 +961,7 @@
       to a spline if: 1) The spline is longer than the em-size/32, or 2) the entire
       contour (rather than just the current spline) attains its maximum/minimum
       value at this point. If the added extrema is extremely close to an already
-      existing point, fontforge may remove that point to avoid creating tiny splines.
+      existing point, websharpstudios may remove that point to avoid creating tiny splines.
     <DT>
       <A NAME="AutoTrace">AutoTrace</A>
     <DD>
@@ -994,7 +994,7 @@
 	<DT>
 	  <A NAME="Space-Pts">Space Points</A>
 	<DD>
-	  If you have three or more points selected then FontForge will figure out
+	  If you have three or more points selected then websharpstudios will figure out
 	  the coordinate that has the greatest change and will space the points out
 	  regularly along that axis.<BR>
 	  If you select one point (and that point is in the middle of a path) then
@@ -1028,11 +1028,11 @@
 	<DT>
 	  Make <A NAME="Parallel">Parallel</A>
 	<DD>
-	  If four points are selected, and there are two lines between them, then FontForge
+	  If four points are selected, and there are two lines between them, then websharpstudios
 	  will make those lines parallel. If there are four lines between them (ie.
-	  they form a quadrilateral, then FontForge will turn it into a parallelogram.
+	  they form a quadrilateral, then websharpstudios will turn it into a parallelogram.
 	  (note, this only works on lines, not on curved splines)<BR>
-	  The last point selected will be the one moved (sometimes FontForge doesn't
+	  The last point selected will be the one moved (sometimes websharpstudios doesn't
 	  remember which point was selected last, then it will just pick one randomly.
 	  If you don't want that to happen, select your points and then single click
 	  on the one you want moved).
@@ -1044,7 +1044,7 @@
 	<DT>
 	  <A NAME="Round">Round</A> to Int
 	<DD>
-	  Not in the bitmap view. FontForge stores point locations as real numbers
+	  Not in the bitmap view. websharpstudios stores point locations as real numbers
 	  (ie. it retains fractional values). TrueType only supports integral values
 	  (And much of the time you want integral values in Type1 and Type2 fonts also
 	  -- using real numbers makes font files bigger), so when generating the font
@@ -1053,7 +1053,7 @@
 	<DT>
 	  Round to <A NAME="Hundredths">Hundredths</A>
 	<DD>
-	  Not in bitmap or metrics views. FontForge's Type1 output is limited to hundredths
+	  Not in bitmap or metrics views. websharpstudios's Type1 output is limited to hundredths
 	  of an em-unit, even when rounding is turned off in the Generate [Options]
 	  dialog.
 	<DT>
@@ -1071,7 +1071,7 @@
       interpolating fonts and in multiple master fonts. Here similar contours must
       appear in the same order.
       <P>
-      If you have a glyph which contains both contours and references, FontForge
+      If you have a glyph which contains both contours and references, websharpstudios
       does not specify whether references or contours are drawn first (or whether
       the two are intermixed). If this matters to you, unlink your references.
     <DT>
@@ -1150,7 +1150,7 @@
       to the other, but that can be tedious, while this command will do it all
       in one fell swoop.
       <P>
-      FontForge does the following when merging CID-keyed fonts:
+      websharpstudios does the following when merging CID-keyed fonts:
       <UL>
 	<LI>
 	  If the font in the window (the mergee) is a normal font and the other font
@@ -1179,7 +1179,7 @@
 	  This strikes me as somewhat problematic, but I can't think of a better solution.
       </UL>
       <P>
-      FontForge will also copy advanced typographic features, kerning, ligatures,
+      websharpstudios will also copy advanced typographic features, kerning, ligatures,
       etc.<BR>
       If one of the two glyphs of a kerning pair is in the mergee and the other
       in the merger then you will be given the option of either ignoring this kerning
@@ -1222,7 +1222,7 @@
       </UL>
       <P>
       You can also use it to compare truetype and postscript versions of the same
-      font. Normally fontforge checks to make sure all the splines match exactly,
+      font. Normally websharpstudios checks to make sure all the splines match exactly,
       but you can also have it test whether a contour in one font is always close
       to the similar contour in another font, or whether a contour in one font
       is inside a reference in another (these are common when comparing PostScript

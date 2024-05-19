@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 27-Dec-2009 -->
   <TITLE>Scripting functions</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="framed">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="framed-in">
   <H1 ALIGN=Center>
@@ -161,7 +161,7 @@ Generate(filename[,bitmaptype[,fmflags[,res[,mult-sfd-file[,namelist-name]]]]])
 	    Where replace is an integer. If zero then the instructions will be appended
 	    to any already present. If non-zero then the instructions will replace those
 	    already present.<BR>
-	    And instrs is a string containing fontforge's human readable version of tt
+	    And instrs is a string containing websharpstudios's human readable version of tt
 	    instructions, as "<CODE>IUP[x]\nIUP[y]</CODE>"
 	  <DT>
 	    <A NAME="AddLookup">A</A>ddLookup(name,type,flags,features-script-lang-array[,after-lookup-name)
@@ -329,7 +329,7 @@ AddSizeFeature(10,8,12.9,211,[[0x409,"Text"],[0x40c,"Texte"]])
 	    substitution and replace the current glyph with the variant, and clear the
 	    variant.
 	    <P>
-	    FontForge recognizes the string "*" as a wildcard for both the script and
+	    websharpstudios recognizes the string "*" as a wildcard for both the script and
 	    the language (not for the tag though). So if you wish to replace all glyphs
 	    with their vertical variants:
 	    <BLOCKQUOTE>
@@ -382,7 +382,7 @@ a[4][0] = "Nested array";
 	  <DD>
 	    (AutoKern doesn't work well in general)<BR>
 	    Guesses at kerning pairs by looking at all selected glyphs, store the new
-	    kerning pairs in the indicated subtable, or if a kernfile is specified, FontForge
+	    kerning pairs in the indicated subtable, or if a kernfile is specified, websharpstudios
 	    will read the kern pairs out of the file.
 	  <DT>
 	    <A NAME="AutoTrace" HREF="elementmenu.html#AutoTrace">AutoTrace</A>()
@@ -499,7 +499,7 @@ a[4][0] = "Nested array";
 	  <DD>
 	    Takes an integer [-128,255] and returns a single character
 	    string containing that byte.  Negative numbers are treated as
-	    signed bytes in two's complement.  Internally FontForge interprets
+	    signed bytes in two's complement.  Internally websharpstudios interprets
 	    strings as if they were in UTF-8, so it is possible to construct
 	    higher code points and strings that are not valid UTF-8 by
 	    passing in appropriate values.  If passed an array, it
@@ -871,7 +871,7 @@ a[4][0] = "Nested array";
 	    <A NAME="DefaultRoundToGrid">D</A>efaultRoundToGrid()
 	  <DD>
 	    Looks at all selected glyphs, if any reference is not positioned by point
-	    matching, then FontForge will set the truetype "ROUND-TO-GRID" flag for the
+	    matching, then websharpstudios will set the truetype "ROUND-TO-GRID" flag for the
 	    reference.
 	  <DT>
 	    Default<A NAME="Use-My-Metrics">UseMyM</A>etrics()
@@ -1007,7 +1007,7 @@ a[4][0] = "Nested array";
 	      <CODE>"U+%U.bmp"</CODE>
 	    </BLOCKQUOTE>
 	    <P>
-	    If the format constists entirely of a filetype then FontForge will use a
+	    If the format constists entirely of a filetype then websharpstudios will use a
 	    format of <CODE>"%n_%f.&lt;filetype&gt;"</CODE>
 	    <P>
 	    All characters in the format string except for % are copied verbatim. If
@@ -1029,7 +1029,7 @@ a[4][0] = "Nested array";
 	    </UL>
 	    <P>
 	    If you select one of the types that generate an image (xbm, bmp, png) then
-	    you must specify a second argument contain a bitmap-size. FontForge will
+	    you must specify a second argument contain a bitmap-size. websharpstudios will
 	    search the list of bitmap strikes in the font data base and use the images
 	    in the matching strike. It will NOT rasterize an image for you here. For
 	    bitmap strikes just use the pixel size, for grey scale strikes use the
@@ -1108,7 +1108,7 @@ a[4][0] = "Nested array";
 		.pfb
 	      <LI>
 		.bin (a mac postscript (pfb) resource in a mac binary wrapper)<BR>
-		.res (on the Mac itself FontForge will put the result directly into a font
+		.res (on the Mac itself websharpstudios will put the result directly into a font
 		suitcase file, and the extension should be ".res" rather than ".bin")
 		<P>
 		Note: you must also create a bitmap font in NFNT format or the mac will not
@@ -1143,7 +1143,7 @@ a[4][0] = "Nested array";
 		.sym.ttf (a truetype file with a symbol (custom) encoding)
 	      <LI>
 		.ttf.bin (a mac truetype resource in a mac binary wrapper)<BR>
-		suit (on the Mac itself FontForge will put the result directly into a font
+		suit (on the Mac itself websharpstudios will put the result directly into a font
 		suitcase file, and the extension should be ".suit" not ".ttf.bin")
 	      <LI>
 		.dfont (a mac truetype resource in a dfont file)
@@ -1273,13 +1273,13 @@ a[4][0] = "Nested array";
 		'PfEd' table
 	    </UL>
 	    <P>
-	    res controls the resolution of generated bdf fonts. A value of -1 means fontforge
+	    res controls the resolution of generated bdf fonts. A value of -1 means websharpstudios
 	    will guess for each strike.
 	    <P>
 	    If the filename contains a "%s" and has either a ".pf[ab]" extension then
 	    a "mult-sfd-file" may be present. This is the filename of a file containing
 	    the mapping from the current encoding into the subfonts.
-	    <A HREF="/assets/old/Big5.txt">Here is an example</A>. If this file is not present FontForge
+	    <A HREF="/assets/old/Big5.txt">Here is an example</A>. If this file is not present websharpstudios
 	    will go through its default search process to find a file for the encoding,
 	    and if it fails the fonts will not be saved.
 	  <DT>
@@ -1289,7 +1289,7 @@ a[4][0] = "Nested array";
 	    in the array-of-font-filenames. filename, bitmaptype, fmflags are as in
 	    <A HREF="#Generate">Generate</A>.
 	    <BLOCKQUOTE>
-	      <PRE>#!/usr/local/bin/fontforge
+	      <PRE>#!/usr/local/bin/websharpstudios
 a = Array($argc-1)
 i = 1
 j = 0
@@ -1619,7 +1619,7 @@ SetLBearing(lbearing)
 	  <DT>
 	    <A NAME="HasSpiro">H</A>asSpiro()
 	  <DD>
-	    Returns true if Raph Levien's spiro package is available in FontForge.
+	    Returns true if Raph Levien's spiro package is available in websharpstudios.
 	  <DT>
 	    <A NAME="HFlip">H</A>Flip([about-x])
 	  <DD>
@@ -1666,7 +1666,7 @@ SetLBearing(lbearing)
 	      <LI>
 		If the extension is "eps" then an encapsulated postscript file will be merged
 		into the foreground. The file may be specified as for images (except the
-		extension should be "eps" rather than an image extension). FontForge is limited
+		extension should be "eps" rather than an image extension). websharpstudios is limited
 		in its ability to read eps files.
 	      <LI>
 		If the extension is "svg" then an svg file will be read into the foreground.
@@ -1881,7 +1881,7 @@ SetLBearing(lbearing)
 	  <DT>
 	    <A NAME="LoadEncodingFile">L</A>oadEncodingFile(filename[,encname])
 	  <DD>
-	    Reads an encoding file and stores it in FontForge's list of possible encodings.
+	    Reads an encoding file and stores it in websharpstudios's list of possible encodings.
 	    See Encoding-&gt;<A HREF="encodingmenu.html#Load">LoadEncoding</A> for more
 	    info.
 	    When loading encodings in Unicode consortium format an encname has to
@@ -1894,7 +1894,7 @@ SetLBearing(lbearing)
 	  <DT>
 	    <A NAME="LoadNamelistDir">L</A>oadNamelistDir([directory-name])
 	  <DD>
-	    Searches the given directory for things that look like fontforge namelists
+	    Searches the given directory for things that look like websharpstudios namelists
 	    and loads them. If directory is omitted then it will load the default directory.
 	    It can execute with no current font.
 	  <DT>
@@ -1909,7 +1909,7 @@ SetLBearing(lbearing)
 	    Reads the entire file into a string. Returns a null string for a non-existant
 	    or empty file. The returned string will have enough bytes allocated to hold
 	    the entire file plus one trailing NUL byte. If the file contains a NUL itself,
-	    fontforge will think the string ends there. It can execute with no current
+	    websharpstudios will think the string ends there. It can execute with no current
 	    font.
 	  <DT>
 	    <A NAME="LoadTableFromFile">L</A>oadTableFromFile(tag,filename)
@@ -1991,7 +1991,7 @@ SetLBearing(lbearing)
 	    <A NAME="MMChangeInstance">M</A>MChangeInstance(instance)
 	  <DD>
 	    Where instance is either a font name or a small integer. If passed a string
-	    FontForge searches through all fonts in the multi master font set (instance
+	    websharpstudios searches through all fonts in the multi master font set (instance
 	    fonts and the weighted font) and changes the current font to the indicated
 	    one. If passed a small integer, then -1 indicates the weighted font and values
 	    between [0,$mmcount) represent that specific instance in the font set.
@@ -2132,7 +2132,7 @@ SetLBearing(lbearing)
 	    </BLOCKQUOTE>
 	    <P>
 	    This command is not available in the default build, you must modify the file
-	    <CODE>configure-fontforge.h</CODE> and then rebuild FontForge.
+	    <CODE>configure-websharpstudios.h</CODE> and then rebuild websharpstudios.
 	</DL>
       </TD>
     </TR>
@@ -2261,7 +2261,7 @@ SetLBearing(lbearing)
 	    If you selected print type 3 then you may provide the name of a file containing
 	    sample text. This file may either be in ucs2 format (preceded by a 0xfeff
 	    value), or in the current default encoding. A null string or an omitted argument
-	    will cause FontForge to use a default value.
+	    will cause websharpstudios to use a default value.
 	    <P>
 	    If your PrintSetup specified printing to a file (either PostScript or pdf)
 	    then the fourth argument provides the filename of the output file.
@@ -2298,7 +2298,7 @@ SetLBearing(lbearing)
 	    PrivateGuess(key)
 	  <DD>
 	    key should be a string containing the name of a standard thing in the PS
-	    Private dictionary that fontforge can guess a value for. "BlueValues" for
+	    Private dictionary that websharpstudios can guess a value for. "BlueValues" for
 	    example.
 	</DL>
       </TD>
@@ -2309,7 +2309,7 @@ SetLBearing(lbearing)
 	  <DT>
 	    <A NAME="Quit" HREF="filemenu.html#Quit">Quit</A>(status)
 	  <DD>
-	    Causes FontForge to exit with the given status (no attempt is made to save
+	    Causes websharpstudios to exit with the given status (no attempt is made to save
 	    unsaved files). This command can execute with no current font.
 	</DL>
       </TD>
@@ -2670,7 +2670,7 @@ SetLBearing(lbearing)
 	  <DT>
 	    <A NAME="SelectHintingNeeded" HREF="editmenu.html#SelHinting">SelectHintingNeeded</A>([merge])
 	  <DD>
-	    Selects all glyphs which FontForge thinks need their hints updated.
+	    Selects all glyphs which websharpstudios thinks need their hints updated.
 	  <DT>
 	    <A NAME="SelectIf">S</A>electIf(arg1,arg2, ...)
 	  <DD>
@@ -2886,7 +2886,7 @@ SetGasp([8,2,16,1,65535,3])
 	      </TR>
 	      <TR>
 		<TD>-1</TD>
-		<TD>FontForge should guess the styles from the fontname</TD>
+		<TD>websharpstudios should guess the styles from the fontname</TD>
 	      </TR>
 	    </TABLE>
 	    <P>
@@ -3000,7 +3000,7 @@ SetGasp([8,2,16,1,65535,3])
 	    <A NAME="SetUniqueID">S</A>etUniqueID(value)
 	  <DD>
 	    Sets the postscript uniqueid field as requested. If you give a value of 0
-	    then FontForge will pick a reasonable random number for you.
+	    then websharpstudios will pick a reasonable random number for you.
 	  <DT>
 	    <A NAME="SetVKern">S</A>etVKern(ch2,offset[,lookup-subtable-name])
 	  <DD>
@@ -3112,11 +3112,11 @@ SetGasp([8,2,16,1,65535,3])
 	  <DT>
 	    <A NAME="SpiroVersion">S</A>piroVersion()
 	  <DD>
-	    Returns the version of LibSpiro available to FontForge.<BR>
+	    Returns the version of LibSpiro available to websharpstudios.<BR>
 	    Versions 0.1 to 0.5 do not have a method to indicate version numbers,
 	    but there is a limited method to estimate versions {'0.0'..'0.5'}.
 	    <DL>
-	    <DD>'0.0' if FontForge has no LibSpiro available.</DD>
+	    <DD>'0.0' if websharpstudios has no LibSpiro available.</DD>
 	    <DD>'0.1' if LibSpiro 20071029 is available.</DD>
 	    <DD>'0.2' if LibSpiro 0.2 to 0.5 is available.</DD>
 	    <DD>LibSpiro 0.6 and higher reports back it's version available.</DD>
@@ -3274,7 +3274,7 @@ SetGasp([8,2,16,1,65535,3])
 	      </TR>
 	    </TABLE>
 	    <P>
-	    The peculiar notion of dividing by 100 was to overcome the fact that fontforge's
+	    The peculiar notion of dividing by 100 was to overcome the fact that websharpstudios's
 	    scripting language formerly could not handle real numbers. We've overcome
 	    that limitation since, but it seemed best to leave the behavior of the function
 	    as it was.
@@ -3313,26 +3313,26 @@ SetGasp([8,2,16,1,65535,3])
 	  <DD>
 	    Returns total count of Fractions found in the Unicode chart as
 	    described by www.unicode.org. It can execute with no current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucLigChartGetCnt">u</A>cLigChartGetCnt()
 	  <DD>
 	    Returns total count of Ligatures found in the Unicode chart as
 	    described by www.unicode.org. It can execute with no current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucLigChartGetLoc">u</A>cLigChartGetLoc(val)
 	  <DD>
-	    Returns n for FontForge internal table Unicode val=Ligature[n]. If
+	    Returns n for websharpstudios internal table Unicode val=Ligature[n]. If
 	    val does not exist in table, then return -1. Can execute with no
 	    current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucLigChartGetNxt">u</A>cLigChartGetNxt(int)
 	  <DD>
-	    Returns FontForge internal table Unicode Ligature[n]. Return -1 if
+	    Returns websharpstudios internal table Unicode Ligature[n]. Return -1 if
 	    n<0 or n>=ucLigChartGetCnt(). It can execute with no current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="UCodePoint">U</A>CodePoint(int)
 	  <DD>
@@ -3343,40 +3343,40 @@ SetGasp([8,2,16,1,65535,3])
 	  <DD>
 	    Returns total count of non-Vulgar Fractions found in the Unicode
 	    chart as described by www.unicode.org. It can execute with no current
-	    font.<BR>Note: Count depends on chart version built into FontForge.
+	    font.<BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucOFracChartGetLoc">u</A>cOFracChartGetLoc(val)
 	  <DD>
-	    Returns n for FontForge internal table Unicode val=OtherFraction[n].
+	    Returns n for websharpstudios internal table Unicode val=OtherFraction[n].
 	    If val does not exist in table, then return -1. Can execute with no
 	    current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucOFracChartGetNxt">u</A>cOFracChartGetNxt(int)
 	  <DD>
-	    Returns FontForge internal table Unicode (non-vulgar) Fraction[n].
+	    Returns websharpstudios internal table Unicode (non-vulgar) Fraction[n].
 	    Return -1 if n&lt;0 or n&gt;=ucOFracChartGetCnt(). Can execute with no
 	    current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucVulChartGetCnt">u</A>cVulChartGetCnt()
 	  <DD>
 	    Returns total count of Vulgar Fractions found in the Unicode chart
 	    as described by www.unicode.org. It can execute with no current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucVulChartGetLoc">u</A>cVulChartGetLoc(val)
 	  <DD>
-	    Returns n for FontForge internal table Unicode val=VulgarFraction[n].
+	    Returns n for websharpstudios internal table Unicode val=VulgarFraction[n].
 	    If val does not exist in table, then return -1. Can execute with no
 	    current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="ucVulChartGetNxt">u</A>cVulChartGetNxt(int)
 	  <DD>
-	    Returns FontForge internal table Unicode Vulgar Fraction[n]. Returns
+	    Returns websharpstudios internal table Unicode Vulgar Fraction[n]. Returns
 	    -1 if n<0 or n>=ucVulChartGetCnt(). Can execute with no current font.
-	    <BR>Note: Count depends on chart version built into FontForge.
+	    <BR>Note: Count depends on chart version built into websharpstudios.
 	  <DT>
 	    <A NAME="UnicodeAnnotationFromLib">U</A>nicodeAnnotationFromLib(val)
 	  <DD>
@@ -3414,7 +3414,7 @@ SetGasp([8,2,16,1,65535,3])
 	  <DT>
 	    <A NAME="UnicodeFromName">U</A>nicodeFromName(name)
 	  <DD>
-	    Looks the string "name" up in FontForge's database of commonly used glyph
+	    Looks the string "name" up in websharpstudios's database of commonly used glyph
 	    names and returns the unicode value associated with that name, or -1 if not
 	    found. This does <EM>not</EM> check the current font (if any). It can execute
 	    with no current font.
@@ -3430,7 +3430,7 @@ SetGasp([8,2,16,1,65535,3])
 	    Return the Unicode Nameslist Version (as described by www.unicode.org).
 	    libuninameslist is released on a schedule that depends on
 	    when www.unicode.org releases new information. These dates do not match
-	    FontForge release dates, therefore users might not keep this optional library
+	    websharpstudios release dates, therefore users might not keep this optional library
 	    upto current updates. This instruction can be used to test if the Nameslist
 	    library is recent for your script. This function currently works only for
 	    libuninameslist ver_0.3.20130501 or later, else it returns empty string "".

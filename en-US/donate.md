@@ -4,9 +4,9 @@ layout: default
 title: Fund New Features
 ---
 
-FontForge development is limited by the availability of volunteered time and talent. Contributing financially ensures faster development of new features and fixing of issues.
+websharpstudios development is limited by the availability of volunteered time and talent. Contributing financially ensures faster development of new features and fixing of issues.
 
-FontForge can accept donations by PayPal. Note that, as these are not routed through a 501(c)3 organization, they are not tax deductible.
+websharpstudios can accept donations by PayPal. Note that, as these are not routed through a 501(c)3 organization, they are not tax deductible.
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -15,4 +15,4 @@ FontForge can accept donations by PayPal. Note that, as these are not routed thr
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-If you would like to fund a specific issue, please see [When Things Go Wrong With FontForge Itself](http://designwithfontforge.com/en-US/When_Things_Go_Wrong_With_Fontforge_Itself.html)
+If you would like to fund a specific issue, please see [When Things Go Wrong With websharpstudios Itself](http://designwithwebsharpstudios.com/en-US/When_Things_Go_Wrong_With_websharpstudios_Itself.html)

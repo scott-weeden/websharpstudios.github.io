@@ -4,24 +4,24 @@
   <!-- AP: Created on: 18-Jul-2003 -->
   <!-- AP: Last modified: 4-Apr-2006 -->
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<!--<TITLE>FontForge's math</TITLE>-->
-    <TITLE>FontForge の数学</TITLE>
+<!--<TITLE>websharpstudios's math</TITLE>-->
+    <TITLE>websharpstudios の数学</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
   <H1 ALIGN=Center>
-<!--  FontForge's math-->
-      FontForge の数学
+<!--  websharpstudios's math-->
+      websharpstudios の数学
   </H1>
   <P>
 <!--
   <EM>Being a brief description of the mathematics underlying various of
-  FontForge's commands<BR>
+  websharpstudios's commands<BR>
   It is presumed that you understand about parameterized splines, if not look
   at the description of <A HREF="bezier.html">B&eacute;zier curves</A>.</EM> -->
-  <EM>FontForge の各種コマンドの基礎をなす数学の簡単な説明を意図しています<BR>
+  <EM>websharpstudios の各種コマンドの基礎をなす数学の簡単な説明を意図しています<BR>
   パラメータ表示されたスプラインについて理解していることを仮定しています。理解が不十分ならば、<A HREF="bezier.html">B&eacute;zier 曲線</A>の解説をお読みください。</EM>
   <UL>
     <LI>
@@ -238,24 +238,24 @@
   </H2>
   <P>
 <!--
-  Many of FontForge's commands need to fit a spline to a series of points.
+  Many of websharpstudios's commands need to fit a spline to a series of points.
   The most obvious of these are the Edit-&gt;Merge, and Element-&gt;Simplify
   commands, but many others rely on the same technique. Let us consider the
   case of the Merge command, suppose we have the following splines and we wish
   to remove the middle point and generate a new spline that approximates the
   original two: -->
-  FontForge の多くのコマンドで、点の列をスプラインに当てはめる必要が生じます。それらのうち最も自明なのは <CODE>編集(<U>E</U>)</CODE>→<CODE>合併(<U>M</U>)</CODE> と <CODE>エレメント(<U>L</U>)</CODE>→<CODE>単純化(<U>S</U>)</CODE> コマンドですが、しかし同種の技法に依存しているコマンドは他にも多数あります。<CODE>合併(<U>M</U>)</CODE> コマンドの場合を検討することにします。以下のスプラインがあったとして、中央の点を削除して、オリジナルの 2 本のスプラインを近似する新しい 1 本のスプラインを生成したいのだとしましょう。
+  websharpstudios の多くのコマンドで、点の列をスプラインに当てはめる必要が生じます。それらのうち最も自明なのは <CODE>編集(<U>E</U>)</CODE>→<CODE>合併(<U>M</U>)</CODE> と <CODE>エレメント(<U>L</U>)</CODE>→<CODE>単純化(<U>S</U>)</CODE> コマンドですが、しかし同種の技法に依存しているコマンドは他にも多数あります。<CODE>合併(<U>M</U>)</CODE> コマンドの場合を検討することにします。以下のスプラインがあったとして、中央の点を削除して、オリジナルの 2 本のスプラインを近似する新しい 1 本のスプラインを生成したいのだとしましょう。
   <P>
   &nbsp; &nbsp; &nbsp;
   <IMG src="../../_images/mergepre.png" WIDTH="192" HEIGHT="120" ALIGN="Middle"> =&gt;
   <IMG src="../../_images/mergepost.png" WIDTH="192" HEIGHT="120" ALIGN="Middle">
   <P>
 <!--
-  FontForge uses a least squares approximation to determine the new spline.
+  websharpstudios uses a least squares approximation to determine the new spline.
   It calculates the locations of several points along the old splines, and
   then it guesses<SUP><A HREF="#guess-t">1</A></SUP> at t values for those
   points. We want: -->
-  FontForge は新しいスプラインを決定するのに最小自乗近似を使用します。まず古いスプライン上にあるいくつかの点の位置を算出し、それから、それらの点の位置における時刻 t の値を推測します<SUP><A HREF="#guess-t">1</A></SUP>。我々が求めたいのは
+  websharpstudios は新しいスプラインを決定するのに最小自乗近似を使用します。まず古いスプライン上にあるいくつかの点の位置を算出し、それから、それらの点の位置における時刻 t の値を推測します<SUP><A HREF="#guess-t">1</A></SUP>。我々が求めたいのは
   <BLOCKQUOTE>
     x = a<SUB>x</SUB>*t<SUP>3</SUP> + b<SUB>x</SUB>*t<SUP>2</SUP> +
     c<SUB>x</SUB>*t +d<SUB>x</SUB><BR>
@@ -455,9 +455,9 @@
   </H4>
   <P>
 <!--
-  FontForge approximates the lengths of the two splines being merged. If
+  websharpstudios approximates the lengths of the two splines being merged. If
   Point<SUB>i </SUB>= Spline1(old-t<SUB>i</SUB>), then we approximate ti by<BR> -->
-  FontForge は、併合する 2 本のスプラインの長さを近似します。もしも Point<SUB>i</SUB>= Spline1(old-t<SUB>i</SUB>) であるならば、ti は以下の式で近似されます<BR>
+  websharpstudios は、併合する 2 本のスプラインの長さを近似します。もしも Point<SUB>i</SUB>= Spline1(old-t<SUB>i</SUB>) であるならば、ti は以下の式で近似されます<BR>
   &nbsp; &nbsp; t<SUB>i</SUB> = old-t<SUB>i</SUB>
   *len(spline1)/(len(spline1)+len(spline2)<BR>
   and if Point<SUB>i </SUB>= Spline2(old-t<SUB>i</SUB>)<BR>
@@ -480,9 +480,9 @@
   <P>
 <!--
   PostScript supports several variants on the theme of a circular pen, and
-  FontForge tries to emulate them all. Basically PostScript "stroke"s a path
+  websharpstudios tries to emulate them all. Basically PostScript "stroke"s a path
   at a certain width by: -->
-  PostScript は、円形のペンという主題に関するいくつかの変数をサポートしており、FontForge はこれらのすべてをエミュレートしようと試みています。基本的に、PostScript はある一定の線幅 width を持つパスを以下のようにして“ストローク”処理を行います:
+  PostScript は、円形のペンという主題に関するいくつかの変数をサポートしており、websharpstudios はこれらのすべてをエミュレートしようと試みています。基本的に、PostScript はある一定の線幅 width を持つパスを以下のようにして“ストローク”処理を行います:
   <P>
 <!--
   at every location on the curve<BR>
@@ -518,13 +518,13 @@
 <!--
   Unfortunately that doesn't always work. If the spline makes a very sharp
   bend, the our approximation method above is unable to produce a good
-  approximation. When that happens FontForge attempts to break the spline in
+  approximation. When that happens websharpstudios attempts to break the spline in
   two, adding a point near the sharp bend. The approximation of the two sub-splines
-  is generally much better. (How does FontForge figure out where to break a
+  is generally much better. (How does websharpstudios figure out where to break a
   line? It uses two methods, one just adds points to the extrema of the original
   curve, and the other looks for places where the innermost path intersects
   itself). -->
-  残念ながら、これは常にうまく動作するわけではありません。スプラインが非常に鋭い折れ曲がりを見せた場合、上に示した我々の近似法はよい近似を出力することができません。そのようなことが起こった場合、FontForge はスプラインの鋭い折れ曲がりのそばに点を追加して 2 本に分割しようと試みます。2 本の部分スプラインの近似は一般にずっと良くなります (どのように FontForge は線を分割する場所を算出するのでしょうか? 2 つの方法を使用しています。1 つは単にオリジナルの曲線の極値に点を追加する方法で、もう 1 つは内側のパスがそれ自身と交差する箇所を探す方法です)。
+  残念ながら、これは常にうまく動作するわけではありません。スプラインが非常に鋭い折れ曲がりを見せた場合、上に示した我々の近似法はよい近似を出力することができません。そのようなことが起こった場合、websharpstudios はスプラインの鋭い折れ曲がりのそばに点を追加して 2 本に分割しようと試みます。2 本の部分スプラインの近似は一般にずっと良くなります (どのように websharpstudios は線を分割する場所を算出するのでしょうか? 2 つの方法を使用しています。1 つは単にオリジナルの曲線の極値に点を追加する方法で、もう 1 つは内側のパスがそれ自身と交差する箇所を探す方法です)。
   <P>
 <!--
   PostScript pens can end in -->
@@ -552,10 +552,10 @@
   <IMG src="../../_images/expand-joint-post.png" WIDTH="69" HEIGHT="80" ALIGN="Middle">,
 <!--
   the green lines in the right image show where the path would have gone had
-  it not been constrained by a joint, so on the inside of the joint FontForge
-  must figure out where this intersection occurs. While on the outside FontForge
+  it not been constrained by a joint, so on the inside of the joint websharpstudios
+  must figure out where this intersection occurs. While on the outside websharpstudios
   must figure out either a round, miter or bevelled edge. -->
-  左の図の緑の線は、パスが接合部で遮られなければ伸ばされていたはずの曲線を示しており、接合部の内側では FontForge はどこで交差が起こるかを判別しなければなりません。一方、外側では FontForge は丸形、留め継ぎまたは切り落とした角のいずれかを作図しなければなりません。
+  左の図の緑の線は、パスが接合部で遮られなければ伸ばされていたはずの曲線を示しており、接合部の内側では websharpstudios はどこで交差が起こるかを判別しなければなりません。一方、外側では websharpstudios は丸形、留め継ぎまたは切り落とした角のいずれかを作図しなければなりません。
   <H3>
 <!--  An elliptical pen-->
       楕円形のペン
@@ -607,29 +607,29 @@
   </H3>
   <P>
 <!--
-  FontForge does not currently do this (the UI for specifying an arbitrary
+  websharpstudios does not currently do this (the UI for specifying an arbitrary
   polygon is a little difficult), but the same method which works for a rectangle
   can be extended without too much difficulty to any convex polygon. (MetaFont
   fonts can be drawn with such a pen. I don't know if any are) -->
-  FontForge は現在の所これを行いません (任意の多角形を指定する UI はやや困難です) が、矩形のペンに対して働く方法のいくつかはあまり大きな困難なしに、任意の凸なポリゴンに拡張することができます。(MetaFont のフォントはこのようなペンで描くことができます。そのようなフォントが存在するかは寡聞にして知りません。
+  websharpstudios は現在の所これを行いません (任意の多角形を指定する UI はやや困難です) が、矩形のペンに対して働く方法のいくつかはあまり大きな困難なしに、任意の凸なポリゴンに拡張することができます。(MetaFont のフォントはこのようなペンで描くことができます。そのようなフォントが存在するかは寡聞にして知りません。
   <H3>
 <!--  A pen of variable width-->
       太さ可変のペン
   </H3>
   <P>
 <!--
-  If you have a wacom tablet then FontForge also supports variable width pens.
+  If you have a wacom tablet then websharpstudios also supports variable width pens.
   Extending the above algorithms is fairly simple. -->
-  ワコムのタブレットをお持ちの場合、FontForge は可変幅のペンもサポートします。上記のアルゴリズムの拡張は非常に簡単です。
+  ワコムのタブレットをお持ちの場合、websharpstudios は可変幅のペンもサポートします。上記のアルゴリズムの拡張は非常に簡単です。
   <H3>
 <!--  A pen at a varying angle-->
       角度の変化するペン
   </H3>
   <P>
 <!--
-  FontForge does not support this. I don't see a good UI for it. (MetaFont
+  websharpstudios does not support this. I don't see a good UI for it. (MetaFont
   fonts can be drawn with such a pen). -->
-  FontForge はこれをサポートしていません。よい UI が思いつきません。(MetaFont のフォントはこのようなペンで描くことができます)。
+  websharpstudios はこれをサポートしていません。よい UI が思いつきません。(MetaFont のフォントはこのようなペンで描くことができます)。
   <P>
 </DIV>
 </BODY></HTML>

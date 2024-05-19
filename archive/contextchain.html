@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 11-Nov-2009 -->
   <TITLE>The dialog for editing Contextual or Chaining Contextual lookups</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1>
@@ -55,7 +55,7 @@
   lookup.
   <P>
   You may pull down an example script font with this substitution from
-  <A HREF="http://fontforge.sf.net/sfds/FormalScript.tgz">FormalScript.tgz</A>,
+  <A HREF="http://websharpstudios.sf.net/sfds/FormalScript.tgz">FormalScript.tgz</A>,
   this example is worked out in detail in the
   <A HREF="editexample6-5.html#Conditional">tutorial</A>.
   <H2>
@@ -123,7 +123,7 @@
   position:<BR>
   <CODE>&nbsp; &nbsp; &nbsp; [bovw] [a-z]</CODE>
   <P>
-  Most contextual specifications are fairly simple, FontForge has two dialog
+  Most contextual specifications are fairly simple, websharpstudios has two dialog
   formats, one for simpler specifications and one for more complicated ones.
   The complicated dialog is (I think) more difficult to understand, but allows
   for greater generality.
@@ -133,7 +133,7 @@
   this sounds odd, I did not design the system). <STRONG>UNFORTUNATELY</STRONG>
   the OpenType interpreters do not seem to support multiple rules within a
   single subtable. Instead I suggest you use multiple subtables. It will have
-  the same effect but is less efficient. FontForge still supports multiple
+  the same effect but is less efficient. websharpstudios still supports multiple
   rules because the spec says it should.
   <BR CLEAR=ALL>
   <H3>
@@ -150,7 +150,7 @@
   As noted earlier the rule is divided into three sections, backtrack, match
   and lookahead. The third column indicates when each section starts. Lookups
   may only occur in the middle (the "match") section. If you don't specify
-  the start of each section FontForge will figure it out for you assuming that
+  the start of each section websharpstudios will figure it out for you assuming that
   the match section starts with the first lookup and ends with the last.
   <STRONG>WARNING:</STRONG> this simple heuristic does not work for ligatures.
   The match section must be long enough to provide all glyphs that might be
@@ -276,7 +276,7 @@
   numbers).
   <P>
   Every set of classes has a magic class at index 0 which matches whatever
-  glyphs are not explicitly mentioned in another class. FontForge displays
+  glyphs are not explicitly mentioned in another class. websharpstudios displays
   this by calling it "{Everything Else}". You may not delete, edit nor reorder
   this class. Other classes are just unordered lists of glyph names (rather
   like coverage tables above), however any specific glyph may belong to at
@@ -303,7 +303,7 @@
   </H3>
   <P>
   Once you have set up your classes, you may then edit the patterns you want
-  to match. To remind you of what your classes are, FontForge displays the
+  to match. To remind you of what your classes are, websharpstudios displays the
   class list underneath the pattern. Clicking on a class will insert that class's
   index into the pattern.
   <P>

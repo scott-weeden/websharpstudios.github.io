@@ -3,32 +3,32 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 6-Apr-2007 -->
   <!-- AP: Last modified: 28-Apr-2010 -->
-  <TITLE>Writing python scripts to change fonts in FontForge</TITLE>
+  <TITLE>Writing python scripts to change fonts in websharpstudios</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    Writing python scripts to change fonts in FontForge
+    Writing python scripts to change fonts in websharpstudios
   </H1>
   <P>
   I assume you have a working knowledge of <A href="http://www.python.org/doc/">Python</A>.
-  FontForge implements two Python modules -- one great huge one
-  called <CODE><A HREF="python.html#fontforge">fontforge</A></CODE> which provides
-  access to as much of FontForge's functionality as I've had time to write,
+  websharpstudios implements two Python modules -- one great huge one
+  called <CODE><A HREF="python.html#websharpstudios">websharpstudios</A></CODE> which provides
+  access to as much of websharpstudios's functionality as I've had time to write,
   and one tiny one called
   <CODE><A HREF="python.html#psMat">psMat</A></CODE> which provides quick access
   to some useful transformations expressed as PostScript matrices.
   <P>
-  In python terms fontforge <EM>embeds</EM> python. It is possible to build
-  fontforge so that it is also a <A HREF="#Extension">python <EM>extension</EM>
+  In python terms websharpstudios <EM>embeds</EM> python. It is possible to build
+  websharpstudios so that it is also a <A HREF="#Extension">python <EM>extension</EM>
   </A>(<CODE>configure --enable-pyextension</CODE>)
   <P>
-  The fontforge module also defines several types
+  The websharpstudios module also defines several types
   <UL>
     <LI>
       <A href="#Point">point</A>
@@ -52,11 +52,11 @@
   <H2>Command line convenience</H2>
   <P>For convenience, Python commands given as a <CODE>-c</CODE> argument on the command line have the following code prepended:
 <BLOCKQUOTE>
-<PRE>from sys import argv; from fontforge import *</PRE>
+<PRE>from sys import argv; from websharpstudios import *</PRE>
 </BLOCKQUOTE>
 <P>Hence, the trivial script to convert a font can be written:
 <BLOCKQUOTE>
-<PRE>fontforge -c 'open(argv[1]).generate(argv[2])'</PRE>
+<PRE>websharpstudios -c 'open(argv[1]).generate(argv[2])'</PRE>
 </BLOCKQUOTE>
 
 <H2 id="psMat">psMat</H2>
@@ -118,7 +118,7 @@
     </TR>
   </TABLE>
 
-<H2 id="fontforge">fontforge</H2>
+<H2 id="websharpstudios">websharpstudios</H2>
   <TABLE class="module" border=1>
     <TR>
       <TH colspan=3>Global Variables</TH>
@@ -129,7 +129,7 @@
     </TR>
     <TR>
       <TD><CODE><A NAME="module-hooks">hooks</A></CODE></TD>
-      <TD colspan=2>A dictionary which the user may fill to associate certain fontforge
+      <TD colspan=2>A dictionary which the user may fill to associate certain websharpstudios
 	events with a python function to be run when those events happen. The function
 	will be passed the font (or possibly glyph) for which the relevant event
 	occurred.
@@ -175,7 +175,7 @@
       <TD><CODE><A NAME="ff-hasSpiro">hasSpiro</A></CODE></TD>
       <TD><CODE>()</CODE></TD>
       <TD>Returns a boolean, <CODE>True</CODE> if Raph Levien's spiro package is
-	available for use in FontForge.</TD>
+	available for use in websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>savePrefs</CODE></TD>
@@ -219,7 +219,7 @@
     <TR>
       <TD><CODE>preloadCidmap</CODE></TD>
       <TD><CODE>(filename,registry,order,supplement)</CODE></TD>
-      <TD>Loads a fontforge cidmap file (first three args are strings, last is
+      <TD>Loads a websharpstudios cidmap file (first three args are strings, last is
 	an integer)</TD>
     </TR>
     <TR>
@@ -328,7 +328,7 @@
       <TD>Return the Unicode Nameslist Version (as described by www.unicode.org).
 	libuninameslist is released on a schedule that depends on
 	when www.unicode.org releases new information. These dates do not match
-	FontForge release dates, therefore users might not keep this optional library
+	websharpstudios release dates, therefore users might not keep this optional library
 	upto current updates. This instruction can be used to test if the Nameslist
 	library is recent for your script. This function currently works only for
 	libuninameslist ver_0.3.20130501 or later, else it returns empty string "".
@@ -410,29 +410,29 @@
       <TD><CODE>()</CODE></TD>
       <TD>Returns total count of Fractions found in the Unicode chart as
 	described by www.unicode.org. It can execute with no current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucLigChartGetCnt</CODE></TD>
       <TD><CODE>()</CODE></TD>
       <TD>Returns total count of Ligatures found in the Unicode chart as
 	described by www.unicode.org. It can execute with no current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucLigChartGetLoc</CODE></TD>
       <TD><CODE>(val)</CODE></TD>
-      <TD>Returns n for FontForge internal table Unicode val=Ligature[n]. If
+      <TD>Returns n for websharpstudios internal table Unicode val=Ligature[n]. If
 	val does not exist in table, then return -1. Can execute with no
 	current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucLigChartGetNxt</CODE></TD>
       <TD><CODE>(n)</CODE></TD>
-      <TD>Returns FontForge internal table Unicode Ligature[n]. Return -1 if
+      <TD>Returns websharpstudios internal table Unicode Ligature[n]. Return -1 if
 	n<0 or n>=ucLigChartGetCnt(). It can execute with no current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucOFracChartGetCnt</CODE></TD>
@@ -440,54 +440,54 @@
       <TD>Returns total count of non-Vulgar Fractions found in the Unicode
 	chart as described by www.unicode.org. It can execute with no current
 	font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucOFracChartGetLoc</CODE></TD>
       <TD><CODE>(val)</CODE></TD>
-      <TD>Returns n for FontForge internal table Unicode val=OtherFraction[n].
+      <TD>Returns n for websharpstudios internal table Unicode val=OtherFraction[n].
 	If val does not exist in table, then return -1. Can execute with no
 	current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucOFracChartGetNxt</CODE></TD>
       <TD><CODE>(n)</CODE></TD>
-      <TD>Returns FontForge internal table Unicode (non-vulgar) Fraction[n].
+      <TD>Returns websharpstudios internal table Unicode (non-vulgar) Fraction[n].
 	Return -1 if n&lt;0 or n&gt;=ucOFracChartGetCnt(). Can execute with no
 	current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucVulChartGetCnt</CODE></TD>
       <TD><CODE>()</CODE></TD>
       <TD>Returns total count of Vulgar Fractions found in the Unicode chart
 	as described by www.unicode.org. It can execute with no current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucVulChartGetLoc</CODE></TD>
       <TD><CODE>(val)</CODE></TD>
-      <TD>Returns n for FontForge internal table Unicode val=VulgarFraction[n].
+      <TD>Returns n for websharpstudios internal table Unicode val=VulgarFraction[n].
 	If val does not exist in table, then return -1. Can execute with no
 	current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>ucVulChartGetNxt</CODE></TD>
       <TD><CODE>(n)</CODE></TD>
-      <TD>Returns FontForge internal table Unicode Vulgar Fraction[n]. Returns
+      <TD>Returns websharpstudios internal table Unicode Vulgar Fraction[n]. Returns
 	-1 if n<0 or n>=ucVulChartGetCnt(). Can execute with no current font.
-	<BR>Note: Count depends on chart version built into FontForge.</TD>
+	<BR>Note: Count depends on chart version built into websharpstudios.</TD>
     </TR>
     <TR>
       <TD><CODE>SpiroVersion</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Returns the version of LibSpiro available to FontForge.<BR>
+      <TD>Returns the version of LibSpiro available to websharpstudios.<BR>
 	Versions 0.1 to 0.5 do not have a method to indicate version numbers,
 	but there is a limited method to estimate versions {'0.0'..'0.5'}.
 	<P>
-	'0.0' if FontForge has no LibSpiro available.<BR>
+	'0.0' if websharpstudios has no LibSpiro available.<BR>
 	'0.1' if LibSpiro 20071029 is available.<BR>
 	'0.2' if LibSpiro 0.2 to 0.5 is available.<BR>
 	LibSpiro 0.6 and higher reports back it's version available.</TD>
@@ -495,23 +495,23 @@
     <TR>
       <TD><CODE>version</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Returns fontforge's version number. This will be a large number like
+      <TD>Returns websharpstudios's version number. This will be a large number like
 	20070406.</TD>
     </TR>
     <TR>
       <TD><CODE>runInitScripts</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Runs the system or user initialization scripts, if not already run.  This is primarily intended when importing FontForge into a python process.</TD>
+      <TD>Runs the system or user initialization scripts, if not already run.  This is primarily intended when importing websharpstudios into a python process.</TD>
     </TR>
     <TR>
       <TD><CODE>scriptPath</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Returns a tuple listing the directory paths which are searched for python scripts during FontForge initialization.</TD>
+      <TD>Returns a tuple listing the directory paths which are searched for python scripts during websharpstudios initialization.</TD>
     </TR>
     <TR>
       <TD><CODE>fonts</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Returns a tuple of all fonts currently loaded into fontforge for editing</TD>
+      <TD>Returns a tuple of all fonts currently loaded into websharpstudios for editing</TD>
     </TR>
     <TR>
       <TD><CODE>activeFont</CODE></TD>
@@ -539,7 +539,7 @@
       <TD><CODE>fontsInFile</CODE></TD>
       <TD><CODE>(filename)</CODE></TD>
       <TD>Returns a tuple of all fontnames found in the specified file. The tuple
-	may be empty if fontforge couldn't find any.</TD>
+	may be empty if websharpstudios couldn't find any.</TD>
     </TR>
     <TR>
       <TD><CODE>open</CODE></TD>
@@ -576,9 +576,9 @@
     <TR>
       <TD><CODE>registerGlyphSeparationHook</CODE></TD>
       <TD><CODE>(hook)</CODE></TD>
-      <TD>The GlyphSeparationHook is a python routine which FontForge will call
+      <TD>The GlyphSeparationHook is a python routine which websharpstudios will call
 	when it wants to figure out the optical separation between two glyphs. If
-	you neve call this, or if you call it with a value of <CODE>None</CODE> FontForge
+	you neve call this, or if you call it with a value of <CODE>None</CODE> websharpstudios
 	will use a built-in default. This routine gets called during AutoWidth, AutoKern,
 	and computing the optical left and right side bearings (for 'lfbd' and 'rtbd'
 	features). For more infomation see
@@ -590,15 +590,15 @@
     <TR>
       <TD colspan=3><A NAME="python-init-scripts">Users</A> may define scripts
 	to be run when menu items are invoked. Some of these scripts will want to
-	ask users questions, so this section provides routines to determine if fontforge
+	ask users questions, so this section provides routines to determine if websharpstudios
 	has a user interface, a command to add menu items, and various small standard
 	dialogs to interact with the user. I do not currently provide a mechanism
 	for allowing people to define special purpose dialogs (for example they might
 	want to ask more than one question in a dialog, and I don't support that).
 	<P>
-	When FontForge <A NAME="starts">starts</A> (if it's a fontforge with python)
-	it will look at the directories <CODE>$(PREFIX)/share/fontforge/python</CODE>
-	and <CODE>~/.FontForge/python</CODE> and attempt to run all files in those
+	When websharpstudios <A NAME="starts">starts</A> (if it's a websharpstudios with python)
+	it will look at the directories <CODE>$(PREFIX)/share/websharpstudios/python</CODE>
+	and <CODE>~/.websharpstudios/python</CODE> and attempt to run all files in those
 	directories which end in ".py". Presumably these files will allow people
 	to customize the user interface to suit their needs.
 	<P>
@@ -609,17 +609,17 @@
 	  Example
 	</H3>
 	<BLOCKQUOTE>
-	  <PRE>import fontforge
+	  <PRE>import websharpstudios
 
 def nameGlyph(junk,glyph):
   print glyph.glyphname
 
-fontforge.registerMenuItem(nameGlyph,None,None,"Glyph",None,"Print Glyph Name")
+websharpstudios.registerMenuItem(nameGlyph,None,None,"Glyph",None,"Print Glyph Name")
 
 def neverEnableMe(junk,glyph):
   return False
 
-fontforge.registerMenuItem(nameGlyph,neverEnableMe,None,"Glyph",None,"SubMenu","Print Glyph Name")
+websharpstudios.registerMenuItem(nameGlyph,neverEnableMe,None,"Glyph",None,"SubMenu","Print Glyph Name")
 
 def importGlyph(junk,glyph,filename,toback):
   print "Import"
@@ -630,7 +630,7 @@ def exportGlyph(junk,glyph,filename):
   print glyph.glyphname
   print filename
 
-fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","foo,foobar")
+websharpstudios.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","foo,foobar")
 </PRE>
 	</BLOCKQUOTE>
 	<P>
@@ -653,7 +653,7 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
     <TR>
       <TD><CODE>hasUserInterface</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Returns True if this session of FontForge has a user interface</TD>
+      <TD>Returns True if this session of websharpstudios has a user interface</TD>
     </TR>
     <TR>
       <TD><CODE>registerMenuItem</CODE></TD>
@@ -664,7 +664,7 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
 	shortcut_string,<BR>
 	{submenu-names,}<BR>
 	menu-name-string)</CODE></TD>
-      <TD>If fontforge has a user interface this will add this menu item to FontForge's
+      <TD>If websharpstudios has a user interface this will add this menu item to websharpstudios's
 	<A HREF="toolsmenu.html#Tools">Tool</A> menu, either in the font or the outline
 	glyph view (or both).
 	<DL>
@@ -686,7 +686,7 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
 	  <DT>
 	    data
 	  <DD>
-	    This can be whatever you want (including None). FontForge keeps track of
+	    This can be whatever you want (including None). websharpstudios keeps track of
 	    it and passes it to both of the above functions. Use it if you need to provide
 	    some context for the menu item.
 	  <DT>
@@ -706,7 +706,7 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
 	  <DD>
 	    You may specify as many of these as you wish (including leaving them out
 	    altogether), this allows you to organize the Tools menu into submenus. (If
-	    a submenu of this name does not currently exist, fontforge will create it).
+	    a submenu of this name does not currently exist, websharpstudios will create it).
 	  <DT>
 	    menu-name
 	  <DD>
@@ -774,7 +774,7 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
     <TR>
       <TD><CODE>logWarning</CODE></TD>
       <TD><CODE>(msg)</CODE></TD>
-      <TD>Adds the message (a string) to FontForge's Warnings window. (if you wish
+      <TD>Adds the message (a string) to websharpstudios's Warnings window. (if you wish
 	to display a % character you must represent it as two percents). If there
 	is no user interface the output will go to stderr.</TD>
     </TR>
@@ -879,7 +879,7 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
       <TH colspan=3>Creation</TH>
     </TR>
     <TR>
-      <TD><CODE>fontforge.point</CODE></TD>
+      <TD><CODE>websharpstudios.point</CODE></TD>
       <TD><CODE>([x,y,on-curve,type,selected])</CODE></TD>
       <TD>Creates a new point. Optionally specifying its x,y
          location, on-curve status and selected status. x and y
@@ -915,42 +915,42 @@ fontforge.registerImportExport(importGlyph,exportGlyph,None,"foosball","foo","fo
       <TD colspan=2>Whether this point is selected in the UI.</TD>
 	<P>
 	The value of this member also determines the selected status in the UI
-	on setting a layer.  FontForge usually retains the selection status of
+	on setting a layer.  websharpstudios usually retains the selection status of
 	any point between and that of an on-curve point when saving, whether or
 	not a UI is present.
       </TD>
     </TR>
     <TR>
       <TD><CODE>type</CODE></TD>
-      <TD colspan=2>For an on-curve point, its FontForge point type.
+      <TD colspan=2>For an on-curve point, its websharpstudios point type.
 	<P>
-	There are four types: <CODE>fontforge.splineCorner</CODE>==0,
-	<CODE>fontforge.splineCurve</CODE>==1,
-	<CODE>fontforge.splineHVCurve</CODE>==2, and
-	<CODE>fontforge.splineTangent</CODE>==3. A new point will have
+	There are four types: <CODE>websharpstudios.splineCorner</CODE>==0,
+	<CODE>websharpstudios.splineCurve</CODE>==1,
+	<CODE>websharpstudios.splineHVCurve</CODE>==2, and
+	<CODE>websharpstudios.splineTangent</CODE>==3. A new point will have
 	type <CODE>splineCorner</CODE>. When assigning a layer to
 	<CODE>glyph.layers</CODE>, <CODE>glyph.background</CODE> or
 	<CODE>glyph.foreground</CODE> the type value is ignored. To
-	influence the type FontForge will associate with an on-curve point
+	influence the type websharpstudios will associate with an on-curve point
 	use <CODE><A HREF="python.html#g-setLayer">glyph.setLayer</A></CODE>
       </TD>
     </TR>
     <TR>
       <TD><CODE>interpolated</CODE></TD>
-      <TD colspan=2>True if FontForge treats this (quadratic, on-curve) point as
+      <TD colspan=2>True if websharpstudios treats this (quadratic, on-curve) point as
         interpolated. All interpolated points should be mid-way between their off-curve
         points, but some such points are not treated as interpolated. This flag is
         ignored when setting a layer.
         <P>
-        Older versions of FontForge omitted interpolated points. This
+        Older versions of websharpstudios omitted interpolated points. This
 	was equivalent to executing the following on a contour:
 	<P>
 	<TT>c[:] = [ p for p in c if not p.interpolated ]</TT> </TD>
 	<P>
-	This member will be false for a point marked "Never interpolate" in FontForge
+	This member will be false for a point marked "Never interpolate" in websharpstudios
 	but there is currently no way of setting or preserving that mark when a
 	layer is replaced using the Python interfaces. A "round trip" through a Python
-	contour therefore clears that mark on any points that have it, and FontForge
+	contour therefore clears that mark on any points that have it, and websharpstudios
 	treats mid-placed and omitted on_curve points as equivalent.
     </TR>
     <TR>
@@ -1014,7 +1014,7 @@ making stroked fonts all your contours should eventually be closed.
 <P>
 Contours may also be expressed in terms of Raph Levien's spiro points. This
 is an alternate representation for the contour, and is not always available
-(Only if <CODE><A HREF="python.html#ff-hasSpiro">fontforge.hasSpiro</A>()
+(Only if <CODE><A HREF="python.html#ff-hasSpiro">websharpstudios.hasSpiro</A>()
 </CODE>is<CODE> True</CODE>. If available the spiro member will return a
 tuple of spiro control points, while assigning to this member will change
 the shape of the contour to match the new spiros.
@@ -1026,7 +1026,7 @@ Two contours may be compared to see if they describe similar paths.
       <TH colspan=3>Creation</TH>
     </TR>
     <TR>
-      <TD><CODE>fontforge.contour</CODE></TD>
+      <TD><CODE>websharpstudios.contour</CODE></TD>
       <TD><CODE>()</CODE></TD>
       <TD>Creates a new contour</TD>
     </TR>
@@ -1054,39 +1054,39 @@ Two contours may be compared to see if they describe similar paths.
     <TR>
       <TD><CODE>spiros</CODE></TD>
       <TD colspan=2>This is an alternate representation of a curve. This member
-	is only available if <A HREF="#ff-hasSpiro">fontforge.hasSpiro()</A> is True.
+	is only available if <A HREF="#ff-hasSpiro">websharpstudios.hasSpiro()</A> is True.
 	Returns a tuple of spiro control points. Each of these is itself a tuple
 	of four elements, an x,y location, a type field, and a set of flags. The
-	type field takes on values (which are predefined constants in the fontforge
+	type field takes on values (which are predefined constants in the websharpstudios
 	module):
 	<TABLE>
 	  <TR>
-	    <TD>fontforge.spiroG4</TD>
+	    <TD>websharpstudios.spiroG4</TD>
 	    <TD>1</TD>
 	    <TD>A Spiro G4 curve point</TD>
 	  </TR>
 	  <TR>
-	    <TD>fontforge.spiroG2</TD>
+	    <TD>websharpstudios.spiroG2</TD>
 	    <TD>2</TD>
 	    <TD>A Spiro G2 curve point</TD>
 	  </TR>
 	  <TR>
-	    <TD>fontforge.spiroCorner</TD>
+	    <TD>websharpstudios.spiroCorner</TD>
 	    <TD>3</TD>
 	    <TD>A Spiro corner point</TD>
 	  </TR>
 	  <TR>
-	    <TD>fontforge.spiroLeft</TD>
+	    <TD>websharpstudios.spiroLeft</TD>
 	    <TD>4</TD>
 	    <TD>A Spiro left "tangent" point</TD>
 	  </TR>
 	  <TR>
-	    <TD>fontforge.spiroRight</TD>
+	    <TD>websharpstudios.spiroRight</TD>
 	    <TD>5</TD>
 	    <TD>A Spiro right "tangent" point</TD>
 	  </TR>
 	  <TR>
-	    <TD>fontforge.spiroOpen</TD>
+	    <TD>websharpstudios.spiroOpen</TD>
 	    <TD>6</TD>
 	    <TD>This may only be used on the first point in a spiro tuple. It indicates
 	      that the tuple describes an open contour.</TD>
@@ -1405,7 +1405,7 @@ Layers may be compared to see if their contours are similar.
       <TH colspan=3>Creation</TH>
     </TR>
     <TR>
-      <TD><CODE>fontforge.layer</CODE></TD>
+      <TD><CODE>websharpstudios.layer</CODE></TD>
       <TD><CODE>()</CODE></TD>
       <TD>Creates a new layer</TD>
     </TR>
@@ -1725,14 +1725,14 @@ Layers may be compared to see if their contours are similar.
 <H2 id="GlyphPen">glyphPen</H2>
 
 This implements the <A href="http://www.robofab.org/objects/pen.html">Pen
-Protocol</A> to draw into a FontForge glyph. You create a glyphPen with
+Protocol</A> to draw into a websharpstudios glyph. You create a glyphPen with
 the <A href="#glyph-glyphPen">glyphPen</A> attribute of a glyph. You then draw
 into it with the operators below.
 
 <BLOCKQUOTE>
 <PRE>
-import fontforge;
-font = fontforge.open("Ambrosia.sfd");	#Open a font
+import websharpstudios;
+font = websharpstudios.open("Ambrosia.sfd");	#Open a font
 pen = font["B"].glyphPen();		# Create a pen to draw into glyph "B"
 pen.moveTo((100,100));			# draw a square
 pen.lineTo((100,200));
@@ -1742,7 +1742,7 @@ pen.closePath();			# end the contour
 
 font["A"].draw(pen);			# or you can copy from one glyph to another
 					# by having a glyph draw itself into the pen
-pen = None;				# Finalize the pen. This tells FontForge
+pen = None;				# Finalize the pen. This tells websharpstudios
 					# that the drawing is done and causes
 			                # it to refresh the display (if a UI is active).
 </PRE>
@@ -1789,7 +1789,7 @@ This type may not be pickled.
 	format with one control point between adjacent on-curve points.
 	<P>
 	The standard appears to support super-bezier curves with more than two control
-	points between on-curve points. FontForge does not. Nor does FontForge allow
+	points between on-curve points. websharpstudios does not. Nor does websharpstudios allow
 	you to draw a quadratic spline into a cubic font, nor vice versa.</TD>
     </TR>
     <TR>
@@ -1833,7 +1833,7 @@ This type may not be pickled.
 
 <H2 id="Glyph">glyph</H2>
 
-The glyph type refers to a fontforge Glyph object. It has no
+The glyph type refers to a websharpstudios Glyph object. It has no
 independent life of its own, it always lives within a font. It has all the
 things you expect to be associated with a glyph: a glyph name, a unicode
 encoding, a drawing layer, GPOS/GSUB features...
@@ -2020,7 +2020,7 @@ must be created through the font.
     <TR>
       <TD><CODE>italicCorrection</CODE></TD>
       <TD colspan=2>The glyph's italic correction field. Used by both TeX and MATH.
-	The special value fontforge.unspecifiedMathValue means the value is unspecified (An
+	The special value websharpstudios.unspecifiedMathValue means the value is unspecified (An
 	unspecified value will not go into the output tables, a value of 0 will)</TD>
     </TR>
     <TR>
@@ -2120,20 +2120,20 @@ must be created through the font.
     </TR>
     <TR>
       <TD><CODE>texheight</CODE></TD>
-      <TD colspan=2>The Tex height. The special value fontforge.unspecifiedMathValue means
+      <TD colspan=2>The Tex height. The special value websharpstudios.unspecifiedMathValue means
 	the field is unspecified (An unspecified value will not go into the output
 	tables, a value of 0 will)</TD>
     </TR>
     <TR>
       <TD><CODE>texdepth</CODE></TD>
-      <TD colspan=2>The Tex depth. The special value fontforge.unspecifiedMathValue means the
+      <TD colspan=2>The Tex depth. The special value websharpstudios.unspecifiedMathValue means the
 	field is unspecified (An unspecified value will not go into the output tables,
 	a value of 0 will)</TD>
     </TR>
     <TR>
       <TD><CODE>topaccent</CODE></TD>
       <TD colspan=2>The glyph's top accent position field. Used by MATH. The special
-	value fontforge.unspecifiedMathValue means the field is unspecified (An unspecified value
+	value websharpstudios.unspecifiedMathValue means the field is unspecified (An unspecified value
 	will not go into the output tables, a value of 0 will)</TD>
     </TR>
     <TR>
@@ -2262,7 +2262,7 @@ must be created through the font.
 	  <TR>
 	    <TD>0x80000</TD>
 	    <TD>Points non-integral. TrueType points and control points must be integer
-	      aligned. (FontForge will round them if they aren't)</TD>
+	      aligned. (websharpstudios will round them if they aren't)</TD>
 	  </TR>
 	  <TR>
 	    <TD>0x100000</TD>
@@ -2613,14 +2613,14 @@ must be created through the font.
 	  <DT>
 	    removeoverlap
 	  <DD>
-	    When FontForge detects that an expanded stroke will self-intersect, then
+	    When websharpstudios detects that an expanded stroke will self-intersect, then
 	    setting this flag will cause it to try to make things nice by removing the
 	    intersections
 	  <DT>
 	    handle_eraser
 	  <DD>
 	    Certain programs use pens with white ink as erasers. When this flag is set,
-	    FontForge will attempt to simulate that.
+	    websharpstudios will attempt to simulate that.
 	  <DT>
 	    correctdir
 	  <DD>
@@ -2645,7 +2645,7 @@ must be created through the font.
       <TD><CODE>preserveLayerAsUndo</CODE></TD>
       <TD><CODE>([layer,dohints])</CODE></TD>
       <TD>Normally undo handling is turned off during python scripting. If you
-	wish you may tell fontforge to preserve the current state of a layer so that
+	wish you may tell websharpstudios to preserve the current state of a layer so that
 	whatever you do later can be undone by the user. You may omit the layer parameter
 	(in which case the currently active layer will be used). You may also request
 	that hints be preserved (they are not, by default).</TD>
@@ -2681,7 +2681,7 @@ must be created through the font.
       <TD>An alternative to assigning to <CODE>layers</CODE>, <CODE>background</CODE>,
 	or <CODE>foreground</CODE>, and equivalent to those when not using the optional
 	<CODE>flags</CODE> argument. When present <CODE>flags</CODE> can be used to
-	influence the types FontForge will assign to on-curve points. It
+	influence the types websharpstudios will assign to on-curve points. It
 	should be a tuple of up to three of the following strings. (In the following
 	descriptions "<em>selected</em>" refers to points picked out by the
 	chosen "select_" flag, which is unrelated to the <CODE>point.selected</CODE>
@@ -2724,11 +2724,11 @@ must be created through the font.
 	  <DT>force
 	  <DD>In this mode, the geometry of each <EM>selected</EM> point is 
 	  altered to match its <CODE>point.type</CODE>, similar to changing a 
-	  point's type using the UI. Note that FontForge's point conversion
+	  point's type using the UI. Note that websharpstudios's point conversion
 	  algorithm is not sophisticated and may not have the desired result.
 	  <DT>hvcurve
 	  <DD>This extra flag can be used to include <CODE>splineHVCurve</CODE>
-	  among the types that can be assigned "by geometry". Normally FontForge
+	  among the types that can be assigned "by geometry". Normally websharpstudios
 	  assigns <CODE>splineCurve</CODE> to on-curve points with strictly 
 	  horizontal or vertical off-curve points. 
 	</DL></TD>
@@ -2904,11 +2904,11 @@ must be created through the font.
 This represents a font's selection. You may index it with an
 encoding value (in the encoding ISO-646-US (ASCII) the character "A" has
 encoding index 65), or with a glyph's name, or with a string like "uXXXXX"
-where XXXXX represent the glyph's unicode codepoint in hex, or with a fontforge
+where XXXXX represent the glyph's unicode codepoint in hex, or with a websharpstudios
 glyph object. The value of indexing into a selection will be either True
 or False.
 <BLOCKQUOTE>
-<PRE><FONT COLOR="Gray">&gt;&gt;&gt;</FONT> print fontforge.activeFont().selection[65]
+<PRE><FONT COLOR="Gray">&gt;&gt;&gt;</FONT> print websharpstudios.activeFont().selection[65]
 <FONT COLOR="Gray">True</FONT>
 </PRE>
 </BLOCKQUOTE>
@@ -2975,13 +2975,13 @@ This type may not be pickled.
 	  <LI>
 	    A glyph name<BR>
 	    Note: There need not be a glyph with this name in the font yet, but if you
-	    use a standard name (like "A") fontforge will still know where that glyph
+	    use a standard name (like "A") websharpstudios will still know where that glyph
 	    should be.
 	  <LI>
 	    An integer (this will be interpreted as either an encoding index or (default)
 	    a unicode code point depending on the flags).
 	  <LI>
-	    A fontforge glyph.
+	    A websharpstudios glyph.
 	  <LI>
 	    A tuple of flags.<BR>
 	    (If you wish to specify a single flag it must still be in a tuple, and you
@@ -3055,7 +3055,7 @@ This type may not be pickled.
     <TR>
       <TD><CODE>guess</CODE></TD>
       <TD><CODE>(name)</CODE></TD>
-      <TD>Guess a value for this this entry in the private dictionary. If fontforge
+      <TD>Guess a value for this this entry in the private dictionary. If websharpstudios
 	can't make a guess it will simply ignore the request.</TD>
     </TR>
   </TABLE>
@@ -3107,7 +3107,7 @@ This type may not be pickled.
 
 <H2 id="Font">font</H2>
 
-The font type refers to a fontforge Font object. It generally
+The font type refers to a websharpstudios Font object. It generally
 contains a list of glyphs, an encoding to order those glyphs, a fontname,
 a list of GPOS/GSUB lookups and many other things.
 <P>
@@ -3118,7 +3118,7 @@ This type may not be pickled.
       <TH colspan=3>Creation</TH>
     </TR>
     <TR>
-      <TD><CODE>fontforge.font</CODE></TD>
+      <TD><CODE>websharpstudios.font</CODE></TD>
       <TD><CODE>()</CODE></TD>
       <TD>Creates a new font</TD>
     </TR>
@@ -3656,7 +3656,7 @@ This type may not be pickled.
 	      from an sfd file, this string will be passed to the python interpretter.
 	      Note: This is a string, not a function. Function code cannot be pickled.
 	      Since it is a string it will receive no arguments, but the current font will
-	      be available in the activeFont method of the fontforge module.
+	      be available in the activeFont method of the websharpstudios module.
 	      <P>
 	      This string will be interpretted before the loadFontHook of the
 	      <A HREF="python.html#module-hooks">module hooks</A> dictionary.
@@ -3815,7 +3815,7 @@ This type may not be pickled.
 	This is documented to be a fixed 16.16 number (that is a 32 bit number with
 	the binary point between bits 15 and 16).
 	<P>
-	The field may be unset (in which case when the font is generated, FontForge
+	The field may be unset (in which case when the font is generated, websharpstudios
 	will guess a default value from one of the version strings).
 	<P>
 	The value returned with be <CODE>None</CODE> if the field is unset or a double.
@@ -3832,13 +3832,13 @@ This type may not be pickled.
 	id (used to represent this design size throughout the font family) and a
 	set of language/string pairs used to represent this design size in the menu.
 	<P>
-	If no size information is specified in the font FontForge will return None.
+	If no size information is specified in the font websharpstudios will return None.
 	<P>
-	If only the design size is specified, FontForge will return a tuple containing
+	If only the design size is specified, websharpstudios will return a tuple containing
 	a single element: the point size for which the font was designed. (This is
 	returned as a real number -- the field can represent tenths of a point).
 	<P>
-	Otherwise FontForge returns a tuple containing five elements, the design
+	Otherwise websharpstudios returns a tuple containing five elements, the design
 	size, the bottom of the design range, the top, the style id and a tuple of
 	tuples. Each sub-tuple is a language/string pair. Language may be either
 	the (english) name of the language/locale, or The string itself is in UTF-8.</TD>
@@ -3931,7 +3931,7 @@ This type may not be pickled.
       <TD><CODE>woffMajor</CODE></TD>
       <TD colspan=2>The major version number of a woff file, an integer.
 	<P>
-	The field may be unset (in which case when the font is generated, FontForge
+	The field may be unset (in which case when the font is generated, websharpstudios
 	will guess a default value from one of the version strings).
 	<P>
 	The value returned with be <CODE>None</CODE> if the field is unset or an
@@ -3943,7 +3943,7 @@ This type may not be pickled.
       <TD><CODE>woffMinor</CODE></TD>
       <TD colspan=2>The minor version number of a woff file, an integer.
 	<P>
-	The field may be unset (in which case when the font is generated, FontForge
+	The field may be unset (in which case when the font is generated, websharpstudios
 	will guess a default value from one of the version strings).
 	<P>
 	The value returned with be <CODE>None</CODE> if the field is unset or an
@@ -4044,7 +4044,7 @@ This type may not be pickled.
 	<CODE>len(first-class)*len(second-class)</CODE>. The optional after argument
 	is used to specify the order of the subtable within the lookup.
 	<P>
-	The second format will cause FontForge to auto kern the subtable. The separation
+	The second format will cause websharpstudios to auto kern the subtable. The separation
 	argument specifies the desired optical distance between any two glyphs (if
 	this is specified as 0 then the kerning class will be designed so glyphs
 	just touch each other). Again the user specifies two sets of predefined classes.
@@ -4052,13 +4052,13 @@ This type may not be pickled.
 	kerning values will be inserted into the table.
 	<P>
 	In the third format the user merely specifies two lists of glyphs to be used,
-	fontforge will look for similarities among among the glyphs and guess at
+	websharpstudios will look for similarities among among the glyphs and guess at
 	classes. The class-distance argument to determine how precise the classes
 	should match (1 is very tight matching, 20 is rather loose).
 	<P>
 	In the last format the font's selection will be used to specify the list
 	of glyphs to be examined (and the same list will be used for both the left
-	and right glyphs -- but fontforge will probably find different classes).</TD>
+	and right glyphs -- but websharpstudios will probably find different classes).</TD>
     </TR>
     <TR>
       <TD><CODE><A name="font-addLookup">addLookup</A></CODE></TD>
@@ -4801,7 +4801,7 @@ This type may not be pickled.
       <TD><CODE>importLookups</CODE></TD>
       <TD><CODE>(another-font,lookup-names<BR>
 	[,before-name])</CODE></TD>
-      <TD>The first argument must be a FontForge Font object, the second a string
+      <TD>The first argument must be a websharpstudios Font object, the second a string
 	or a tuple of strings, and the third, another string. It will search the
 	other font for the named lookup(s) and import it into the current font.
 	(Contextual lookups which invoke other lookups will have any nested lookups
@@ -4947,7 +4947,7 @@ This type may not be pickled.
 	    fontsample
 	  <DD>
 	    The third argument should contain a string which will be layed out and displayed
-	    as well as FontForge can.
+	    as well as websharpstudios can.
 	  <DT>
 	    fontsampleinfile
 	  <DD>
@@ -4998,13 +4998,13 @@ This type may not be pickled.
       <TD><CODE>(uni[,name])<BR>
 	(name)<BR>
 	(glyph)</CODE></TD>
-      <TD>You may either pass in a FontForge glyph object (from this font) or identify
+      <TD>You may either pass in a websharpstudios glyph object (from this font) or identify
 	a glyph in the font by unicode code point or name. In any case the glyph
 	will be removed from the font.
 	<P>
 	If you use (uni,name) to specify a name, set uni to -1.
 	<P>
-	<STRONG>WARNING:</STRONG> This frees fontforge's storage to this glyph. If
+	<STRONG>WARNING:</STRONG> This frees websharpstudios's storage to this glyph. If
 	you have any python pointers to that storage they will be looking at garbage.
 	This does not go through the usual python reference mechanism.</TD>
     </TR>
@@ -5100,7 +5100,7 @@ This type may not be pickled.
 	be created (if "a.sc" already exists, it will be reused, and its current
 	contents cleared). The contents of "a.sc" will be based on the upper case
 	variant of this glyph (and that variant must be present for the command to
-	work). FontForge will also create two lookups (unless appropriate ones already
+	work). websharpstudios will also create two lookups (unless appropriate ones already
 	exist) one, bound to the feature 'c2sc' will map upper case letters to small
 	caps, the other, bound to feature 'smcp' will map lower case letters to small
 	caps.</TD>
@@ -5202,12 +5202,12 @@ This type may not be pickled.
     <TR>
       <TD><CODE>copy</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Copies all selected glyphs into (fontforge's internal) clipboard.</TD>
+      <TD>Copies all selected glyphs into (websharpstudios's internal) clipboard.</TD>
     </TR>
     <TR>
       <TD><CODE>copyReference</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Copies all selected glyphs (as references) into (fontforge's internal)
+      <TD>Copies all selected glyphs (as references) into (websharpstudios's internal)
 	clipboard.</TD>
     </TR>
     <TR>
@@ -5221,20 +5221,20 @@ This type may not be pickled.
       <TD><CODE>()</CODE></TD>
       <TD>Checks a font for glyphs with mixed contours and references (or references
 	with transformation matrices which cannot be represented truetype (ie. scaling
-	by 2 or more)). If a mixed case is discovered fontforge will take the contours
+	by 2 or more)). If a mixed case is discovered websharpstudios will take the contours
 	out of the glyph, put them in a new glyph, and make a reference to the new
 	glyph.</TD>
     </TR>
     <TR>
       <TD><CODE>cut</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Copies all selected glyphs into (fontforge's internal) clipboard. And
+      <TD>Copies all selected glyphs into (websharpstudios's internal) clipboard. And
 	then clears them.</TD>
     </TR>
     <TR>
       <TD><CODE>paste</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Pastes the contents of (fontforge's internal) clipboard into the selected
+      <TD>Pastes the contents of (websharpstudios's internal) clipboard into the selected
 	glyphs -- and removes what was there before.</TD>
     </TR>
     <TR>
@@ -5246,7 +5246,7 @@ This type may not be pickled.
     <TR>
       <TD><CODE>pasteInto</CODE></TD>
       <TD><CODE>()</CODE></TD>
-      <TD>Pastes the contents of (fontforge's internal) clipboard into the selected
+      <TD>Pastes the contents of (websharpstudios's internal) clipboard into the selected
 	glyphs -- and retains what was there before.</TD>
     </TR>
     <TR>
@@ -5389,12 +5389,12 @@ This type may not be pickled.
   </H3>
   <TABLE BORDER=1>
     <TR>
-      <TD><PRE>import fontforge                                 #Load the module
-amb=fontforge.open("Ambrosia.sfd")               #Open a font
+      <TD><PRE>import websharpstudios                                 #Load the module
+amb=websharpstudios.open("Ambrosia.sfd")               #Open a font
 amb.selection.select(("ranges",None),"A","Z")    #select A-Z
 amb.copy()                                       #Copy those glyphs into the clipboard
 
-n=fontforge.font()                               #Create a new font
+n=websharpstudios.font()                               #Create a new font
 n.selection.select(("ranges",None),"A","Z")      #select A-Z of it
 n.paste()                                        #paste the glyphs above in
 print n["A"].foreground                          #test to see that something
@@ -5406,14 +5406,14 @@ n.save("NewFont.sfd")                            #and save it.
     </TR>
   </TABLE>
   <H2>
-    FontForge as a python <A NAME="extension">extension</A>
+    websharpstudios as a python <A NAME="extension">extension</A>
   </H2>
   <P>
-  In addition to embedding Python, FontForge typically installs a Python module
+  In addition to embedding Python, websharpstudios typically installs a Python module
   accessible to the system's <code>python</code> executable, which can be
   accessed using:
   <BLOCKQUOTE id="shell">
-    <PRE><FONT COLOR="Gray">&gt;&gt;&gt; </FONT>import fontforge
+    <PRE><FONT COLOR="Gray">&gt;&gt;&gt; </FONT>import websharpstudios
 </PRE>
   </BLOCKQUOTE>
 </DIV>

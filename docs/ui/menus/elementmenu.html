@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>The Element Menu &#8212; FontForge 20230101 documentation</title>
+    <title>The Element Menu &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -36,8 +36,8 @@
   <section id="the-element-menu">
 <h1>The Element Menu<a class="headerlink" href="#the-element-menu" title="Permalink to this heading">¶</a></h1>
 <p>There are also two menu entries which are not part of the default build but
-which may be configured by modifying <code class="docutils literal notranslate"><span class="pre">configure-fontforge.h</span></code> before compiling
-FontForge.</p>
+which may be configured by modifying <code class="docutils literal notranslate"><span class="pre">configure-websharpstudios.h</span></code> before compiling
+websharpstudios.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#elementmenu-tilepath"><span class="std std-ref">Tile Path</span></a></p></li>
 <li><p><a class="reference internal" href="#elementmenu-nonlinear"><span class="std std-ref">Non Linear Transform…</span></a></p></li>
@@ -180,12 +180,12 @@ more info.</p>
 size that is in the list then that font will be deleted from the sfd file. If
 you add a size then that size font will be created and stored in the sfd
 file.</p>
-<p>FontForge deals in pixel sizes, not point sizes. The conversion between
+<p>websharpstudios deals in pixel sizes, not point sizes. The conversion between
 pixels and points differs on different systems and indeed on different
 screens. A point is (approximately) 1/72 of an inch, a pixel is however big a
 pixel happens to be on your screen. Usually pixels range from about 1/72 of
 an inch to about 1/144 of an inch. Different systems support different screen
-resolutions as “standard”, and FontForge tries to know about these standards.</p>
+resolutions as “standard”, and websharpstudios tries to know about these standards.</p>
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">Some conversions between points and pixels</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <thead>
@@ -246,8 +246,8 @@ and 120dpi, and on the Mac 72dpi. This dialog provides the conversion between
 pixel size and point sizes at these resolutions.</p>
 <p>Normally the new glyphs are created by rasterizing the outline font. If your
 system has the freetype2 library installed (and you checked the “Use
-FreeType” box) then FontForge will use the FreeType rasterizer to generate
-bitmaps, otherwise it will use FontForge’s built-in rasterizer (which isn’t
+FreeType” box) then websharpstudios will use the FreeType rasterizer to generate
+bitmaps, otherwise it will use websharpstudios’s built-in rasterizer (which isn’t
 as good, but involves a little less overhead).</p>
 <p>Finally, if you have no outline font then the new glyphs will be created by
 scaling the (bitmap) font displayed in the font view.</p>
@@ -256,9 +256,9 @@ off the <code class="docutils literal notranslate"><span class="pre">[]</span> <
 <p>In CID keyed fonts there will not be a set of bitmaps for each sub font,
 instead the entire complex of sub-fonts share bitmaps.</p>
 <img alt="../../_images/greymapsavail.png" class="align-right" src="../../_images/greymapsavail.png" />
-<p>FontForge also supports anti-aliased bitmap fonts, and you can use this
+<p>websharpstudios also supports anti-aliased bitmap fonts, and you can use this
 dialog to generate them. If you want to generate a 12 point anti-aliased font
-with 8 bits per pixel you would type 12&#64;8 into the dialog above. FontForge
+with 8 bits per pixel you would type 12&#64;8 into the dialog above. websharpstudios
 supports 1, 2, 4 and 8 bit per pixel fonts (a 1 bit per pixel font is a
 standard bitmap, the others are greymaps).</p>
 <p>(New greymaps can not be created by scaling old greymaps, if you wish to
@@ -304,7 +304,7 @@ lighter. It sometimes works.</p>
 then moves everything below a certain point up, and everything above
 another point down. This is based on heuristics and will fail if a glyph
 is even the slightest bit unexpected.</p>
-<p>For other writing systems FontForge will do something, currently it will
+<p>For other writing systems websharpstudios will do something, currently it will
 fall into one of the two cases above.</p>
 <p>See the <a class="reference internal" href="../dialogs/Styles.html#styles-embolden"><span class="std std-ref">Change Weight dialog</span></a>.</p>
 </dd></dl>
@@ -479,7 +479,7 @@ bitmap view)</p>
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Non</span> <span class="pre">Linear</span> <span class="pre">Transform...</span></span></dt>
 <dd><p>This command is not available in the default build, you must modify the file
-<code class="docutils literal notranslate"><span class="pre">configure-fontforge.h</span></code> and then rebuild FontForge. This command allows the
+<code class="docutils literal notranslate"><span class="pre">configure-websharpstudios.h</span></code> and then rebuild websharpstudios. This command allows the
 user to specify a non-linear transformation as a pair of expressions (the
 first specifies the transformation for the x coordinate, the second for the y
 coordinate). These expressions may be fairly general functions of x and y.
@@ -502,7 +502,7 @@ all paths).</p>
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Tile</span> <span class="pre">Path</span></span></dt>
 <dd><p>This command is not available in the default build, you must reconfigure $
-<code class="docutils literal notranslate"><span class="pre">configure</span> <span class="pre">--with-tilepath</span></code> and then rebuild FontForge. Not available in
+<code class="docutils literal notranslate"><span class="pre">configure</span> <span class="pre">--with-tilepath</span></code> and then rebuild websharpstudios. Not available in
 quadratic (truetype) fonts. This command brings up a <a class="reference internal" href="../dialogs/tilepath.html"><span class="doc">dialog</span></a>
 which allows you to specify a tile to be applied to any selected contours.</p>
 </dd></dl>
@@ -535,7 +535,7 @@ retained. Things get very strange if you have intersecting paths with
 different orientations.</p>
 <img alt="../../_images/expandedlines.png" src="../../_images/expandedlines.png" />
 <img alt="../../_images/overlappedlines.png" src="../../_images/overlappedlines.png" />
-<p>This command is probably the buggiest in FontForge. So before FontForge
+<p>This command is probably the buggiest in websharpstudios. So before websharpstudios
 invokes the command it will save the state to the error recovery file.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -640,7 +640,7 @@ the baseline. There are two reasons for doing this:</p>
 the code expressing the glyph slightly. (I don’t think it can increase the
 code, but there are certainly cases where the optimization will have no
 effect).</p></li>
-<li><p>It will enable FontForge to find more reusable bits of code which it can
+<li><p>It will enable websharpstudios to find more reusable bits of code which it can
 put in subroutines</p></li>
 </ul>
 </dd></dl>
@@ -667,7 +667,7 @@ view (or if nothing is selected in the outline view) it will add extrema to a
 spline if: 1) The spline is longer than the em-size/32, or 2) the entire
 contour (rather than just the current spline) attains its maximum/minimum
 value at this point. If the added extrema is extremely close to an already
-existing point, fontforge may remove that point to avoid creating tiny
+existing point, websharpstudios may remove that point to avoid creating tiny
 splines.</p>
 </dd></dl>
 
@@ -715,7 +715,7 @@ horizontal/vertical)</p>
 <span class="target" id="elementmenu-space-pts"></span><dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Space</span> <span class="pre">Points</span></span></dt>
-<dd><p>If you have three or more points selected then FontForge will figure out
+<dd><p>If you have three or more points selected then websharpstudios will figure out
 the coordinate that has the greatest change and will space the points out
 regularly along that axis.</p>
 <p>If you select one point (and that point is in the middle of a path) then
@@ -752,10 +752,10 @@ each other than to their respective stems.</p>
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Make</span> <span class="pre">Parallel</span></span></dt>
 <dd><p>If four points are selected, and there are two lines between them, then
-FontForge will make those lines parallel. If there are four lines between
-them (ie. they form a quadrilateral, then FontForge will turn it into a
+websharpstudios will make those lines parallel. If there are four lines between
+them (ie. they form a quadrilateral, then websharpstudios will turn it into a
 parallelogram. (note, this only works on lines, not on curved splines)</p>
-<p>The last point selected will be the one moved (sometimes FontForge doesn’t
+<p>The last point selected will be the one moved (sometimes websharpstudios doesn’t
 remember which point was selected last, then it will just pick one
 randomly. If you don’t want that to happen, select your points and then
 single click on the one you want moved).</p>
@@ -789,7 +789,7 @@ is selected in the outline view) it will harmonize all smooth spline points.</p>
 <dd><span class="target" id="elementmenu-round"></span><dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Round</span> <span class="pre">to</span> <span class="pre">Int</span></span></dt>
-<dd><p>Not in the bitmap view. FontForge stores point locations as real numbers
+<dd><p>Not in the bitmap view. websharpstudios stores point locations as real numbers
 (ie. it retains fractional values). TrueType only supports integral values
 (And much of the time you want integral values in Type1 and Type2 fonts
 also – using real numbers makes font files bigger), so when generating
@@ -800,7 +800,7 @@ all selected locations to the closest integer.</p>
 <span class="target" id="elementmenu-hundredths"></span><dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Round</span> <span class="pre">to</span> <span class="pre">Hundredths</span></span></dt>
-<dd><p>Not in bitmap or metrics views. FontForge’s Type1 output is limited to
+<dd><p>Not in bitmap or metrics views. websharpstudios’s Type1 output is limited to
 hundredths of an em-unit, even when rounding is turned off in the Generate
 [Options] dialog.</p>
 </dd></dl>
@@ -822,7 +822,7 @@ is almost useless because this order of contours and references does not
 affect the final appearance of the glyph. The only relevance it has is when
 interpolating fonts and in multiple master fonts. Here similar contours must
 appear in the same order.</p>
-<p>If you have a glyph which contains both contours and references, FontForge
+<p>If you have a glyph which contains both contours and references, websharpstudios
 does not specify whether references or contours are drawn first (or whether
 the two are intermixed). If this matters to you, unlink your references.</p>
 </dd></dl>
@@ -910,7 +910,7 @@ points to one glyph, but it is part of the font format.</p>
 to merge in other fonts. You can, of course, cut and paste from one to the
 other, but that can be tedious, while this command will do it all in one fell
 swoop.</p>
-<p>FontForge does the following when merging CID-keyed fonts:</p>
+<p>websharpstudios does the following when merging CID-keyed fonts:</p>
 <ul>
 <li><p>If the font in the window (the mergee) is a normal font and the other font
 (the merger) is a CID keyed font, then the merger font is effectively
@@ -932,7 +932,7 @@ they came from in the merger.</p>
 solution.</p>
 </li>
 </ul>
-<p>FontForge will also copy advanced typographic features, kerning, ligatures,
+<p>websharpstudios will also copy advanced typographic features, kerning, ligatures,
 etc.</p>
 <p>If one of the two glyphs of a kerning pair is in the mergee and the other in
 the merger then you will be given the option of either ignoring this kerning
@@ -971,7 +971,7 @@ changed. This command will allow you to check:</p>
 <li><p>Changes to the font’s glyph positioning (kerning and whatnot)</p></li>
 </ul>
 <p>You can also use it to compare truetype and postscript versions of the same
-font. Normally fontforge checks to make sure all the splines match exactly,
+font. Normally websharpstudios checks to make sure all the splines match exactly,
 but you can also have it test whether a contour in one font is always close
 to the similar contour in another font, or whether a contour in one font is
 inside a reference in another (these are common when comparing PostScript
@@ -1006,7 +1006,7 @@ pops up.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -1018,7 +1018,7 @@ pops up.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../menus.html">Menus</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="filemenu.html">The File Menu</a></li>
@@ -1038,13 +1038,13 @@ pops up.</p>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -1056,7 +1056,7 @@ pops up.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../menus.html">Menus</a><ul>
       <li>Previous: <a href="pointmenu.html" title="previous chapter">The Point Menu</a></li>
       <li>Next: <a href="toolsmenu.html" title="next chapter">The Tools Menu</a></li>
@@ -1088,7 +1088,7 @@ pops up.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

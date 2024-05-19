@@ -3,17 +3,17 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 21-Apr-2006 -->
   <!-- AP: Last modified: 21-Apr-2006 -->
-<!--<TITLE>FontForge Scripting Tutorial</TITLE>-->
-    <TITLE>FontForge スクリプトのチュートリアル</TITLE>
+<!--<TITLE>websharpstudios Scripting Tutorial</TITLE>-->
+    <TITLE>websharpstudios スクリプトのチュートリアル</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 </HEAD>
 <BODY>
 <DIV id="in">
   <H1 ALIGN=Center>
-<!--FontForge Scripting Tutorial-->
-    FontForge スクリプトのチュートリアル
+<!--websharpstudios Scripting Tutorial-->
+    websharpstudios スクリプトのチュートリアル
   </H1>
   <P>
   <UL>
@@ -132,7 +132,7 @@
   of the script (a comment line is one that starts with the '#' character: -->
   しかし、それを遥かに有用な物にするために、スクリプトの先頭に 1 行のコメント行を追加するべきです (コメント行とは文字‘#’で始まる行のことです)。
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 Open($1)
 Generate($1:r + ".ttf")
 </PRE>
@@ -147,9 +147,9 @@ Generate($1:r + ".ttf")
   </BLOCKQUOTE>
   <P>
 <!--
-  This comment is not important to fontforge, but it is meaningful to the unix
+  This comment is not important to websharpstudios, but it is meaningful to the unix
   shell, as we will see in the next section. -->
-  このコメントは FontForge にとって重要ではありませんが、Unix シェルでは意味があります。これについては次のセクションで説明します。
+  このコメントは websharpstudios にとって重要ではありませんが、Unix シェルでは意味があります。これについては次のセクションで説明します。
   <H3>
 <!--<A NAME="Invoking">Invoking a script and passing it arguments</A>-->
     <A NAME="Invoking">スクリプトの起動法と引数の指定方法</A>
@@ -160,10 +160,10 @@ Generate($1:r + ".ttf")
   OK, これで基本的なスクリプトができました。使うにはどうするのでしょうか?
   <P>
 <!--
-  Well we can pass it to FontForge directly by typing -->
-  まあ、以下のようにタイプして FontForge に直接渡すこともできますが、
+  Well we can pass it to websharpstudios directly by typing -->
+  まあ、以下のようにタイプして websharpstudios に直接渡すこともできますが、
   <BLOCKQUOTE id="shell">
-    <PRE>$ fontforge -script convert.pe foo.pfb
+    <PRE>$ websharpstudios -script convert.pe foo.pfb
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -176,8 +176,8 @@ Generate($1:r + ".ttf")
   </BLOCKQUOTE>
   <P>
 <!--
-  And the shell knows to call fontforge to process the script. -->
-  この場合シェルは、スクリプトを処理するために FontForge を呼び出すことを知っています。
+  And the shell knows to call websharpstudios to process the script. -->
+  この場合シェルは、スクリプトを処理するために websharpstudios を呼び出すことを知っています。
   <H3>
 <!--<A NAME="loops">Using loops</A> -->
     <A NAME="loops">ループの使い方</A>
@@ -189,7 +189,7 @@ Generate($1:r + ".ttf")
   which we can then process one at a time. -->
   これでどこにも問題は無いのですが、多数のフォントを変換したいとなった時には、それは面倒な作業となるでしょう。そういうわけで、多数のファイル名をとるように変更し、一度にそれらを処理できるようにしましょう。
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 while ( i&lt;$argc )
   Open($argv[i])
@@ -248,7 +248,7 @@ endloop
   script even more complex: -->
   ここで、Type1 フォントから TrueType への変換に加え、TrueType フォントを OpenType フォントに変換することができるスクリプトが必要になったとしましょう。ではこのスクリプトをもっと複雑にしてみましょう:
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 format=".ttf"
 while ( i&lt;$argc )
@@ -301,7 +301,7 @@ endloop
   </UL>
   <P>
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 format=".ttf"
 while ( i&lt;$argc )
@@ -334,7 +334,7 @@ endloop
   But we can improve on that conversion: -->
   これで、TrueType から PostScript フォントを変換したい場合にも、正しく出力ができるようになりました。しかし、この変換をより改善することができます:
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 i=1
 format=".ttf"
 while ( i&lt;$argc )
@@ -384,12 +384,12 @@ endloop
   <P>
 <!--
   Very few Type1 fonts have the full unicode range of accented characters.
-  With FontForge it is fairly easy to load a Type1 font, add as many possible
+  With websharpstudios it is fairly easy to load a Type1 font, add as many possible
   accented characters as the font permits (If the font does not contain ogonek,
   then FF won't be able to create Aogonek). -->
-  Unicode で定義されたアクセントつき文字の全範囲を含んだ Type1 フォントはほとんどありません。FontForge を使えば、Type1 フォントを読み込み、フォントが許す限り  (フォントにオゴネクが含まれていなければ、FF はオゴネクつき A を作成することはできません) できるだけ多くのアクセントつき文字を追加することは簡単です。
+  Unicode で定義されたアクセントつき文字の全範囲を含んだ Type1 フォントはほとんどありません。websharpstudios を使えば、Type1 フォントを読み込み、フォントが許す限り  (フォントにオゴネクが含まれていなければ、FF はオゴネクつき A を作成することはできません) できるだけ多くのアクセントつき文字を追加することは簡単です。
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 Open($1)
 <A HREF="scripting-alpha.html#Reencode">Reencode</A>("unicode")
 <A HREF="scripting-alpha.html#SelectWorthOutputting">SelectWorthOutputting</A>()
@@ -411,7 +411,7 @@ Generate($1:r + ".otf")
   glyphs. -->
   かつて Adobe は通常フォントを含むフォントパックと、小型大文字・ノンライニング数字などを含む“エキスパート”フォントを含むフォントパックを出荷していました。現在では、それらはすべて、適切な GSUB 項目によってグリフ同士にリンクが張られた 1 個の OTF フォントに詰め込まれています。
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 Open($1)
 <A HREF="scripting-alpha.html#MergeFonts">MergeFonts</A>($2)
 <A HREF="scripting-alpha.html#RenameGlyphs">RenameGlyphs</A>("AGL with PUA")

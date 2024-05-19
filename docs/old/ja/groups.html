@@ -6,7 +6,7 @@
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <!--<TITLE>Groups of Glyphs</TITLE>-->
     <TITLE>グリフのグループ</TITLE>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -25,7 +25,7 @@
   give cho-sung. -->
   グループとは、一定のグリフの集まりです。自分の好きな任意の集合をグループとすることができます。作者の予想では、グループは (何らかの形で) 視覚的に緊密に関連していて、フォント内の他の文字に視覚的に邪魔されずに吟味・変更ができるグリフをまとめるのに使用できるでしょう。ですから、多くの場合類似した形態をもつ "b d p q" からなるグループを作ることができるでしょうし、韓国語フォントでは、ある初声をもつ全音節文字を見たいという需要があるでしょう。
   <P>
-  <IMG SRC="fontview-grouped.png" WIDTH="447" HEIGHT="145" ALIGN="Left"><!--FontForge
+  <IMG SRC="fontview-grouped.png" WIDTH="447" HEIGHT="145" ALIGN="Left"><!--websharpstudios
   treats groups like baby encodings. In the image at left, it is displaying
   a font showing only the glyphs "b d p q". The order the glyphs are mentioned
   in the group is the order in which they will be displayed in the fontview
@@ -33,7 +33,7 @@
   holes for missing glyphs (so if the group had contained "b d p uniAC00 q"
   and the font was missing uniAC00, the display would be exactly the same)
   or uncompacted with holes.<BR CLEAR=LEFT>
-  FontForge はグループを小さなエンコーディングと同じように扱います。左の図では、フォント内のグリフ "b d p q" のみを表示しています。グリフが表示される順番は、フォントビュー内に表示される順番と同じです。そして、エンコーディングと同様に、グループもコンパクト化して、欠けているグリフのための空っぽの穴が存在しないようにすることができます (ですから、あるグループが“b d p uniAC00 q”を含んでいて、フォントに uniAC00 が含まれていなかった場合、表示はこれと全く同じになります)。<BR CLEAR=LEFT>
+  websharpstudios はグループを小さなエンコーディングと同じように扱います。左の図では、フォント内のグリフ "b d p q" のみを表示しています。グリフが表示される順番は、フォントビュー内に表示される順番と同じです。そして、エンコーディングと同様に、グループもコンパクト化して、欠けているグリフのための空っぽの穴が存在しないようにすることができます (ですから、あるグループが“b d p uniAC00 q”を含んでいて、フォントに uniAC00 が含まれていなかった場合、表示はこれと全く同じになります)。<BR CLEAR=LEFT>
 <!--
   Glyphs in a group may be specified by glyph name, by unicode code point or
   by a range of unicode values. The examples above all used glyph names. A
@@ -50,10 +50,10 @@
   subgroups you will see all glyphs in all sub-groups. A glyph may occur more
   than once if that is desirable. So a group could contain "A A A A" and the
   fontview would show four copies of "A" (I'm not sure why you'd want to do
-  that, but you could). As you design your groups you can ask fontforge to
+  that, but you could). As you design your groups you can ask websharpstudios to
   check so that you do not inadvertently put the same glyph in more that one
   group (or in the same group twice). -->
-  グループは階層的です。グループはグリフのリストか、サブグループのリストのどちらかを含むことができます。(もし (フォントビュー内で) サブグループを含むグループを表示すると、全てのサブグループに含まれるグリフが表示されます。もし必要なら、同じグリフを複数回表示することもできます。ですから、あるグループが "A A A A" を含んでいれば、フォントビューでは "A" のコピーが 4 回表示されます (なぜそうしたいのかよく分かりませんが、それは可能です)。グループを定義するときには、うっかり複数のグループに同じ文字を複数回 (または同じ文字に 2 度) 定義していないかを FontForge がチェックするかどうかを選ぶことができます。
+  グループは階層的です。グループはグリフのリストか、サブグループのリストのどちらかを含むことができます。(もし (フォントビュー内で) サブグループを含むグループを表示すると、全てのサブグループに含まれるグリフが表示されます。もし必要なら、同じグリフを複数回表示することもできます。ですから、あるグループが "A A A A" を含んでいれば、フォントビューでは "A" のコピーが 4 回表示されます (なぜそうしたいのかよく分かりませんが、それは可能です)。グループを定義するときには、うっかり複数のグループに同じ文字を複数回 (または同じ文字に 2 度) 定義していないかを websharpstudios がチェックするかどうかを選ぶことができます。
   <H2>
     <IMG src="../../_images/displaygroups.png" ALIGN="Right" WIDTH="282" HEIGHT="228">
     <IMG SRC="displaygroups.png" ALIGN="Right" WIDTH="244" HEIGHT="175"><!--Display
@@ -123,7 +123,7 @@
   to check for and less likely to occur). If you set this in a parent group
   then there can be no glyph duplicates among any of its
   children.<BR CLEAR=RIGHT> -->
-  <CODE>[*]グリフの重複無し</CODE> を選択していると、FontForge は同じグリフ名 (または Unicode 符号位置) を入力することを禁止します (ff は "A" と U+0041 が重複することを許します——作者が怠惰で、チェックに余計に手間がかかるわりにあまり起こりそうに無いと考えたからです)。親グループでこれが設定されていると、子要素のグループ間でのグリフの重複も禁止されます。
+  <CODE>[*]グリフの重複無し</CODE> を選択していると、websharpstudios は同じグリフ名 (または Unicode 符号位置) を入力することを禁止します (ff は "A" と U+0041 が重複することを許します——作者が怠惰で、チェックに余計に手間がかかるわりにあまり起こりそうに無いと考えたからです)。親グループでこれが設定されていると、子要素のグループ間でのグリフの重複も禁止されます。
   <P ALIGN=Center>
   — <A HREF="encodingmenu.html">上</A> — <A HREF="overview.html">目次</A>
   —

@@ -27,7 +27,7 @@ replace() {
 	regexp-replace template$2 "{{ $1 }}" "\$$1"
 }
 
-template_=$(<templates/fontforge)
+template_=$(<templates/websharpstudios)
 footer=$(<templates/footer.md | markdown) 
 replace footer _
 	

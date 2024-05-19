@@ -1,7 +1,7 @@
 ---
 published: true
 layout: default
-title: Older changes to FontForge
+title: Older changes to websharpstudios
 ---
 
 
@@ -15,7 +15,7 @@ title: Older changes to FontForge
 >  Christopher Fry
 
 [Current changes](../changelog/)
- [Changes to PfaEdit (predecessor to FontForge)](../pfaeditchangelog/)
+ [Changes to PfaEdit (predecessor to websharpstudios)](../pfaeditchangelog/)
  Changes to the [sfd format](sfdchangelog.html).
 
 -   24-August-2008
@@ -24,7 +24,7 @@ title: Older changes to FontForge
           --------------- ------------------
 
         Changes to create a stub Mac application. Add an apple event
-        handler to fontforge so that it will notice when the finder
+        handler to websharpstudios so that it will notice when the finder
         wants it to open files. Add icons, etc. so it will look like a
         mac app.
     -   Make it possible to drag and drop lookups
@@ -90,7 +90,7 @@ title: Older changes to FontForge
         focus were in the top level window (in the scroll bars, or the
         menu bar.
     -   Typo in the code to display side bearings in the charview.
-    -   FontForge assumed that all anchor classes for a given subtable
+    -   websharpstudios assumed that all anchor classes for a given subtable
         were in sequence, but Panov has a font where an anchor class for
         a different subtable appears in the middle of a list of classes
         for the desired subtable. Result was garbage output, and
@@ -265,8 +265,8 @@ title: Older changes to FontForge
     -   Make "-lang ff" work for "-lang=ff", it's more consistent with
         the rest of the arguments.
     -   Add a -unique argument which means that FF checks to see if
-        another fontforge is running on the current screen. If no other
-        fontforge exists things proceed normally, but if there is
+        another websharpstudios is running on the current screen. If no other
+        websharpstudios exists things proceed normally, but if there is
         another, then we send it our arguments and ask it to open them,
         and then we exit.
     -   Make the OFLib dialog have an option to download a preview when
@@ -325,7 +325,7 @@ title: Older changes to FontForge
     -   Add a dialog to browse fonts on the OFLib.
     -   Fix some bugs in feature file generation of contextual chaining
         lookups which refer to marks. Note these are not supported in
-        the spec. This is a FontForge only extension.
+        the spec. This is a websharpstudios only extension.
     -   If a script contain no default language features (but did
         contain some languages) then ff produced a garbage script table
         for GPOS/GSUB.
@@ -421,9 +421,9 @@ title: Older changes to FontForge
     -   Barry points out that "print" is a python keyword. So
         font.print() doesn't work. Call it printSample() instead.
     -   Freetype now (or in the next release, 2.3.7) supports dropout
-        modes, which means fontforge must do a bit of work when
+        modes, which means websharpstudios must do a bit of work when
         generating rasters for the debugger.
-    -   Move some logic out of fontimage.pe and into fontforge to make a
+    -   Move some logic out of fontimage.pe and into websharpstudios to make a
         default string for a font image more widely available.
     -   When saving an image fromt the print dlg, the top line was off
         the top of the image.
@@ -490,7 +490,7 @@ title: Older changes to FontForge
     -   Merge fonts broken again. This time references didn't work.
     -   Provide a mechanism for loading image files to make menu item
         icons (instead of expecting the images to live in memory inside
-        of fontforge). Then provide a bunch of these icons so the menus
+        of websharpstudios). Then provide a bunch of these icons so the menus
         will look more interesting.
 
         Provide some icons
@@ -503,7 +503,7 @@ title: Older changes to FontForge
 
     -   FF crashed when opening CID keyed fonts with compact\_on\_open
         set.
-    -   If fontforge got an end of file in the middle of reading a
+    -   If websharpstudios got an end of file in the middle of reading a
         (corrupt) cff font, then ff would sit there reading endlessly
         and ignoring the error.
     -   Off by one error in drawing the large "pixel" rectangles that
@@ -538,7 +538,7 @@ title: Older changes to FontForge
     -   Make it clear that the transform dlg from the fontview will move
         the width of a glyph by default, and provide a checkbox so the
         user can turn this off.
-    -   Fix various bugs in argument handling of fontforge.askChoices
+    -   Fix various bugs in argument handling of websharpstudios.askChoices
     -   Change font.removeGlyph to accept a single string argument to
         remove the glyph with that name.
     -   FF didn't like decimal points in the metrics view l/r bearing
@@ -665,7 +665,7 @@ title: Older changes to FontForge
 -   29-Apr-2008
     -   Validate didn't work in CID keyed fonts.
     -   Pierre Hanser wants an X Resource
-        (fontforge.CharView.Rulers.FontSize) to specify the font size of
+        (websharpstudios.CharView.Rulers.FontSize) to specify the font size of
         text displayed in the info line and the rulers. I have applied
         his patch, but have made no effort to insure that text will fit
         in the space allowed for it.
@@ -684,7 +684,7 @@ title: Older changes to FontForge
     -   Add support for opening a font from http & ftp URLs. Can browse
         ftp URLs, and save fonts back to ftp.
 
-        `$ fontforge       http://openfontlibrary.org/people/Nasenbaer/Nasenbaer_-_Widelands.ttf`
+        `$ websharpstudios       http://openfontlibrary.org/people/Nasenbaer/Nasenbaer_-_Widelands.ttf`
     -   The validation patch broke the save mac family dialog, and then
         the upload to open font library broke it further.
     -   When doing expand stroke, it is possible to have two points so
@@ -710,7 +710,7 @@ title: Older changes to FontForge
         ligatures.
     -   Upgrade to unicode 5.1
     -   If an sfd file were saved with spiros active, and then loaded
-        into a version of fontforge without libspiro, then bad things
+        into a version of websharpstudios without libspiro, then bad things
         would happen. Whenever we check that spiros are active also
         check that they can be active, and add some warnings for the
         user to let him/her know that spiros aren't available.
@@ -773,7 +773,7 @@ title: Older changes to FontForge
         compacted when they are opened.
     -   Add a new preference item (SeekCharacter) to allow users to
         control which character will be displayed when opening a new
-        font. Normally FontForge displays 'A', but that's a bit
+        font. Normally websharpstudios displays 'A', but that's a bit
         latin-alphabet-centric.
     -   If palettes were not docked, then a complicated series of events
         could lead to a crash after closing a TilePath (Math kerning,
@@ -879,7 +879,7 @@ title: Older changes to FontForge
 
         Add new python stuff to handle layers:
 
-        fontforge.activeLayer()
+        websharpstudios.activeLayer()
 
         Returns the currently active layer
 
@@ -924,7 +924,7 @@ title: Older changes to FontForge
         information to determine an ellipse uniquely (three points and
         two tangents being required) so in general there will be an
         infinite number of solutions (and it is possible to provide
-        contradictory input so that no ellipse can be found). FontForge
+        contradictory input so that no ellipse can be found). websharpstudios
         may not choose the ellipse you had your heart set on. FF will
         first attempt to find an ellipse so that one of the points lies
         on an axis of the ellipse (this will find a circle if there is a
@@ -974,7 +974,7 @@ title: Older changes to FontForge
         specified in the 'hmtx' table.
     -   Pdf filter decode didn't work if given an array of filters (not
         even in the array contain only a single filter).
-    -   FontForge doesn't support pdf encryption which seems to require
+    -   websharpstudios doesn't support pdf encryption which seems to require
         a license from RSA. Before we'd just announce failure for no
         reason, now announce that the file is encrypted and we can't
         read it.
@@ -1037,7 +1037,7 @@ title: Older changes to FontForge
         in Font Info.
     -   Making class0 editable broke the ability to create a context
         chaining class lookup.
-    -   The encapsulation for creating libfontforge broke importing a
+    -   The encapsulation for creating libwebsharpstudios broke importing a
         lookup from one font to another.
     -   Feature file generation omitted a semicolon after (some)
         contextual lookup rules.
@@ -1103,7 +1103,7 @@ title: Older changes to FontForge
         substitutions. It treats both as alternate substitutions.
     -   Michal Now. points out that there are some strings not marked
         for translation in cvruler.c.
-    -   FontForge never checked that fonts had fewer than 65536 glyphs.
+    -   websharpstudios never checked that fonts had fewer than 65536 glyphs.
         I just blythely assumed I wouldn't have to worry. Well someone
         handed me a font with 65731 glyphs, and FF treated it as having
         195 glyphs. Things got nasty after the 196th.
@@ -1154,7 +1154,7 @@ title: Older changes to FontForge
     -   When adding an hvcurve point into an existing spline it behaved
         like a curved point and laid parallel to the spline rather than
         being either horiz or vert.
-    -   FontForge uses floats (which have \~24 bits of precision
+    -   websharpstudios uses floats (which have \~24 bits of precision
         internally) to represent coordinates. Type2 fonts use a 16.16
         fixed notation, which means that we only represent coordinates
         \<256 accurately. This will cause slight errors during output
@@ -1285,7 +1285,7 @@ title: Older changes to FontForge
         want the default behavior to create lots of .5 coordinate
         values.
         Make the window open at 33% instead.
-    -   FontForge warns the user when a glyph's name does not match its
+    -   websharpstudios warns the user when a glyph's name does not match its
         unicode encoding. But in the past it would do this for glyphs
         with multiple encodings even if the name matched one of the
         encodings. Fix that.
@@ -1313,12 +1313,12 @@ title: Older changes to FontForge
         benefit most.
     -   Update copyright notices. (add 2008)
     -   Oops, typo in python menu code.
-    -   There is now an incomplete fontforge which uses the gtk toolkit.
+    -   There is now an incomplete websharpstudios which uses the gtk toolkit.
 
         >     $ ./configure
         >     $ make
         >     $ make install
-        >     $ make fontforgegtk
+        >     $ make websharpstudiosgtk
         >     $ make install_gtk
 
         About all it can do is open a font and display it. If a menu
@@ -1328,7 +1328,7 @@ title: Older changes to FontForge
 
         I think the open dialog is extremely ugly. That's not my fault,
         that's gtk's widget. The open dialog is far less functional than
-        the one in the gdraw fontforge -- I can't figure out how to
+        the one in the gdraw websharpstudios -- I can't figure out how to
         enhance it.
 
     -   Switching to a new internal representation of diagonal stem
@@ -1380,9 +1380,9 @@ title: Older changes to FontForge
     -   Add the ability to insert a list of words into the metrics view.
 
 -   10-Dec-2007
-    -   Redo the internals of fontforge to separate the core font engine
+    -   Redo the internals of websharpstudios to separate the core font engine
         from its dependance on gdraw, and stuff all of that into
-        libfontforge. So libfontforge no longer needs gdraw, and can be
+        libwebsharpstudios. So libwebsharpstudios no longer needs gdraw, and can be
         used to build another user interface with a different widget
         set.
         In theory.
@@ -1481,7 +1481,7 @@ title: Older changes to FontForge
         a guideline.
     -   If a glyph had a unicode encoding for one code point, and a name
         which mapped to another, then double clicking on the other code
-        point would cause fontforge to provide a reference to the base
+        point would cause websharpstudios to provide a reference to the base
         glyphs from the new encoding slot. But only in the current
         encoding map. In other words I forgot to set the AltUni field.
     -   Some people have though winDescent should be a negative value
@@ -1495,7 +1495,7 @@ title: Older changes to FontForge
         in the fontview ehich caused the spiros to be removed (Lots of
         things: Overlap, Expand Stroke, Embolden, ...), and then did a
         Round to Int (and perhaps other things) from the font view, then
-        FontForge would crash.
+        websharpstudios would crash.
         It expected to find spiros in a glyph marked as being edited in
         spiro mode, and was surprised when none were available.
     -   Dave Crossland doesn't like having "..." at the end of window
@@ -1515,14 +1515,14 @@ title: Older changes to FontForge
 
 -   9-Nov-2007
     -   Introduced Raph Levien's Spiro curves. Please [download
-        **libspiro**](http://libspiro.sf.net) before using fontforge.
+        **libspiro**](http://libspiro.sf.net) before using websharpstudios.
     -   Deal with things that got deprecated as the mac moved from 10.4
         to 10.5
         -   NSAddImage and family have been replaced by dlopen
         -   the old mechanism for referencing a resource fork from POSIX
             "foo/rsrc" has changed to "foo/..namedfork/rsrc".
 
-        The new stuff all worked as far back as 10.3 -- but FontForge
+        The new stuff all worked as far back as 10.3 -- but websharpstudios
         source is no longer compatible with 10.2.
     -   In a truetype font, if a substitution lead to an unencoded glyph
         and the cursor hung over the substitution long enough to invoke
@@ -1555,7 +1555,7 @@ title: Older changes to FontForge
         in ArialBlack.ufo), but it seems to be negative in most UFOs.
     -   Erik wants the creation order of contours preserved when reading
         a glif file.
-    -   Oops. glyph/glyphPen types got the wrong names in the fontforge
+    -   Oops. glyph/glyphPen types got the wrong names in the websharpstudios
         python module. (interchanged)
     -   remove the Elide command. (There's no reason to use it, Merge is
         always better, it just confused people.
@@ -1575,7 +1575,7 @@ title: Older changes to FontForge
         undocumented in case anyone has been mislead by my previous
         documentation.
     -   Add new python stuff to provide access to spiros.
-         The fontforge module has a new method -- hasSpiro() which
+         The websharpstudios module has a new method -- hasSpiro() which
         returns whether we've got access to libspiro or not.
          The module also has a bunch of numeric constants defined
         spiroG4, spiroG2, etc. for use in the
@@ -1617,7 +1617,7 @@ title: Older changes to FontForge
     -   Correct the list of dutch font styles.
     -   Most of the items in the popup menu of the lookup pane didn't
         work.
-    -   FF wasn't loading python init files from \~/.FontForge/python
+    -   FF wasn't loading python init files from \~/.websharpstudios/python
     -   When I fixed mark to ligature positioning I broke the other
         three types of anchor positioning (to base, to mark & cursive).
     -   If you pressed the [\*] Default check box in the Font
@@ -1631,7 +1631,7 @@ title: Older changes to FontForge
     -   Add a new point tool which creates curved points which are
         always either horizontally or vertically oriented. (I call 'em
         hvcurves)
-    -   Use \~/.FontForge instead of \~/.PfaEdit
+    -   Use \~/.websharpstudios instead of \~/.PfaEdit
     -   I'm told there was a typo in my Bulgarian text for the
         Print/Display dlg, and that this should fix it.
     -   Get some proper Belorussian text.
@@ -1711,7 +1711,7 @@ title: Older changes to FontForge
     -   Add `Edit->Select->Autohintable`
     -   Typo in parsing cmap format=6 subtables could cause a crash (or
         eccentric behavior)
-    -   Can build fontforge so that it is a python extension (as well as
+    -   Can build websharpstudios so that it is a python extension (as well as
         embedding python in ff).
 
         >     $ ./configure --enable-pyextension
@@ -1796,7 +1796,7 @@ title: Older changes to FontForge
         created an account with them first).
     -   Further improvements to the auto instructor.
     -   When all glyphs are selected and the user auto-instructs, then
-        FontForge will clear any legacy tables ('fpgm', 'prep' and
+        websharpstudios will clear any legacy tables ('fpgm', 'prep' and
         'cvt '). The old values will be of no use, and they just get in
         the way.
     -   Add a Edit-\>Select-\>Select by Script command
@@ -1854,7 +1854,7 @@ title: Older changes to FontForge
         garbage and things would crash.
     -   Drat. In the outline glyph view, the Import command didn't set
         the filter properly when you changed the import type.
-    -   Extend fontforge to keep track of errors encountered when
+    -   Extend websharpstudios to keep track of errors encountered when
         loading 'sfnt' files, and then have fontlint complain about
         them.
         Also extend fontlint to do validity checking in glyphs against
@@ -1862,7 +1862,7 @@ title: Older changes to FontForge
         will fixup the maxp values when it generates the font, but there
         might be some existing fonts with buggy 'maxp' values).
     -   Oops. When changing the weight of a glyph and retaining the
-        counter sizes, fontforge would push two entries onto the undo
+        counter sizes, websharpstudios would push two entries onto the undo
         stack rather than one. (So the user would have to do Edit-\>Undo
         twice to get back to where s/he started from).
     -   Added several new python methods to font.
@@ -1912,7 +1912,7 @@ title: Older changes to FontForge
         2.[34] delay the init until an import happens, while 2.5 does it
         at start up. I just assumed that when I called Py\_Initialize
         that it did so. This led to a crash on 2.[34] when I tried to
-        use my types before the user had tried to import fontforge.
+        use my types before the user had tried to import websharpstudios.
     -   Further improvements to tile path.
     -   When moving a control point in a ttf font where one side of the
         cp was a real point, I would allow an implicit point on the far
@@ -1931,13 +1931,13 @@ title: Older changes to FontForge
         persistent data. (And write our persistent data out if it's a
         dict).
     -   Add the ability to call hooks (python functions) when various
-        fontforge events take place.
-    -   Make fontforge's basic types (Point, Contour, and Layer) be
+        websharpstudios events take place.
+    -   Make websharpstudios's basic types (Point, Contour, and Layer) be
         picklable so they can now be saved in an sfd file.
     -   Oops. With the inclusion of the library check argument, ff would
         not compile if NODYNAMIC were set.
-    -   FontForge now stores the "userdata" python members into the sfd
-        file as pickled objects. (FontForge's own types are not
+    -   websharpstudios now stores the "userdata" python members into the sfd
+        file as pickled objects. (websharpstudios's own types are not
         currently pickleable).
     -   Add the ability to mark a glyph so that just before being saved
         its references will be unlinked and we will run remove overlap
@@ -2004,7 +2004,7 @@ title: Older changes to FontForge
         Warn the user (rather than just silently failing) when we have a
         freetype version mismatch.
 
-    -   Patch from Barry SCHWARTZ. python fontforge.font.addPosSub was
+    -   Patch from Barry SCHWARTZ. python websharpstudios.font.addPosSub was
         expecting its args inside a redundant tuple.
     -   New Vietnamese translation from Clytie.
          Also some spelling corrections in the original messages.
@@ -2050,7 +2050,7 @@ title: Older changes to FontForge
         with each change to the font (that would make moving a point
         around in the outline view far too sluggish), instead there is a
         [Refresh] button the user can press to force an update.
-    -   It occurred to me that fontforge's current mechanism for setting
+    -   It occurred to me that websharpstudios's current mechanism for setting
         ligature carets requires that there be a ligature substitution
         is the exact number of components used to make the glyph. But in
         indic fonts ligatures are often made up out of other ligatures
@@ -2096,7 +2096,7 @@ title: Older changes to FontForge
     -   Barry SCHWARTZ complains that font info says "fontnames must"
         but that the cited adobe tech note only says "should". So change
         "must" to "should".
-    -   When processing class-based contextual lookups fontforge could
+    -   When processing class-based contextual lookups websharpstudios could
         not handle class 0 (the class containing "all glyphs not in
         another class") add code to do that.
     -   If the user did not select a Gasp Version (note: active
@@ -2110,7 +2110,7 @@ title: Older changes to FontForge
     -   Make entry of ghost hints better.
     -   Add the ability to determine whether a point is selected or not
         from python.
-    -   Add a mechanism so the user can ask fontforge to check for the
+    -   Add a mechanism so the user can ask websharpstudios to check for the
         existance of optional libraries.
     -   Add range checks to some library routines which blindly
         referenced some BMP arrays with codepoints outside bmp. Broken
@@ -2275,12 +2275,12 @@ title: Older changes to FontForge
         support, and even their documented syntax is inadequate to
         represent all the complexities of OpenType.
 
-        FontForge supports anchors and device tables and will parse
+        websharpstudios supports anchors and device tables and will parse
         lookups which contain these. This is a syntax which Adobe
         documents but does not implement. Adobe also warns that this
         syntax may change when they get around to implementing it.
 
-        FontForge makes one extension to the syntax which allows me to
+        websharpstudios makes one extension to the syntax which allows me to
         specify complex contextual features.
 
         Neither I nor Adobe support reverse contextual substitutions,
@@ -2298,7 +2298,7 @@ title: Older changes to FontForge
         add a member (.byGlyphs) which will make the iterator return
         glyphs.
     -   Accept contour += (1,2) rather than forcing people to say
-        contour += fontforge.point(1,2)
+        contour += websharpstudios.point(1,2)
     -   Was using an error return from two setter functions
         (contour.set\_closed, set\_is\_quadratic) when I should have
         returned success.
@@ -2378,10 +2378,10 @@ title: Older changes to FontForge
         looked as though it had changed, but actually had not.
 
 -   1-May-2007
-    -   I've redone the way FontForge handles lookups so that it is more
+    -   I've redone the way websharpstudios handles lookups so that it is more
         in keeping with OpenType.
 
-        > The major change is that fontforge now presents lookups to the
+        > The major change is that websharpstudios now presents lookups to the
         > user rather than features. I think this makes simple things
         > more difficult (which is why I avoided this when I started),
         > but it makes complex things possible.
@@ -2509,7 +2509,7 @@ title: Older changes to FontForge
 
     -   New translations to match the new UI: Polish, Greek, German,
         French, simplified Chinese.
-    -   FontForge now supports [python scripting](python.html) if it has
+    -   websharpstudios now supports [python scripting](python.html) if it has
         been configured to do so.
     -   Tell users they should add their email address to the License
         after pressing the [Add SIL Open Font License] button.
@@ -2531,7 +2531,7 @@ title: Older changes to FontForge
         font contained non-BMP characters. Might also have set the first
         char index wrong two.
     -   Bugs in 'PfEd' table, glyph comment subtable.
-    -   Couple of places where I actually say "FontForge 1.0". Let's
+    -   Couple of places where I actually say "websharpstudios 1.0". Let's
         bump that to 2.0 now that I've done that for the sfd format.
     -   Overlap problems with incorrect path orientations.
     -   Arrow keys didn't work in the charview if the tabset were
@@ -2598,9 +2598,9 @@ title: Older changes to FontForge
         DELTAP2 works from 25 ppem to 25+15 ppem, in this example it's
         25+12 ppem). So it's just a way of constructing an argument byte
         for DELTAP/C.
-    -   Allow FontForge's menu shortcuts (hot keys, whatever) to be user
+    -   Allow websharpstudios's menu shortcuts (hot keys, whatever) to be user
         definable. We use a gettext based mechanism, type \$ make
-        FontForge-MenuShortCuts.pot to get a pot file for the process.
+        websharpstudios-MenuShortCuts.pot to get a pot file for the process.
         It needs to be converted to an mo file and installed in
         \$(prefix)/share/locale/\$(LANG)/LC\_MESSAGES, just like any
         other getext file.
@@ -2720,7 +2720,7 @@ title: Older changes to FontForge
         problem is that glyph 1 (or 2?) has encoding 0 in the mac cmap
         table while it is not referenced at all in the windows cmap.
     -   Wasn't setting os2\_typelinegap field when reading an sfnt.
-    -   In a font without any LCG characters, fontforge set the OS/2
+    -   In a font without any LCG characters, websharpstudios set the OS/2
         capheight and xheight fields to -1e10. It should have been 0.
         Patch by Roozbeh Pournader.
     -   Patch by Roozbeh Pournader. Regular bit in fsSel in OS/2 was
@@ -2742,7 +2742,7 @@ title: Older changes to FontForge
     -   Sigh. Ok. make the size of the label font in the fontview
         configurable.
 
-            fontforge.FontView.FontSize: 24
+            websharpstudios.FontView.FontSize: 24
 
     -   Werner finds "Original" confusing for an encoding and suggests
         "Glyph Order" instead.
@@ -2876,7 +2876,7 @@ title: Older changes to FontForge
 
 -   14-Oct-2006
     -   New translations: Greek, Simplified Chinese, German, Polish.
-    -   Using the help command would generally crash fontforge on
+    -   Using the help command would generally crash websharpstudios on
         cygwin.
     -   Adobe uses the American spelling of diaeresis (that is
         dieresis), but some fonts contain glyph names with the European
@@ -2981,12 +2981,12 @@ title: Older changes to FontForge
         encoding data if not saved from the biggest subfont.
     -   Add support for version 4 of the OS/2 table.
     -   If Interpretation was set in a font then when generating a 8/16
-        type cmap fontforge always went down the traditional chinese
+        type cmap websharpstudios always went down the traditional chinese
         (big5) branch.
     -   MS has changed their indic shaping engine. It still uses the
         same features but they are applied differently. To disambiguate
         this change they have created a parallel set of script tags for
-        the indic writing system. FontForge should recognize these and
+        the indic writing system. websharpstudios should recognize these and
         use them when appropriate.
     -   When Adobe first released fonts with a 'size' feature they did
         not follow the opentype specification. In August of 2006 they
@@ -3003,7 +3003,7 @@ title: Older changes to FontForge
         intend to upgrade their programs... So this may be less of an
         issue than I initially feared.
 
-        FontForge should now be able to read in a size feature in either
+        websharpstudios should now be able to read in a size feature in either
         format and gives the user the option of producing 'size'
         features in either format on output.
 
@@ -3051,7 +3051,7 @@ title: Older changes to FontForge
 
 -   22-Aug-2006
     -   Add a pane to the Preference dlg allowing user to control some
-        of fontforge's hint creation.
+        of websharpstudios's hint creation.
     -   Someone complained that Find Problems-\>Path Direction got the
         wrong answer. It got the wrong answer because they had a
         self-intersecting path (which screws up all concepts of
@@ -3091,7 +3091,7 @@ title: Older changes to FontForge
         This is different from file times (which is what appears to be
         stored in the 'head' table of an sfnt file). Add a new table
         'FFTM' to our sfnt output with these timestamps (and the
-        timestamp of fontforge itself, just in case we ever care).
+        timestamp of websharpstudios itself, just in case we ever care).
     -   Mark classes could not be set from the selection.
     -   Ben Laenen points out that if an order2 glyph has a dependent
         which refers to it using point matching and we keep changing the
@@ -3412,7 +3412,7 @@ title: Older changes to FontForge
         debugger. My guess is that most people won't be interested in
         this mode (and it makes the window a bit uglier) so I've made it
         configurable. --with-debug-raw-points
-    -   Write sfddiff as a fontforge script and put it back into the
+    -   Write sfddiff as a websharpstudios script and put it back into the
         install process.
     -   Add code to font compare so it can do the old sfddiff --merge
         option (if two corresponding glyphs differ, add the outlines of
@@ -3631,7 +3631,7 @@ title: Older changes to FontForge
     -   If a font contain an encoded glyph called ".notdef" and that
         glyph was not the first glyph, then type1 fonts had a .notdef
         glyph at a random place in the font. Now freetype seems to
-        renumber glyphs so .notdef is always glyph 0 which fontforge did
+        renumber glyphs so .notdef is always glyph 0 which websharpstudios did
         not expect and produced some strange results when rasterizing
         (tested on 2.1.10). Fix is simple: always make notdef be first
         in the chars dictionary and then all is happy.
@@ -3651,7 +3651,7 @@ title: Older changes to FontForge
         isn't stored in the sfd) which causes an error when reading it
         back in.
     -   If a copyright message were an exact multiple of 100 characters
-        long, fontforge would screw up memory (and potentially crash)
+        long, websharpstudios would screw up memory (and potentially crash)
         when reading it in from an sfd file.
     -   The Merge/Simplify command (which Add Extrema now calls) had
         problems when the control points were very close to the base
@@ -3681,7 +3681,7 @@ title: Older changes to FontForge
     -   If users didn't have libuninameslist installed we were still
         generating spurious ligatures for numero and TM. (and others)
     -   KANOU points out that if you comment out a bdf glyph (with
-        COMMENT) fontforge sort of reads it anyway.
+        COMMENT) websharpstudios sort of reads it anyway.
     -   Kanou needs to distinquish between the script latin and the
         language.
     -   SplineRemoveAnnoyingExtrema1 got tweaked a little too much in
@@ -3689,7 +3689,7 @@ title: Older changes to FontForge
 
 -   25-Jan-2006
     -   If you try to create a bitmap only sfnt but provide pixelsizes
-        for no valid bitmap strikes, the fontforge would crash.
+        for no valid bitmap strikes, the websharpstudios would crash.
     -   Chia points out that I should use the PIXEL\_SIZE property to
         set a bdf font's pixelsize (instead of using font
         ascent+descent).
@@ -3742,7 +3742,7 @@ title: Older changes to FontForge
         -   retain the properties when loading a bdf, pcf font
         -   Add a dialog which gives user control over bdf properties
         -   design a 'BDF ' table for SFNT files which can contain bdf
-            properties and make FontForge read and generate this table.
+            properties and make websharpstudios read and generate this table.
 
     -   Ted Packard points out that I output "big metrics" in sfnts
         inconsistently. This patch should make them consistent and
@@ -3761,7 +3761,7 @@ title: Older changes to FontForge
         dlg has refused to generate "No Outline Font" and "No Bitmap
         Font".
     -   Herbert Duerr from OpenOffice tells me that their OpenSymbol.ttf
-        font when produced by fontforge does not work on Win98. This is
+        font when produced by websharpstudios does not work on Win98. This is
         because Win98 doesn't like the codepages bits ff produces and
         refuses to use any glyphs in the font. He submitted a patch to
         make ff produce a version 0 OS/2 table (with no codepage info)
@@ -3772,7 +3772,7 @@ title: Older changes to FontForge
         FT\_Outline\_Get\_Bitmap properly.
     -   If the user has never called PrintSetup (or if the user has not
         called PrintSetup this session and has not loaded prefs), then
-        fontforge will invode setpagedevice on a pagesize which will fit
+        websharpstudios will invode setpagedevice on a pagesize which will fit
         on either A4 or US-Letter. The PS manual says a printer should
         refuse such a size unless it has paper within 5 points of it. So
         on printers which follow the spec (not mine) nothing will print
@@ -3982,7 +3982,7 @@ title: Older changes to FontForge
 -   23-Oct-2005
     -   Try to make the Mac install a bit more mac-like by adding an
         entry to the X11 Applications menu rather than expecting users
-        to start fontforge from the command line.
+        to start websharpstudios from the command line.
     -   David Binderman points out an out of bounds array reference in
         cvexport which has been there for years. Gleep.
     -   Add scripting commands for manipulating ttf instructions.
@@ -4111,7 +4111,7 @@ title: Older changes to FontForge
         classes.
     -   cygwin does very weird things with shared libaries, and we
         didn't support them at all.
-    -   FontForge did not support the depreciated usage of endchar to
+    -   websharpstudios did not support the depreciated usage of endchar to
         mean (almost) seac in type2 charstrings. It should now.
     -   os2 typo linegap was not read out of sfd files.
     -   Display 'gai' files in the open dlg.
@@ -4248,7 +4248,7 @@ title: Older changes to FontForge
         crashes.
     -   I'm very old fashioned. I like having error messages on stderr.
         But far too many people don't see them there. I guess they
-        invoke fontforge directly from X with stderr directed to some
+        invoke websharpstudios directly from X with stderr directed to some
         invisible console window. Well create a little window to contain
         warning messages about font errors (for instance when reading an
         otf font we might complain about glyphs out of bounds, etc.)
@@ -4493,7 +4493,7 @@ title: Older changes to FontForge
     -   Added a TypeOf command to scripting
     -   Added a GetPosSub command to scripting.
     -   Werner says negative widths and depths be set to 0 in tfm files.
-    -   FontForge was generating an incorrect warning message. If a
+    -   websharpstudios was generating an incorrect warning message. If a
         'name' table contains a duplicate entry for a given
         platform/specific/language/id that's an error in the font. But
         ff conflated mac names with window names and so was only
@@ -4644,7 +4644,7 @@ title: Older changes to FontForge
         reference to crash.
     -   Generating a postscript resource font on the mac from a script
         did not work.
-    -   Werner points out that afm files generated by FontForge still
+    -   Werner points out that afm files generated by websharpstudios still
         claim to have been made by pfaedit. Oops.
     -   Didn't parse user defined encodings properly and often omitted
         the first glyph.
@@ -4809,7 +4809,7 @@ title: Older changes to FontForge
         going to use and what it is going to do.
     -   Was using the wrong accent to build cyrillic breves.
     -   Remove the adobe private use defs from libgunicode and put them
-        in fontforge.
+        in websharpstudios.
     -   ff had problems reading pfm files containing kerning pairs using
         non-existant chars
     -   Add pixels per em in register view.
@@ -5124,7 +5124,7 @@ title: Older changes to FontForge
     -   Type3 fonts that set colour/grey didn't work
     -   Printing at 140pt tried printing 4 glyphs across although there
         was only room for 3
-    -   At install tell pkg-config the verson of fontforge
+    -   At install tell pkg-config the verson of websharpstudios
 
 -   3-Dec-2004
     -   If a cff file contained unencoded glyphs then ff would crash
@@ -5191,7 +5191,7 @@ title: Older changes to FontForge
         problems.
     -   If a font contains multiple ttf names for a given string in a
         language then allow the user to pick which one s/he likes best.
-    -   Another case where a bad otf table crashes fontforge
+    -   Another case where a bad otf table crashes websharpstudios
     -   If a ttf/otf font does not contain a postscript FontName string
         in the name table, then ff's attempt to synthesize one out of
         fullname/familyname did not check for a valid name.
@@ -5245,7 +5245,7 @@ title: Older changes to FontForge
         accent to an arbetrary glyph.
 
 -   3-Nov-2004
-    -   KANOU has a [Japanese version](http://khdd.net/fontforge-jman/)
+    -   KANOU has a [Japanese version](http://khdd.net/websharpstudios-jman/)
         of this reference manual under construction.
     -   In MultiLayered mode, the "New Layer" menu item left a dangling
         pointer which caused a crash if anyone looked at the background
@@ -5367,7 +5367,7 @@ title: Older changes to FontForge
         interpretation (under FontInfo-\>Encoding) that will make ff use
         those names in new fonts.
     -   Many of code points in the AMS PUA are reencodings of other
-        glyphs. FontForge will automatically generate these reencodings
+        glyphs. websharpstudios will automatically generate these reencodings
         for you.
     -   The AMS also describes how some TeX glyph names map to unicode.
         So include those names in our alternate list too (so we can map
@@ -5422,7 +5422,7 @@ title: Older changes to FontForge
         -   Preferences are not saved in a script unless explicitly
             requested.
         -   Added 2 new scripting functions LoadPrefs() and SavePrefs()
-        -   Added an environment variable FONTFORGE\_LOADPREFS to give
+        -   Added an environment variable websharpstudios\_LOADPREFS to give
             the user control over loading of preferences.
 
     -   Used to have a preference item DumpGlyphMap. Now we have an
@@ -5446,7 +5446,7 @@ title: Older changes to FontForge
         0
         cos(x-axis-rotation)
     -   Add a Point of View dialog to do real perspective projections
-    -   Remove the FONTFORGE\_CONFIG\_NONLINEAR flag, and enable the
+    -   Remove the websharpstudios\_CONFIG\_NONLINEAR flag, and enable the
         nonlinear dlg perminantly. I need some of its routines to do the
         perspective projections.
     -   There was a path through LoadEncodingFile (in a script) where it
@@ -5513,7 +5513,7 @@ title: Older changes to FontForge
         list, july 2004 for more info)
     -   Added both a menu and scripting command to copy kerning &
         substitution info from one glyph to another.
-    -   FontForge fails to load some svg fonts properly (if they use the
+    -   websharpstudios fails to load some svg fonts properly (if they use the
         "t" directive within a path =\> quadratic splines, control point
         implied, relative to last point). Result is a nasty scribble.
     -   Windows file systems are not case conscious. The file names
@@ -5612,7 +5612,7 @@ title: Older changes to FontForge
 -   23-May-2004
     -   Added popups in the Open Font dialog to show the fontname(s) of
         any font(s) in a file.
-    -   FontForge failed to load background images. A bug introduced
+    -   websharpstudios failed to load background images. A bug introduced
         24-Feb (part of multi-layer)
     -   Reordered the which glyph FF would pick when searching for
         accents. It used to use ASCII versions of the accents over those
@@ -5666,15 +5666,15 @@ title: Older changes to FontForge
 -   2-May-2004
     -   I've changed the colour of check boxes because people found
         black confusing
-    -   FontForge read Italic Correction incorrectly out of tfm files
+    -   websharpstudios read Italic Correction incorrectly out of tfm files
         and had minor problems generating tfm files.
     -   the kern class dlg had an uninitialized variable (introduced
         with the multiple master code I think)
-    -   FontForge would sometimes crash when generating a GDEF table for
+    -   websharpstudios would sometimes crash when generating a GDEF table for
         some types of otf font.
     -   Pierre Hanser has updated the french UI, and pointed out some
         problems with the english UI.
-    -   In a version of FontForge compiled with MultiLayer on, Pasting
+    -   In a version of websharpstudios compiled with MultiLayer on, Pasting
         something containing a reference screwed up memory
 
 -   25-Apr-2004
@@ -5682,7 +5682,7 @@ title: Older changes to FontForge
         were outside of the character.
     -   Fixed some uninitialized variables in MetaFont (but the
         algorthim is still flawed)
-    -   FontForge had problems when the fontview was maximized.
+    -   websharpstudios had problems when the fontview was maximized.
     -   The 18-Apr patch for cubic-\>quadratic conversion had a bug
         which generally resulted in a crash.
     -   When flickering in and out of compacted mode, during a Generate
@@ -5712,7 +5712,7 @@ title: Older changes to FontForge
     -   Put in more protection against bad GSUB/GPOS tables. In
         particular mangal.ttf has a bad GSUB table (with erroneous class
         specifications).
-    -   FontForge wasn't setting `'hhea'.caretSlopeRun` appropriately in
+    -   websharpstudios wasn't setting `'hhea'.caretSlopeRun` appropriately in
         italic fonts (should match `tan(italicAngle)`).
     -   Oops. Can do much better converting from cubic to quadratic
         splines. We were getting far too many linear segments.
@@ -5720,7 +5720,7 @@ title: Older changes to FontForge
         the endpoints were less than 1 unit apart. Since ttf rounds all
         coords to ints, this meant we'd get the two endpoints on top of
         one another.
-    -   When generating a truetype font from a cubic database, FontForge
+    -   When generating a truetype font from a cubic database, websharpstudios
         calculated 'maxp'.maxCompositePoints incorrectly.
     -   Gave the user control over when point numbers are visible (even
         for cubic fonts)
@@ -5756,7 +5756,7 @@ title: Older changes to FontForge
         (as opposed to a subroutine call or using a seac command) then
         it would lose any translation applied to that reference.
     -   Patch to Type3 output from R.L.Horn
-    -   FontForge used to crash when reading in a bdf glyph with a bad
+    -   websharpstudios used to crash when reading in a bdf glyph with a bad
         bounding box.
     -   Reading a kerning class from an sfd file when that class had
         more second character classes than first character classes would
@@ -5781,23 +5781,23 @@ title: Older changes to FontForge
         it, then nasty things happened.)
 
 -   21-Mar-2004
-    -   When flattening a CID file fontforge lost track of the
+    -   When flattening a CID file websharpstudios lost track of the
         script/lang list (and other things) which caused bugs when
         dealing with substitutions
-    -   When saving multiply, fontforge could free a fonts hash table
+    -   When saving multiply, websharpstudios could free a fonts hash table
         several times
-    -   When flattening by a CMAP file from a script fontforge could
+    -   When flattening by a CMAP file from a script websharpstudios could
         crash
     -   Added a CIDFlatten command to scripting.
     -   The "cleanup of OS/2" on 29-Feb actually broke WinAscent/Descent
     -   When loading a mac unicode string from the 'name' table,
-        fontforge failed to convert the language correctly.
+        websharpstudios failed to convert the language correctly.
     -   When loading a mac contextual substitution statemachine,
-        fontforge made egregious errors in guessing to what glyphs were
+        websharpstudios made egregious errors in guessing to what glyphs were
         usable for a substitution of the marked glyph.
     -   Added the current encoding to the font's window title (also
         display a flag to show whether the font has been changed)
-    -   When moving points around on an order2 contour fontforge could
+    -   When moving points around on an order2 contour websharpstudios could
         end up with bad control points and would then produce annoying
         internal errors alerting the user to this fact.
     -   The CID Flatten commands did not work when the view was
@@ -5820,7 +5820,7 @@ title: Older changes to FontForge
         feature/settings and opentype features never went away.
     -   Disable the Default ATT menu if no char is selected in the
         fontview.
-    -   FontForge sometimes had trouble drawing the correct rotated
+    -   websharpstudios sometimes had trouble drawing the correct rotated
         glyph in cid fonts on the display lines of the fontview.
     -   Changed the way names used in cidmap files, so there are new
         cidmap files now.
@@ -5842,8 +5842,8 @@ title: Older changes to FontForge
     -   new command in MM menu: Blend to new font
 
 -   2-Mar-2004
-    -   Changed name from pfaedit to fontforge
+    -   Changed name from pfaedit to websharpstudios
 
-FontForge was first released on 2-Mar-2004. An earlier version of the
+websharpstudios was first released on 2-Mar-2004. An earlier version of the
 program, called PfaEdit, was begun in Sept of 2000, released on the web
 7-Nov-2000, and moved to pfaedit.sf.net on 21-Apr-2001.

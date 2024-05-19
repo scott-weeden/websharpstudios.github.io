@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 9-Nov-2008 -->
   <TITLE>The font validation window</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -28,7 +28,7 @@
     <LI>
       All paths must be drawn in a consistent direction. Clockwise for external
       paths, anti-clockwise for internal paths. (Actually PostScript requires the
-      exact opposite, but FontForge reverses PostScript contours when it loads
+      exact opposite, but websharpstudios reverses PostScript contours when it loads
       them so that everything is consistant internally -- and reverses them again
       when it saves them, of course).
     <LI>
@@ -38,7 +38,7 @@
       There must be points everywhere a contour attains a local maximum or minimum,
       horizontally or vertically. (Actually there are exceptions to this rule,
       for small curved sections like serifs. The exception is not defined very
-      well, and FontForge makes a guess and will not report errors if the spline
+      well, and websharpstudios makes a guess and will not report errors if the spline
       is small -- but the actual definition of "small" is somewhat arbetrary).
     <LI>
       The coordinate offsets between adjacent points (or control points) must not
@@ -52,7 +52,7 @@
     <LI>
       In PostScript, non-cid-keyed fonts, glyph names may not be longer than 31
       characters and may contain only "A"-"Z", "a"-"z", "0"-"9", "_" and ".". (If
-      you have the UnicodeGlyphNames preference item check, FontForge disables
+      you have the UnicodeGlyphNames preference item check, websharpstudios disables
       this check because it assumes you know what you are doing and you are planning
       to rename the glyphs before they get saved anyway).
     <LI>
@@ -81,7 +81,7 @@
       Check that the OS/2 version number is valid.
   </UL>
   <P>
-  Validating a font can take a long time. So FontForge caches the validation
+  Validating a font can take a long time. So websharpstudios caches the validation
   state of each glyph (saving it to the sfd file so it is valid across invocations)
   and will only validate those glyphs which have changed since the last validation.
   This means that although the first validation may be slow, subsequent validations
@@ -95,7 +95,7 @@
   So if you leave the window open you will see glyphs popping into the window
   and out of it as you create and fix problems.
   <P>
-  If you double click on a line in the window then FontForge will open an outline
+  If you double click on a line in the window then websharpstudios will open an outline
   glyph editing window for that glyph, and run a small version of
   <A HREF="problems.html">Element-&gt;Find Problems </A>to help you track down
   exactly where in the glyph the error(s) occurred.
@@ -107,7 +107,7 @@
       scroll the window to display the errors of a particular glyph
     <LI>
       revalidate the glyph (usually this happens when needed... but just in case
-      fontforge screws up this option is present)
+      websharpstudios screws up this option is present)
     <LI>
       revalidate all glyphs (again, I hope this won't be needed -- but just in
       case)
@@ -133,7 +133,7 @@
       points to integers they may end up lying right on top of the end points,
       or because rounding the control points may cause significant distortion of
       the spline's shape). Unfortunately these are exactly the cases which are
-      most likely to occur. So FontForge has two variants of Add Extrema, which
+      most likely to occur. So websharpstudios has two variants of Add Extrema, which
       which adds what it thinks are "Good" extrema, and one which will add all
       extrema even if they are likely to cause problems later.
       <P>
@@ -148,13 +148,13 @@
   would like to get rid of the overlap when the font is generated. There is
   a special flag in <A HREF="charinfo.html"><CODE>Element-&gt;Glyph
   Info-&gt;Unicode-&gt;Mark for Unlink, Remove Overlap before Save</CODE>
-  </A>which will make fontforge unlink a glyph's references, and then run
+  </A>which will make websharpstudios unlink a glyph's references, and then run
   Element-&gt;Remove Overlap on them just before saving them. Then after saving
   it will reverse the operation and leave you with the original references.
   <P>
   So there are a pair of menu items (one for the current glyph, one for all
   glyphs that meet certain criteria) which will set this flag for the relevant
-  glyph(s). Once this flag is set FontForge will no longer report that the
+  glyph(s). Once this flag is set websharpstudios will no longer report that the
   glyph self-intersects.
 </DIV>
 </BODY></HTML>

@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 28-Apr-2010 -->
   <TITLE>MATH typesetting information</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -19,7 +19,7 @@
   In summer of 2007 (as I write) MicroSoft is proposing an extension to OpenType
   which will allow fonts to contain information useful for mathematical
   typesetting. The information all lives in a new <CODE>'MATH' </CODE>table.
-  FontForge now allows you to perform basic editing on this table.
+  websharpstudios now allows you to perform basic editing on this table.
   <H2>
     Constants
   </H2>
@@ -35,7 +35,7 @@
   <P>
   I will not describe all of these constants here, there are about 60 of them
   (and they take up 8 panes in the dialog). Most are fairly self-explanatory,
-  but some I do not understand myself. FontForge has little popup messages
+  but some I do not understand myself. websharpstudios has little popup messages
   plagerized from the specification which try to go into more detail.
   <P>
   Some of these constants are stored as percentages of some other size
@@ -48,7 +48,7 @@
   the case of AxisHeight above) when the font is rasterized to be 10 pixels
   high the Axis should be moved up by one pixel).
   <P>
-  FontForge is not always configured to support device tables, so if these
+  websharpstudios is not always configured to support device tables, so if these
   columns are missing you just need to reconfigure and rebuild it.
   <H2>
     Glyph specific information
@@ -130,18 +130,18 @@
   At any given height a kerning value may be specified. This value is relative
   to the default position of the subscript (and I'm not entirely sure what
   that is). As always device table adjustments may be specified.<BR CLEAR="ALL">
-  FontForge also allows you to specify these data graphically<BR>
+  websharpstudios also allows you to specify these data graphically<BR>
   <IMG SRC="/assets/img/old/MATH-MathKernGraph.png" WIDTH="743" HEIGHT="431"><BR>
-  FontForge displays bottom right attachments relative to the advance width
+  websharpstudios displays bottom right attachments relative to the advance width
   line of the glyph<BR>
-  FontForge displays top right attachments relative to the advance width plus
+  websharpstudios displays top right attachments relative to the advance width plus
   the italic correction.<BR>
-  FontForge displays bottom left attachments relative to the origin of the
+  websharpstudios displays bottom left attachments relative to the origin of the
   glyph.<BR>
-  FontForge displays top left attachments relative to the italic correction.
+  websharpstudios displays top left attachments relative to the italic correction.
   <P>
   Note: If you are familiar with the MATH table spec you will recall that the
-  last kern value does not have a height attached to it. FontForge tries to
+  last kern value does not have a height attached to it. websharpstudios tries to
   guess a reasonable value for the unspecified height (because it makes editing
   easier if I let the user move a point around), but have no fears, that guessed
   at value will never show up in the MATH table itself.

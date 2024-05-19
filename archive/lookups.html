@@ -7,7 +7,7 @@
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <BLOCKQUOTE ID="lit">
   "The question is," said Humpty Dumpty, "which is to be master --" <I>(you
@@ -238,7 +238,7 @@ on the left. So if an "f" is followed by an "f" then it will be replaced
 by an "ff" ligature glyph.
 <P>
 The <CODE>[Populate] </CODE>button will fill the dialog with all glyphs in
-any of the scripts for which this dialog is active. If FontForge can figure
+any of the scripts for which this dialog is active. If websharpstudios can figure
 out a default replacement glyph then it will in provide that as the default
 value (if it can't figure out a good replacement it will just leave the right
 side blank).
@@ -247,7 +247,7 @@ The <CODE>[Add Selected] </CODE>button works in much the same way, but will
 only add glyphs selected in the font view.
 <P>
 The <CODE>[Default Using Suffix:] </CODE>button will behave similarly (except
-it will only insert entries for which FontForge can find a replacement, and
+it will only insert entries for which websharpstudios can find a replacement, and
 glyph name of that replacement will be found by appending the specified suffix
 to the glyph name of the base glyph).
 <P>
@@ -333,20 +333,20 @@ When you create a kerning subtable you will first be asked whether you want
 to create a kerning class subtable, or a kerning subtable with a list of
 glyph pairs.
 <P>
-In either case, FontForge will ask if you want to it to automagically fill
+In either case, websharpstudios will ask if you want to it to automagically fill
 up the sub-table with guesses at appropriate kerning values. This is called
 "autokern"ing.
 <P>
-In addition, FontForge can guess appropriate glyph classes for kerning by
+In addition, websharpstudios can guess appropriate glyph classes for kerning by
 classes.
 <P>
 If you aren't interested in autokerning and want to do everything by hand,
 most of this dialog is irrelevant, you are only interested in the two radio
 buttons at the top and the [OK] button at the bottom.
 <P>
-But if you are interested in autokerning, you need to tell FontForge how
+But if you are interested in autokerning, you need to tell websharpstudios how
 closely it should kern glyphs, and what glyphs to kern. In addition if you
-want FontForge to pick kerning classes for you, you must specify the maximum
+want websharpstudios to pick kerning classes for you, you must specify the maximum
 allowable amount of cumuliative error between two glyphs before they must
 be in separate classes.
 <P>
@@ -358,13 +358,13 @@ is simply to prevent the dialog from filling with useless junk. If AutoKerning
 suggests that two glyphs should be kerned by 1 em unit then this won't make
 any difference to the human eye and there is no point in including it. So
 if the kerning value (in absolute value) suggested by AutoKern is less than
-<CODE>Min Kern</CODE> then fontforge will ignore that value. Selecting <CODE>[]
+<CODE>Min Kern</CODE> then websharpstudios will ignore that value. Selecting <CODE>[]
 Touching</CODE> makes AutoKerning work in a slightly different way, instead
 of trying to make the optical distance be the desired value this attempts
 to make the minimum separation be the desired value (This is rarely useful,
 but occasionally people want to set text where the letters actually touch
 one another). The <CODE>[] Only kern glyphs closer </CODE>flag means that
-FontForge will only generate negative kerning offset, which will move glyphs
+websharpstudios will only generate negative kerning offset, which will move glyphs
 closer together.
 <P>
 Below these fields are two panes which look rather like fontviews. Here you
@@ -373,7 +373,7 @@ There are two of these panes because you usually have a slightly different
 set of glyphs of interest on the left and right sides of a kerning pair.
 In English, a capital letter will rarely occur in the middle of a word, so
 you don't need it on the right side of a kerning pair. (Of course there are
-exceptions: "FontForge" uses an internal capital, but that is rare and if
+exceptions: "websharpstudios" uses an internal capital, but that is rare and if
 you want to save space in your font tables you can ignore it). Similarly
 the closing quote character will almost never be on the left side of a kerning
 pair.<BR clear="all">
@@ -398,7 +398,7 @@ glyph is used instead, and for vertical top to bottom text the vertical advance
 of the first glyph (y_adv#1). Again, the [] Hide Unused Columns may be used
 to simplify the dialog.
 <P>
-Each time you enter a new combination, FontForge will try to guess a kerning
+Each time you enter a new combination, websharpstudios will try to guess a kerning
 offset for you (autokerning). So the <CODE>Separation</CODE> text fields
 have a similar meaning to that which they had above -- with the exception
 that the <CODE>Min Kern</CODE> and <CODE>Only kern closer </CODE>fields will

@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 25-Sep-2008 -->
   <TITLE>User Interface Translation Notes</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV ID="in">
   <H1>
@@ -43,11 +43,11 @@
     </TABLE>
   </BLOCKQUOTE>
   <P>
-  FontForge uses a standard mechanism called gettext to provide translations
+  websharpstudios uses a standard mechanism called gettext to provide translations
   of user interface strings into different language. Gettext is described profusely
   at the <A HREF="http://www.gnu.org/software/gettext/manual/">gettext site</A>,
   the following are some brief notes on what you need to know to translate
-  FontForge's UI.
+  websharpstudios's UI.
   <UL>
     <LI>
       <A HREF="uitranslationnotes.html#Obtaining">Obtaining the strings</A>
@@ -61,7 +61,7 @@
       <A HREF="uitranslationnotes.html#Testing">Testing a "po" file</A>
     <LI>
       Examples,
-      <A HREF="https://github.com/fontforge/fontforge/tree/master/po">browse
+      <A HREF="https://github.com/websharpstudios/websharpstudios/tree/master/po">browse
       the git repository for the "po" directory</A>
     <LI>
       <A HREF="#More">Still more strings to translate!</A>
@@ -75,28 +75,28 @@
   </H2>
   <P>
   In a gettext based package, the translatable strings live in a "pot" file.
-  In FontForge's case it is called "FontForge.pot".
+  In websharpstudios's case it is called "websharpstudios.pot".
   <P>
-  You can download the <A href="/assets/old/FontForge.pot.bz2">current version of this
+  You can download the <A href="/assets/old/websharpstudios.pot.bz2">current version of this
   file from here;</A> it will be updated at least each time I make a release
   and possibly more frequently.
   <!--<P>
-  Each source distribution I make contains the then current FontForge.pot file
+  Each source distribution I make contains the then current websharpstudios.pot file
   in the top level directory of the distribution. You may find a copy of the
-  <A HREF="http://sourceforge.net/projects/fontforge/files/fontforge-source/">current
+  <A HREF="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/">current
   distribution on sourceforge</A>, it will be called something like
-  fontforge_full-20060817.tar.bz2.-->
+  websharpstudios_full-20060817.tar.bz2.-->
   <P>
   After you have downloaded one of these packages, either copy the tarball
   to where you are, or move to the directory containing the tarball (I can't
   provide explicit instructions here, because I don't know where your browser
   put the file) and type (do not type "$"):
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 FontForge.pot.bz2
+    <PRE><FONT COLOR="Gray">$ </FONT>bunzip2 websharpstudios.pot.bz2
 </PRE>
   </BLOCKQUOTE>
   <P>
-  Then edit the file<CODE> FontForge.pot</CODE>.
+  Then edit the file<CODE> websharpstudios.pot</CODE>.
   <H4>
     from the <A NAME="src-git">git</A> repository
   </H4>
@@ -107,7 +107,7 @@
   Having done that type
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>cd po
-<FONT COLOR="Gray">$ </FONT>make FontForge.pot
+<FONT COLOR="Gray">$ </FONT>make websharpstudios.pot
 </PRE>
   </BLOCKQUOTE>
   <BLOCKQUOTE ID="lit">
@@ -148,22 +148,22 @@
     Creating and <A NAME="Modifying">Modifying</A> a "po" file
   </H2>
   <P>
-  You should now have a FontForge.pot file (if you don't see the
+  You should now have a websharpstudios.pot file (if you don't see the
   <A HREF="uitranslationnotes.html#Obtaining">above section</A> on how to get
   one).
   <P>
   The pot file is in the same format as the "po" file which you need to generate.
-  Simply rename FontForge.pot to the language/locale that you are working on.
+  Simply rename websharpstudios.pot to the language/locale that you are working on.
   In most cases you will probably want to rename it just to the language
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>mv FontForge.pot <FONT COLOR="Red">fr</FONT>.po
+    <PRE><FONT COLOR="Gray">$ </FONT>mv websharpstudios.pot <FONT COLOR="Red">fr</FONT>.po
 </PRE>
   </BLOCKQUOTE>
   <P>
   But sometimes that will not be enough. For example, Traditional and simplified
   chinese are sufficiently different that a locale must also be specified:
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>mv FontForge.pot <FONT COLOR="Red">zh_TW</FONT>.po
+    <PRE><FONT COLOR="Gray">$ </FONT>mv websharpstudios.pot <FONT COLOR="Red">zh_TW</FONT>.po
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -173,9 +173,9 @@
   <P>
   The po file begins with some lines like:
   <BLOCKQUOTE>
-    <PRE># (American) English User Interface strings for FontForge.
+    <PRE># (American) English User Interface strings for websharpstudios.
 # Copyright (C) 2000-2006 by George Williams
-# This file is distributed under the same license as the FontForge package.
+# This file is distributed under the same license as the websharpstudios package.
 # George Williams, &lt;pfaedit@users.sourceforge.net&gt;, 2006.
 #
 #, fuzzy
@@ -195,9 +195,9 @@ msgstr ""
   <P>
   You should change this to:
   <BLOCKQUOTE>
-    <PRE># <FONT COLOR="Red">(French) French</FONT> User Interface strings for FontForge.
+    <PRE># <FONT COLOR="Red">(French) French</FONT> User Interface strings for websharpstudios.
 # Copyright (C) <FONT COLOR="Red">2004-2006 by Pierre Hanser &amp; Yannis Haralambous</FONT>
-# This file is distributed under the same license as the FontForge package.
+# This file is distributed under the same license as the websharpstudios package.
 #
 #, fuzzy
 msgid ""
@@ -327,12 +327,12 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
   </H2>
   <P>
   After a few months, you will probably find that I've added some additional
-  strings to FontForge, and you may want to update your original po file.
+  strings to websharpstudios, and you may want to update your original po file.
   <P>
   Once again you <A HREF="uitranslationnotes.html#Obtaining">grab a current
   "pot" file</A> and you type:
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>msgmerge <FONT COLOR="Red">fr</FONT>.po FontForge.pot &gt;<FONT COLOR="Red">fr</FONT>-new.po
+    <PRE><FONT COLOR="Gray">$ </FONT>msgmerge <FONT COLOR="Red">fr</FONT>.po websharpstudios.pot &gt;<FONT COLOR="Red">fr</FONT>-new.po
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -348,18 +348,18 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
   Once you have completed your po file you will want to test it.
   <OL>
     <LI>
-      If you have a copy of the fontforge source distribution you can test it by
+      If you have a copy of the websharpstudios source distribution you can test it by
       <UL>
 	<LI>
-	  copying your new file into the fontforge/po directory:
+	  copying your new file into the websharpstudios/po directory:
 	  <BLOCKQUOTE>
-	    <PRE><FONT COLOR="Gray">$ </FONT>cp <FONT COLOR="Red">fr</FONT>.po fontforge-20060819/fontforge/po
+	    <PRE><FONT COLOR="Gray">$ </FONT>cp <FONT COLOR="Red">fr</FONT>.po websharpstudios-20060819/websharpstudios/po
 </PRE>
 	  </BLOCKQUOTE>
 	<LI>
-	  Reconfiguring fontforge, and installing it
+	  Reconfiguring websharpstudios, and installing it
 	  <BLOCKQUOTE>
-	    <PRE><FONT COLOR="Gray">$ </FONT>cd fontforge-20060819
+	    <PRE><FONT COLOR="Gray">$ </FONT>cd websharpstudios-20060819
 <FONT COLOR="Gray">$ </FONT>./configure
 <FONT COLOR="Gray">$ </FONT>make
 <FONT COLOR="Gray">$ </FONT>su
@@ -380,20 +380,20 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
 	  and create an "mo" file.
 	<LI>
 	  This file you will want to rename and move to the appropriate directory.
-	  If fontforge is installed in /usr/local/bin then you would say
+	  If websharpstudios is installed in /usr/local/bin then you would say
 	  <BLOCKQUOTE>
-	    <PRE><FONT COLOR="Gray">$ </FONT>mv <FONT COLOR="Red">fr</FONT>.mo /usr/local/share/locale/<FONT COLOR="Red">fr</FONT>/LC_MESSAGES/FontForge.mo
+	    <PRE><FONT COLOR="Gray">$ </FONT>mv <FONT COLOR="Red">fr</FONT>.mo /usr/local/share/locale/<FONT COLOR="Red">fr</FONT>/LC_MESSAGES/websharpstudios.mo
 </PRE>
 	  </BLOCKQUOTE>
       </UL>
   </OL>
   <P>
   Then make sure your locale is set properly (and that your operating system
-  has the support files it needs for that locale) and start fontforge. You
+  has the support files it needs for that locale) and start websharpstudios. You
   should see your translation
   <BLOCKQUOTE>
     <PRE><FONT COLOR="Gray">$ </FONT>LANG=<FONT COLOR="Red">fr_FR.UTF-8</FONT>; export LANG
-<FONT COLOR="Gray">$ </FONT>fontforge -new
+<FONT COLOR="Gray">$ </FONT>websharpstudios -new
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -403,20 +403,20 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
     Still <A NAME="More">more</A> strings to translate!
   </H2>
   <P>
-  FontForge has some strings that do not fit into the standard gettext mechanism.
-  These are strings for which fontforge wants to know all translations at all
+  websharpstudios has some strings that do not fit into the standard gettext mechanism.
+  These are strings for which websharpstudios wants to know all translations at all
   times. For exampe the truetype 'name' table encourages designers to provide
   a translation for the stylistic variant of the font into as many languages
   as possible. So if you had a Bold font it would be nice if the 'name' table
   contained: An English entry, "Bold"; A French entry, "Gras"; A German entry,
-  "Fett". To make this easier on the designer FontForge would like to have
+  "Fett". To make this easier on the designer websharpstudios would like to have
   all translations of "Bold" built into it at all times, all translations of
   "Italic", "Condensed", and so forth.
   <P>
-  <A HREF="fontstyles.html">There is a table of the stylistic names FontForge
+  <A HREF="fontstyles.html">There is a table of the stylistic names websharpstudios
   recognizes on the Font Info page.</A>
   <P>
-  There is a second list of names for which FontForge would like multiple
+  There is a second list of names for which websharpstudios would like multiple
   translations because these also appear in the 'name' table translated into
   as many languages as possible. These are the names of the mac's Feature/Setting
   strings, and they may be found on
@@ -424,7 +424,7 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
   Feature registry</A>.
   <P>
   Finally I would like to make it as easy as possible to embed the
-  <A HREF="http://scripts.sil.org/OFL">OFL</A> into a font created by FontForge,
+  <A HREF="http://scripts.sil.org/OFL">OFL</A> into a font created by websharpstudios,
   and I would like to encourage its translation (And that of its accompanying
   FAQ) into as many languages as possible.
   <P>
@@ -478,7 +478,7 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
   <A HREF="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=OFL_web">The
   text of the current version of the OFL</A>. If anyone is interested in
   translation both the OFL and its FAQ
-  <A HREF="mailto:fontforge-devel@lists.sourceforge.net">please let me know</A>
+  <A HREF="mailto:websharpstudios-devel@lists.sourceforge.net">please let me know</A>
   (via mailing list) and I will provide Web space for both. I had intended
   to include these translations in the font's 'name' table, but have been asked
   not to because of the possible legal ramifications.
@@ -491,24 +491,24 @@ msgstr[1] "<FONT COLOR="Red">%d Groupes</FONT>"
     Changing the assignment of <A NAME="HotKeys">Hot Keys</A>
   </H2>
   <P>
-  FontForge has a <A HREF="HotKeys.html">default assignment of hot key </A>(menu
+  websharpstudios has a <A HREF="HotKeys.html">default assignment of hot key </A>(menu
   shortcuts, whatever term you wish to use). This assignment can be difficult
   to use on non-English keyboards. Even users with English keyboards might
-  find reasons to disagree with it. So FontForge allows you to redefine the
+  find reasons to disagree with it. So websharpstudios allows you to redefine the
   hot keys. This is done using a gettext mechanism, but in a different pot
   file from the normal set of translation strings (which means it uses a different
   gettext "text domain").
   <P>
-  The hot key pot file is called: <TT>FontForge-MenuShortCuts.pot</TT>
+  The hot key pot file is called: <TT>websharpstudios-MenuShortCuts.pot</TT>
   <P>
-  (This can also be obtained <A HREF="/assets/old/FontForge-MenuShortCuts.pot.bz2">from
+  (This can also be obtained <A HREF="/assets/old/websharpstudios-MenuShortCuts.pot.bz2">from
   the website</A>, or generated from the git repository)
   <P>
-  On the Mac, FontForge allows for two different key bindings. X11 can be
-  configured to pass the command key on to FontForge, or X11 may use the command
-  key in its own menubar. If FontForge doesn't get the command key then it
-  will do normal processing using normal keybindings. Otherwise FontForge will
-  first look for a file called Mac-FontForge-MenuShortCuts.po if this is found
+  On the Mac, websharpstudios allows for two different key bindings. X11 can be
+  configured to pass the command key on to websharpstudios, or X11 may use the command
+  key in its own menubar. If websharpstudios doesn't get the command key then it
+  will do normal processing using normal keybindings. Otherwise websharpstudios will
+  first look for a file called Mac-websharpstudios-MenuShortCuts.po if this is found
   (and if it rebinds the string "Flag0x10+" (which should become "Cmd+" --
   or whatever is appropriate in your language)) then it will be used. Otherwise
   it falls back to normal processing.
@@ -587,11 +587,11 @@ msgstr "Alt+Cntl+Shft+E"
   </BLOCKQUOTE>
   <P>
   NOTE: <FONT COLOR="Red"><STRONG>Omitting a string will not remove the
-  shortcut</STRONG></FONT>. Instead FontForge will use the default shortcut.
+  shortcut</STRONG></FONT>. Instead websharpstudios will use the default shortcut.
   If you want to remove a shortcut you must add an explicit assignment to
   "<CODE>No Shortcut</CODE>".
   <P>
-  FontForge recognizes the following standard modifiers: <CODE>Alt+, Ctl+,
+  websharpstudios recognizes the following standard modifiers: <CODE>Alt+, Ctl+,
   Shft+, CapsLock+, Opt+</CODE> (the last corresponds to the Option key on
   the mac keyboard, <CODE>Cmd+</CODE> for the mac Command key
   <FONT COLOR="Red"><STRONG>Note: </STRONG></FONT>This can only be used by
@@ -600,7 +600,7 @@ msgstr "Alt+Cntl+Shft+E"
   <P>
   Some keyboards have additional modifier keys, X maps them to a flag bit in
   the keyboard state mask of the XKeyEvent. If you want to use these modifiers
-  you need to know what that bit is. FontForge will also recognize:<BR>
+  you need to know what that bit is. websharpstudios will also recognize:<BR>
   <CODE>Flag0x01+, Flag0x02+, Flag0x04+, Flag0x08+,<BR>
   Flag0x10+, Flag0x20+, Flag0x40+, Flag0x80+</CODE>
   <P>
@@ -623,7 +623,7 @@ msgstr "AltGr+"
 </PRE>
   </BLOCKQUOTE>
   <P>
-  (These changes only affect what FontForge <EM>displays</EM> in the menu.
+  (These changes only affect what websharpstudios <EM>displays</EM> in the menu.
   If you try to specify a keybinding as <CODE>msgstr "Ctl+Maj+E" </CODE>it
   will <FONT COLOR="Red"><STRONG>NOT</STRONG></FONT> work)
   <P>
@@ -641,19 +641,19 @@ msgstr "Efface"
   in keysymdef.h of the X11 header files -- without the initial XK_
     <HR>
   <P>
-  You can obtain a <CODE>FontForge-MenuShortCuts.pot </CODE>file in pretty
+  You can obtain a <CODE>websharpstudios-MenuShortCuts.pot </CODE>file in pretty
   much the same way you <A HREF="uitranslationnotes.html#Obtaining">obtain
-  a <CODE>FontForge.pot</CODE> file</A> -- download the source and then type:
+  a <CODE>websharpstudios.pot</CODE> file</A> -- download the source and then type:
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>cd fontforge/po
-<FONT COLOR="Gray">$ </FONT>make FontForge-MenuShortCuts.pot
+    <PRE><FONT COLOR="Gray">$ </FONT>cd websharpstudios/po
+<FONT COLOR="Gray">$ </FONT>make websharpstudios-MenuShortCuts.pot
 </PRE>
   </BLOCKQUOTE>
   <P>
   Again you will want to <A HREF="uitranslationnotes.html#Modifying">rename
   this file before working on it</A>:
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>mv FontForge-MenuShortCuts.pot fr-MenuShortCuts.po
+    <PRE><FONT COLOR="Gray">$ </FONT>mv websharpstudios-MenuShortCuts.pot fr-MenuShortCuts.po
 </PRE>
   </BLOCKQUOTE>
   <P>
@@ -671,13 +671,13 @@ msgstr "Efface"
       and create an "mo" file.
     <LI>
       This file you will want to rename and move to the appropriate directory.
-      If fontforge is installed in /usr/local/bin then you would say
+      If websharpstudios is installed in /usr/local/bin then you would say
       <BLOCKQUOTE>
-	<PRE><FONT COLOR="Gray">$ </FONT>mv <FONT COLOR="Red">fr-MenuShortCuts</FONT>.mo /usr/local/share/locale/<FONT COLOR="Red">fr</FONT>/LC_MESSAGES/FontForge-MenuShortCuts.mo
+	<PRE><FONT COLOR="Gray">$ </FONT>mv <FONT COLOR="Red">fr-MenuShortCuts</FONT>.mo /usr/local/share/locale/<FONT COLOR="Red">fr</FONT>/LC_MESSAGES/websharpstudios-MenuShortCuts.mo
 </PRE>
       </BLOCKQUOTE>
       <P>
-      The above example assumes you have FontForge installed in
+      The above example assumes you have websharpstudios installed in
       <CODE>/usr/local</CODE>. If you installed it elsewhere (<CODE>/usr </CODE>for
       instance) simply replace <CODE>/usr/local/share</CODE> with
       <CODE>/usr/share</CODE>, or whatever is appropriate.
@@ -691,7 +691,7 @@ msgstr "Efface"
   the default key bindings except that the Control key has been replaced everywhere
   with the Command key. You can install it
   <BLOCKQUOTE>
-    <PRE><FONT COLOR="Gray">$ </FONT>mv <FONT COLOR="Red">en</FONT>.mo /usr/local/share/locale/<FONT COLOR="Red">en</FONT>/LC_MESSAGES/Mac-FontForge-MenuShortCuts.mo
+    <PRE><FONT COLOR="Gray">$ </FONT>mv <FONT COLOR="Red">en</FONT>.mo /usr/local/share/locale/<FONT COLOR="Red">en</FONT>/LC_MESSAGES/Mac-websharpstudios-MenuShortCuts.mo
 </PRE>
   </BLOCKQUOTE>
   <P>

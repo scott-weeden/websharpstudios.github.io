@@ -3,17 +3,17 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 13-Feb-2003 -->
   <!-- AP: Last modified: 20-Mar-2008 -->
-  <TITLE>TrueType and OpenType tables supported by FontForge</TITLE>
+  <TITLE>TrueType and OpenType tables supported by websharpstudios</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    TrueType and OpenType tables supported by FontForge
+    TrueType and OpenType tables supported by websharpstudios
   </H1>
   <P>
   <A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6.html">Apple</A>,
@@ -25,7 +25,7 @@
     <TR>
       <TH>name</TH>
       <TH>long name</TH>
-      <TH>FontForge's use</TH>
+      <TH>websharpstudios's use</TH>
       <TH>Apple<BR>
 	docs</TH>
       <TH>Adobe<BR>
@@ -117,7 +117,7 @@
       <TD>cmap</TD>
       <TD>character code mapping</TD>
       <TD>Provides at least one encoding from a stream of bytes to glyphs in the
-	font. FontForge provides at least three encodings in every font (one for
+	font. websharpstudios provides at least three encodings in every font (one for
 	Mac Roman, one for Mac Unicode, one for MS Unicode). For some fonts it will
 	additionally provide a CJK encoding (Big5, SJIS, etc) or an extended unicode
 	encoding which will cover code points outside of the BMP.
@@ -142,7 +142,7 @@
     <TR>
       <TD>cvt</TD>
       <TD>control value table</TD>
-      <TD>FontForge uses this when it attempts to hint truetype fonts (FontForge
+      <TD>websharpstudios uses this when it attempts to hint truetype fonts (websharpstudios
 	will read it from a font and save it into another).</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6cvt.html">cvt</A></TD>
@@ -173,7 +173,7 @@
       <TD>EBSC</TD>
       <TD>embedded bitmap scaling</TD>
       <TD>Provides information on how to scale bitmaps (on those rare occasions
-	where this is desirable). FontForge uses it when making bitmap only fonts
+	where this is desirable). websharpstudios uses it when making bitmap only fonts
 	for windows.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6EBSC.html">EBSC</A></TD>
@@ -184,7 +184,7 @@
       <TD>feat</TD>
       <TD>layout feature table</TD>
       <TD>Maps features specified in Apple's 'morx' (or 'mort') tables into names
-	provided in the 'name' table. FontForge generates this when it generates
+	provided in the 'name' table. websharpstudios generates this when it generates
 	a 'morx' table.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6feat.html">feat</A></TD>
@@ -193,9 +193,9 @@
     </TR>
     <TR>
       <TD>FFTM</TD>
-      <TD>FontForge timestamp</TD>
-      <TD>This table is unique to FontForge. It contains three timestamps: First
-	FontForge's version date, then when the font was generated, and when the
+      <TD>websharpstudios timestamp</TD>
+      <TD>This table is unique to websharpstudios. It contains three timestamps: First
+	websharpstudios's version date, then when the font was generated, and when the
 	font was created. I describe its format <A HREF="non-standard.html">here</A>.</TD>
       <TD><P ALIGN=Center>
 	*</TD>
@@ -205,7 +205,7 @@
     <TR>
       <TD>fpgm</TD>
       <TD>font program</TD>
-      <TD>FontForge never generates this, but it will preserve it and allows users
+      <TD>websharpstudios never generates this, but it will preserve it and allows users
 	to edit it.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6fpgm.html">fpgm</A></TD>
@@ -225,7 +225,7 @@
     <TR>
       <TD>gasp</TD>
       <TD>grid-fitting and scan conversion</TD>
-      <TD>When FontForge does not attempt to hint a truetype font it will generate
+      <TD>When websharpstudios does not attempt to hint a truetype font it will generate
 	this table which tells the rasterizer not to to do grid-fitting (hinting)
 	but to do anti-aliasing instead.</TD>
       <TD><P ALIGN=Center>
@@ -258,7 +258,7 @@
       <TD>GPOS</TD>
       <TD>glyph positioning</TD>
       <TD>Provides kerning information, mark-to-base, etc. for opentype fonts.
-	See the <A HREF="gposgsub.html#GPOS">chapter on GPOS</A> in FontForge for
+	See the <A HREF="gposgsub.html#GPOS">chapter on GPOS</A> in websharpstudios for
 	more information. Vaguely equivalent to 'kern' and 'opbd' tables.</TD>
       <TD><P ALIGN=Center>
 	*</TD>
@@ -269,7 +269,7 @@
       <TD>GSUB</TD>
       <TD>glyph substitution</TD>
       <TD>Provides ligature information, swash, etc. for opentype fonts. See the
-	<A HREF="gposgsub.html#GSUB">chapter on GSUB</A> in FontForge for more
+	<A HREF="gposgsub.html#GSUB">chapter on GSUB</A> in websharpstudios for more
 	information. Vaguely equivalent to 'morx'.</TD>
       <TD><P ALIGN=Center>
 	*</TD>
@@ -371,7 +371,7 @@
     <TR>
       <TD>mort</TD>
       <TD>metamorphosis</TD>
-      <TD>FontForge will read this table but not generate it. This table has been
+      <TD>websharpstudios will read this table but not generate it. This table has been
 	replaced by the 'morx' table which will be generated instead. It is vaguely
 	equivalent to the GSUB table.</TD>
       <TD><P ALIGN=Center>
@@ -383,8 +383,8 @@
       <TD>morx</TD>
       <TD>extended metamorphosis</TD>
       <TD>Provides ligature information, swash, etc. for apple's truetype fonts.
-	FontForge can read and write this table. See the
-	<A HREF="gposgsub.html#AAT">chapter on morx</A> in FontForge for more
+	websharpstudios can read and write this table. See the
+	<A HREF="gposgsub.html#AAT">chapter on morx</A> in websharpstudios for more
 	information. Vaguely equivalent to 'GSUB'.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6morx.html">morx</A></TD>
@@ -415,8 +415,8 @@
     </TR>
     <TR>
       <TD>PfEd</TD>
-      <TD>FontForge's personal table</TD>
-      <TD>This table is unique to FontForge. It can contain things like FontForge's
+      <TD>websharpstudios's personal table</TD>
+      <TD>This table is unique to websharpstudios. It can contain things like websharpstudios's
 	comments, and colors.I describe its format
 	<A HREF="non-standard.html">here</A>.</TD>
       <TD><P ALIGN=Center>
@@ -437,7 +437,7 @@
     <TR>
       <TD>prep</TD>
       <TD>cvt program</TD>
-      <TD>FontForge never generatest this table itself, but it will retain it when
+      <TD>websharpstudios never generatest this table itself, but it will retain it when
 	reading other fonts, and it allows users to edit it.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6prep.html">prep</A></TD>
@@ -457,7 +457,7 @@
     <TR>
       <TD>TeX</TD>
       <TD>TeX information</TD>
-      <TD>This table is unique to FontForge and is for use by TeX. I describe its
+      <TD>This table is unique to websharpstudios and is for use by TeX. I describe its
 	format <A HREF="non-standard.html">here</A>.</TD>
       <TD><P ALIGN=Center>
 	*</TD>
@@ -467,7 +467,7 @@
     <TR>
       <TD>vhea</TD>
       <TD>vertical header</TD>
-      <TD>FontForge generates this table for fonts with vertical metrics. This
+      <TD>websharpstudios generates this table for fonts with vertical metrics. This
 	table contains font-wide vertical metric information.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6vhea.html">vhea</A></TD>
@@ -477,7 +477,7 @@
     <TR>
       <TD>vmtx</TD>
       <TD>vertical metrics</TD>
-      <TD>FontForge generates this table for fonts with vertical metrics. This
+      <TD>websharpstudios generates this table for fonts with vertical metrics. This
 	contains the per-glyph vertical metrics.</TD>
       <TD><P ALIGN=Center>
 	<A HREF="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6vmtx.html">vmtx</A></TD>
@@ -486,6 +486,6 @@
     </TR>
   </TABLE>
   <P>
-  <A HREF="gposgsub.html">Advanced Typography tables in FontForge</A>
+  <A HREF="gposgsub.html">Advanced Typography tables in websharpstudios</A>
 </DIV>
 </BODY></HTML>

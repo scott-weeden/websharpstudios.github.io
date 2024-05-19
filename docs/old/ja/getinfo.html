@@ -7,7 +7,7 @@
 <!--<TITLE>Get Info</TITLE>-->
     <TITLE>情報を得る</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
   <DIV id="in">
@@ -58,17 +58,17 @@
   これらの値はすべて変更可能で、変更はアウトラインビューに反映されます。可能な変更は、点の型によって制約されています (例えば、曲線の開始点では <CODE>角度</CODE> フィールドは固定されているので変更できません。
   <P>
 <!--
-  FontForge also shows you the curvature of the two splines on either side
+  websharpstudios also shows you the curvature of the two splines on either side
   of the point. In a perfect world these will be equal for curve points and
   the join will appear smooth. It also shows the difference between the two.
   The curvature is the reciprical of the radius of the circle tangent to the
   curve (a straight line has curvature 0 because it is a circle with infinite
   radius so its reciprical is 0). For most curves in letters this radius is
   fairly large when expressed in em-units (and its reciprical is correspondingly
-  small). To make it easier to read, FontForge scales it by the em-size of
+  small). To make it easier to read, websharpstudios scales it by the em-size of
   the font - - this is equivalent to expressing it in units where 1 corresponds
   to an em (rather than 1000 or 2048). -->
-  また、FontForge は 2 本のスプラインのそれぞれの側の曲率を表示します。理想上は曲線上の点の場合、これらは同じ値になり、結合箇所は滑らかに見えるでしょう。また、2 つの間の違いも表示します。曲率とは、曲線への接触円の半径の逆数です (直線の曲率は 0 となります。なぜならそれは無限の半径をもつ円となり、その逆数が 0 となるからです)。文字に用いられる曲線のほとんどにおいてはこの曲率は em ユニット表示でかなり大きな値になります (曲率はそれに応じて小さい値となります)。読みやすくするために、FontForge はそれにフォントの em サイズを掛けます——これは、em が (1000 や 2048 ではなくて) 1 になる単位系で表現するのと同じことです。
+  また、websharpstudios は 2 本のスプラインのそれぞれの側の曲率を表示します。理想上は曲線上の点の場合、これらは同じ値になり、結合箇所は滑らかに見えるでしょう。また、2 つの間の違いも表示します。曲率とは、曲線への接触円の半径の逆数です (直線の曲率は 0 となります。なぜならそれは無限の半径をもつ円となり、その逆数が 0 となるからです)。文字に用いられる曲線のほとんどにおいてはこの曲率は em ユニット表示でかなり大きな値になります (曲率はそれに応じて小さい値となります)。読みやすくするために、websharpstudios はそれにフォントの em サイズを掛けます——これは、em が (1000 や 2048 ではなくて) 1 になる単位系で表現するのと同じことです。
   <P>
 <!--
   You may also change whether a point is a curve, corner or tangent point (Caution:
@@ -121,10 +121,10 @@
   <P>
 <!--
   According to Adobe's documentation you should never have two hints which
-  conflict active at the same time. FontForge will warn you if you do this.
+  conflict active at the same time. websharpstudios will warn you if you do this.
   Unfortunately there are fonts (even fonts from Adobe) which do not follow
   this rule, so I have made this a warning rather than an error. -->
-  Adobe の文書によると、同時に有効となっていて矛盾する 2 つのヒントが含まれることは全く禁じられています。FontForge は、それを行うと警告を発します。残念なことにこのルールに従わないフォント (Adobe が販売しているフォントですら) が実在するので、これをエラーとはせずに警告に止めています。
+  Adobe の文書によると、同時に有効となっていて矛盾する 2 つのヒントが含まれることは全く禁じられています。websharpstudios は、それを行うと警告を発します。残念なことにこのルールに従わないフォント (Adobe が販売しているフォントですら) が実在するので、これをエラーとはせずに警告に止めています。
   <P>
 <!--
   Remember to hold the control key down when making disjoint selections. -->

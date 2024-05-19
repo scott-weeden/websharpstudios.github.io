@@ -5,9 +5,9 @@
   <!-- AP: Last modified: 16-Apr-2004 -->
   <LINK REL="icon" href="../../_static/fftype16.png">
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<!--<TITLE>The basic spline data structures of FontForge</TITLE>-->
-    <TITLE>FontForge の基本的なスプラインデータ構造</TITLE>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+<!--<TITLE>The basic spline data structures of websharpstudios</TITLE>-->
+    <TITLE>websharpstudios の基本的なスプラインデータ構造</TITLE>
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -463,10 +463,10 @@ while that associated with the previous Spline is at prevcp. Then there are
 a couple of flags that simplify tests. If the nextcp is degenerate (ie. at
 the same place as me) then nonextcp is set, similarly for prevcp. If the
 user has not touched the control points then they will have their default
-values, and when the user moves the point around fontforge will update the
-control points appropriately, if they do not have default values then fontforge
+values, and when the user moves the point around websharpstudios will update the
+control points appropriately, if they do not have default values then websharpstudios
 will only offset them. -->
-SplinePoint は、“me”で指定された位置に置かれています。次の <A HREF="#Spline">Spline</A> に付随する制御点は nextfp に置かれ、前の Spline に付随する制御点は prevcp に置かれています。それに続き、simplify 処理がテストする 2 個のフラグがあります。nextcp が縮退している (すなわち、me と同じ場所にある) 場合 nonextcp がセットされます。prevcp もそれと同様です。ユーザが制御点の位置を操作していない場合、それらはデフォルト値をもっており、ユーザが点を移動したときには FontForge は制御点の位置を適切に設定しますが、それがデフォルト値と異なるときには FontForge はそれらを単純にオフセットするだけです。
+SplinePoint は、“me”で指定された位置に置かれています。次の <A HREF="#Spline">Spline</A> に付随する制御点は nextfp に置かれ、前の Spline に付随する制御点は prevcp に置かれています。それに続き、simplify 処理がテストする 2 個のフラグがあります。nextcp が縮退している (すなわち、me と同じ場所にある) 場合 nonextcp がセットされます。prevcp もそれと同様です。ユーザが制御点の位置を操作していない場合、それらはデフォルト値をもっており、ユーザが点を移動したときには websharpstudios は制御点の位置を適切に設定しますが、それがデフォルト値と異なるときには websharpstudios はそれらを単純にオフセットするだけです。
 <P>
 <!--
 If the point is selected then that bit will be set. -->
@@ -986,7 +986,7 @@ extern void PSFontInterpretPS(FILE *ps,struct charprocs *cp);
 
 extern int SFFindChar(SplineFont *sf, int unienc, char *name );
 
-extern char *getFontForgeDir(char *buffer);
+extern char *getwebsharpstudiosDir(char *buffer);
 extern void DoAutoSaves(void);
 extern int DoAutoRecovery(void);
 extern SplineFont *SFRecoverFile(char *autosavename);

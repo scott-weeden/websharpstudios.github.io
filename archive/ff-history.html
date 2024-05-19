@@ -3,13 +3,13 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 13-Oct-2006 -->
   <!-- AP: Last modified: 9-Nov-2008 -->
-  <TITLE>The history of the development of FontForge</TITLE>
+  <TITLE>The history of the development of websharpstudios</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV ID="in">
   <H2>
@@ -224,7 +224,7 @@
   leading to many suggestions and requests. I learned about SVG fonts at EuroTex
   2003 and implemented them soon thereafter.
   <P>
-  Yannis was also working on a book, <I>Fontes &amp; codages</I> in which FontForge
+  Yannis was also working on a book, <I>Fontes &amp; codages</I> in which websharpstudios
   figures. He spent a lot of time making suggestions and finding bugs. He
   encouraged me to support multi-master fonts and by February of 2004 I had
   done so. Then I started working on Apple's distortable font technology (which
@@ -235,9 +235,9 @@
   <P>
   In early 2004 people complained that the name "PfaEdit" no longer reflected
   the abilities of the program and requested that I change it. Various people
-  suggested names (including me), but the one I liked the best, FontForge,
+  suggested names (including me), but the one I liked the best, websharpstudios,
   came from David Turner of freetype. And in March of 2004 PfaEdit changed
-  its name to FontForge.
+  its name to websharpstudios.
   <P>
   At about the same time I wanted to provide a somewhat more complete ability
   to handle PostScript Type3 fonts (or SVG fonts). So I implemented a multi-layered
@@ -246,23 +246,23 @@
   <P>
   In 2005 a Korean company asked me to do something. We had some difficulty
   communicating (I don't speak Korean), but eventually I figured out that they
-  wanted to be able to group glyphs together. Prior to this FontForge handled
+  wanted to be able to group glyphs together. Prior to this websharpstudios handled
   encodings as an integral part of the font, which didn't seem right, and it
   made implementing groups impossible. So I had to rewrite much of the internals
-  of FontForge to redo encodings before I could even start on groups. This
+  of websharpstudios to redo encodings before I could even start on groups. This
   took longer than I had thought it would, and by the time I finished (in July
   of 2005) the Koreans seemed to have lost interest. Ah well.
   <P>
-  I got interested in pdf files in October of 2005, and gave FontForge's Print
+  I got interested in pdf files in October of 2005, and gave websharpstudios's Print
   command the ability to print to a pdf file. Then I thought it would be kind
   of fun to be able to read a font out of a pdf file. I was a little worried
   about implementing this because I know that most fonts stored in pdf files
   are sub-sets, and only contain the glyphs actually used in the pdf file itself.
   I was convinced that I'd get lots of bug reports from people complaining
-  that FontForge didn't read the entire font. Nevertheless my sense of fun
+  that websharpstudios didn't read the entire font. Nevertheless my sense of fun
   overcame my fear of silly bug reports and I implemented it.
   <P>
-  And I did get bug reports complaining that FontForge did not read the fonts
+  And I did get bug reports complaining that websharpstudios did not read the fonts
   correctly. <BR>
   And I don't think I was able to convince some of the complainers that the
   fonts were incomplete in the pdf file. Ah well.
@@ -276,24 +276,24 @@
   Now it should be possible to make a round trip conversion of
   bdf-&gt;otb-&gt;bdf and not lose any information.
   <P>
-  Many people complained about FontForge's ability to edit quadratic splines.
+  Many people complained about websharpstudios's ability to edit quadratic splines.
   I had no experience editing quadratic splines before I wrote my original
   version, I just made it behave like the cubic spline editor (which seemed
   obvious). But doing the obvious makes it hard to create a font that uses
   some of the optimizations in the ttf file, and made instructing the font
-  confusing. So between January and February of 2006 FontForge's quadratic
+  confusing. So between January and February of 2006 websharpstudios's quadratic
   editing capabilities underwent an evolutionary change as people complained
   and I tried to fix things.
   <P>
-  I have a testsuite for fontforge. Obviously. Originally it was very simple:
-  a set of script files which did various actions. If FontForge didn't crash,
+  I have a testsuite for websharpstudios. Obviously. Originally it was very simple:
+  a set of script files which did various actions. If websharpstudios didn't crash,
   then I presumed it worked. That was about all I could test, and although
   that's important, there are a few other things which might be examined. So
   I wrote a command to compare two fonts and see if they were equivalent.
   Originally this had been a separate command (called sfddiff), but if I integrated
-  it into FontForge I could increase the abilities of the tests I wrote.
+  it into websharpstudios I could increase the abilities of the tests I wrote.
   <P>
-  FontForge produced some rather naive type1 and type2 fonts which did not
+  websharpstudios produced some rather naive type1 and type2 fonts which did not
   make good use of the PostScript concept of subroutines. In June of 2006 I
   did a substantial rewrite of the type2 output code and decreased the size
   of my output fonts considerably. My new comparison command was helpful in
@@ -304,7 +304,7 @@
   his part induced me (in October 2006) to make better use of subroutines in
   Type1 output also. No bugs yet... (but it's still October of 2006).
   <P>
-  All of FontForge's dialogs had a fixed layout. Which works fine if you've
+  All of websharpstudios's dialogs had a fixed layout. Which works fine if you've
   only got one language to support, but which looks really ugly (and worse
   can be totally illegible) when the dialog is translated into a different
   language and labels suddenly become longer (or shorter) and spill over into
@@ -321,20 +321,20 @@
   the dialogs look nicer and more comprehensible but which aren't functional.
     <HR>
   <P>
-  My interface to GSUB/GPOS was not well thought out. I stored things in FontForge
+  My interface to GSUB/GPOS was not well thought out. I stored things in websharpstudios
   at the feature level, while OpenType wants things done at the lookup level.
   I thought lookups added an unnecessary level of complexity and ignored them.
   But people complained (they always do) that once a font had been read in
-  to FontForge and saved out again it wouldn't work any more. And that was
+  to websharpstudios and saved out again it wouldn't work any more. And that was
   because I had lost the ordering imposed by the lookups. So in early 2007
-  I had to redo much of the internals of fontforge as it related to OpenType.
+  I had to redo much of the internals of websharpstudios as it related to OpenType.
   I also changed the Metrics View so it would handle all OpenType lookup types
   (rather than just kerning).
   <P>
   And people didn't like my scripting language. Why hadn't I used python? (Well
   because I didn't know python and was lazy about learning more stuff that
   I didn't think would be useful to me). Various people told me that they just
-  couldn't use FontForge because it didn't support python. So I added python
+  couldn't use websharpstudios because it didn't support python. So I added python
   support. Then I discovered that my build machine has such an old version
   of python that it doesn't provide libpython -- and I can't upgrade my machine
   any more because all the distros require booting from CD now (and my machine
@@ -346,7 +346,7 @@
   plugins and menu items. Dave Crossland, as is his wont, had many requests,
   and had me update the old Display dialog to support all the OpenType lookups
   (just as I'd done for the Metrics View) and then merge that into the Print
-  dialog too. Dave also felt that FontForge should be able to store a font
+  dialog too. Dave also felt that websharpstudios should be able to store a font
   directly on the Open Font Library website. Well, they had no API for this,
   so I had to sit down and figure out http all over again and see what bits
   of the user API I needed to walk through.
@@ -398,26 +398,26 @@
   support diagonal stems, and the two of them started working together on this.
   <P>
   At the Libre Graphics Meeting Dave demoed Raph Levien's spiro splines and
-  encouraged me to integrate them into fontforge. But Raph released under GPL
+  encouraged me to integrate them into websharpstudios. But Raph released under GPL
   and wasn't willing to change, and I released under BSD and wasn't willing
   to change. I got permision from Raph to repackage his spiro routines into
   a small shared library (libspiro) which could be released separately from
-  FontForge but to which FontForge could link. And we had Raph's spiros in
-  FontForge.
+  websharpstudios but to which websharpstudios could link. And we had Raph's spiros in
+  websharpstudios.
   <P>
-  I realized that no only could I stick python into fontforge, but if I did
-  a little more work, I could stick fontforge into python. So I wrapped up
-  most of fontforge into a shared library that python could load. Dave Crossland
-  had been complaining (again) about the FontForge widget set. When was I going
+  I realized that no only could I stick python into websharpstudios, but if I did
+  a little more work, I could stick websharpstudios into python. So I wrapped up
+  most of websharpstudios into a shared library that python could load. Dave Crossland
+  had been complaining (again) about the websharpstudios widget set. When was I going
   to move to gtk? (well, I'd tried gtk back in 2004, and found it hard to use,
   and bits of it ugly -- and less functional than my own widget set in the
   ways that mattered to me, so I had given up on it). Dave offered to fund
-  development of a gtk fontforge UI, but only if I'd switch to GPL. I dislike
+  development of a gtk websharpstudios UI, but only if I'd switch to GPL. I dislike
   GPL, it seems so restrictive to me, so I said I wouldn't. Then I realized
   that I could rework my library until it was independant of widget set, and
-  allow Dave to write a UI to sit on top of it, not bound by the fontforge
-  license. So I reworked the internals of fontforge to make them extensible,
-  stripped the UI out of libfontforge. And started to work on a gtk based fontforge
+  allow Dave to write a UI to sit on top of it, not bound by the websharpstudios
+  license. So I reworked the internals of websharpstudios to make them extensible,
+  stripped the UI out of libwebsharpstudios. And started to work on a gtk based websharpstudios
   of my own.
   <P>
   Dave Crossland was complaining on the Open Font Library mailing list about
@@ -426,7 +426,7 @@
   And about the need for providing sources. Well, providing sources of fonts
   can be difficult, and not always useful if the tools to generate the fonts
   aren't also available. However there is no reason why much of that information
-  can't be stored in the font itself. I already had a table that FontForge
+  can't be stored in the font itself. I already had a table that websharpstudios
   would create called ('PfEd', left over from PfaEdit days) which stored per-glyph
   comments, and other things. I could simply extend that table to store guidelines
   and other things. And document it so that others could use it, of course
@@ -436,10 +436,10 @@
   this year as opposed to last. 
   <P>
   Alexey and others complained that they wanted multiple layers of splines.
-  More than just the Foreground, Background, Guidelines layers that FontForge
+  More than just the Foreground, Background, Guidelines layers that websharpstudios
   came with. One common request was to have both a cubic (PostScript) and a
   quadratic (TrueType) layer and be able to generate fonts from both. So in
-  March of 2008 FontForge grew multiple layer support.
+  March of 2008 websharpstudios grew multiple layer support.
   <P>
   Later in March I added support for the OpenType 'BASE' and Apple 'bsln' tables.
   And to amuse myself I added the ablity to have gradient fills in Type3 (and
@@ -470,43 +470,43 @@
   And it was something Ikarus had done, so I wanted to do it too.
   <P>
   In July a friend of mine, who is a mac user, said she wouldn't even consider
-  looking at fontforge on her mac unless it behaved more like a mac application.
+  looking at websharpstudios on her mac unless it behaved more like a mac application.
   So I figured out how to build a mac Application, and how to respond to apple
   events (like having someone double click on a font file, or drop a font file
-  on fontforge's icon). I figured out how to start up X so that the user didn't
+  on websharpstudios's icon). I figured out how to start up X so that the user didn't
   have to. I made pretty (well, I think they are pretty) icons for font files.
   I even changed the menus to use the command key on the mac and to show the
   mac cloverleaf icon.
   <P>
-  My friend still (November) has not looked at fontforge. Ah well.
+  My friend still (November) has not looked at websharpstudios. Ah well.
   <P>
-  Dave Crossland had hired someone to integrate cairo into fontforge. But the
+  Dave Crossland had hired someone to integrate cairo into websharpstudios. But the
   result never got back to me. In a moment of foolish boredom I decided I could
   do that too. So I studied cairo, and it really didn't seem that hard. But
   it was slow -- at least on my 10 year old x86 machine which doesn't support
   XRender. Cairo gave two things I cared about, anti-aliased splines in the
   glyph view, and anti-aliased text everywhere. Well I needed cairo in the
   glyph view, but pango would also provide fuzzy text and was lighter weight
-  and would also support complex scripts (which fontforge's own widget set did
+  and would also support complex scripts (which websharpstudios's own widget set did
   not do). So I could turn off cairo everywhere but the glyph view but still
   get fuzzy text from pango. And speed things up. Then Khaled Hosny suggested
   that I implement pango. Hurumph. And I had wanted to surprise people. Oh
   well. Implement Pango I did.
   <P>
-  A group in Japan created the "Unofficial mingw fontforge page". A very nice
+  A group in Japan created the "Unofficial mingw websharpstudios page". A very nice
   piece of work. It included a set of X resources which provided another, nice
   look to the UI. A theme. And then other people started writing themes -- and
-  started complaining about and finding old bugs in fontforge's resource reading
+  started complaining about and finding old bugs in websharpstudios's resource reading
   code -- it had never been exercised before I guess.
     <HR>
   <P>
   I have received many suggestions from many people, too many to enumerate
-  here, and FontForge is the better for their requests. Often I have reacted
+  here, and websharpstudios is the better for their requests. Often I have reacted
   badly to these suggestions (because they always mean more work for me), and
   I apologize for that, but mostly I wish to thank those who have helped make
-  FontForge what it is today.
+  websharpstudios what it is today.
   <P>
-  Currently, probably the biggest complaint about FontForge is the choice of
+  Currently, probably the biggest complaint about websharpstudios is the choice of
   widget set. No one likes my widgets (except me). Unfortunately for the rest
   of the world <A HREF="faq.html#widget-set">I don't like the two choices of
   widget set available to me (gtk and qt)</A>. I will get started working on

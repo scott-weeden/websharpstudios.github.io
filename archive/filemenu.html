@@ -5,24 +5,24 @@
   <!-- AP: Last modified: 9-Aug-2009 -->
   <TITLE>The File Menu</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="menued">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV class="menucontainer">
   <UL class="menubar">
     <LI class="menu">
-      <A href="http://sourceforge.net/projects/fontforge/files/">Download</A>
+      <A href="http://sourceforge.net/projects/websharpstudios/files/">Download</A>
       <UL>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-docs/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/"
 	      >Documentation</A>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-source/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/"
 	      >Source</A>
       </UL>
     <LI>
@@ -265,63 +265,63 @@
       <IMG SRC="/assets/img/old/openfont.png" WIDTH="398" HEIGHT="412" ALIGN="Right"><A NAME="Open">Open</A>
     <DD>
       Brings up a file chooser and allows you to open a font in any of the formats
-      FontForge understands.
+      websharpstudios understands.
       <P>
       If you open a truetype font containing bitmaps then you will be asked if
       you want to load some of the bitmaps as well as the outlines.
       <P>
       By default this dialog will display all files with extensions of pfa, pfb,
       pt3, sfd, ttf, otf, otb, t42, cef, cff, gsf, ttc, svg, ik, mf and bdf (possibly
-      others as FontForge comes to support more formats). You can change this with
+      others as websharpstudios comes to support more formats). You can change this with
       the Filter pull down list -- there are several standard filters, and you
       may define your own.<BR>
       You may select multiple files (by holding down the shift or control keys
       when clicking on them), and all selected files will be opened.<BR>
-      FontForge can open macbinary resource files containing postscript and truetype
+      websharpstudios can open macbinary resource files containing postscript and truetype
       fonts (it does not open bitmap fonts currently)<BR>
-      FontForge does not open Acorn RISC/OS files, but you can use
+      websharpstudios does not open Acorn RISC/OS files, but you can use
       <I><A HREF="acorn2sfd.html">acorn2sfd</A></I> to convert them into an sfd
-      file which FontForge can then open.<BR>
+      file which websharpstudios can then open.<BR>
       If you have <A HREF="http://www.tug.org/"><I>mf </I></A>and
       <I><A HREF="http://sourceforge.net/projects/autotrace/">autotrace</A>
-      </I>installed on your machine FontForge will process metafont's mf files
+      </I>installed on your machine websharpstudios will process metafont's mf files
       for you. But you might want to use <I>pktrace, mftrace</I> or some other
       standalone program to do the job.
       <P>
       When opening a TTC file, or a mac dfont -- files which potentially contain
       several fonts -- you will be given a dlg showing a list of all fonts in the
-      file, you get to pick which you want to open. (FontForge does not provide
+      file, you get to pick which you want to open. (websharpstudios does not provide
       a way to open all fonts in a file at once). If you know the fontname you
       are interested in you may append it to the filename in the open dlg as:
       <CODE>Helvetica.dfont(Helvetica Bold)</CODE> or if you know the font index
       <CODE>Helvetica.dfont(0)</CODE> (indeces start at 0, not 1).
       <P>
-      When FontForge opens a pdb file (one that contains palm bitmap fonts) it
+      When websharpstudios opens a pdb file (one that contains palm bitmap fonts) it
       will open the first font it finds. In most formats it will list the available
       fonts in a file and ask which you want, but palm fonts contain no fontname
       so there is no way to identify them.
       <P>
-      When importing a <A NAME="type3-import">type3</A> font FontForge will ask
+      When importing a <A NAME="type3-import">type3</A> font websharpstudios will ask
       you a few questions. It shouldn't have to ask these questions, but this is
-      an imperfect world and FontForge an imperfect program. In some rare cases
-      FontForge will crash if it tries to do a remove overlap. The remove overlap
+      an imperfect world and websharpstudios an imperfect program. In some rare cases
+      websharpstudios will crash if it tries to do a remove overlap. The remove overlap
       functionality is important for interpreting stroked paths so you really should
       have it on. But if a crash happens then, turn it off (and the crash should
       not repeat, but some functionality will be lost).
       <P>
-      Not all font formats that fontforge supports have standard extensions. Mac
+      Not all font formats that websharpstudios supports have standard extensions. Mac
       resource forks are one example, postscript cid, type0 and type3 fonts are
-      another. FontForge can still open these formats, even if it fails to display
+      another. websharpstudios can still open these formats, even if it fails to display
       the file. You can always type the file name in yourself if you don't see
       it in the file list.
       <P>
-      FontForge can also read (many) fonts out of a pdf file. FontForge usually
+      websharpstudios can also read (many) fonts out of a pdf file. websharpstudios usually
       does not list pdf files (because they aren't really designed as mechanisms
       for transporting fonts and most such fonts will be incomplete due to subsetting
       and other optimizations), but you can always type in the name of one directly
       (or use the [Filter] button to define a filter for pdf files).
       <P>
-      You can also force fontforge to rename all the glyphs in the font being read
+      You can also force websharpstudios to rename all the glyphs in the font being read
       in to fit some standard naming convention. See the section on
       <A HREF="encodingmenu.html#namelist">namelists</A> for more information.
 	<HR>
@@ -406,7 +406,7 @@
     <DT>
       <A NAME="RevertBackup">Revert To Backup</A>
     <DD>
-      Only available in the font view. When FontForge saves an sfd file (with the
+      Only available in the font view. When websharpstudios saves an sfd file (with the
       <A HREF="#Save">Save</A> command, not the <A HREF="#SaveAs">Save As</A> command)
       it creates a backup version of the file containing the old data (this file
       has the same name as the main branch with a "~" character appended to it).
@@ -434,7 +434,7 @@
       glyph into an encapsulated postscript (.eps), pdf, svg or xfig format (.fig
       -- the conversion to fig format is not the best) file. You may also have
       the glyph rasterized and output in either .xbm or .bmp (or png if you have
-      that library) formats (FontForge will prompt you for a pixelsize. bmp also
+      that library) formats (websharpstudios will prompt you for a pixelsize. bmp also
       allows you to generate an anti-aliased image, and you will be prompted for
       bits per pixel. 1 bit per pixel is a bitmap).
       <P>
@@ -452,7 +452,7 @@
       (So "A" from the bitmap font goes into the background of the "A" outline
       glyph), this is to make tracing glyphs easier. Be careful, you need to load
       a big bitmap for autotrace to be useful.
-      <FONT COLOR="Red"><SMALL><STRONG>NOTE: </STRONG></SMALL></FONT>FontForge
+      <FONT COLOR="Red"><SMALL><STRONG>NOTE: </STRONG></SMALL></FONT>websharpstudios
       is unable to read an encoding from pk files, you will may need to set it
       with "Force Encoding" after you've loaded the pk file.<BR>
       You may also load images into the glyph backgrounds. There are two ways to
@@ -470,16 +470,16 @@
       If you are editing a <A HREF="multilayer.html">multi-layered font</A>
       then you can also import an image into one of the foreground layers.
       <P>
-      <SMALL>FontForge does best when given <A NAME="bitmapfiles">bitmap</A> images.
+      <SMALL>websharpstudios does best when given <A NAME="bitmapfiles">bitmap</A> images.
       It will grey out the foreground and make the background transparent. It will
       also compress them when it stores them in the sfd file. It will handle most
       other image formats but does not try to optimize them in anyway. Please use
       bitmaps here.</SMALL>
       <P>
       You may load an encapsulated postscript file (or rather the sub-set of postscript
-      that FontForge understands) into the foreground of glyphs. As with images
+      that websharpstudios understands) into the foreground of glyphs. As with images
       above this may import either depending on the selection or a template.<BR>
-      If you have libxml2 on your system then FontForge will also be able to import
+      If you have libxml2 on your system then websharpstudios will also be able to import
       svg files. As with postscript, only a subset of svg is understood).
       <P>
       In the Outline View this allows you to import an image into the background
@@ -501,11 +501,11 @@
       for an <A HREF="featurefile.html">adobe feature file</A> (.fea) for
       feature/lookup information or an afm, ofm, tfm, pfm or mac resource file
       containing kerning pairs for the specified font. In many cases it will not
-      be needed because when FontForge opens a .pfa or .pfb font it will automagically
+      be needed because when websharpstudios opens a .pfa or .pfb font it will automagically
       search for an appropriate .afm file in the same place. But sometimes afm
       files are stored in other directories. And sometimes you want to import
       information from TeX, from mac resource files or from windows pfm files.<BR>
-      <FONT COLOR="Red"><SMALL><STRONG>NOTE: </STRONG></SMALL></FONT>FontForge
+      <FONT COLOR="Red"><SMALL><STRONG>NOTE: </STRONG></SMALL></FONT>websharpstudios
       is unable to read an encoding from tfm/ofm files or from mac resource files,
       it is your responsibility to ensure that the encoding of your font matches
       that of the tfm file <EM>BEFORE</EM> merging kerning information. This is
@@ -513,7 +513,7 @@
       <P>
       Note: When loading a postscript font from a mac resource file, the associated
       kerning data will be found in the FOND stored with a bitmap font for this
-      face. FontForge can't guess the name of this file when loading the font.
+      face. websharpstudios can't guess the name of this file when loading the font.
       You must figure it out yourself.
     <DT>
       <A NAME="Print">Print</A>...
@@ -543,17 +543,17 @@
       <A NAME="prefs">Preferences...</A>
     <DD>
       This pops up a <A HREF="prefs.html">dialog allowing you to configure various
-      esoteric bits of fontforge</A>.
+      esoteric bits of websharpstudios</A>.
       <P>
-      A number of things, like the colors used in FontForge, that might be controlled
+      A number of things, like the colors used in websharpstudios, that might be controlled
       from a preference window are controlled by <A HREF="xres.html">X Resources</A>
       below.
     <DT>
       <A NAME="ResEdit">X Resource Editor...</A>
     <DD>
-      <A HREF="resedit.html">This dialog</A> allows you to edit FontForge's X
+      <A HREF="resedit.html">This dialog</A> allows you to edit websharpstudios's X
       Resources, you may either save them to a file for perminant storage, or change
-      the current settings for this use of FontForge.
+      the current settings for this use of websharpstudios.
     <DT>
       <A NAME="Quit">Quit</A>
     <DD>

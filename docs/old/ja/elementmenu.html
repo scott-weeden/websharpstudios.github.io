@@ -7,7 +7,7 @@
 <!--<TITLE>The Element Menu</TITLE>-->
     <TITLE>エレメントメニュー</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -252,9 +252,9 @@
   <P>
 <!--
   There are also two menu entries which are not part of the default build but
-  which may be configured by modifying <CODE>configure-fontforge.h</CODE> before
-  compiling FontForge. -->
-  その他、FontForge のデフォルトのままのビルドではメニューには現れませんが、<CODE>configure-fontforge.h</CODE> を変更してからコンパイルすることによって利用可能になるメニュー項目が 2 個あります。
+  which may be configured by modifying <CODE>configure-websharpstudios.h</CODE> before
+  compiling websharpstudios. -->
+  その他、websharpstudios のデフォルトのままのビルドではメニューには現れませんが、<CODE>configure-websharpstudios.h</CODE> を変更してからコンパイルすることによって利用可能になるメニュー項目が 2 個あります。
   <UL>
     <LI>
 <!--  <A HREF="#TilePath">Tile Path</A>-->
@@ -329,10 +329,10 @@
 	  <P>
 <!--	  The sub-menu consists of a list of feature names (and a few more generic
 	  names like "All" which will provide defaults for everything it can figure
-	  out, and "Ligatures" which will provide defaults for all ligatures). FontForge
+	  out, and "Ligatures" which will provide defaults for all ligatures). websharpstudios
 	  will look for defaults for all selected glyph. There is also one special
 	  entry: -->
-	  このサブメニューは機能名のリスト (それに加えて、算出可能なすべての値に対するデフォルトを指定する“All”と、すべての合字に関するデフォルトを与える“Ligatures”) からなります。FontForge は選択中のすべてのグリフに対するデフォルトを探します。それに加え、特別な項目が 1 個あります:
+	  このサブメニューは機能名のリスト (それに加えて、算出可能なすべての値に対するデフォルトを指定する“All”と、すべての合字に関するデフォルトを与える“Ligatures”) からなります。websharpstudios は選択中のすべてのグリフに対するデフォルトを探します。それに加え、特別な項目が 1 個あります:
 	  <DL>
 	    <DT>
 <!--	      Suffix to Tag... -->
@@ -343,12 +343,12 @@
 	      "A" might be named "A.swash". -->
 	      Adobe のグリフ命名の慣例では、別字形のグリフは標準グリフの名前に接尾子を追加した名前をつけることになっています。これにより、“A”のスワッシュ字形は“A.swash”という名前をつけることになります。
 	      <P>
-<!--	      Using this command you can tell FontForge to associate a given suffix with
+<!--	      Using this command you can tell websharpstudios to associate a given suffix with
 	      a feature tag. (in the above example you could associate ".swash" with 'swsh'
-	      - - except you don't need to, because FontForge already knows about that one).
+	      - - except you don't need to, because websharpstudios already knows about that one).
 	      Select the letter "A", then enter the command, then "A" will be linked to
 	      "A.swash" as a 'swsh'. -->
-	      このコマンドを使用すると、機能タグに対応する接尾子を FontForge に対して指定することができます。(上の例で言えば、&lsquo;swsh&rsquo;機能に“.swash”という接尾子を対応づけたことになります——特別にそうしないよう指定しないかぎり、デフォルトでこうなります。FontForge はあらかじめこの対応を知っています)。
+	      このコマンドを使用すると、機能タグに対応する接尾子を websharpstudios に対して指定することができます。(上の例で言えば、&lsquo;swsh&rsquo;機能に“.swash”という接尾子を対応づけたことになります——特別にそうしないよう指定しないかぎり、デフォルトでこうなります。websharpstudios はあらかじめこの対応を知っています)。
 	  </DL>
 	<DT>
 <!--	  <A NAME="Rm-All-Feat">Remove All Features</A> -->
@@ -427,13 +427,13 @@
       file. -->
       編集中のフォントにビットマップが含まれているときは、それらのピクセルサイズを一覧表示します。リストからサイズ表示を取り除くと、SFD ファイルからそのサイズのビットマップフォントが削除されます。サイズを追加すると、そのサイズのフォントが追加され、SFD ファイルに格納されます。
       <P>
-<!--  FontForge deals in pixel sizes, not point sizes. The conversion between pixels
+<!--  websharpstudios deals in pixel sizes, not point sizes. The conversion between pixels
       and points differs on different systems and indeed on different screens.
       A point is (approximately) 1/72 of an inch, a pixel is however big a pixel
       happens to be on your screen. Usually pixels range from about 1/72 of an
       inch to about 1/144 of an inch. Different systems support different screen
-      resolutions as "standard", and FontForge tries to know about these standards.-->
-      FontForge が取り扱うのはピクセルサイズであってポイントサイズではありません。ピクセルとポイントの間の変換はシステムごとに異なり、実際には表示画面ごとに異なります。1 ポイントは (約) 1/72 インチですが、1 ポイントが何ピクセルに相当するかは画面の設定によって異なります。通常 1 ピクセルは 1/72 インチ〜1/144 インチです。システムが異なると "標準" としてサポートされるデフォルトの画面解像度は異なります。FontForge は、以下の標準について知ろうと努めています。
+      resolutions as "standard", and websharpstudios tries to know about these standards.-->
+      websharpstudios が取り扱うのはピクセルサイズであってポイントサイズではありません。ピクセルとポイントの間の変換はシステムごとに異なり、実際には表示画面ごとに異なります。1 ポイントは (約) 1/72 インチですが、1 ポイントが何ピクセルに相当するかは画面の設定によって異なります。通常 1 ピクセルは 1/72 インチ〜1/144 インチです。システムが異なると "標準" としてサポートされるデフォルトの画面解像度は異なります。websharpstudios は、以下の標準について知ろうと努めています。
       <TABLE BORDER CELLPADDING="2" ALIGN=Center>
 	<CAPTION>
 <!--	  Some conversions between points and pixels -->
@@ -499,10 +499,10 @@
       <P>
 <!--  Normally the new glyphs are created by rasterizing the outline font. If your
       system has the freetype2 library installed (and you checked the "Use FreeType"
-      box) then FontForge will use the FreeType rasterizer to generate bitmaps,
-      otherwise it will use FontForge's built-in rasterizer (which isn't as good,
+      box) then websharpstudios will use the FreeType rasterizer to generate bitmaps,
+      otherwise it will use websharpstudios's built-in rasterizer (which isn't as good,
       but involves a little less overhead). -->
-      通常は、新しいグリフはアウトラインフォントをラスタライズすることによって作成されます。システムに freetype2 ライブラリがインストールされている場合 (そして「FreeType を使う」チェックボックスにチェックが入っている場合) FontForge はビットマップの生成に FreeType ラスタライザを使用します。それ以外の場合、FontForge は内蔵ラスタライザ (能力では劣りますが、オーバヘッドは少し削減されます) を使用します。
+      通常は、新しいグリフはアウトラインフォントをラスタライズすることによって作成されます。システムに freetype2 ライブラリがインストールされている場合 (そして「FreeType を使う」チェックボックスにチェックが入っている場合) websharpstudios はビットマップの生成に FreeType ラスタライザを使用します。それ以外の場合、websharpstudios は内蔵ラスタライザ (能力では劣りますが、オーバヘッドは少し削減されます) を使用します。
       <P>
 <!--  Finally, if you have no outline font then the new glyph will be created
       by scaling the (bitmap) font displayed in the font view. -->
@@ -512,15 +512,15 @@
       instead the entire complex of sub-fonts share bitmaps.<BR Clear=Right> -->
       CID フォントでは、各サブセットにはビットマップは存在しません。その代りに、サブフォントの複合体全体がビットマップを共有します。<BR Clear=Right>
       <P>
-      <IMG SRC="greymapsavail.png" WIDTH="232" HEIGHT="286" ALIGN="Right"><!--FontForge
+      <IMG SRC="greymapsavail.png" WIDTH="232" HEIGHT="286" ALIGN="Right"><!--websharpstudios
       also supports anti-aliased bitmap fonts, and you can use this dialog to generate
       them. If you want to generate a 12 point anti-aliased font with 8 bits per
-      pixel you would type 12@8 into the dialog above. FontForge supports 1, 2,
+      pixel you would type 12@8 into the dialog above. websharpstudios supports 1, 2,
       4 and 8 bit per pixel fonts (a 1 bit per pixel font is a standard bitmap,
       the others are greymaps).<BR>
       (New greymaps can not be created by scaling old greymaps, if you wish to
       generate a greymap font, you must have an outline font). -->
-      FontForge はアンチエイリアス表示のビットマップフォントもサポートしており、このダイアログを使ってそれらを生成するように設定することもできます。12 ポイントのアンチエイリアスフォントを各ピクセル 8 ビットの階調で作成したいなら、上のダイアログに 12@8 と入力します。FontForge は各ピクセル 1, 2, 4, 8 ビットのフォントをサポートしています (各ピクセル 1 ビットのフォントは標準ビットマップで、その他はグレイマップです)。<BR>
+      websharpstudios はアンチエイリアス表示のビットマップフォントもサポートしており、このダイアログを使ってそれらを生成するように設定することもできます。12 ポイントのアンチエイリアスフォントを各ピクセル 8 ビットの階調で作成したいなら、上のダイアログに 12@8 と入力します。websharpstudios は各ピクセル 1, 2, 4, 8 ビットのフォントをサポートしています (各ピクセル 1 ビットのフォントは標準ビットマップで、その他はグレイマップです)。<BR>
       (新しいグレイマップは古いグレイマップを拡大・縮小して作成することはできません。グレイマップフォントを作成したい場合、アウトラインフォントを持っている必要があります)。
     <DT>
 <!--  <A NAME="Regenerate">Regenerate</A> Bitmaps...-->
@@ -613,13 +613,13 @@
       <A NAME="NonLinear">非線形の</A>変形(<U>N</U>)...
     <DD>
 <!--  This command is not available in the default build, you must modify the file
-      <CODE>configure-fontforge.h</CODE> and then rebuild FontForge. This command
+      <CODE>configure-websharpstudios.h</CODE> and then rebuild websharpstudios. This command
       allows the user to specify a non-linear transformation as a pair of expressions
       (the first specifies the transformation for the x coordinate, the second
       for the y coordinate). These expressions may be fairly general functions
       of x and y. See the <A HREF="scripting-alpha.html#NonLinearTransform">scripting
       page</A> for a description of the syntax. -->
-      このコマンドはデフォルトのビルドでは利用できません。<CODE>configure-fontforge.h</CODE> を修正して FontForge をビルドしなおす必要があります。このコマンドを使うと、非線形の座標変換を 2 個の数式として指定することができます (最初が x 座標の変換式を、2 番目が y 座標の変換式を表します)。これらの数式には x と y の非常に一般的な式を書くことができます。構文の説明については、<A HREF="scripting-alpha.html#NonLinearTransform">スクリプト処理のページ</A>を参照してください。
+      このコマンドはデフォルトのビルドでは利用できません。<CODE>configure-websharpstudios.h</CODE> を修正して websharpstudios をビルドしなおす必要があります。このコマンドを使うと、非線形の座標変換を 2 個の数式として指定することができます (最初が x 座標の変換式を、2 番目が y 座標の変換式を表します)。これらの数式には x と y の非常に一般的な式を書くことができます。構文の説明については、<A HREF="scripting-alpha.html#NonLinearTransform">スクリプト処理のページ</A>を参照してください。
     <DT>
 <!--  <A NAME="Expand">Expand</A> Stroke...-->
       輪郭を<A NAME="Expand">太らせる(<U>E</U>)...</A>
@@ -654,10 +654,10 @@
       <A NAME="TilePath">パスのタイル敷き(<U>P</U>)</A>
     <DD>
 <!--  This command is not available in the default build, you must modify the file
-      <CODE>configure-fontforge.h</CODE> and then rebuild FontForge. Not available
+      <CODE>configure-websharpstudios.h</CODE> and then rebuild websharpstudios. Not available
       in quadratic (truetype) fonts. This command takes the contents of the clipboard
       and treats it as a tile which is applied to any selected contours. -->
-      このコマンドはデフォルトのビルドでは利用できません。2 次曲線 (TrueType) フォントでは使用できません。ファイル <CODE>configure-fontforge.h</CODE> を修正してから FontForge を再ビルドする必要があります。このコマンドはクリップボードの内容をとり、それを選択中のパスに当てはめるためのタイルであるかのように扱います。
+      このコマンドはデフォルトのビルドでは利用できません。2 次曲線 (TrueType) フォントでは使用できません。ファイル <CODE>configure-websharpstudios.h</CODE> を修正してから websharpstudios を再ビルドする必要があります。このコマンドはクリップボードの内容をとり、それを選択中のパスに当てはめるためのタイルであるかのように扱います。
     <DT>
 <!--  None of these is available in the bitmap view. -->
       これらはいずれもビットマップビューには存在しません。
@@ -682,11 +682,11 @@
 	  <P>
 	  <IMG src="../../_images/expandedlines.png" WIDTH="247" HEIGHT="247">
 	  <IMG src="../../_images/overlappedlines.png" WIDTH="247" HEIGHT="247"><BR>
-<!--	  This command is probably the buggiest in FontForge. So before FontForge invokes
+<!--	  This command is probably the buggiest in websharpstudios. So before websharpstudios invokes
 	  the command it will save the state to the error recovery file.<BR>
 	  Warning: Splines which are tangent (or nearly so) cause problems. Points
 	  which are close together can cause problems. -->
-	  このコマンドは FontForge の中でおそらく最もバグが多いはずです。ですから、FontForge はコマンドを起動する前にエラー回復ファイルに現状を保存します。<BR>
+	  このコマンドは websharpstudios の中でおそらく最もバグが多いはずです。ですから、websharpstudios はコマンドを起動する前にエラー回復ファイルに現状を保存します。<BR>
       警告: 平行な (またはほとんどそれに近い) スプラインは問題を起こします。あまりに近い点も問題を起こす可能性があります。
 	<DT>
 <!--	  <A NAME="Intersect">Intersect</A> -->
@@ -798,9 +798,9 @@
 	      code, but there are certainly cases where the optimization will have no effect). -->
 	      PostScript Type1 および Type2 フォントでは (通常) グリフを表現するコードのサイズを僅かに縮減します。(この処理がコードサイズを増やすような場合は無いと思いますが、最適化が意味をもたない場合があるのは確かです。
 	    <LI>
-<!--	      It will enable FontForge to find more reusable bits of code which it can
+<!--	      It will enable websharpstudios to find more reusable bits of code which it can
 	      put in subroutines -->
-	      FontForge が、再利用可能でサブルーチンに移動できるコード片をより多く発見することができます。
+	      websharpstudios が、再利用可能でサブルーチンに移動できるコード片をより多く発見することができます。
 	  </UL>
 	<DT>
 <!--	  <A NAME="CanonicalContours">Canonical Contour Order</A> -->
@@ -823,8 +823,8 @@
       to a spline if: 1) The spline is longer than the em-size/32, or 2) the entire
       contour (rather than just the current spline) attains its maximum/minimum
       value at this point. If the added extrema is extremely close to an already
-      existing point, fontforge may remove that point to avoid creating tiny splines. -->
-      ビットマップビューでは使用できません。TrueType と Type1 のどちらでも、水平および垂直方向の極値にあたる位置に点が存在することを推奨しています。アウトラインビューでは、何らかの点が選択されていれば、選択された点の間に存在するすべての極値に点を追加します。フォントビューおよびメトリックビュー (または、アウトラインビューで何も選択されていなければ) 以下の 2 条件のいずれかが満たされている極値に点を追加します。1) スプラインの長さが em / 32 よりも大きい、2) その点が文字の輪郭全体 (現在のスプラインだけでなく) の極大/極小値に該当する。もし、追加した点のごく近くに既存の点が位置する場合、FontForge は微小なスプラインが発生するのを避けるためにその点を削除します。
+      existing point, websharpstudios may remove that point to avoid creating tiny splines. -->
+      ビットマップビューでは使用できません。TrueType と Type1 のどちらでも、水平および垂直方向の極値にあたる位置に点が存在することを推奨しています。アウトラインビューでは、何らかの点が選択されていれば、選択された点の間に存在するすべての極値に点を追加します。フォントビューおよびメトリックビュー (または、アウトラインビューで何も選択されていなければ) 以下の 2 条件のいずれかが満たされている極値に点を追加します。1) スプラインの長さが em / 32 よりも大きい、2) その点が文字の輪郭全体 (現在のスプラインだけでなく) の極大/極小値に該当する。もし、追加した点のごく近くに既存の点が位置する場合、websharpstudios は微小なスプラインが発生するのを避けるためにその点を削除します。
     <DT>
 <!--  Effects-->
       効果
@@ -914,10 +914,10 @@
 <!--	  <A NAME="Space-Pts">Space Points</A>-->
 	  <A NAME="Space-Pts">点の間隔を均等に(<U>S</U>)</A>
 	<DD>
-<!--	  If you have three or more points selected then FontForge will figure out
+<!--	  If you have three or more points selected then websharpstudios will figure out
 	  the coordinate that has the greatest change and will space the points out
 	  regularly along that axis.<BR> -->
-	  3 個以上の点を選択している場合、FontForge は差が大きいほうの座標軸を選び、その軸に沿って等間隔に点を分散させます。<BR>
+	  3 個以上の点を選択している場合、websharpstudios は差が大きいほうの座標軸を選び、その軸に沿って等間隔に点を分散させます。<BR>
 <!--	  If you select one point (and that point is in the middle of a path) then
 	  (internally) the point's location will be expressed in a coordinate system
 	  which is rotated so that one axis is parallel to the line between the two
@@ -954,16 +954,16 @@
 <!--	  Make <A NAME="Parallel">Parallel</A> -->
 	  <A NAME="Parallel">平行に(<U>P</U>)...</A>
 	<DD>
-<!--	  If four points are selected, and there are two lines between them, then FontForge
+<!--	  If four points are selected, and there are two lines between them, then websharpstudios
 	  will make those lines parallel. If there are four lines between them (ie.
-	  they form a quadrilateral, then FontForge will turn it into a parallelogram.
+	  they form a quadrilateral, then websharpstudios will turn it into a parallelogram.
 	  (note, this only works on lines, not on curved splines)<BR>
-	  The last point selected will be the one moved (sometimes FontForge doesn't
+	  The last point selected will be the one moved (sometimes websharpstudios doesn't
 	  remember which point was selected last, then it will just pick one randomly.
 	  If you don't want that to happen, select your points and then single click
 	  on the one you want moved). -->
-	  4 個の点を選択中で、それらの間に 2 本の直線が通っている場合、FontForge はそれらの線が平行になるように点を移動します。4 本の直線が通っている場合 (つまり、四角形を構成している場合)、FontForge はそれらを平行四辺形に変形します (これは直線だけに作用し、曲線のスプラインには作用しないことにご注意ください)。<BR>
-	  移動するのは最後に選択した線です (FontForge は、どの点が最後に選択されたか覚えていないことがしばしばあります。その時は 1 個をランダムに選びます。これを避けたい場合は、点を選択した後で移動したい点をシングルクリックしてください)。
+	  4 個の点を選択中で、それらの間に 2 本の直線が通っている場合、websharpstudios はそれらの線が平行になるように点を移動します。4 本の直線が通っている場合 (つまり、四角形を構成している場合)、websharpstudios はそれらを平行四辺形に変形します (これは直線だけに作用し、曲線のスプラインには作用しないことにご注意ください)。<BR>
+	  移動するのは最後に選択した線です (websharpstudios は、どの点が最後に選択されたか覚えていないことがしばしばあります。その時は 1 個をランダムに選びます。これを避けたい場合は、点を選択した後で移動したい点をシングルクリックしてください)。
       </DL>
     <DT>
 <!--  Round -->
@@ -973,21 +973,21 @@
 <!--	  <A NAME="Round">Round</A> to Int -->
 	  整数値に(<U>I</U>)<A NAME="Round">丸める</A>
 	<DD>
-<!--	  Not in the bitmap view. FontForge stores point locations as real numbers
+<!--	  Not in the bitmap view. websharpstudios stores point locations as real numbers
 	  (ie. it retains fractional values). TrueType only supports integral values
 	  (And much of the time you want integral values in Type1 and Type2 fonts also
 	  - - using real numbers makes font files bigger), so when generating the font
 	  points are rounded to integral values. This command will round all selected
 	  locations to the closest integer.-->
-	  ビットマップビューでは使用できません。FontForge は点の位置を実数として格納しています (つまり、それらの値には端数が含まれます)。TrueType は整数値のみをサポートしています (また、Type1, Type2 の両形式のフォントでもほとんどの場合は整数値が望ましいでしょう——実数値を使用するとフォントファイルが大きくなります) ので、フォントを出力する時には座標は整数値に丸められます。このコマンドは、選択した対象の座標値をすべて一番近い整数に丸めます。
+	  ビットマップビューでは使用できません。websharpstudios は点の位置を実数として格納しています (つまり、それらの値には端数が含まれます)。TrueType は整数値のみをサポートしています (また、Type1, Type2 の両形式のフォントでもほとんどの場合は整数値が望ましいでしょう——実数値を使用するとフォントファイルが大きくなります) ので、フォントを出力する時には座標は整数値に丸められます。このコマンドは、選択した対象の座標値をすべて一番近い整数に丸めます。
 	<DT>
 <!--	  Round to <A NAME="Hundredths">Hundredths</A> -->
 	  <A NAME="Hundredths">1/100単位(<U>H</U>)</A>に丸める
 	<DD>
-<!--	  Not in bitmap or metrics views. FontForge's Type1 output is limited to hundredths
+<!--	  Not in bitmap or metrics views. websharpstudios's Type1 output is limited to hundredths
 	  of an em-unit, even when rounding is turned off in the Generate [Options]
 	  dialog. -->
-	      ビットマップビューとメトリックビューでは使用できません。FontForge の Type1 出力の精度は、出力ダイアログの <CODE>[オプション]</CODE> で、整数への丸めを off にした場合でも、em 単位の 1/100 に限られています。
+	      ビットマップビューとメトリックビューでは使用できません。websharpstudios の Type1 出力の精度は、出力ダイアログの <CODE>[オプション]</CODE> で、整数への丸めを off にした場合でも、em 単位の 1/100 に限られています。
 	<DT>
 <!--	  Round to <A NAME="Cluster">Cluster</A> -->
 	  近い値を<A NAME="Cluster">まとめる(<U>C</U>)</A>
@@ -1007,10 +1007,10 @@
       appear in the same order. -->
       このコマンドはどの順番で輪郭・参照と画像を描画するかを変更します。この輪郭と参照の順序はグリフの形に影響しないので、ほとんどの場合は意味がありません。関係がある唯一の場合は、フォントを補間する場合とマルチプルマスターフォントの場合です。そのときは、同等の輪郭が出現する順番は同じでなければなりません。
       <P>
-<!--  If you have a glyph which contains both contours and references, FontForge
+<!--  If you have a glyph which contains both contours and references, websharpstudios
       does not specify whether references or contours are drawn first (or whether
       the two are intermixed). If this matters to you, unlink your references. -->
-      輪郭と参照の両方を含むグリフがある場合、FontForge が参照と輪郭のどちらを先に描くか (それとも 2 つを混ぜこぜに描画するか) を指定することはできません。これが問題になる場合は、参照のリンクを解除してください。
+      輪郭と参照の両方を含むグリフがある場合、websharpstudios が参照と輪郭のどちらを先に描くか (それとも 2 つを混ぜこぜに描画するか) を指定することはできません。これが問題になる場合は、参照のリンクを解除してください。
     <DT>
 <!--  <A NAME="Clockwise">Clockwise</A>-->
       <A NAME="Clockwise">時計回り(<U>O</U>)</A>
@@ -1100,8 +1100,8 @@
       in one fell swoop. -->
       フォントビューでのみ使用可能です。Unicode フォントを作成している時には、他のエフォントに併合したくなることがよくあるでしょう。もちろん、他のフォントからカット&amp;ペーストをすれば可能ですが、たいへん手間がかかるでしょう。それにひきかえ、このコマンドはすべてを一撃で片付けてしまいます。
       <P>
-<!--  FontForge does the following when merging CID-keyed fonts: -->
-      FontForge は、CID フォントを統合する時には以下の処理を行います。
+<!--  websharpstudios does the following when merging CID-keyed fonts: -->
+      websharpstudios は、CID フォントを統合する時には以下の処理を行います。
       <UL>
 	<LI>
 <!--	  If the font in the window (the mergee) is a normal font and the other font
@@ -1138,9 +1138,9 @@
 	  これはいくぶん問題だと感じますが、より良い解決方法を思い付くことができません。
       </UL>
       <P>
-<!--  FontForge will also copy advanced typographic features, kerning, ligatures,
+<!--  websharpstudios will also copy advanced typographic features, kerning, ligatures,
       etc. -->
-      FontForge は高度タイポグラフィ機能、カーニング、合字などもコピーします。
+      websharpstudios は高度タイポグラフィ機能、カーニング、合字などもコピーします。
     <DT>
 <!--  <A NAME="Interpolate">Interpolate</A> Fonts...-->
       フォントの<A NAME="Interpolate">補間(<U>L</U>)...</A>
@@ -1188,12 +1188,12 @@
       </UL>
       <P>
 <!--  You can also use it to compare truetype and postscript versions of the same
-      font. Normally fontforge checks to make sure all the splines match exactly,
+      font. Normally websharpstudios checks to make sure all the splines match exactly,
       but you can also have it test whether a contour in one font is always close
       to the similar contour in another font, or whether a contour in one font
       is inside a reference in another (these are common when comparing PostScript
       fonts where the format loses references). -->
-      同じフォントの TrueType 版と PostScript 版の比較をすることもできます。通常は FontForge はすべてのスプラインが完全に一致するかどうかを確かめるための検査を行いますが、これを使って、片方のフォントが常にもう片方のフォントの同等な輪郭とどこでもほぼ一致するかどうか、または片方のフォントに含まれる輪郭がもう片方のフォント内の参照に含まれているか (これは、フォーマットが参照を含まない PostScript フォントを比較する時によく起こります) を検査することもできます。
+      同じフォントの TrueType 版と PostScript 版の比較をすることもできます。通常は websharpstudios はすべてのスプラインが完全に一致するかどうかを確かめるための検査を行いますが、これを使って、片方のフォントが常にもう片方のフォントの同等な輪郭とどこでもほぼ一致するかどうか、または片方のフォントに含まれる輪郭がもう片方のフォント内の参照に含まれているか (これは、フォーマットが参照を含まない PostScript フォントを比較する時によく起こります) を検査することもできます。
       <P>
 <!--
       Comparing PostScript hintmasks is another somewhat iffy topic. There are

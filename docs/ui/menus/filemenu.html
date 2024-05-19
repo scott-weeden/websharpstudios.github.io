@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>The File Menu &#8212; FontForge 20230101 documentation</title>
+    <title>The File Menu &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -47,55 +47,55 @@ default encoding may be changed in the preference dlg.</p>
 <span class="sig-name descname"><span class="pre">Open</span></span></dt>
 <dd><img alt="../../_images/openfont.png" class="align-right" src="../../_images/openfont.png" />
 <p>Brings up a file chooser and allows you to open a font in any of the formats
-FontForge understands.</p>
+websharpstudios understands.</p>
 <p>If you open a truetype font containing bitmaps then you will be asked if you
 want to load some of the bitmaps as well as the outlines.</p>
 <p>By default this dialog will display all files with extensions of pfa, pfb,
 pt3, sfd, ttf, otf, otb, t42, cef, cff, gsf, ttc, svg, ik, mf and bdf
-(possibly others as FontForge comes to support more formats). You can change
+(possibly others as websharpstudios comes to support more formats). You can change
 this with the Filter pull down list – there are several standard filters,
 and you may define your own.</p>
 <p>You may select multiple files (by holding down the shift or control keys when
 clicking on them), and all selected files will be opened.</p>
-<p>FontForge can open macbinary resource files containing postscript and
+<p>websharpstudios can open macbinary resource files containing postscript and
 truetype fonts (it does not open bitmap fonts currently)</p>
-<p>FontForge does not open Acorn RISC/OS files, but you can use
+<p>websharpstudios does not open Acorn RISC/OS files, but you can use
 <a class="reference internal" href="../../fontutils/acorn2sfd.html"><span class="doc">acorn2sfd</span></a> to convert them into an sfd file which
-FontForge can then open.</p>
+websharpstudios can then open.</p>
 <p>If you have <a class="reference external" href="http://www.tug.org/">mf</a> and
 <a class="reference external" href="http://sourceforge.net/projects/autotrace/">autotrace</a> installed on
-your machine FontForge will process metafont’s mf files for you. But you
+your machine websharpstudios will process metafont’s mf files for you. But you
 might want to use <em>pktrace, mftrace</em> or some other standalone program to do
 the job.</p>
 <p>When opening a TTC file, or a mac dfont – files which potentially contain
 several fonts – you will be given a dlg showing a list of all fonts in the
-file, you get to pick which you want to open. (FontForge does not provide a
+file, you get to pick which you want to open. (websharpstudios does not provide a
 way to open all fonts in a file at once). If you know the fontname you are
 interested in you may append it to the filename in the open dlg as:
 <code class="docutils literal notranslate"><span class="pre">Helvetica.dfont(Helvetica</span> <span class="pre">Bold)</span></code> or if you know the font index
 <code class="docutils literal notranslate"><span class="pre">Helvetica.dfont(0)</span></code> (indeces start at 0, not 1).</p>
-<p>When FontForge opens a pdb file (one that contains palm bitmap fonts) it will
+<p>When websharpstudios opens a pdb file (one that contains palm bitmap fonts) it will
 open the first font it finds. In most formats it will list the available
 fonts in a file and ask which you want, but palm fonts contain no fontname so
 there is no way to identify them.</p>
-<p id="filemenu-type3-import">When importing a type3 font FontForge will ask you a few questions. It
+<p id="filemenu-type3-import">When importing a type3 font websharpstudios will ask you a few questions. It
 shouldn’t have to ask these questions, but this is an imperfect world and
-FontForge an imperfect program. In some rare cases FontForge will crash if it
+websharpstudios an imperfect program. In some rare cases websharpstudios will crash if it
 tries to do a remove overlap. The remove overlap functionality is important
 for interpreting stroked paths so you really should have it on. But if a
 crash happens then, turn it off (and the crash should not repeat, but some
 functionality will be lost).</p>
-<p>Not all font formats that fontforge supports have standard extensions. Mac
+<p>Not all font formats that websharpstudios supports have standard extensions. Mac
 resource forks are one example, postscript cid, type0 and type3 fonts are
-another. FontForge can still open these formats, even if it fails to display
+another. websharpstudios can still open these formats, even if it fails to display
 the file. You can always type the file name in yourself if you don’t see it
 in the file list.</p>
-<p>FontForge can also read (many) fonts out of a pdf file. FontForge usually
+<p>websharpstudios can also read (many) fonts out of a pdf file. websharpstudios usually
 does not list pdf files (because they aren’t really designed as mechanisms
 for transporting fonts and most such fonts will be incomplete due to
 subsetting and other optimizations), but you can always type in the name of
 one directly (or use the [Filter] button to define a filter for pdf files).</p>
-<p>You can also force fontforge to rename all the glyphs in the font being read
+<p>You can also force websharpstudios to rename all the glyphs in the font being read
 in to fit some standard naming convention. See the section on
 <a class="reference internal" href="encodingmenu.html#encodingmenu-namelist"><span class="std std-ref">namelists</span></a> for more information.</p>
 </dd></dl>
@@ -195,7 +195,7 @@ how they should be stored.</p>
 <span class="target" id="filemenu-revertbackup"></span><dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Revert</span> <span class="pre">To</span> <span class="pre">Backup</span></span></dt>
-<dd><p>Only available in the font view. When FontForge saves an sfd file (with the
+<dd><p>Only available in the font view. When websharpstudios saves an sfd file (with the
 <a class="reference internal" href="#filemenu-save"><span class="std std-ref">Save</span></a> command, not the <a class="reference internal" href="#filemenu-saveas"><span class="std std-ref">Save As</span></a>
 command) it creates a backup version of the file containing the old data
 (this file has the same name as the main branch with a “~” character appended
@@ -226,7 +226,7 @@ em-size) then the results may not be appropriate.</p>
 glyph into an encapsulated postscript (.eps), pdf, svg or xfig format (.fig
 – the conversion to fig format is not the best) file. You may also have the
 glyph rasterized and output in either .xbm or .bmp (or png if you have that
-library) formats (FontForge will prompt you for a pixelsize. bmp also allows
+library) formats (websharpstudios will prompt you for a pixelsize. bmp also allows
 you to generate an anti-aliased image, and you will be prompted for bits per
 pixel. 1 bit per pixel is a bitmap).</p>
 <p>In the Bitmap view this allows you to export the current glyph as either a
@@ -246,7 +246,7 @@ glyph), this is to make tracing glyphs easier. Be careful, you need to load a
 big bitmap for autotrace to be useful.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FontForge is unable to read an encoding from pk files, you will may need
+<p>websharpstudios is unable to read an encoding from pk files, you will may need
 to set it with “Force Encoding” after you’ve loaded the pk file.</p>
 </div>
 <p>You may also load images into the glyph backgrounds. There are two ways to do
@@ -262,11 +262,11 @@ or “cid*” are handled similarly except that they specify the current encodin
 (and the number must be in decimal rather than hex).</p>
 <p>If you are editing a <a class="reference internal" href="../dialogs/multilayer.html"><span class="doc">multi-layered font</span></a> then you can also
 import an image into one of the foreground layers.</p>
-<p id="filemenu-bitmapfiles"><span class="small">FontForge does best when given bitmap images. It will grey out the foreground and make the background transparent. It will also compress them when it stores them in the sfd file. It will handle most other image formats but does not try to optimize them in anyway. Please use bitmaps here.</span></p>
+<p id="filemenu-bitmapfiles"><span class="small">websharpstudios does best when given bitmap images. It will grey out the foreground and make the background transparent. It will also compress them when it stores them in the sfd file. It will handle most other image formats but does not try to optimize them in anyway. Please use bitmaps here.</span></p>
 <p>You may load an encapsulated postscript file (or rather the sub-set of
-postscript that FontForge understands) into the foreground of glyphs. As with
+postscript that websharpstudios understands) into the foreground of glyphs. As with
 images above this may import either depending on the selection or a template.</p>
-<p>If you have libxml2 on your system then FontForge will also be able to import
+<p>If you have libxml2 on your system then websharpstudios will also be able to import
 svg files. As with postscript, only a subset of svg is understood).</p>
 <p>In the Outline View this allows you to import an image into the background
 (see the above remark about <a class="reference internal" href="#filemenu-bitmapfiles"><span class="std std-ref">bitmaps</span></a>, or import
@@ -286,13 +286,13 @@ imported into the sfd.</p>
 for an <a class="reference internal" href="../../techref/featurefile.html"><span class="doc">adobe feature file</span></a> (.fea) for feature/lookup
 information or an afm, ofm, tfm, pfm or mac resource file containing kerning
 pairs for the specified font. In many cases it will not be needed because
-when FontForge opens a .pfa or .pfb font it will automagically search for an
+when websharpstudios opens a .pfa or .pfb font it will automagically search for an
 appropriate .afm file in the same place. But sometimes afm files are stored
 in other directories. And sometimes you want to import information from TeX,
 from mac resource files or from windows pfm files.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FontForge is unable to read an encoding from tfm/ofm files or from mac
+<p>websharpstudios is unable to read an encoding from tfm/ofm files or from mac
 resource files, it is your responsibility to ensure that the encoding of
 your font matches that of the tfm file <em>BEFORE</em> merging kerning
 information. This is unfortunate, sorry.</p>
@@ -301,7 +301,7 @@ information. This is unfortunate, sorry.</p>
 <p class="admonition-title">Note</p>
 <p>When loading a postscript font from a mac resource file, the associated
 kerning data will be found in the FOND stored with a bitmap font for this
-face. FontForge can’t guess the name of this file when loading the font.
+face. websharpstudios can’t guess the name of this file when loading the font.
 You must figure it out yourself.</p>
 </div>
 </dd></dl>
@@ -340,8 +340,8 @@ and the tenth by Control-Meta-0. The scripts are set in the
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Preferences...</span></span></dt>
 <dd><p>This pops up a
-<a class="reference internal" href="../dialogs/prefs.html"><span class="doc">dialog allowing you to configure various esoteric bits of fontforge</span></a>.</p>
-<p>A number of things, like the colors used in FontForge, that might be
+<a class="reference internal" href="../dialogs/prefs.html"><span class="doc">dialog allowing you to configure various esoteric bits of websharpstudios</span></a>.</p>
+<p>A number of things, like the colors used in websharpstudios, that might be
 controlled from a preference window are controlled by the
 <a class="reference internal" href="../misc/xres.html"><span class="doc">Appearance Editor</span></a> below.</p>
 </dd></dl>
@@ -349,18 +349,18 @@ controlled from a preference window are controlled by the
 <span class="target" id="filemenu-resedit"></span><dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Appearance</span> <span class="pre">Editor...</span></span></dt>
-<dd><p><a class="reference internal" href="../misc/resedit.html"><span class="doc">This dialog</span></a> allows you to edit FontForge’s appearance.
+<dd><p><a class="reference internal" href="../misc/resedit.html"><span class="doc">This dialog</span></a> allows you to edit websharpstudios’s appearance.
 You may either save the changes to a file for perminant storage or change the current
-settings for this use of FontForge (although the latter does not work for all settings).</p>
+settings for this use of websharpstudios (although the latter does not work for all settings).</p>
 </dd></dl>
 
 <span class="target" id="filemenu-confplugin"></span><dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Configure</span> <span class="pre">Plugins...</span></span></dt>
 <dd><p><a class="reference internal" href="../../techref/plugins.html"><span class="doc">This dialog</span></a> allows you to configure which
-FontForge plugins—discovered among python packages installed and available
-to the FontForge application—are loaded, and in what order. Plugins extend
-the functionality of FontForge, most often by adding entries in the Font View
+websharpstudios plugins—discovered among python packages installed and available
+to the websharpstudios application—are loaded, and in what order. Plugins extend
+the functionality of websharpstudios, most often by adding entries in the Font View
 and Char View <a class="reference internal" href="toolsmenu.html"><span class="doc">Tools menu</span></a>.</p>
 </dd></dl>
 
@@ -379,7 +379,7 @@ and Char View <a class="reference internal" href="toolsmenu.html"><span class="d
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -391,7 +391,7 @@ and Char View <a class="reference internal" href="toolsmenu.html"><span class="d
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../menus.html">Menus</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">The File Menu</a></li>
@@ -411,13 +411,13 @@ and Char View <a class="reference internal" href="toolsmenu.html"><span class="d
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -429,7 +429,7 @@ and Char View <a class="reference internal" href="toolsmenu.html"><span class="d
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../menus.html">Menus</a><ul>
       <li>Previous: <a href="../menus.html" title="previous chapter">Menus</a></li>
       <li>Next: <a href="editmenu.html" title="next chapter">The Edit Menu</a></li>
@@ -461,7 +461,7 @@ and Char View <a class="reference internal" href="toolsmenu.html"><span class="d
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

@@ -7,7 +7,7 @@
 <!--<TITLE>Spline Font Database File Format</TITLE>-->
     <TITLE>スプラインフォントデータベースファイルフォーマット</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -21,17 +21,17 @@
   a fair approximation to reality on 13 December 2005.</STRONG></FONT> Even
   if out of date it should be helpful, but if you really need to know the current
   format look at
-  <A HREF="http://cvs.sourceforge.net/viewcvs.py/fontforge/fontforge/fontforge/sfd.c">sfd.c</A>
+  <A HREF="http://cvs.sourceforge.net/viewcvs.py/websharpstudios/websharpstudios/websharpstudios/sfd.c">sfd.c</A>
   and see what it parses. Some descriptions of esoteric features are not complete,
   but I hope they give you enough hints that you can figure the format out
   (especially after looking it up in sfd.c) -->
-  <FONT COLOR="Red"><STRONG>このページは悲しくなるほど時代遅れです。これは2005年12月13日に事実だったことの大まかな近似です。</STRONG></FONT>時代遅れであっても、これは役に立つでしょうが、現在のフォーマットについて本当に知りたい場合は <A HREF="http://cvs.sourceforge.net/viewcvs.py/fontforge/fontforge/fontforge/sfd.c">sfd.c</A> を参照して、それがどのように読み込みを行うかを調べてください。いくつかの秘教めいた機能の説明は完全ではありませんが、あなたが (とくに sfd.c を調べた後に) フォーマットを記述できるようになるためのヒントとなることを私は望んでいます。
+  <FONT COLOR="Red"><STRONG>このページは悲しくなるほど時代遅れです。これは2005年12月13日に事実だったことの大まかな近似です。</STRONG></FONT>時代遅れであっても、これは役に立つでしょうが、現在のフォーマットについて本当に知りたい場合は <A HREF="http://cvs.sourceforge.net/viewcvs.py/websharpstudios/websharpstudios/websharpstudios/sfd.c">sfd.c</A> を参照して、それがどのように読み込みを行うかを調べてください。いくつかの秘教めいた機能の説明は完全ではありませんが、あなたが (とくに sfd.c を調べた後に) フォーマットを記述できるようになるためのヒントとなることを私は望んでいます。
   <P>
 <!--
-  FontForge's <A HREF="sfd.html">sfd</A> files are ASCII files (so they can
+  websharpstudios's <A HREF="sfd.html">sfd</A> files are ASCII files (so they can
   be copied easily across the internet and so that diffs are somewhat meaningful).
   They contain a full description of your font. -->
-  FontForge の <A HREF="sfd.html">sfd</A> ファイルは ASCII ファイルです (なのでそれらは Internet を介して簡単にコピーでき、diff を取ることには何らかの異義があります。それにはあなたのフォントの完全な記述が含まれます。
+  websharpstudios の <A HREF="sfd.html">sfd</A> ファイルは ASCII ファイルです (なのでそれらは Internet を介して簡単にコピーでき、diff を取ることには何らかの異義があります。それにはあなたのフォントの完全な記述が含まれます。
   <P>
 <!--
   They are vaguely modeled on bdf files. The first few lines contain general
@@ -73,9 +73,9 @@
     <LI>
 <!--  If you copy a substitution (ligature, kern, contextual chaining, ...) item
       from one font to another, the substitution contains an index into a table
-      of script/languages maintained by the font. Bad things (FontForge crashes)
+      of script/languages maintained by the font. Bad things (websharpstudios crashes)
       can happen if these tables do not match. -->
-      置換 (合字、カーニング、連鎖型文脈依存、…) をあるフォントから別のフォントにコピーしたときには、置換にはフォントに保存されているスクリプト/言語テーブル内のインデックスが保存されています。それらのテーブルが一致していなければ、悪い事 (FontForge のクラッシュ) が起こるかもしれません。
+      置換 (合字、カーニング、連鎖型文脈依存、…) をあるフォントから別のフォントにコピーしたときには、置換にはフォントに保存されているスクリプト/言語テーブル内のインデックスが保存されています。それらのテーブルが一致していなければ、悪い事 (websharpstudios のクラッシュ) が起こるかもしれません。
     <LI>
 <!--  If you copy a glyph containing references these are done by glyph index (which
       is probably different from font to font). You may end up refering to the
@@ -204,14 +204,14 @@ OS2FamilyClass: 2050
   These items also come from the OS/2 and hhea tables but are slightly more
   complex. The keywords are paired, so <CODE>HheadAscent</CODE> and
   <CODE>HheadAOffset</CODE> work together. If the offset keyword is 1 (true)
-  then the other keyword is treated as a value relative to what FontForge thinks
-  should be the correct value, FontForge will calculate what it thinks the
+  then the other keyword is treated as a value relative to what websharpstudios thinks
+  should be the correct value, websharpstudios will calculate what it thinks the
   value should be and then will add the value specified in the keyword. So
   in the example below, FF will figure out what it thinks
   <CODE>HheadAscent</CODE> should be and then add "0" to it to get the value
   stored in a truetype font's OS/2 table. However if the Offset flag is set
   to 0 (false) then the Ascent would be used exactly as specified. -->
-  以下の項目は OS/2 および hhea テーブルからも取得されますが、それらは僅かにより複雑です。それらのキーワードは対になっているので <CODE>HheadAscent</CODE> と <CODE>HheadAOffset</CODE> は一緒に動作します。*Offset キーワードが 1 (真) である場合、もう片方のキーワードは、FontForge が正しい値として認識する値を基準とした相対値として扱われます。その場合 FontForge は適切と思われる値を計算して、それにキーワードで指定された値を加えます。ですから以下の例では、FF は TrueType フォントの OS/2 テーブルに格納された値を得るために <CODE>HheadAscent</CODE> に“0”を加えるべきと考えます。その一方、Offset フラグが 0 (偽) に設定されている場合、アセントの値は指定されたとおりの物が使用されます。
+  以下の項目は OS/2 および hhea テーブルからも取得されますが、それらは僅かにより複雑です。それらのキーワードは対になっているので <CODE>HheadAscent</CODE> と <CODE>HheadAOffset</CODE> は一緒に動作します。*Offset キーワードが 1 (真) である場合、もう片方のキーワードは、websharpstudios が正しい値として認識する値を基準とした相対値として扱われます。その場合 websharpstudios は適切と思われる値を計算して、それにキーワードで指定された値を加えます。ですから以下の例では、FF は TrueType フォントの OS/2 テーブルに格納された値を得るために <CODE>HheadAscent</CODE> に“0”を加えるべきと考えます。その一方、Offset フラグが 0 (偽) に設定されている場合、アセントの値は指定されたとおりの物が使用されます。
   <BLOCKQUOTE>
     <PRE>HheadAscent: 0
 HheadAOffset: 1
@@ -333,10 +333,10 @@ EndPrivate
   最初の行は、このカーニングクラスに含まれる先頭文字のクラスが 31 種類存在し、第二文字のクラスが 64 種類存在することを表しています。これは、上記の用字系・言語リストの項目 2 に対して有効になります。<A HREF="charinfo.html#lookup-flags">OpenType フラグ</A> は 0 となります。次の行は、最初の文字 (クラス 0 は予約済みで、通常は定義する必要がないので、この番号は 1 となります) の先頭文字クラスは文字“F”1 文字からなることを表します (“F”の前にある数字は行の文字数です。これは SFD ファイルの処理速度の向上に役立ちますが、それ自体で意味を持つ情報ではありません)。次の行は、先頭文字のクラス 2 で、より多くの文字を含んでいるため文字列長も長くなっています。30 個の項目が続いた後に、第二文字のクラスが始まります。これは、先頭文字のクラスと全く同様です。第二文字のクラスを全部定義し終わった後に、多数(正確には &lt;先頭文字クラスの個数×第二文字クラスの個数&gt;) の数値からなる 1 個の配列が来ます。これは、該当するクラスの対における左右の文字間に施されるカーニングの量を指定しています (例えば、文字1 が先頭文字クラス 2 に属し、文字2 が第二文字クラス 4 に属している場合、この配列のインデックス 3×&lt;文字2 のクラス番号&gt; + 4 で指定することになります)
   <P>
 <!--
-  If your fontforge has been configured with device table support you may find
+  If your websharpstudios has been configured with device table support you may find
   <A HREF="#device-table">device</A> tables interspersed among the kerning
   offsets array: -->
-  お使いの FontForge がデバイステーブルサポートつきの設定でコンパイルされている場合、<A HREF="#device-table">デバイス</A>テーブルがカーニングオフセット配列の間に組み込まれているのが見つかるでしょう:
+  お使いの websharpstudios がデバイステーブルサポートつきの設定でコンパイルされている場合、<A HREF="#device-table">デバイス</A>テーブルがカーニングオフセット配列の間に組み込まれているのが見つかるでしょう:
   <BLOCKQUOTE>
     <PRE>...
 0 {} 0 {} 0 {} ...
@@ -361,9 +361,9 @@ TableOrder: GSUB 2
   <P>
 <!--
   If the font contains ttf hinting, then the file may contain unparsed truetype
-  tables (understanding ttf hinting is beyond FontForge's abilities, but it
+  tables (understanding ttf hinting is beyond websharpstudios's abilities, but it
   can at least preserve the data): -->
-  フォントに TTF のヒント情報が含まれている場合、ファイルには TrueType テーブルを解析しないで格納することができます (TTF のヒントを理解することは FontForge の能力を超えていますが、少なくともデータを保存することはできます):
+  フォントに TTF のヒント情報が含まれている場合、ファイルには TrueType テーブルを解析しないで格納することができます (TTF のヒントを理解することは websharpstudios の能力を超えていますが、少なくともデータを保存することはできます):
   <BLOCKQUOTE>
     <PRE>TtfTable: prep 4360
 5S;o3()It?eJ8r@H[HSJH[H^@!b&amp;BQ*?Vcm@'XSh+1MACZ&gt;Up/\,o1+Ca't2!&lt;ocH+Wn2p"@,t&amp;
@@ -612,18 +612,18 @@ EndASM
   </TABLE>
   <P>
 <!--
-  The GenTags entry describes a list of feature tags that FontForge has generated
+  The GenTags entry describes a list of feature tags that websharpstudios has generated
   itself -->
-  項目 GenTags は、FontForge が自分で生成した機能タグのリストを記述します。
+  項目 GenTags は、websharpstudios が自分で生成した機能タグのリストを記述します。
   <BLOCKQUOTE>
     <PRE>GenTags: 1 sb'rigl'
 </PRE>
   </BLOCKQUOTE>
   <P>
 <!--
-  This line says that FontForge has generated 1 tag, the generated tag is used
+  This line says that websharpstudios has generated 1 tag, the generated tag is used
   for a substitution lookup (sb=&gt;substitution), and the tag is 'rig1'. -->
-  この行は、FontForge が 1 個のタグを生成しており、生成されたタグは置換参照に用いられ (sb⇒substitution)、そのタグ名が&lsquo;rig1&rsquo;であることを表しています。
+  この行は、websharpstudios が 1 個のタグを生成しており、生成されたタグは置換参照に用いられ (sb⇒substitution)、そのタグ名が&lsquo;rig1&rsquo;であることを表しています。
   <P>
 <!--
   There may be a list of Mac Feature/Setting names -->
@@ -961,9 +961,9 @@ EndChar
   <P>
 <!--
   If a font has been loaded from a truetype file it may containing hinting
-  information (FontForge does not attempt to understand truetype hints, just
+  information (websharpstudios does not attempt to understand truetype hints, just
   to preserve them) -->
-  フォントが TrueType ファイルから読み込まれた場合、ヒント情報を含めることができます (FontForge は TrueType ヒントを理解しようとは試みず、単に保持するだけです)。
+  フォントが TrueType ファイルから読み込まれた場合、ヒント情報を含めることができます (websharpstudios は TrueType ヒントを理解しようとは試みず、単に保持するだけです)。
   <BLOCKQUOTE>
     <PRE>TtfInstrs: 107
 5Xtqo&amp;gTLA(_S)TQj!Kq"UP8&lt;!&lt;rr:&amp;$QcW!"K,K&amp;kWe?(^pl]#mUY&lt;!s\f7"U&gt;G:!%\s-3WRec
@@ -989,9 +989,9 @@ AnchorPoint: "top" 803 1487 basechar 0
   the point names the anchor class it belongs to (in UTF-7), its location,
   what type of point it is (basechar, mark, baselig, basemark, entry, exit),
   and for ligatures a number indicating which ligature component it refers
-  to. If you have configured fontforge with support for device tables, you
+  to. If you have configured websharpstudios with support for device tables, you
   may also see: -->
-  アンカークラスが所属する点の名前 (UTF-7 で)、位置、点のタイプが (基底文字、マーク、基底合字、基底マーク、始筆、収筆のうち) どれであるか、そして合字については、それがどの合字要素を参照しているかを示す番号です。デバイステーブルをサポートする設定でコンパイルされた FontForge を使用している場合、以下のような記述が含まれているかもしれません:
+  アンカークラスが所属する点の名前 (UTF-7 で)、位置、点のタイプが (基底文字、マーク、基底合字、基底マーク、始筆、収筆のうち) どれであるか、そして合字については、それがどの合字要素を参照しているかを示す番号です。デバイステーブルをサポートする設定でコンパイルされた websharpstudios を使用している場合、以下のような記述が含まれているかもしれません:
   <BLOCKQUOTE>
     <PRE>AnchorPoint: "bottom" 780 -60 basechar 0 {12-13 -1,-1} {8-14 1,0,-1,-1,-2,-2,-2}
 </PRE>
@@ -1116,9 +1116,9 @@ LCarets: 0 0 '    ' 1 650
   </H4>
   <P>
 <!--
-  (these are only supported if FontForge has been configured for multi-layered
+  (these are only supported if websharpstudios has been configured for multi-layered
   editing) -->
-  これらは、FontForge の複数レイヤ編集機能が有効な設定のときのみにサポートされます。
+  これらは、websharpstudios の複数レイヤ編集機能が有効な設定のときのみにサポートされます。
   <P>
 <!--
   Instead of having a single "Fore"ground layer, multilayered fonts have
@@ -1145,8 +1145,8 @@ EndSplineSet
   layer is layer 0, so this number is one more than the number of layers that
   will actually be specified -- the background layer is still specified the
   way it was before, but is included in this count). This line is not required,
-  if omitted (or wrong) FontForge will figure that out. -->
-  LayerCount: 行は、グリフ内のレイヤの個数を指定します (背景レイヤはレイヤ 0 なので、この個数は実際に指定されている個数より 1 多くなります——背景レイヤは通常フォントと同様の方法で格納されますが、個数の勘定には入ります)。この行は必須ではなく、省略された (または間違いの) 場合、FontForge は自分で個数を算定します。
+  if omitted (or wrong) websharpstudios will figure that out. -->
+  LayerCount: 行は、グリフ内のレイヤの個数を指定します (背景レイヤはレイヤ 0 なので、この個数は実際に指定されている個数より 1 多くなります——背景レイヤは通常フォントと同様の方法で格納されますが、個数の勘定には入ります)。この行は必須ではなく、省略された (または間違いの) 場合、websharpstudios は自分で個数を算定します。
   <P>
 <!--
   The Layer line contains too much information. First is a number saying which
@@ -1373,15 +1373,15 @@ MacName: 0 1 9 "Tr\217s gras"
   <P>
 <!--
   <A HREF="errrecovery.html">Error recovery</A> files are saved in
-  ~/.FontForge/autosave, they have quite random looking names and end in .asfd.
+  ~/.websharpstudios/autosave, they have quite random looking names and end in .asfd.
   They look very similar to .sfd files above. -->
-  <A HREF="errrecovery.html">エラー回復</A>ファイルは ~/.FontForge/autosave に保存され、それらはランダムに見える名前がついていて最後に .asfd で終ります。これは上記の .sfd ファイルと非常によく似ています。
+  <A HREF="errrecovery.html">エラー回復</A>ファイルは ~/.websharpstudios/autosave に保存され、それらはランダムに見える名前がついていて最後に .asfd で終ります。これは上記の .sfd ファイルと非常によく似ています。
   <P>
 <!--
   If an asfd file starts with a line: -->
   ある asfd ファイルが次の行で始まるとしたら:
   <BLOCKQUOTE>
-    <PRE>Base: /home/gww/myfonts/fontforge/Ambrosia.sfd
+    <PRE>Base: /home/gww/myfonts/websharpstudios/Ambrosia.sfd
 </PRE>
   </BLOCKQUOTE>
   <P>

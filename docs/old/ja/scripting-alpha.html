@@ -7,7 +7,7 @@
   <TITLE>Scripting functions</TITLE> -->
   <TITLE>スクリプト関数一覧</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY id="framed">
 <DIV id="framed-in">
@@ -133,13 +133,13 @@ Generate</A>(filename[,bitmaptype[,fmflags[,res[,mult-sfd-file[,namelist-name]]]
 	    third should be a script-lang string like:<BR>
 	    <CODE>&nbsp; &nbsp; grek{dflt} latn{dflt,VIT ,ROM }</CODE><BR>
 	    The fourth arg should be a 4 character opentype feature tag. The fifth argument
-	    should be the <A HREF="#otf-flags">otf flags </A>(or -1 to make FontForge
+	    should be the <A HREF="#otf-flags">otf flags </A>(or -1 to make websharpstudios
 	    guess appropriate flags). The sixth and last argument should be the name
 	    of another AnchorClass to be merged into the same lookup (or a null string
 	    if this class merges with no other class yet). -->
 	    これらは、<CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォント情報(<U>I</U>)</CODE>メニューの <CODE>[アンカークラス]</CODE> ダイアログを反映しています。最初の引数は UTF-8 でエンコードされたアンカークラスの名前です。2 番目は "default", "mk-mk", または "cursive" のいずれかです。3 番目はスクリプト-言語の文字列です:<BR>
 	    <CODE>&nbsp; &nbsp; grek{dflt} latn{dflt,VIT ,ROM }</CODE><BR>
-	    4 番目の引数は 4 文字の OpenType 機能タグです。5 番目の引数は <A HREF="#otf-flags">OTF フラグ</A> (-1 のときは、FontForge が適切なフラグを推測します) です。 6 番目と最後の引数は、同じ lookup に統合されるもう一つのアンカークラス (このクラスがまだ他のクラスを統合していない場合、空文字列となります) です。
+	    4 番目の引数は 4 文字の OpenType 機能タグです。5 番目の引数は <A HREF="#otf-flags">OTF フラグ</A> (-1 のときは、websharpstudios が適切なフラグを推測します) です。 6 番目と最後の引数は、同じ lookup に統合されるもう一つのアンカークラス (このクラスがまだ他のクラスを統合していない場合、空文字列となります) です。
 	  <DT>
 	    <A NAME="AddAnchorPoint">A</A>ddAnchorPoint(name,type,x,y[,lig-index])
 	  <DD>
@@ -172,9 +172,9 @@ Generate</A>(filename[,bitmaptype[,fmflags[,res[,mult-sfd-file[,namelist-name]]]
 	    3 番目の引数 tag は 4 文字の OpenType 機能タグです。
 	    <P>
 <!--	    The fourth argument should be the <A NAME="otf-flags">otf flags </A>(or -1
-	    to make FontForge guess appropriate flags). -->
+	    to make websharpstudios guess appropriate flags). -->
 	    4 番目の引数 flags は <A NAME="otf-flags">OTF のフラグ</A>です
-	    (-1 の時は、FontForge が適切なフラグを推測します)。
+	    (-1 の時は、websharpstudios が適切なフラグを推測します)。
 	    <UL>
 	      <LI>
 <!--	    	0x0001 =&gt; RightToLeft -->
@@ -245,9 +245,9 @@ Generate</A>(filename[,bitmaptype[,fmflags[,res[,mult-sfd-file[,namelist-name]]]
 	    to any already present. If non-zero then the instructions will replace those
 	    already present.<BR> -->
 	    引数 replace は整数です。値が 0 の場合、既に存在する命令の後ろに instr で指定された命令を付け加えます。値が非 0 の場合、既に存在する命令を消去し、指定された命令に置き換えます。
-<!--	    And instrs is a string containing fontforge's human readable version of tt
+<!--	    And instrs is a string containing websharpstudios's human readable version of tt
 	    instructions, as "<CODE>IUP[x]\nIUP[y]</CODE>" -->
-	    最後の instr は FontForge の人間可読な形式の TrueType 命令文字列で、例えば "<CODE>IUP[x]\nIUP[y]</CODE>" のような形で指定します。
+	    最後の instr は websharpstudios の人間可読な形式の TrueType 命令文字列で、例えば "<CODE>IUP[x]\nIUP[y]</CODE>" のような形で指定します。
 	  <DT>
 	    <A NAME="AddVHint" HREF="hintsmenu.html#VHint">AddVHint</A>(start,width)
 	  <DD>
@@ -267,10 +267,10 @@ Generate</A>(filename[,bitmaptype[,fmflags[,res[,mult-sfd-file[,namelist-name]]]
 	    variant. -->
 	    3 個の引数はすべて、4 文字を越えない文字列でなくてはなりません (4 文字より短い文字列は、後ろに空白が追加されます)。このコマンドは、選択中の各グリフに対して、そのグリフの置換リストを検索し、tag で指定されたタグを持つ (それに加え、スクリプトと言語の組合せがその置換に一致する) 置換が見つかった場合に置換を実行します — すなわち、置換によって指定された異体字グリフを探して現在のグリフをそれで置き換え、異体字グリフを消去します。
 	    <P>
-<!--	    FontForge recognizes the string "*" as a wildcard for both the script and
+<!--	    websharpstudios recognizes the string "*" as a wildcard for both the script and
 	    the language (not for the tag though). So if you wish to replace all glyphs
 	    with their vertical variants: -->
-	    FontForge は文字列 "*" をスクリプトや言語の両方で使用できる
+	    websharpstudios は文字列 "*" をスクリプトや言語の両方で使用できる
 	    (ただしタグには使用できません) ワイルドカードとして認識します。
 	    すべての文字を縦書き用の字形に置き換えたい場合は以下のようになります:
 	    <BLOCKQUOTE>
@@ -330,9 +330,9 @@ a[4][0] = "Nested array";
 	  <DD>
 <!--	    (AutoKern doesn't work well in general)<BR>
 	    Guesses at kerning pairs by looking at all selected glyphs, or if a kernfile
-	    is specified, FontForge will read the kern pairs out of the file. -->
+	    is specified, websharpstudios will read the kern pairs out of the file. -->
 	    (AutoKern は一般的にはあまりよく動作しません)<BR>
-	    選択中のすべてのグリフを調べてカーニングペアを推測します。kernfile を指定した場合、FontForge はファイル kernfile からカーニングペアを読み込みます。
+	    選択中のすべてのグリフを調べてカーニングペアを推測します。kernfile を指定した場合、websharpstudios はファイル kernfile からカーニングペアを読み込みます。
 	  <DT>
 	    <A NAME="AutoTrace" HREF="elementmenu.html#AutoTrace">AutoTrace</A>()
 	  <DD>
@@ -458,11 +458,11 @@ a[4][0] = "Nested array";
 	    Chr(array)
 	  <DD>
 <!--	    Takes an integer [0,255] and returns a single character string containing
-	    that code point. Internally FontForge interprets strings as if they were
-	    in utf8 (well really, FontForge almost always just uses ASCII-US internally).
+	    that code point. Internally websharpstudios interprets strings as if they were
+	    in utf8 (well really, websharpstudios almost always just uses ASCII-US internally).
 	    If passed an array, it should be an array of integers and the result is the
 	    string. It can execute with no current font. -->
-	    [0,255] の範囲にある整数を取り、そのコードポイントを含む 1 文字を返します。内部的には FontForge は文字列を UTF-8 で書かれているものとして (本当を言えば、FontForge は内部ではほとんどの場合単純に ASCII-US を使います) 解釈します。配列を渡す場合、それは整数からなる配列でなければならず、結果は文字列として返されます。カレントフォントがない状態でも実行できます。
+	    [0,255] の範囲にある整数を取り、そのコードポイントを含む 1 文字を返します。内部的には websharpstudios は文字列を UTF-8 で書かれているものとして (本当を言えば、websharpstudios は内部ではほとんどの場合単純に ASCII-US を使います) 解釈します。配列を渡す場合、それは整数からなる配列でなければならず、結果は文字列として返されます。カレントフォントがない状態でも実行できます。
 	  <DT>
 	    <A NAME="CIDChangeSubFont">C</A>IDChangeSubFont(new-sub-font-name)
 	  <DD>
@@ -925,10 +925,10 @@ a[4][0] = "Nested array";
 	    <A NAME="DefaultATT" HREF="elementmenu.html#DefaultATT">DefaultATT</A>(tag)
 	  <DD>
 <!--	    For all selected glyphs make a guess as to what might be an appropriate value
-	    for the given tag. If the tag is "*" then FontForge will apply guesses for
+	    for the given tag. If the tag is "*" then websharpstudios will apply guesses for
 	    all features it can. -->
 	    選択中のすべてのグリフについて、与えられたタグに対して適切だと思われる値を推測します。
-	    タグが "*" である場合、FontForge は可能なすべての機能に対して推測を行います。
+	    タグが "*" である場合、websharpstudios は可能なすべての機能に対して推測を行います。
 	  <DT>
 	    <A NAME="DefaultOtherSubrs">D</A>efaultOtherSubrs()
 	  <DD>
@@ -938,9 +938,9 @@ a[4][0] = "Nested array";
 	    <A NAME="DefaultRoundToGrid">D</A>efaultRoundToGrid()
 	  <DD>
 <!--	    Looks at all selected glyphs, if any reference is not positioned by point
-	    matching, then FontForge will set the truetype "ROUND-TO-GRID" flag for the
+	    matching, then websharpstudios will set the truetype "ROUND-TO-GRID" flag for the
 	    reference. -->
-	    選択中のすべてのグリフを調べます。どの参照も点の照合によって位置指定されていない場合、FontForge はその参照に対し、 TrueType の“ROUND-TO-GRID”フラグをセットします。
+	    選択中のすべてのグリフを調べます。どの参照も点の照合によって位置指定されていない場合、websharpstudios はその参照に対し、 TrueType の“ROUND-TO-GRID”フラグをセットします。
 	  <DT>
 	    Default<A NAME="Use-My-Metrics">UseMyM</A>etrics()
 	  <DD>
@@ -1201,9 +1201,9 @@ a[4][0] = "Nested array";
 	      <LI>
 <!--	    	.bin (a mac postscript (pfb) resource in a mac binary wrapper)<BR> -->
 	    	.bin (Mac のバイナリラッパに格納した Mac の postscript (pfb) リソース)<BR>
-<!--	    	.res (on the Mac itself FontForge will put the result directly into a font
+<!--	    	.res (on the Mac itself websharpstudios will put the result directly into a font
 	    	suitcase file, and the extension should be ".res" rather than ".bin") -->
-	    	.res (Mac 上で実行した場合は、FontForge はフォントスーツケースに直接ファイルを書き出し、拡張子は“.bin”ではなく“.res”となります)
+	    	.res (Mac 上で実行した場合は、websharpstudios はフォントスーツケースに直接ファイルを書き出し、拡張子は“.bin”ではなく“.res”となります)
 		<P>
 <!--	    	Note: you must also create a bitmap font in NFNT format or the mac will not
 	    	recognize your postscript font. -->
@@ -1248,9 +1248,9 @@ a[4][0] = "Nested array";
 	      <LI>
 <!--	    	.ttf.bin (a mac truetype resource in a mac binary wrapper)<BR> -->
 	    	.ttf.bin (Mac のバイナリラッパに格納した TrueType  リソース)<BR>
-<!--	    	suit (on the Mac itself FontForge will put the result directly into a font
+<!--	    	suit (on the Mac itself websharpstudios will put the result directly into a font
 	    	suitcase file, and the extension should be ".suit" not ".ttf.bin") -->
-	    	suit (Mac 上で実行した場合は、FontForge は結果を直接フォントスーツケースファイルに書き出し、拡張子は“.ttf.bin”ではなく“.suit”になります)
+	    	suit (Mac 上で実行した場合は、websharpstudios は結果を直接フォントスーツケースファイルに書き出し、拡張子は“.ttf.bin”ではなく“.suit”になります)
 	      <LI>
 <!--	    	.dfont (a mac truetype resource in a dfont file) -->
 	    	.dfont (dfont ファイルに含まれた Mac の TrueType リソース)
@@ -1409,18 +1409,18 @@ a[4][0] = "Nested array";
 		fmflags&amp;0x400000 ⇒ (マークから基底文字への) 組合せ情報を AFM ファイルに追加します。
 	    </UL>
 	    <P>
-<!--	    res controls the resolution of generated bdf fonts. A value of -1 means fontforge
+<!--	    res controls the resolution of generated bdf fonts. A value of -1 means websharpstudios
 	    will guess for each strike. -->
 	    res により、生成された BDF フォントの解像度が決まります。
-	    -1 を指定すると、FontForge が各サイズに対して自動的に値を推測します。
+	    -1 を指定すると、websharpstudios が各サイズに対して自動的に値を推測します。
 	    <P>
 <!--	    If the filename contains a "%s" and has either a ".pf[ab]" extension then
 	    a "mult-sfd-file" may be present. This is the filename of a file containing
 	    the mapping from the current encoding into the subfonts.
-	    <A HREF="../Big5.txt">Here is an example</A>. If this file is not present FontForge
+	    <A HREF="../Big5.txt">Here is an example</A>. If this file is not present websharpstudios
 	    will go through its default search process to find a file for the encoding,
 	    and if it fails the fonts will not be saved. -->
-	    filename に“%s”が含まれ、“.pf[ab]”のいずれかの拡張子をもつ場合、“複合 sfd ファイル”が存在するはずです。これは現在のエンコーディングからサブフォントへのマッピングを含むファイルの名前です。<A HREF="http://fontforge.sourceforge.net/Big5.txt">一例をここに示します</A>。このファイルが存在しない場合、FontForge はフォントのエンコーディングに対応するファイルを探す標準の探索プロセスを行い、それが失敗した時はフォントは保存されません。
+	    filename に“%s”が含まれ、“.pf[ab]”のいずれかの拡張子をもつ場合、“複合 sfd ファイル”が存在するはずです。これは現在のエンコーディングからサブフォントへのマッピングを含むファイルの名前です。<A HREF="http://websharpstudios.sourceforge.net/Big5.txt">一例をここに示します</A>。このファイルが存在しない場合、websharpstudios はフォントのエンコーディングに対応するファイルを探す標準の探索プロセスを行い、それが失敗した時はフォントは保存されません。
 	  <DT>
 	    <A NAME="GenerateFamily" HREF="filemenu.html#GenerateMac">GenerateFamily</A>(filename,bitmaptype,fmflags,array-of-font-filenames)
 	  <DD>
@@ -1429,7 +1429,7 @@ a[4][0] = "Nested array";
 	    <A HREF="#Generate">Generate</A>. -->
 	    配列 array-of-font-filenames で名前を指定した各フォント (読み込み済みでなければなりません) から構成される Mac のフォントファミリー (FOND) を生成します。filename, bitmaptype, fmflag は <A HREF="#Generate">Generate</A> と同じです。
 	    <BLOCKQUOTE>
-	<PRE>#!/usr/local/bin/fontforge
+	<PRE>#!/usr/local/bin/websharpstudios
 a = Array($argc-1)
 i = 1
 j = 0
@@ -1824,10 +1824,10 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	      <LI>
 <!--	    	If the extension is "eps" then an encapsulated postscript file will be merged
 	    	into the foreground. The file may be specified as for images (except the
-	    	extension should be "eps" rather than an image extension). FontForge is limited
+	    	extension should be "eps" rather than an image extension). websharpstudios is limited
 	    	in its ability to read eps files. -->
 	    	拡張子が“.eps”ならば、EPS ファイルが前面にマージされます。ファイルは画像として指定することができます (ファイル名に画像ファイルの拡張子でなく“.eps”がついている点だけが異なります)。
-	    	FontForge の EPS ファイル読み込み能力は、非常に制限されています。
+	    	websharpstudios の EPS ファイル読み込み能力は、非常に制限されています。
 	      <LI>
 <!--	    	If the extension is "svg" then an svg file will be read into the foreground. -->
 	    	拡張子が“.svg”ならば SVG ファイルが前面に読み込まれます。
@@ -1930,10 +1930,10 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	  <DT>
 	    <A NAME="LoadEncodingFile">L</A>oadEncodingFile(filename)
 	  <DD>
-<!--	    Reads an encoding file and stores it in FontForge's list of possible encodings.
+<!--	    Reads an encoding file and stores it in websharpstudios's list of possible encodings.
 	    See Encoding-&gt;<A HREF="encodingmenu.html#Load">LoadEncoding</A> for more
 	    info. -->
-	    エンコーディングファイルを読み込み、FontForge で使用可能なエンコーディングのリストに追加します。より詳しい情報は、<CODE>エンコーディング(<U>N</U>)</CODE>→<CODE><A HREF="encodingmenu.html#Load">エンコーディングを読み込み(<U>L</U>)...</A></CODE>を参照してください。
+	    エンコーディングファイルを読み込み、websharpstudios で使用可能なエンコーディングのリストに追加します。より詳しい情報は、<CODE>エンコーディング(<U>N</U>)</CODE>→<CODE><A HREF="encodingmenu.html#Load">エンコーディングを読み込み(<U>L</U>)...</A></CODE>を参照してください。
 	  <DT>
 	    <A NAME="LoadNamelist">L</A>oadNamelist(filename)
 	  <DD>
@@ -1943,10 +1943,10 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	  <DT>
 	    <A NAME="LoadNamelistDir">L</A>oadNamelistDir([directory-name])
 	  <DD>
-<!--	    Searches the given directory for things that look like fontforge namelists
+<!--	    Searches the given directory for things that look like websharpstudios namelists
 	    and loads them. If directory is omitted then it will load the default directory.
 	    It can execute with no current font. -->
-	    指定されたディレクトリから FontForge の名前リストらしき物を探して読み込みます。ディレクトリ名を省略した場合、デフォルトのディレクトリから読み込みます。カレントフォントがない状態でも実行できます。
+	    指定されたディレクトリから websharpstudios の名前リストらしき物を探して読み込みます。ディレクトリ名を省略した場合、デフォルトのディレクトリから読み込みます。カレントフォントがない状態でも実行できます。
 	  <DT>
 	    <A NAME="LoadPrefs">L</A>oadPrefs()
 	  <DD>
@@ -1959,8 +1959,8 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 <!--	    Reads the entire file into a string. Returns a null string for a non-existant
 	    or empty file. The returned string will have enough bytes allocated to hold
 	    the entire file plus one trailing NUL byte. If the file contains a NUL itself,
-	    fontforge will think the string ends there. -->
-	    ファイル全体を文字列に読み込みます。ファイルが存在しないか空である場合は空文字列を返します。返り値の文字列はファイル全体を保持するのに十分なバイト数に加えて末尾の NUL バイトを含むのに十分なバイト数が割り当てられます。もしファイルに NUL 文字そのものが含まれていた場合、FontForge はそこが文字列の終端であると判断します。
+	    websharpstudios will think the string ends there. -->
+	    ファイル全体を文字列に読み込みます。ファイルが存在しないか空である場合は空文字列を返します。返り値の文字列はファイル全体を保持するのに十分なバイト数に加えて末尾の NUL バイトを含むのに十分なバイト数が割り当てられます。もしファイルに NUL 文字そのものが含まれていた場合、websharpstudios はそこが文字列の終端であると判断します。
 	  <DT>
 	    <A NAME="LoadTableFromFile">L</A>oadTableFromFile(tag,filename)
 	  <DD>
@@ -2000,11 +2000,11 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	    array containing the lower bound, default value and upper bound. Note each 
 	    value is multiplied by 65536 (because they need not be integers on the mac, 
 	    and ff doesn't support real values). -->
-	    axis は、マルチプルマスターフォントに含まれる軸の数よりも少ない整数です。下限値、デフォルト値と上限値を含む配列を返します。それぞれの値は 65536 倍されていることにご注意ください (それらは Mac では整数値でなくてはならず、FontForge は実数値をサポートしていないからです)。
+	    axis は、マルチプルマスターフォントに含まれる軸の数よりも少ない整数です。下限値、デフォルト値と上限値を含む配列を返します。それぞれの値は 65536 倍されていることにご注意ください (それらは Mac では整数値でなくてはならず、websharpstudios は実数値をサポートしていないからです)。
 	    <P> 
 <!--	    (The default value is a GX Var concept. FF simulates a reasonable value for 
 	    true multiple master fonts). -->
-	    デフォルト値は、GX の Var という概念に相当します。FontForge は本物のマルチプルマスターフォントに対しては妥当な値をシミュレートします。
+	    デフォルト値は、GX の Var という概念に相当します。websharpstudios は本物のマルチプルマスターフォントに対しては妥当な値をシミュレートします。
 	  <DT>
 	    <A NAME="MMAxisNames">M</A>MAxisNames() 
 	  <DD> 
@@ -2022,12 +2022,12 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	    <A NAME="MMChangeInstance">M</A>MChangeInstance(instance)
 	  <DD>
 <!--	    Where instance is either a font name or a small integer. If passed a string
-	    FontForge searches through all fonts in the multi master font set (instance
+	    websharpstudios searches through all fonts in the multi master font set (instance
 	    fonts and the weighted font) and changes the current font to the indicated
 	    one. If passed a small integer, then -1 indicates the weighted font and values
 	    between [0,$mmcount) represent that specific instance in the font set. -->
 	    ここで instance はフォント名か小さな整数のどちらかです。
-	    文字列を渡した場合、FontForge はマルチプルマスターフォントセットから
+	    文字列を渡した場合、websharpstudios はマルチプルマスターフォントセットから
 	    すべてのフォント (インスタンスフォントと重みづけされたフォント) を検索し、
 	    カレントフォントの名前を指定された物に変更します。
 	    小さな整数を渡したときは、-1 が重みづけされたフォントを表し、
@@ -2190,8 +2190,8 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	    </BLOCKQUOTE>
 	    <P>
 <!--	    This command is not available in the default build, you must modify the file
-	    <CODE>configure-fontforge.h</CODE> and then rebuild FontForge. -->
-	    このコマンドはデフォルトのビルドでは使用できません。<CODE>configure-fontforge.h</CODE> を変更して、FontForge を再構築してください。
+	    <CODE>configure-websharpstudios.h</CODE> and then rebuild websharpstudios. -->
+	    このコマンドはデフォルトのビルドでは使用できません。<CODE>configure-websharpstudios.h</CODE> を変更して、websharpstudios を再構築してください。
 	</DL>
       </TD>
     </TR>
@@ -2345,8 +2345,8 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 <!--	    If you selected print type 3 then you may provide the name of a file containing
 	    sample text. This file may either be in ucs2 format (preceded by a 0xfeff
 	    value), or in the current default encoding. A null string or an omitted argument
-	    will cause FontForge to use a default value. -->
-	    type に 3 を指定した時は、サンプルテキストを含むファイルの名前を指定することができます。このファイルは UCS2 フォーマット (頭に 0xfeff がつきます) か、現在のデフォルトエンコーディングが使用できます。空の文字列を指定するか、引数を省略した場合には、FontForge はデフォルト値を使用します。
+	    will cause websharpstudios to use a default value. -->
+	    type に 3 を指定した時は、サンプルテキストを含むファイルの名前を指定することができます。このファイルは UCS2 フォーマット (頭に 0xfeff がつきます) か、現在のデフォルトエンコーディングが使用できます。空の文字列を指定するか、引数を省略した場合には、websharpstudios はデフォルト値を使用します。
 	    <P>
 <!--	    If your PrintSetup specified printing to a file then the fourth argument
 	    provides the filename of the output file.-->
@@ -2407,9 +2407,9 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	  <DT>
 	    <A NAME="Quit" HREF="filemenu.html#Quit">Quit</A>(status)
 	  <DD>
-<!--	    Causes FontForge to exit with the given status (no attempt is made to save
+<!--	    Causes websharpstudios to exit with the given status (no attempt is made to save
 	    unsaved files). This command can execute with no current font. -->
-	    status を終了ステータスとして FontForge を終了します。(保存していないフォントを保存するように促すことはしません)。カレントフォントが無い状態でも実行可能です。
+	    status を終了ステータスとして websharpstudios を終了します。(保存していないフォントを保存するように促すことはしません)。カレントフォントが無い状態でも実行可能です。
 	</DL>
       </TD>
     </TR>
@@ -2845,8 +2845,8 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	  <DT>
 	    <A NAME="SelectHintingNeeded" HREF="editmenu.html#SelHinting">SelectHintingNeeded</A>([merge])
 	  <DD>
-<!--	    Selects all glyphs which FontForge thinks need their hints updated.-->
-	    FontForge がヒントを更新する必要があると判断した全グリフを選択します。
+<!--	    Selects all glyphs which websharpstudios thinks need their hints updated.-->
+	    websharpstudios がヒントを更新する必要があると判断した全グリフを選択します。
 	  <DT>
 	    <A NAME="SelectIf">S</A>electIf(arg1,arg2, ...)
 	  <DD>
@@ -3062,8 +3062,8 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	      </TR>
 	      <TR>
 		<TD>-1</TD>
-<!--	    	<TD>FontForge should guess the styles from the fontname</TD> -->
-		<TD>FontForge はフォント名から推測を行います。</TD>
+<!--	    	<TD>websharpstudios should guess the styles from the fontname</TD> -->
+		<TD>websharpstudios はフォント名から推測を行います。</TD>
 	      </TR>
 	    </TABLE>
 	    <P>
@@ -3191,8 +3191,8 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	    <A NAME="SetUniqueID">S</A>etUniqueID(value)
 	  <DD>
 <!--	    Sets the postscript uniqueid field as requested. If you give a value of 0
-	    then FontForge will pick a reasonable random number for you. -->
-	    PostScript の UniqueID フィールドに指定した値を設定します。値 0 を与えた場合、FontForge は適正な範囲に含まれる乱数値を自動的に選びます。
+	    then websharpstudios will pick a reasonable random number for you. -->
+	    PostScript の UniqueID フィールドに指定した値を設定します。値 0 を与えた場合、websharpstudios は適正な範囲に含まれる乱数値を自動的に選びます。
 	  <DT>
 	    <A NAME="SetVKern">S</A>etVKern(ch2,offset)
 	  <DD>
@@ -3416,11 +3416,11 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	      </TR>
 	    </TABLE>
 	    <P>
-<!--	    The peculiar notion of dividing by 100 was to overcome the fact that fontforge's
+<!--	    The peculiar notion of dividing by 100 was to overcome the fact that websharpstudios's
 	    scripting language formerly could not handle real numbers. We've overcome
 	    that limitation since, but it seemed best to leave the behavior of the function
 	    as it was. -->
-	    100 で割る特別な表記法を用いているのは、FontForge のスクリプト言語がかつて実数を扱うことができなかったためです。その後この制限は解消されましたが、関数のふるまいを当時のままにしておくに越したことはないと思います。
+	    100 で割る特別な表記法を用いているのは、websharpstudios のスクリプト言語がかつて実数を扱うことができなかったためです。その後この制限は解消されましたが、関数のふるまいを当時のままにしておくに越したことはないと思います。
 	  <DT>
 	    <A NAME="TypeOf">T</A>ypeOf(any)
 	  <DD>
@@ -3463,11 +3463,11 @@ verta = GlyphInfo("Substitution","*","dflt","vrt2")
 	  <DT>
 	    <A NAME="UnicodeFromName">U</A>nicodeFromName(name)
 	  <DD>
-<!--	    Looks the string "name" up in FontForge's database of commonly used glyph
+<!--	    Looks the string "name" up in websharpstudios's database of commonly used glyph
 	    names and returns the unicode value associated with that name, or -1 if not
 	    found. This does <EM>not</EM> check the current font (if any). It can execute
 	    with no current font. -->
-	    文字列 "name" を、一般に使用されるグリフ名を格納した FontForge のデータベースから検索して、その名前がもつ Unicode 値を (見つからなければ -1 を) 返します。これは、カレントフォント (があれば) を検査<EM>しません</EM>。カレントフォントがない状態でも実行できます。
+	    文字列 "name" を、一般に使用されるグリフ名を格納した websharpstudios のデータベースから検索して、その名前がもつ Unicode 値を (見つからなければ -1 を) 返します。これは、カレントフォント (があれば) を検査<EM>しません</EM>。カレントフォントがない状態でも実行できます。
 	  <DT>
 	    <A NAME="UnlinkReference" HREF="editmenu.html#Unlink">UnlinkReference</A>
 	  <DD>

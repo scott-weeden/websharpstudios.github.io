@@ -7,7 +7,7 @@
   <LINK REL="icon" href="../../_static/fftype16.png">
 <!--<TITLE>Multiple Master Dialog</TITLE>-->
     <TITLE>マルチプルマスターダイアログ</TITLE>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -105,15 +105,15 @@ Apple はわずかに異なるフォーマットを使っており、極限の�
 </UL>
 <P>
 <!--
-Apple also allows for intermediate designs, but FontForge does not currently
+Apple also allows for intermediate designs, but websharpstudios does not currently
 support this. -->
-Apple もまた、中間デザインを認めていますが、FontForge は現在これをサポートしていません。
+Apple もまた、中間デザインを認めていますが、websharpstudios は現在これをサポートしていません。
 <P>
 <!--
 A font designer first determines how many axes s/he will need. PostScript
-allows a maximum of 4 axes in a Type1 font. FontForge only supports 4 axes
+allows a maximum of 4 axes in a Type1 font. websharpstudios only supports 4 axes
 for Apple's fonts too. -->
-フォントデザイナーは、最初にいくつの軸が必要か決定する必要があります。PostScript では、Type1 フォントに最大 4 個の軸を使うことができます。FontForge は Apple のフォントに対しても 4 軸までしかサポートしていません。
+フォントデザイナーは、最初にいくつの軸が必要か決定する必要があります。PostScript では、Type1 フォントに最大 4 個の軸を使うことができます。websharpstudios は Apple のフォントに対しても 4 軸までしかサポートしていません。
 <P>
 <!--
 Then s/he provides information about each axis, specifically: -->
@@ -158,19 +158,19 @@ Type1 フォントを作る場合、2 個の PostScript 関数を書く必要が
   <DT>
     NormalizeDesignVector
   <DD>
-<!--FontForge is always able to generate this function for the user (unless the
+<!--websharpstudios is always able to generate this function for the user (unless the
     user wants something non-linear). This maps a vector of design values to
     their normalized values (in our three axis case above it might map [400 500
     12] to [.4 .5 .09]) -->
-    FontForge はユーザに代わってこの関数を常に生成できます (ユーザが何らかの非線形の処理を必要とする場合を除く)。この関数はデザイン値のベクトルを正規化された値に変換します (先ほどの 3 軸の例では、[400 500 12] を [0.4 0.5 0.09] に変換することになります)。
+    websharpstudios はユーザに代わってこの関数を常に生成できます (ユーザが何らかの非線形の処理を必要とする場合を除く)。この関数はデザイン値のベクトルを正規化された値に変換します (先ほどの 3 軸の例では、[400 500 12] を [0.4 0.5 0.09] に変換することになります)。
   <DT>
     ConvertDesignVector
   <DD>
-<!--In the usual cases FontForge is able to create this function for the user
+<!--In the usual cases websharpstudios is able to create this function for the user
     (but in more complicated cases, with intermediate designs it is unable to
     do so). This function takes a normalized vector (as produced above) and figures
     out how much each weight to give each design in the final blend. -->
-    通常の場合は、FontForge はこの機能をユーザに代わって作成することができます (しかし、より複雑な、中間デザインが含まれる場合は自動作成できません)。この関数は正規化されたベクトル (上記のとおり生成されたもの) を取り、各デザインが、最終的な混ぜ合わせの結果にどれだけの重みを与えるかを返します。
+    通常の場合は、websharpstudios はこの機能をユーザに代わって作成することができます (しかし、より複雑な、中間デザインが含まれる場合は自動作成できません)。この関数は正規化されたベクトル (上記のとおり生成されたもの) を取り、各デザインが、最終的な混ぜ合わせの結果にどれだけの重みを与えるかを返します。
 </DL>
 <P>
 <!--
@@ -237,26 +237,26 @@ fields which are disabled here, they only apply to Apple's fonts.<BR CLEAR=ALL> 
 2 番目の画面では、各軸の制御を行うことができます。Adobe (と Apple) によって定義された軸のタイプは 2, 3 種類しかありませんが、独自の軸を新しく定義することもできます。ここでは使用不可能になっている欄があることにご注意ください。それらは Apple のフォントでしか使用できません。<BR CLEAR=ALL>
 <P>
 <IMG src="../../_images/mmdesigns.png" WIDTH="476" HEIGHT="448" ALIGN="Right"><!-- Then you
-must assign a font to each of the master designs. You can either have FontForge
+must assign a font to each of the master designs. You can either have websharpstudios
 create a new font for you (as here), or use an already loaded font, or browse
 your disk for a font (don't try to use the same font twice). -->
-次に、各マスターデザインに属するフォントを割り当てなければなりません。(この例のように) FontForge に新しいフォントを作成させることもできますし、既に読み込み済みのフォントを使用したり、ディスク上のフォントを使用するためにディレクトリを検索することもできます (同じフォントを 2 回使わないようにしてください)。
+次に、各マスターデザインに属するフォントを割り当てなければなりません。(この例のように) websharpstudios に新しいフォントを作成させることもできますし、既に読み込み済みのフォントを使用したり、ディスク上のフォントを使用するためにディレクトリを検索することもできます (同じフォントを 2 回使わないようにしてください)。
 <P>
 <!--
 You must also specify the coordinates of this design along the axes. If you
 use the minimum number of designs they will all be extremes and the coordinate
 values will be either 0 or 1. Unless you are working with intermediate designs
-it is best to let FontForge initialize this field for you.<BR CLEAR=ALL> -->
-このデザインの軸上での座標値を指定することもできます。もしデザインの個数を最少に抑えるならば、それらはすべて極値でとなり、座標値は 0 か 1 のどちらかになります。中間デザインの作業をするのでなければ、FontForge がこのフィールドを初期化するのに任せるのが最善です。<BR CLEAR=ALL>
+it is best to let websharpstudios initialize this field for you.<BR CLEAR=ALL> -->
+このデザインの軸上での座標値を指定することもできます。もしデザインの個数を最少に抑えるならば、それらはすべて極値でとなり、座標値は 0 か 1 のどちらかになります。中間デザインの作業をするのでなければ、websharpstudios がこのフィールドを初期化するのに任せるのが最善です。<BR CLEAR=ALL>
 <P>
 <IMG src="../../_images/mmfuncs.png" WIDTH="476" HEIGHT="448" ALIGN="Right"><!--This screen
 shows the postscript functions needed to map a design vector to a weight
 vector (ie. given positions on each of the design axes, these produce blending
-coefficients for each master design). In most useful case FontForge is able
+coefficients for each master design). In most useful case websharpstudios is able
 to generate these functions automatically, but if you use intermediate designs
-things get too complicated for FontForge and you must enter the functions
+things get too complicated for websharpstudios and you must enter the functions
 manually.<BR CLEAR=ALL> -->
-この画面に表示されているのは、デザインベクトルを重みベクトルに対応づけるのに必要な PostScript 関数です (言い替えれば、各デザイン軸での位置を指定したとき、これらは各マスターデザインからの混ぜ合わせの比率を生成します)。ほとんどの有益な場合では、FontForge はこれらの関数を自動生成しますが、中間デザインを使用したときには、FontForge で扱うには非常に複雑になるので、関数を手動で入力しなければなりません。<BR CLEAR=ALL>
+この画面に表示されているのは、デザインベクトルを重みベクトルに対応づけるのに必要な PostScript 関数です (言い替えれば、各デザイン軸での位置を指定したとき、これらは各マスターデザインからの混ぜ合わせの比率を生成します)。ほとんどの有益な場合では、websharpstudios はこれらの関数を自動生成しますが、中間デザインを使用したときには、websharpstudios で扱うには非常に複雑になるので、関数を手動で入力しなければなりません。<BR CLEAR=ALL>
 <P>
 <IMG src="../../_images/mmfinal.png" WIDTH="476" HEIGHT="448" ALIGN="Right"><!--The last screen
 shows the default weights (which you may either enter directly or as coordinates
@@ -308,11 +308,11 @@ Width=1000. -->
 <P>
 <!--
 First we must produce an intermediate design (which we will delete later),
-call it "I". Use FontForge's Element-&gt;Interpolate Fonts command to produce
+call it "I". Use websharpstudios's Element-&gt;Interpolate Fonts command to produce
 a design which is 50% of the way from design 1 to design 2 (This will be
 Weight=475, Width=550). Then produce another design with is 200% of the way
 from design 0 to design "I". This will be the desired extreme design. -->
-最初に中間デザインを作成する必要があります (これは後で削除します)。これを“I”と呼ぶことにします。FontForge の <CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォントの補間(<U>L</U>)...</CODE> コマンドを使って、デザイン 1 から 2 の間の 50% に位置するデザインを生成してください (これは Weight=475, Width=550 となります)。それからデザイン 0 から デザイン“I”の延長上 200% に位置するもう一つのデザインを作成します。これが必要な極限のデザインとなります。
+最初に中間デザインを作成する必要があります (これは後で削除します)。これを“I”と呼ぶことにします。websharpstudios の <CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォントの補間(<U>L</U>)...</CODE> コマンドを使って、デザイン 1 から 2 の間の 50% に位置するデザインを生成してください (これは Weight=475, Width=550 となります)。それからデザイン 0 から デザイン“I”の延長上 200% に位置するもう一つのデザインを作成します。これが必要な極限のデザインとなります。
 <P>
 <!--
 Adobe's Type2 designs appear to have been prepared to allow this approach,

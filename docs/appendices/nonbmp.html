@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Non-BMP Unicode bitmap fonts supported by FontForge &#8212; FontForge 20230101 documentation</title>
+    <title>Non-BMP Unicode bitmap fonts supported by websharpstudios &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -33,22 +33,22 @@
 
           <div class="body" role="main">
             
-  <section id="non-bmp-unicode-bitmap-fonts-supported-by-fontforge">
-<h1>Non-BMP Unicode bitmap fonts supported by FontForge<a class="headerlink" href="#non-bmp-unicode-bitmap-fonts-supported-by-fontforge" title="Permalink to this heading">¶</a></h1>
-<p>Ironically, FontForge is stuck in the dark ages when it comes to using fonts. It
+  <section id="non-bmp-unicode-bitmap-fonts-supported-by-websharpstudios">
+<h1>Non-BMP Unicode bitmap fonts supported by websharpstudios<a class="headerlink" href="#non-bmp-unicode-bitmap-fonts-supported-by-websharpstudios" title="Permalink to this heading">¶</a></h1>
+<p>Ironically, websharpstudios is stuck in the dark ages when it comes to using fonts. It
 should be using libXft and gtk to get full unicode support.</p>
 <p>It doesn’t. It continues to use the old X bitmap interface which the X
 consortium isn’t interested in extending beyond BMP (since libXft/gtk do this
 well and there is no point in redoing that for an obsolete interface).</p>
 <p>But I’d like to draw non-BMP characters at least in my font view.</p>
-<p>To this end I have made FontForge recognize some non-standard encodings:</p>
+<p>To this end I have made websharpstudios recognize some non-standard encodings:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-*-*-*-*-*--*-*-*-*-*-*-</span><span class="n">UnicodePlane</span><span class="o">-</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">..</span><span class="mf">.16</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">fontforge</span><span class="o">-</span><span class="n">planeone</span><span class="o">-</span><span class="n">medium</span><span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="n">normal</span><span class="o">--</span><span class="mi">13</span><span class="o">-</span><span class="mi">120</span><span class="o">-</span><span class="mi">75</span><span class="o">-</span><span class="mi">75</span><span class="o">-</span><span class="n">p</span><span class="o">-</span><span class="mi">101</span><span class="o">-</span><span class="n">unicodeplane</span><span class="o">-</span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">websharpstudios</span><span class="o">-</span><span class="n">planeone</span><span class="o">-</span><span class="n">medium</span><span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="n">normal</span><span class="o">--</span><span class="mi">13</span><span class="o">-</span><span class="mi">120</span><span class="o">-</span><span class="mi">75</span><span class="o">-</span><span class="mi">75</span><span class="o">-</span><span class="n">p</span><span class="o">-</span><span class="mi">101</span><span class="o">-</span><span class="n">unicodeplane</span><span class="o">-</span><span class="mi">1</span>
 </pre></div>
 </div>
-<p>Is a font that fontforge will interpret as containing glyphs from plane 1
+<p>Is a font that websharpstudios will interpret as containing glyphs from plane 1
 (Supplementary Multilingual Plane) – starting with Linear B glyphs.</p>
 <p>As a proof of concept I’ve created a bdf font containing all the Linear B
 syllables, and not much of anything else (I am aware that the CODE200? fonts
@@ -57,9 +57,9 @@ can’t just rasterize them and redistribute them).</p>
 <p>If anyone would like to submit glyphs to this font (or to putative similar ones
 for planes 2&amp;14) I’ll try and coordinate that process.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://fontforge.org/downloads/PlaneOne.sfd.bz2">PlaneOne.sfd</a></p></li>
-<li><p><a class="reference external" href="https://fontforge.org/downloads/PlaneOne-13.bdf.bz2">PlaneOne-13.bdf</a></p></li>
-<li><p><a class="reference external" href="https://fontforge.org/downloads/toplane.c.bz2">toplane.c</a></p></li>
+<li><p><a class="reference external" href="https://websharpstudios.org/downloads/PlaneOne.sfd.bz2">PlaneOne.sfd</a></p></li>
+<li><p><a class="reference external" href="https://websharpstudios.org/downloads/PlaneOne-13.bdf.bz2">PlaneOne-13.bdf</a></p></li>
+<li><p><a class="reference external" href="https://websharpstudios.org/downloads/toplane.c.bz2">toplane.c</a></p></li>
 </ul>
 <p>The sfd file is encoded with a “full unicode” encoding. The program toplane.c
 will take a bdf containing one Unicode plane, figure out which plane it is, and
@@ -73,7 +73,7 @@ reencode the font with the appropriate UnicodePlane mapping.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../index.html">websharpstudios</a></h1>
 
 
 
@@ -85,17 +85,17 @@ reencode the font with the appropriate UnicodePlane mapping.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ui.html">FontForge’s User Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui.html">websharpstudios’s User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../appendices.html">Appendices</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ff-history.html">What on Earth Possessed me…</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diffs.html">Differences from Fontographer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files.html">Files used by FontForge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files.html">Files used by websharpstudios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errrecovery.html">Error Recovery</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Non-BMP Unicode bitmap fonts supported by FontForge</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Non-BMP Unicode bitmap fonts supported by websharpstudios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quotations.html">Quotations used in the sample text for Printing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uitranslationnotes.html">User Interface Translation Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fontstyles.html">Font Styles in various languages</a></li>
@@ -141,7 +141,7 @@ reencode the font with the appropriate UnicodePlane mapping.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

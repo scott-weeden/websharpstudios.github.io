@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Expand Stroke Facility &#8212; FontForge 20230101 documentation</title>
+    <title>Expand Stroke Facility &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../_static/fftype16.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Extending FontForge With Python" href="pyextend.html" />
+    <link rel="next" title="Extending websharpstudios With Python" href="pyextend.html" />
     <link rel="prev" title="Delta Instruction Suggestions" href="SuggestDeltas.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -62,8 +62,8 @@ if no points are selected on any contour. The dialog looks like this:</p>
 </figure>
 <p>The <a class="reference internal" href="../ui/mainviews/charview.html#charview-freehand"><span class="std std-ref">Freehand Tool</span></a> also uses the facility and has a
 similar dialog, and there are interfaces for both
-<a class="reference internal" href="../scripting/python/fontforge.html#fontforge.glyph.stroke" title="fontforge.glyph.stroke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Python</span></code></a> and
-<a class="reference internal" href="../scripting/scripting-alpha.html#ExpandStroke" title="ExpandStroke"><code class="xref ff ff-func docutils literal notranslate"><span class="pre">FontForge's</span> <span class="pre">native</span> <span class="pre">scripting</span> <span class="pre">language</span></code></a>.</p>
+<a class="reference internal" href="../scripting/python/websharpstudios.html#websharpstudios.glyph.stroke" title="websharpstudios.glyph.stroke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Python</span></code></a> and
+<a class="reference internal" href="../scripting/scripting-alpha.html#ExpandStroke" title="ExpandStroke"><code class="xref ff ff-func docutils literal notranslate"><span class="pre">websharpstudios's</span> <span class="pre">native</span> <span class="pre">scripting</span> <span class="pre">language</span></code></a>.</p>
 <p>This guide is arranged into four sections. The <a class="reference internal" href="#stroke-offsetting"><span class="std std-ref">first</span></a>
 discusses the common case of tracing a circular nib, which is also called
 “offsetting”. It includes a description of the “<a class="reference internal" href="#stroke-cap"><span class="std std-ref">cap</span></a>” and
@@ -89,7 +89,7 @@ line thickness of <em>2r</em> (source contour shown in green):</p>
 <p><span class="caption-text">Offset Curves</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>In FontForge you specify a circular nib in the UI dialog by choosing the
+<p>In websharpstudios you specify a circular nib in the UI dialog by choosing the
 “Circular/Elliptical” nib type and making the Major and Minor Axis lengths
 equal. In the native and Python API a Minor Axis value of zero will be replaced
 by the Major Axis value. And although it does not make a geometric difference,
@@ -122,7 +122,7 @@ where the angle changes:</p>
 open source contour is called a “cap”. PostScript and SVG specify three cap
 styles that are really two styles: “Round” and “Butt”/”Square”. A Round cap
 connects the ends with a semi-circle, while a Butt cap connects them with a
-straight line. When tracing with a circular nib the FontForge cap options “Nib”
+straight line. When tracing with a circular nib the websharpstudios cap options “Nib”
 and “Round” are both equivalent to PS/SVG “Round”, and the options “Butt” and
 “Bevel” are both equivalent to PS/SVG “Butt”. (These options differ when used
 with other nib shapes.)</p>
@@ -132,7 +132,7 @@ with other nib shapes.)</p>
 </figcaption>
 </figure>
 <p>A PS/SVG “Square” cap is a Butt cap extended by the length of the offset radius,
-and therefore half the width of the traced line. The FontForge “Extend Cap”
+and therefore half the width of the traced line. The websharpstudios “Extend Cap”
 parameter generalizes this feature by allowing the user to specify the distance
 between the end of the source contour and the cap line either as an absolute
 length or in units of stroke-width. The parameter works with the “Round” and
@@ -159,16 +159,16 @@ is to trim off the parts of the line past the intersection:</p>
 <p>The offset lines at the larger “reflex” angle do not meet. The line closing the
 gap between those is called a “join”. PostScript specified three join styles:
 “Round”, “Bevel” and “Miter”. SVG 2.0 adds styles “Miter Clip” and “Arcs”.
-FontForge currently supports the six styles “Nib”, “Bevel”, “Round”, “Miter”,
+websharpstudios currently supports the six styles “Nib”, “Bevel”, “Round”, “Miter”,
 “Miter Clip”, and “Arcs”.</p>
 <p>A PS/SVG “Bevel” join connects the two offset curves with a straight line, and
-this is also what FontForge’s “Bevel” option does. A PS/SVG “Miter” or SVG
+this is also what websharpstudios’s “Bevel” option does. A PS/SVG “Miter” or SVG
 “Miter Clip” join (normally) extends each offset curve with a straight line
-tangent to the curve at the endpoint to where each intersects, as do FontForge’s
-equivalent “Miter” and “Miter Clip” options. A FontForge “Nib” join connects the
+tangent to the curve at the endpoint to where each intersects, as do websharpstudios’s
+equivalent “Miter” and “Miter Clip” options. A websharpstudios “Nib” join connects the
 offset curves with an edge corresponding to the shape of the nib; when using a
 round nib this is equivalent to the PS/SVG “Round” join option, which connects
-the offset lines with an arc of the offset radius. FontForge’s “Round” join
+the offset lines with an arc of the offset radius. websharpstudios’s “Round” join
 option is also equivalent when using a circular nib:</p>
 <figure class="align-default" id="id9">
 <img alt="../_images/joins.svg" src="../_images/joins.svg" /><figcaption>
@@ -280,7 +280,7 @@ from the origin will cause the output to be offset by that amount:</p>
 </section>
 <section id="caps-and-joins-with-other-nibs">
 <h3>Caps and Joins With Other Nibs<a class="headerlink" href="#caps-and-joins-with-other-nibs" title="Permalink to this heading">¶</a></h3>
-<p>Earlier versions of FontForge only provided cap and join options for circular
+<p>Earlier versions of websharpstudios only provided cap and join options for circular
 and elliptical nibs (and some of the latter were misleadingly named). For other
 nibs it automatically closed the cap and join edges with the nib
 shape-equivalent to the current “Nib” cap and join styles. Given that the Nib
@@ -305,7 +305,7 @@ Miter Clip joins, although both are constructed according to the same rules.</p>
 </figcaption>
 </figure>
 <p>For similar reasons it is often impossible to close an arbitrary join with a
-smooth circular arc. When the Round join is specified in such cases FontForge
+smooth circular arc. When the Round join is specified in such cases websharpstudios
 will instead choose the smooth arc of the least eccentric compatible ellipse
 (which might still be noticeably eccentric).</p>
 <figure class="align-default" id="id17">
@@ -327,7 +327,7 @@ simplest option for later editing stages.)</p>
 <p><span class="caption-text">Cap Angle of Custom Nib</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>FontForge will not trim a trace line to make a Butt or Round cap; instead it
+<p>websharpstudios will not trim a trace line to make a Butt or Round cap; instead it
 extends one of the lines to match the other. This means that Butt and Round caps
 often extend past the end of the source contour, with a distance that depends on
 the nib shape and the cap angle. If this is a problem the Extend Cap option
@@ -429,7 +429,7 @@ will keep the larger clockwise counterpart of the glyph’s larger clockwise
 contour and the smaller counterclockwise counterpart of the glyph’s smaller
 counterclockwise contour. This increases the “weight” of the character by
 <em>2r</em>-the diameter of the nib. Choosing Internal Only analogously decreases the
-weight by <em>2r</em>, assuming it is thicker than that at all points. (FontForge’s
+weight by <em>2r</em>, assuming it is thicker than that at all points. (websharpstudios’s
 Change Weight facility uses Expand Stroke with these options.)</p>
 <figure class="align-default" id="id23">
 <img alt="../_images/intext.svg" src="../_images/intext.svg" /><figcaption>
@@ -441,7 +441,7 @@ Change Weight facility uses Expand Stroke with these options.)</p>
 <h3>Add Extrema and Simplify<a class="headerlink" href="#add-extrema-and-simplify" title="Permalink to this heading">¶</a></h3>
 <p>It is normally desirable to avoid mid-spline extrema and to remove unneeded
 on-curve points and (in the case of straight lines) unneeded control points.
-Therefore Expand Stroke normally runs FontForge’s Add Extrema and Simplify
+Therefore Expand Stroke normally runs websharpstudios’s Add Extrema and Simplify
 algorithms on its output (in that order). You can change this behavior by
 changing these options. One reason to do this is if you prefer a different
 choice of Simplify parameters. Expand Stroke uses the Accuracy Target as the
@@ -455,7 +455,7 @@ source contour knot (where the angle changes, requiring the join) and the
 intersection of the arcs. This approach works well for roughly-round nibs at any
 Join Limit and for any nibs at longer Join Limits. Unfortunately it can produce
 poor or nonsensical results for oblong nibs at shorter Join Limits. To handle
-such cases FontForge includes an alternate “Ratio” Arcs join clipping algorithm.</p>
+such cases websharpstudios includes an alternate “Ratio” Arcs join clipping algorithm.</p>
 <p>The default “Auto” setting uses the SVG 2 algorithm unless the ratio of maximum
 to minimum axis for a circular or calligraphic nib is greater than 2 and the
 Join Limit is relative to Nib Span and less than 4, in which case it uses the
@@ -560,7 +560,7 @@ Although these results are unusual and probably undesirable they are not
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../index.html">websharpstudios</a></h1>
 
 
 
@@ -572,12 +572,12 @@ Although these results are unusual and probably undesirable they are not
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ui.html">FontForge’s User Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui.html">websharpstudios’s User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../techref.html">Technical References</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="gposgsub.html">Advanced Typography Tables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="AA-Comparison.html">Anti-Alias Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autotrace.html">Autotracing bitmaps in FontForge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autotrace.html">Autotracing bitmaps in websharpstudios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="accented.html">Building Accented and other Composite Glyphs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bezier.html">Bézier Splines </a></li>
 <li class="toctree-l2"><a class="reference internal" href="askmulti.html">The <cite>askMulti</cite> Dialog</a></li>
@@ -615,21 +615,21 @@ Although these results are unusual and probably undesirable they are not
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pyextend.html">Extending FontForge With Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyextend.html">Extending websharpstudios With Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BDFGrey.html">Extensions to Adobe’s BDF  for greymap fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PfaEdit-TeX.html">FontForge and TeX</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pfaeditmath.html">FontForge’s math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PfaEdit-TeX.html">websharpstudios and TeX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pfaeditmath.html">websharpstudios’s math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hinting.html">Hinting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="macformats.html">Macintosh font formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="featurefile.html">Major differences between FontForge’s and Adobe’s interpretation of feature files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="non-standard.html">Non standard extensions used FontForge in True/Open Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="featurefile.html">Major differences between websharpstudios’s and Adobe’s interpretation of feature files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="non-standard.html">Non standard extensions used websharpstudios in True/Open Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="palmfonts.html">Palm fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Using FontForge Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Using websharpstudios Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmaponlysfnt.html">Several formats for bitmap only sfnts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sfdformat.html">Spline Font Database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pcf-format.html">The X11 PCF bitmap font file format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TrueOpenTables.html">TrueType and OpenType tables supported by FontForge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="corpchar.html">Unicode Corporate Characters used by FontForge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TrueOpenTables.html">TrueType and OpenType tables supported by websharpstudios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpchar.html">Unicode Corporate Characters used by websharpstudios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="UniqueID.html">UniqueID and XUID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selections.html">X Selections and the X Clipboard</a></li>
 </ul>
@@ -646,7 +646,7 @@ Although these results are unusual and probably undesirable they are not
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="../techref.html">Technical References</a><ul>
       <li>Previous: <a href="SuggestDeltas.html" title="previous chapter">Delta Instruction Suggestions</a></li>
-      <li>Next: <a href="pyextend.html" title="next chapter">Extending FontForge With Python</a></li>
+      <li>Next: <a href="pyextend.html" title="next chapter">Extending websharpstudios With Python</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -674,7 +674,7 @@ Although these results are unusual and probably undesirable they are not
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

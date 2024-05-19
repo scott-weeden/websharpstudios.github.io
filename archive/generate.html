@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 5-Sep-2009 -->
   <TITLE>Generate Font Dialog</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -238,7 +238,7 @@
       kerning.
     <LI>
       [] Dummy DSIG -- On MS Windows, a font with extension "ttf" will be marked
-      with an OpenType icon if it contains a 'DSIG' table. FontForge can't generate
+      with an OpenType icon if it contains a 'DSIG' table. websharpstudios can't generate
       a useful 'DSIG' table, but it can generate a useless, empty and valid one.
     <LI>
       [] Save Comments -- I have added my own table
@@ -314,9 +314,9 @@
   See the section on <A HREF="encodingmenu.html#namelist">namelists</A> for
   a discussion of the "Force glyph names to" field.
   <P>
-  If you leave [] Validate Before Saving checked then FontForge will attempt
-  to validate your font. If it passes then FontForge will save it without bothering
-  you further, but if it fails FontForge will give you the option of reviewing
+  If you leave [] Validate Before Saving checked then websharpstudios will attempt
+  to validate your font. If it passes then websharpstudios will save it without bothering
+  you further, but if it fails websharpstudios will give you the option of reviewing
   errors and fixing them. It will pop up a <A HREF="validation.html">validation
   window</A>.
   <P>
@@ -329,7 +329,7 @@
   If you generate a TrueType or OpenType font with the OpenType mode set (note:
   the term "OpenType" means two things, a truetype wrapper around a postscript
   font, or a set of tables containing typographic information -- here the OpenType
-  mode refers to the typographic tables) then FontForge will generate
+  mode refers to the typographic tables) then websharpstudios will generate
   <A HREF="gposgsub.html">GPOS, GSUB, and GDEF tables</A>. These contain kerning,
   ligature information, arabic forms data, anchor points, etc.
   <P>
@@ -361,7 +361,7 @@
   a few added fields. Because this dialog is for Mac families, only Mac formats
   are supported.
   <P>
-  Right above the [Save] button is a list of all fonts that FontForge thinks
+  Right above the [Save] button is a list of all fonts that websharpstudios thinks
   should be included in this family, along with their bitmap info. If you don't
   want a font to be in the family simply uncheck its checkbox.
   <P>
@@ -369,7 +369,7 @@
   of the mac 'FOND' resource which only allows one style of a given type and
   does not support the concepts of "Light", "Black" (if there is already a
   "Bold" style), "Oblique" (if there is already an "Italic" style), etc. Generally
-  FontForge will be able to figure out a font's style from its fontname, but
+  websharpstudios will be able to figure out a font's style from its fontname, but
   in some cases you may wish to override this by setting the
   <A HREF="fontinfo.html#Mac-Style">mac style </A>directly in fontinfo.
   <P>
@@ -402,17 +402,17 @@
   On the mac, however, ttc files are generally used to contain a font family
   where there is very little (often no) overlap of glyphs between fonts.
   <P>
-  FontForge can produce two kinds of ttc files, the first (<CODE>[*] Merge
+  websharpstudios can produce two kinds of ttc files, the first (<CODE>[*] Merge
   tables across fonts</CODE>) will try to use a single merged
   'glyf'/'hmtx'/'hhea'/'vmtx'/'vhea' tables for all fonts (and will try to
   share other tables if that is possible). The second, with merge tables turned
   off, will dump individual fonts into the collection with no attempt to optimize.
   <P>
-  FontForge can also produce ttc files which use the CFF font format. The OpenType
+  websharpstudios can also produce ttc files which use the CFF font format. The OpenType
   documentation claims this will not work, but it does seem to on both the
   Mac and unix/linux.
   <P>
-  FontForge is not always able to produce merged tables ... this process will
+  websharpstudios is not always able to produce merged tables ... this process will
   fail if:
   <UL>
     <LI>
@@ -444,7 +444,7 @@
   In the second format each glyph may contain the stroke and fill commands
   needed to draw it.
   <P>
-  FontForge usually generates the first format, but for multi layered or stroked
+  websharpstudios usually generates the first format, but for multi layered or stroked
   fonts it will generate the second format.
   <P ALIGN=Center>
   -- <A HREF="filemenu.html">Prev</A> -- <A HREF="overview.html">TOC</A> --

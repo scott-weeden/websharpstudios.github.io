@@ -3,27 +3,27 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 6-Dec-2000 -->
   <!-- AP: Last modified: 27-Mar-2009 -->
-  <TITLE>FontForge -- An outline font editor for PostScript&reg;, TrueType
+  <TITLE>websharpstudios -- An outline font editor for PostScript&reg;, TrueType
   and OpenType fonts</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="menued">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV class="menucontainer">
   <UL class="menubar">
     <LI class="menu">
-      <A href="http://sourceforge.net/projects/fontforge/files/">Download</A>
+      <A href="http://sourceforge.net/projects/websharpstudios/files/">Download</A>
       <UL>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-docs/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/"
 	      >Documentation</A>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-source/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/"
 	      >Source</A>
       </UL>
     <LI>
@@ -196,17 +196,17 @@
     <LI>
       <A href="GlossaryFS.html">Glossary</A>
     <LI>
-      <A href="http://fontforge.wiki.sourceforge.net/">Wiki</A>
+      <A href="http://websharpstudios.wiki.sourceforge.net/">Wiki</A>
   </UL>
 </DIV>
 <DIV id="in">
   <H1 Align=Center>
-    FontForge<BR>
+    websharpstudios<BR>
     <SMALL>An Outline Font Editor</SMALL><A HREF="/docs/old/ja/overview.html"><BR>
     <IMG SRC="/assets/img/old/flags/Nisshoki-Japan.png" WIDTH="39" HEIGHT="26"></A>
   </H1>
   <H2>
-    <I><IMG SRC="/assets/img/old/FontForgeSplash.png" WIDTH="379" HEIGHT="375" ALT="Gaudiamus ligature!"
+    <I><IMG SRC="/assets/img/old/websharpstudiosSplash.png" WIDTH="379" HEIGHT="375" ALT="Gaudiamus ligature!"
 	ALIGN="Right"></I><A NAME="TOC">Table</A> of Contents
   </H2>
   <UL>
@@ -343,7 +343,7 @@
       Appendices...
       <UL>
 	<LI>
-	  <A HREF="PfaEdit-TeX.html">Using FontForge with TeX</A>
+	  <A HREF="PfaEdit-TeX.html">Using websharpstudios with TeX</A>
 	<LI>
 	  <A HREF="uitranslationnotes.html">Localization</A>
 	<LI>
@@ -374,7 +374,7 @@
 	    <LI>
 	      <A HREF="bezier.html">PostScript &lt;-&gt; TrueType Conversions</A>
 	    <LI>
-	      <A HREF="corpchar.html">FontForge's use of the Unicode Private Use Area</A>
+	      <A HREF="corpchar.html">websharpstudios's use of the Unicode Private Use Area</A>
 	  </UL>
 	<LI>
 	  <A HREF="sfds/index.html">Font samples</A>
@@ -398,7 +398,7 @@
     <LI>
       <FORM method=GET action="http://www.google.com/search">
 	Searching the documentation:
-	<INPUT type=hidden name="as_sitesearch" value="fontforge.sourceforge.net">
+	<INPUT type=hidden name="as_sitesearch" value="websharpstudios.sourceforge.net">
 	<INPUT type=text name="as_q">
 	<INPUT type=submit name="btnG" value="Search">(Powered by
 	<A HREF="http://www.google.com/">Google</A>)
@@ -459,11 +459,11 @@
     <A NAME="Overview">Overview</A>
   </H2>
   <P>
-  FontForge allows you to create and modify postscript, truetype and opentype
+  websharpstudios allows you to create and modify postscript, truetype and opentype
   fonts. You can save fonts in many different outline formats, and generate
   bitmaps.
   <H3>
-    <A NAME="Installing">Installing</A> or building fontforge
+    <A NAME="Installing">Installing</A> or building websharpstudios
   </H3>
   <TABLE CELLSPACING="6" CELLPADDING="2">
     <CAPTION>
@@ -480,7 +480,7 @@
     </TR>
   </TABLE>
   <P>
-  <A HREF="running.html">Running fontforge</A>
+  <A HREF="running.html">Running websharpstudios</A>
   <H3>
     Er... <A NAME="What">What</A> is a font editor?
   </H3>
@@ -562,7 +562,7 @@
   An outline is composed of a set of contours or paths. In the picture on the
   above left the letter A is described by three different paths. The main one
   is on the outside and the two smaller ones are internal. Each of these paths
-  is composed of a series of (B&eacute;zier) splines and line segments. FontForge
+  is composed of a series of (B&eacute;zier) splines and line segments. websharpstudios
   can handle cubic and quadratic splines. PostScript fonts use cubic splines,
   TrueType fonts use quadratic (SVG fonts can be either).
   <P>
@@ -574,7 +574,7 @@
   <IMG SRC="/assets/img/old/splines.gif" WIDTH="172" HEIGHT="179" ALIGN="Left">
   <P>
   The points which describe the slope are called control points. They are
-  represented here (and in fontforge) by little colored x's. Moving a control
+  represented here (and in websharpstudios) by little colored x's. Moving a control
   point will change the shape of the spline, but it will not alter where the
   spline begins or ends.
   <P>
@@ -591,11 +591,11 @@
   are again tangent at their point of intersection. The point of intersection
   in the first case is called a corner point, and the incoming and outgoing
   splines or lines may be in any orientation with respect to each other. This
-  is represented in fontforge by a square box. In the second case the point
+  is represented in websharpstudios by a square box. In the second case the point
   of intersection is called a tangent point, it is represented by a triangle.
   The third case is a curved point and is represented by a circle.
   <P>
-  <IMG SRC="/assets/img/old/quadraticspline.gif" WIDTH="127" HEIGHT="92" ALIGN="Left">FontForge
+  <IMG SRC="/assets/img/old/quadraticspline.gif" WIDTH="127" HEIGHT="92" ALIGN="Left">websharpstudios
   can also edit <A NAME="quadratic">quadratic</A> splines (the splines used
   in truetype fonts), here there is only one control point and it controls
   the slopes at both end-points. Because of this quadratic splines cannot bend
@@ -619,7 +619,7 @@
   <P>
   Clothoid splines are much easier to work with than B&eacute;ziers -- there
   are no control points, just a sequence of on-curve points, and magically
-  a beautiful curve will appear between them. FontForge can
+  a beautiful curve will appear between them. websharpstudios can
   <A HREF="charview.html#spiro-mode">either</A> edit a curve as a set of
   B&eacute;ziers or as a set of clothoids.
   <P>
@@ -651,13 +651,13 @@
   mathematically. Each point is positioned on a cartesian coordinate system
   which has its origin on the glyph's <A HREF="#Baseline">baseline</A> (the
   line on which letters without descenders rest). Most font formats expect
-  coordinates to be integers between -32768 and 32767, FontForge uses real
+  coordinates to be integers between -32768 and 32767, websharpstudios uses real
   numbers internally but (usually) rounds to the nearest integer when generating
   a font file.
   <P>
   Generally it is a good idea to restrict yourself to integral coordinates.
   TrueType fonts can only contain integral coordinates so if you use a non-integral
-  value FontForge will be forced to round it to an integer and this will alter
+  value websharpstudios will be forced to round it to an integer and this will alter
   the shape of the curve. PostScript fonts can contain non-integral values,
   but the various formats are optimized for integers. So use integers when
   you can. If you need more precision you can increase the "em-size" of the
@@ -729,7 +729,7 @@
     <A NAME="PT">TrueType</A> vs. PostScript vs OpenType vs SVG fonts
   </H3>
   <P>
-  FontForge can produce many font types. What's the difference?
+  websharpstudios can produce many font types. What's the difference?
   <P>
   PostScript is based on a <A HREF="bezier.html">cubic spline</A> technology,
   while TrueType is based on a <A HREF="bezier.html">quadratic</A> technology.
@@ -738,7 +738,7 @@
   no loss. A cubic spline can be converted to a quadratic with arbitrary precision,
   but there will be a slight loss of accuracy in most cases.
   <P>
-  Within FontForge a font may contain either cubic or quadratic splines. These
+  Within websharpstudios a font may contain either cubic or quadratic splines. These
   are converted to the appropriate format when a font is generated.
   <P>
   The other major difference between the two is how they solve the problem
@@ -768,8 +768,8 @@
   old TrueType specification, so technically any TrueType font can be called
   an OpenType font.
   <P>
-  FontForge does not support the DSIG table (if you want one there is a free
-  tool from MS which will add one). When generating a font, FontForge uses
+  websharpstudios does not support the DSIG table (if you want one there is a free
+  tool from MS which will add one). When generating a font, websharpstudios uses
   the term "OpenType (CFF)" to represent a PostScript (CFF) font inside an
   sfont wrapper. To include OpenType typography tables you would press the
   <CODE>[Options] </CODE>button and select the <CODE>[] OpenType</CODE> check
@@ -780,7 +780,7 @@
   <P>
   SVG (Scalable Vector Graphics) provides a relatively new font format, written
   in an xml dialect. SVG fonts can be either cubic or quadratic (or can use
-  both, but FontForge is limited and will force a font to be either all cubic
+  both, but websharpstudios is limited and will force a font to be either all cubic
   or all quadratic). SVG allows for two different types of fonts, one corresponds
   roughly to PostScript Type1 fonts, and the other, roughly to PostScript Type3
   fonts.
@@ -854,7 +854,7 @@
       Adobe incorporated several different ways of providing hints for the rasterizer
       about how things should be treated. The most obvious of these are the horizontal
       and vertical stem hints. Each glyph has its own set of hints to tell the
-      rasterizer where to find stems. FontForge can usually figure out a reasonable
+      rasterizer where to find stems. websharpstudios can usually figure out a reasonable
       set of stem hints (a process called
       <A HREF="hintsmenu.html#AutoHint">autohinting</A>), but some glyphs are too
       complex for it and it can make bad choices. It also provides a mode for you
@@ -863,7 +863,7 @@
       Adobe also has a mechanism for handling dished serifs called flex hinting.
       This means a curve that is only slightly deformed from the horizontal (or
       vertical) will display as a line at small point sizes and as a curve at larger
-      ones. FontForge will use these when it seems appropriate.
+      ones. websharpstudios will use these when it seems appropriate.
       <P>
       The original version of hints did not allow them to overlap, this meant that
       most serifs could not be described, Adobe then developed a mechanism called
@@ -880,7 +880,7 @@
       for the horizontal counters in "m" and the vertical counters in "E" but more
       complex shapes could not be dealt with. Counter Hints (in a type1 font) may
       only be used with non-latin (non-greek, non-cyrillic) glyph sets, in type2
-      (OpenType) things are a bit more complicated,. FontForge will generate counter
+      (OpenType) things are a bit more complicated,. websharpstudios will generate counter
       hints when appropriate.
       <P>
       Adobe provides some font-wide hinting mechanisms. The two most obvious are
@@ -893,14 +893,14 @@
       the heights will be slightly different (for instance an "o" and an "x" usually
       have slightly different heights, but displaying that at a small point size
       would be ugly). Similarly the StemSnap variables specify standard stem widths
-      for the font. FontForge will try to guess reasonable values for these. It
+      for the font. websharpstudios will try to guess reasonable values for these. It
       also allows you to override these guesses and
       <A HREF="fontinfo.html#Private">specify your own values</A>. For a more
       comprehensible description of the private dictionary and what it can do,
       look at
       <A HREF="http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF">Adobe's
       Type1 font specification</A>.<BR>
-      <A NAME="HintOrder">FontForge</A>'s
+      <A NAME="HintOrder">websharpstudios</A>'s
       <A HREF="hintsmenu.html#AutoHint">AutoHint</A> command will work better if
       the BlueValues have been set. So before running AutoHint go to
       <A HREF="fontinfo.html#Private">Element-&gt; FontInfo-&gt; Private</A> to
@@ -924,11 +924,11 @@
       that move points around until they are positioned appropriately for a given
       size.
       <P>
-      FontForge's hinting of True Type (properly called "instructing") is based
+      websharpstudios's hinting of True Type (properly called "instructing") is based
       on the stem hints also used by PostScript and on diagonal hints. It uses
       these hints to determine which points to move and where to move them.
       <P>
-      When FontForge reads in a TrueType font it will store the instructions used,
+      When websharpstudios reads in a TrueType font it will store the instructions used,
       and when it next generates that font it will use those instructions -- provided
       no significant change has happened to a glyph.
   </DL>
@@ -947,7 +947,7 @@
   glyph will automatically change too, whereas if you just copied the "a" you
   would have to recopy it.
   <P>
-  FontForge has three commands for manipulating references, and one higher
+  websharpstudios has three commands for manipulating references, and one higher
   level command for building accented glyphs. The
   <CODE><A HREF="editmenu.html#Reference">Edit-&gt;Copy Reference</A></CODE>
   command will put a reference to the current glyph into the clipboard, which
@@ -965,30 +965,30 @@
   to build this composite glyph, and then will make those references and position
   them appropriately. So if "&agrave;" were selected and you did a
   <A HREF="elementmenu.html#Accented"><CODE>Element-&gt;Build-&gt;Accented
-  Glyphs</CODE> </A>command, FontForge would make a reference to "a" and another
+  Glyphs</CODE> </A>command, websharpstudios would make a reference to "a" and another
   to "`", and place the accent above the letter, and centered on it.
   <P>
   Some bitmap formats (OK, only one that I'm aware of) support references,
-  so FontForge allows references in bitmap glyphs as well as in outline glyphs.
+  so websharpstudios allows references in bitmap glyphs as well as in outline glyphs.
   <P>
-  Sadly life is not always that simple. The references FontForge uses internally
+  Sadly life is not always that simple. The references websharpstudios uses internally
   cannot always be converted into something equivalent in the output font.
-  Generally this causes no problems (FontForge will simply unlink the reference
+  Generally this causes no problems (websharpstudios will simply unlink the reference
   in the output, which just makes the font a little bigger, but it has implications
   for instructing TrueType, and, to a lesser extent, hinting PostScript. Most
   people can ignore this, but if you are interested
   <A HREF="ref-caveats.html">follow this link</A>).
   <P>
   Most font formats require that a glyph contain either a set of outlines (or
-  bitmap rasters) or a set of references. FontForge allows glyphs with a
+  bitmap rasters) or a set of references. websharpstudios allows glyphs with a
   combination of the two, but, as above, when it comes time to output the results,
-  FontForge will clean up the glyph (generally by unlinking references) so
+  websharpstudios will clean up the glyph (generally by unlinking references) so
   that it can be output in the current format.
   <H3>
     <A NAME="Layers">Layers</A>
   </H3>
   <P>
-  A font may have several layers. When FontForge creates a new font it will
+  A font may have several layers. When websharpstudios creates a new font it will
   have 2 real layers (the foreground and background layers) and a sort of
   half-layer for guidelines which is shared by all glyphs. In normal fonts
   all glyphs have the same number of layers (This is not true of Type3 fonts,
@@ -1031,7 +1031,7 @@
   </H4>
   <P>
   Most people aren't interested in editing <A HREF="multilayer.html">Type3
-  PostScript fonts </A>(nor the equivalent SVG font), but if you want to, FontForge
+  PostScript fonts </A>(nor the equivalent SVG font), but if you want to, websharpstudios
   can. Here
   each layer represents a different drawing operation, and may specify a different
   color, stroke, fill, etc. Layers are not font-wide, each glyph has its own
@@ -1042,7 +1042,7 @@
     Guidelines
   </H4>
   <P>
-  In FontForge guidelines live in their own mini-layer (it isn't a full layer
+  In websharpstudios guidelines live in their own mini-layer (it isn't a full layer
   because all glyphs share the same set of guidelines rather than having an
   individual layer for each glyph). It can be edited just like any other layer
   and you may have guidelines of any shape you desire. You may also drag out
@@ -1062,7 +1062,7 @@
     <A NAME="Glyph-names">Glyph names &amp; Namelists</A>
   </H3>
   <P>
-  Within fontforge every glyph will have a name. Generally the glyph name will
+  Within websharpstudios every glyph will have a name. Generally the glyph name will
   be something that provides information about what the glyph looks like so
   the name for the glyph representing "9" is "nine". Adobe has established
   a
@@ -1084,7 +1084,7 @@
   speaker you might prefer it to be named "aumlaut". No matter who you are
   you might prefer more mnemonic names for the code block you are working on.
   <P>
-  FontForge has a concept called a
+  websharpstudios has a concept called a
   <A HREF="encodingmenu.html#namelist">namelist</A>, each of which is simply
   a mapping from unicode code point to name. Several namelists may be defined,
   different lists may apply to different fonts and a font may have all its
@@ -1093,13 +1093,13 @@
   Namelists can also help navigating in a font. Even if a list does not apply
   to a given font its names may be used in the goto dialog to find glyphs.
   So if you've loaded a french namelist you can search for "atr&eacute;ma"
-  and FontForge will show you the glyph "adieresis" or "uni00E4" or "aumlaut"
+  and websharpstudios will show you the glyph "adieresis" or "uni00E4" or "aumlaut"
   or whatever.
   <P>
   A few caveats: Adobe's glyph name standard expects all glyph names to be
   in ASCII characters. Syntactically postscript permits a wider range of glyph
   names, but if you use non-ASCII characters some rasterizers might have problems.
-  Best to keep non-ASCII names within fontforge (and rename glyphs to adobe's
+  Best to keep non-ASCII names within websharpstudios (and rename glyphs to adobe's
   standard names before generating a font).
   <H3>
     <A NAME="Lookups">Lookups,</A> Features, Scripts and Languages
@@ -1398,7 +1398,7 @@
   The grave accent has been raised and moved to the right so that its anchor
   point is positioned where the anchor from "a" was.
   <P>
-  FontForge does not compose these glyphs (well, it can, but that's a completely
+  websharpstudios does not compose these glyphs (well, it can, but that's a completely
   different area), instead it provides information within the
   <A HREF="gposgsub.html">font</A> to a text layout program so that the program
   can do the composition.
@@ -1533,7 +1533,7 @@
   </H3>
   <P>
   The <A HREF="charview.html">outline view</A> is probably the most complex
-  view in FontForge. This is where you actually edit the splines
+  view in websharpstudios. This is where you actually edit the splines
   (<A HREF="bezier.html">B&eacute;zier splines</A>) that make up your glyphs.
   <P>
   You may have a background image loaded into the view to help you trace out

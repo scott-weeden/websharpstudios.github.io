@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Font View &#8212; FontForge 20230101 documentation</title>
+    <title>Font View &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -173,7 +173,7 @@ number (often between 0 and 255) and maps it to a character. Often these two are
 used synonymously as an encoding generally implies a given character set.
 (strictly speaking a character set is an unordered collection with no implied
 encoding, and some encodings work with multiple character sets).</p>
-<p>All fonts in fontforge have both a character set and an encoding. The character
+<p>All fonts in websharpstudios have both a character set and an encoding. The character
 set is just the set of characters in the font. The encoding is the way those
 characters are ordered (or sometimes, the way the first 256 are ordered). The
 font info dialog allows you to chose the encoding (and character set) you wish
@@ -188,10 +188,10 @@ a time would be encoded).</p>
 <p>It is possible for an encoding not to be one-to-one. That is there may be
 several characters that might lead to the same underlying glyph (the classic
 example is the non-breaking space which often uses the same glyph as the
-breaking space). When FontForge encounters such an encoding it will create a
+breaking space). When websharpstudios encounters such an encoding it will create a
 character structure for each entry, one of those structures will contain the
 data for drawing the glyph, the other(s) will contain a reference to the one
-real character. All characters will have the same name. When FontForge generates
+real character. All characters will have the same name. When websharpstudios generates
 a font it looks for this case and turns it into a font whose encoding vector
 contains multiple references to a glyph.</p>
 <p>It is also possible to have an encoding where a single character can lead to
@@ -222,7 +222,7 @@ assigned the name “mu” to Micro Sign, “Delta” to Increment and “Omega�
 Sign. So the Greek alphabet has ugly nameless holes in it.</p>
 <p>CID fonts (see <a class="reference internal" href="#fontview-cid"><span class="std std-ref">below</span></a>) have no encodings. Instead they are
 designed to be associated with one or several cmap files which provide encodings
-in a general way. cmap files are beyond the scope of FontForge. Adobe has
+in a general way. cmap files are beyond the scope of websharpstudios. Adobe has
 defined many which are freely
 <a class="reference external" href="http://www.adobe.com/products/acrobat/acrrasianfontpack.html">available</a>.</p>
 <p>There is one final encoding called “Glyph Order”. This encoding is just the
@@ -240,12 +240,12 @@ not encode the latter) while Unicode does.</p>
 <p>According to the <a class="reference external" href="http://www.unicode.org/">unicode website</a> the first 256
 character positions of unicode and ISO 8859-1 (ISO Latin1) are the same. However
 the PostScript encoding of ISOLatin1 is slightly different from that specified
-for unicode. I cannot explain the reasoning behind this. FontForge does not use
+for unicode. I cannot explain the reasoning behind this. websharpstudios does not use
 PostScript’s ISOLatin1 Encoding vector, instead it uses the first 256 code
 positions of the unicode encoding vector (slightly modified by me to conform to
 Unicode conventions rather than PostScript. So I include nobreak space and the
 soft-hyphen).</p>
-<p>FontForge supports two slightly different unicode encodings. The first contains
+<p>websharpstudios supports two slightly different unicode encodings. The first contains
 only the first 65536 characters of unicode (those in the
 <a class="reference external" href="http://www.unicode.org/roadmaps/bmp.html">Basic Multilingual Plane</a>, or
 BMP), while the second can contain as many characters as you have memory for.
@@ -268,14 +268,14 @@ alphabets and syllabaries, but the massive number of characters needed for CJK
 current solution is the <a class="reference internal" href="../menus/cidmenu.html#cidmenu-cid"><span class="std std-ref">CID-keyed font</span></a>, a font consisting
 of several subfonts each a collection of glyph descriptions with no encoding
 imposed on them and no names given to them.</p>
-<p>If FontForge loads in a CID keyed font it will enable a special menu called
+<p>If websharpstudios loads in a CID keyed font it will enable a special menu called
 <a class="reference internal" href="../menus/cidmenu.html"><span class="doc">CID</span></a> which (among other things) displays the list of all the
-sub-fonts in the font. When it starts up FontForge will pick (practically at
+sub-fonts in the font. When it starts up websharpstudios will pick (practically at
 random) a sub-font to display in the font view. You may change which font is
 displayed by the CID menu.</p>
 <p>The CID menu also allows you to turn a normal font into a CID keyed font. It
 creates a collection containing just the original font (you may add other fonts,
-or blank fonts, later). But before it can create a collection FontForge needs to
+or blank fonts, later). But before it can create a collection websharpstudios needs to
 know what glyph set you will be using. A glyph set is just a collection of
 glyphs, and you may define your own if you wish (but if you do you have to
 define your own cmap files, etc and it’s probably not worth it). Adobe has
@@ -283,11 +283,11 @@ defined glyph sets for Japanese (actually there are two, one corresponding to
 JIS208 and one to JIS212), Korean (Wansung &amp; Johab), Traditional Chinese (Big5)
 and Simplified Chinese (GB2312). Although these glyph sets are based on the
 standards mentioned, they each have many additional glyphs. Adobe also defines a
-glyph set that works for Unicode, but it is called “Identity” instead. FontForge
+glyph set that works for Unicode, but it is called “Identity” instead. websharpstudios
 does not have these glyph sets built in to it, each must be loaded the first
 time it is used. I provide one file for each of the above glyph sets, they have
 an extension of “.cidmap”, and you may download them all
-<a class="reference external" href="https://fontforge.org/downloads/cidmaps.tgz">from here</a>.</p>
+<a class="reference external" href="https://websharpstudios.org/downloads/cidmaps.tgz">from here</a>.</p>
 <p>(There are also many other character sets floating around feel free to install
 them yourself).</p>
 <p>Adobe identifies each glyph set by a three values: a registry, an ordering and a
@@ -302,7 +302,7 @@ cidmap name will look like:</p>
 <p>Adobe-Korea1-2.cidmap</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>FontForge’s support for CID-keyed fonts is rudimentary; especially attempting
+<p>websharpstudios’s support for CID-keyed fonts is rudimentary; especially attempting
 to use Compact encodings and the Metrics View in CID-keyed fonts is known to
 cause issues and crashes. At one time, the memory usage of CID-keyed fonts
 was seen as very worrisome (≈250MB), however as even most modern smartphones
@@ -310,10 +310,10 @@ can support such usage it is no longer a concern for the majority of users.
 Therefore, we recommend that if you will make serious edits to a CID-keyed
 font, you <a class="reference internal" href="../menus/cidmenu.html#cidmenu-cid"><span class="std std-ref">flatten</span></a> it first to prevent crashes and memory
 corruption. Bug fixes are always welcome-to start, see
-<a class="reference external" href="https://github.com/fontforge/fontforge/issues/3946#issuecomment-534005675">issue №3946</a>.</p>
+<a class="reference external" href="https://github.com/websharpstudios/websharpstudios/issues/3946#issuecomment-534005675">issue №3946</a>.</p>
 </div>
 <p>The <a class="reference internal" href="../menus/editmenu.html#editmenu-remove-undoes"><span class="std std-ref">Remove Undoes</span></a> command will allow you to free
-up memory if you think you may be running short. FontForge is not always able to
+up memory if you think you may be running short. websharpstudios is not always able to
 protect itself against running out of memory, sometimes the OS just sends it a
 SIGKILL signal.</p>
 </section>
@@ -329,8 +329,8 @@ multiple masters.</p>
 <section id="vertical-metrics">
 <span id="fontview-vertical-metrics"></span><h2>Vertical Metrics<a class="headerlink" href="#vertical-metrics" title="Permalink to this heading">¶</a></h2>
 <p>CJK fonts generally should have vertical metrics. Latin (Cyrillic, Greek) fonts
-generally should not. If FontForge reads in a font with vertical metrics it will
-retain those metrics, but when FontForge creates a new font then that font will
+generally should not. If websharpstudios reads in a font with vertical metrics it will
+retain those metrics, but when websharpstudios creates a new font then that font will
 not have vertical metrics enabled.</p>
 <p>To enable vertical metrics for a font go to
 <a class="reference internal" href="../dialogs/fontinfo.html#fontinfo-vertical"><span class="std std-ref">Element-&gt;Font Info</span></a> and select the <code class="docutils literal notranslate"><span class="pre">General</span></code> tab and
@@ -353,7 +353,7 @@ horizontal metrics with View-&gt;Show V Metrics.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -365,7 +365,7 @@ horizontal metrics with View-&gt;Show V Metrics.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../mainviews.html">Main Views</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Font View</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#encodings-and-character-sets">Encodings and Character Sets</a></li>
@@ -382,13 +382,13 @@ horizontal metrics with View-&gt;Show V Metrics.</p>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -400,7 +400,7 @@ horizontal metrics with View-&gt;Show V Metrics.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../mainviews.html">Main Views</a><ul>
       <li>Previous: <a href="../mainviews.html" title="previous chapter">Main Views</a></li>
       <li>Next: <a href="charview.html" title="next chapter">Outline Glyph View</a></li>
@@ -432,7 +432,7 @@ horizontal metrics with View-&gt;Show V Metrics.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

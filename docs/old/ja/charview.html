@@ -6,7 +6,7 @@
 <!--<TITLE>Outline Glyph View</TITLE>-->
     <TITLE>アウトライングリフビュー</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -65,9 +65,9 @@
 <!--
   <IMG src="../../_images/charview-quadratic.png" WIDTH="344" HEIGHT="392" ALT="A quadratic glyph"
       ALIGN="Right">In a TrueType font, an on-curve point can be implied between
-  two control points. FontForge will draw these with an open circle. -->
+  two control points. websharpstudios will draw these with an open circle. -->
   <IMG src="../../_images/charview-quadratic.png" WIDTH="344" HEIGHT="392" ALT="2次曲線のグリフ" ALIGN="Right">
-  TrueType フォントでは、曲線上の点が 2 個の制御点の中点にあるときは、暗黙の位置指定を行うことができます。FontForge はそれらの点を開いた円として描画します。
+  TrueType フォントでは、曲線上の点が 2 個の制御点の中点にあるときは、暗黙の位置指定を行うことができます。websharpstudios はそれらの点を開いた円として描画します。
   <P>
 <!--
   The initial point in a contour will be drawn in green, and beside it will
@@ -115,8 +115,8 @@
   <P>
 <!--
   If you drag a glyph from the font view and drop it into a character view then
-  FontForge will drop a reference to the dragged character into the view. -->
-  フォントビューからグリフをドラッグしてグリフビューに置くと、FontForge はその文字への参照をビュー上に配置します。
+  websharpstudios will drop a reference to the dragged character into the view. -->
+  フォントビューからグリフをドラッグしてグリフビューに置くと、websharpstudios はその文字への参照をビュー上に配置します。
   <P>
 <!--
   Warning: <FONT COLOR="Red"><STRONG>If your glyph has truetype instructions
@@ -153,9 +153,9 @@
   These do not go into the font, but may be helpful to you in tracing the outline
   of your glyph. It is possible to paste an image into the background if you
   have an image manipulation program that supports selection by mime type (the
-  kde family of applications does this, perhaps others), then FontForge will
+  kde family of applications does this, perhaps others), then websharpstudios will
   be able to read images in either "image/png" or "image/bmp". -->
-  2 番目は背面レイヤで、ここには背景画像とスプラインが含まれます。これらはフォントには書き出されませんが、グリフのアウトラインをトレースする作業の助けになります。画像を背面に貼りつけることも可能です。MIME タイプによる選択が可能な画像操作プログラムがある場合、画像を背面に貼りつけることもできます (KDE ファミリーのアプリケーションはこれを行いますし、多分他にもあるでしょう)。このとき、FontForge は“image/png”または“image/bmp”のどちらかで画像を読み出すことができます。
+  2 番目は背面レイヤで、ここには背景画像とスプラインが含まれます。これらはフォントには書き出されませんが、グリフのアウトラインをトレースする作業の助けになります。画像を背面に貼りつけることも可能です。MIME タイプによる選択が可能な画像操作プログラムがある場合、画像を背面に貼りつけることもできます (KDE ファミリーのアプリケーションはこれを行いますし、多分他にもあるでしょう)。このとき、websharpstudios は“image/png”または“image/bmp”のどちらかで画像を読み出すことができます。
   <P>
 <!--
   When debugging truetype
@@ -241,8 +241,8 @@
   if you hold the shift or alt (meta) key down when using the tool. On the
   mac there is no alt/meta key, and the Option and Command keys are usually
   bound to making a one button mouse look like a three button mouse. So on
-  the mac fontforge uses the caps-lock key rather than alt/meta. -->
-  多くのツールは、Shift または Alt (Meta) キーを押しながら選択した場合には通常と異なる<A NAME="alt-meta-capslock">挙動</A>を示します。Mac には Alt/Meta キーは存在せず、Option キーと Command キーは 1 ボタンマウスを 3 ボタンマウスに見せかけるために使われるのが普通です。そこで FontForge は  Mac ではAlt/Meta の代わりに CapsLock キーを使用します。
+  the mac websharpstudios uses the caps-lock key rather than alt/meta. -->
+  多くのツールは、Shift または Alt (Meta) キーを押しながら選択した場合には通常と異なる<A NAME="alt-meta-capslock">挙動</A>を示します。Mac には Alt/Meta キーは存在せず、Option キーと Command キーは 1 ボタンマウスを 3 ボタンマウスに見せかけるために使われるのが普通です。そこで websharpstudios は  Mac ではAlt/Meta の代わりに CapsLock キーを使用します。
   <H3>
 <!--  <IMG src="../../_images/cvarrowicon.png" ALIGN="Middle">The <A NAME="pointer">pointer</A>
     tool -->
@@ -394,10 +394,10 @@
   拡大ツールをクリックすると表示を拡大し、クリックした位置を中心に移します。<A HREF="charview.html#alt-meta-capslock">Alt/Meta/CapsLock</A> キーを押しながらクリックすると表示を縮小し、クリックした位置を中心に移します。先にも述べたとおり、ウィンドウマネージャの中には Meta クリックを奪い取るものがあるので、そのばあい縮小には <CODE>表示(<U>V</U>)</CODE> メニューの <CODE>縮小(<U>O</U>)</CODE> を使う必要があるでしょう。
   <P>
 <!--
-  If you drag out a rectangle with this tool then when you release, FontForge
+  If you drag out a rectangle with this tool then when you release, websharpstudios
   will shift and scale the view so that your rectangle just fits into the window.
   -->
-  このツールを使って長方形を描くと、マウスを離した時に FontForge はその長方形がウィンドウにちょうど収まるようにビューの拡大・縮小と移動を行います。
+  このツールを使って長方形を描くと、マウスを離した時に websharpstudios はその長方形がウィンドウにちょうど収まるようにビューの拡大・縮小と移動を行います。
   <P>
 <!--
   If your mouse has a scroll wheel then holding down the control key with the
@@ -420,11 +420,11 @@
   </H3>
   <P>
 <!--
-  You can use this tool to draw a random curve which FontForge will then attempt
+  You can use this tool to draw a random curve which websharpstudios will then attempt
   to convert into a set of splines. If you hold down the
   <A HREF="charview.html#alt-meta-capslock">Alt/Meta/CapsLock</A> key then
-  FontForge will close the curve when you release the mouse. -->
-  このツールを使うと自由曲線を描くことができ、FontForge はそれをスプラインの集合に変換しようと試みます。 <A HREF="charview.html#alt-meta-capslock">Alt/Meta/CapsLock</A> キーを押して線を描くと、FontForge はマウスを離した時に曲線を閉じます。
+  websharpstudios will close the curve when you release the mouse. -->
+  このツールを使うと自由曲線を描くことができ、websharpstudios はそれをスプラインの集合に変換しようと試みます。 <A HREF="charview.html#alt-meta-capslock">Alt/Meta/CapsLock</A> キーを押して線を描くと、websharpstudios はマウスを離した時に曲線を閉じます。
   <P>
 <!--
   If you double click on the icon in the tool palette you get a dialog similar
@@ -531,14 +531,14 @@
   </H3>
   <P>
 <!--
-  This tool is used to cut splines. As you drag it across the view fontforge
+  This tool is used to cut splines. As you drag it across the view websharpstudios
   draws a line showing where the cut will happen. When you release, every spline
   you intersect will be cut-- that is at the location where this line intersects
   the spline two new points will be created and the old spline will be split
   in two connecting to the two new end points. These endpoints are not joined,
   so the spline is now open (or if it were previously open, it is now cut in
   two). -->
-  このツールはスプラインを切断するのに使用します。ビュー上でマウスをドラッグすると、FontForge はどこでパスを切断するかを示す直線を描きます。マウスを離すと、それに交差する全てのスプラインが切断されます—つまり、この線が交差する場所に、各スプラインは 2 個の点を追加し、古いスプラインはこれら 2 個の点をそれぞれ新しい端点とする連なり合ったスプラインに切断されます。これらの端点は連結していないので、現在の状態では開いたパスになっています (または、元から開いたパスだった場合、このパスは 2 個に分割されます。)
+  このツールはスプラインを切断するのに使用します。ビュー上でマウスをドラッグすると、websharpstudios はどこでパスを切断するかを示す直線を描きます。マウスを離すと、それに交差する全てのスプラインが切断されます—つまり、この線が交差する場所に、各スプラインは 2 個の点を追加し、古いスプラインはこれら 2 個の点をそれぞれ新しい端点とする連なり合ったスプラインに切断されます。これらの端点は連結していないので、現在の状態では開いたパスになっています (または、元から開いたパスだった場合、このパスは 2 個に分割されます。)
   <H3>
     <IMG src="../../_images/cvrulericon.png" WIDTH="26" HEIGHT="26" ALIGN="Middle"><!-- The
     <A NAME="ruler">ruler</A> tool -->
@@ -781,11 +781,11 @@
   </H2>
   <P>
 <!--
-  FontForge has a truetype debugger - - provided you have a version of freetype
+  websharpstudios has a truetype debugger - - provided you have a version of freetype
   on your machine with the bytecode interpreter enabled
   <FONT COLOR="Red"><STRONG>(Note: you need a license from Apple to enable
   this. It is protected by several patents)</STRONG></FONT>. -->
-  FontForge は TrueType デバッガを内蔵しています——バイトコードインタプリタを利用可能なバージョンの FreeType がインストールされている場合に限ります。<FONT COLOR="Red"><STRONG>(注意: これを利用可能にするには、Apple からライセンスを得る必要があります。これは幾つかの特許で保護されています)</STRONG></FONT>。
+  websharpstudios は TrueType デバッガを内蔵しています——バイトコードインタプリタを利用可能なバージョンの FreeType がインストールされている場合に限ります。<FONT COLOR="Red"><STRONG>(注意: これを利用可能にするには、Apple からライセンスを得る必要があります。これは幾つかの特許で保護されています)</STRONG></FONT>。
   <P>
 <!--
   The image to the right shows an example of this mode. You invoke it with
@@ -839,14 +839,14 @@
 <!--
   The fifth button allows you to set a watch point. You select a point (or
   several points) in the left hand pane, and press this button. Thereafter,
-  whenever one of those points is moved FontForge will stop the glyph program. -->
-  5 番目のボタンを使うとウォッチポイントを設定することができます。1 個の点 (またはいくつかの点) を左側のペーンで選択してから、このボタンを押してください。その後、この点が移動したときはいつでも FontForge はグリフプログラムを停止します。
+  whenever one of those points is moved websharpstudios will stop the glyph program. -->
+  5 番目のボタンを使うとウォッチポイントを設定することができます。1 個の点 (またはいくつかの点) を左側のペーンで選択してから、このボタンを押してください。その後、この点が移動したときはいつでも websharpstudios はグリフプログラムを停止します。
   <P>
 <!--
-  Flaw: FontForge only allows you to select a single control point (multiple
+  Flaw: websharpstudios only allows you to select a single control point (multiple
   on-curve points, but only one control point) so currently there is no good
   way to watch several control points. -->
-  制限: FontForge では、1 個の制御点しか選ぶことができません (カーブ上の点は複数選べますが、制御点は 1 個だけです) ので、現在のところ複数の制御点を監視の対象とすることはできません。
+  制限: websharpstudios では、1 個の制御点しか選ぶことができません (カーブ上の点は複数選べますが、制御点は 1 個だけです) ので、現在のところ複数の制御点を監視の対象とすることはできません。
   <P>
 <!--
   You can set a more conventional break point by clicking on an instruction.
@@ -992,19 +992,19 @@
   </H3>
   <P>
 <!--
-  FontForge is not as friendly when debugging composite glyphs as it should
+  websharpstudios is not as friendly when debugging composite glyphs as it should
   be - - this is influenced by the way truetype works. Suppose you want to debug
   the "Atilde" glyph. -->
-  FontForge は、複合グリフのデバッグ時にはあまり十分に親切ではありません——これは TrueType の動作方法の影響によるものです。例えば“Atilde”グリフをデバッグしたいとしましょう。
+  websharpstudios は、複合グリフのデバッグ時にはあまり十分に親切ではありません——これは TrueType の動作方法の影響によるものです。例えば“Atilde”グリフをデバッグしたいとしましょう。
   <P>
 <!--
-  First FontForge will load and grid fit the "A" glyph, points from the "tilde"
+  First websharpstudios will load and grid fit the "A" glyph, points from the "tilde"
   will not be displayed and behavior will be exactly the same as if you were
   debugging a stand alone "A". -->
-  最初に FontForge が“A”グリフを読み込んでグリッド合わせを行う時点では、“tilde”の点は表示されず、“A”単独をデバッグしているときと全く同じです。
+  最初に websharpstudios が“A”グリフを読み込んでグリッド合わせを行う時点では、“tilde”の点は表示されず、“A”単独をデバッグしているときと全く同じです。
   <P>
 <!--
-  Then FontForge will load and grid fit the "tilde" glyph, and now points from
+  Then websharpstudios will load and grid fit the "tilde" glyph, and now points from
   the "A" glyph will not be visible. The point numbers on the "tilde" will
   be the same as they are in a stand-alone "tilde" (whereas in a true
   representation of "Atilde", the points numbering in the "tilde" component
@@ -1013,26 +1013,26 @@
   usually be translated, and this translation will usually be rounded to fit
   the pixel grid. The width line will show the width of the "tilde" and not
   of the "Atilde". -->
-  次に FontForge は“tilde”グリフを読み込んでグリッド合わせを行い、この時点では“A”グリフの点は見えなくなります。"tilde”の点番号は単独の“tilde”のものと同じになるでしょう ("Atilde”の本当の表現では、部品“tilde”の点の番号づけは部品“A”の点の個数ぶんだけずらされたものになります)。"tilde”は、丸めによって変な位置に現れることがあります:“tilde”はふつう平行移動を施され、この移動量はピクセルグリッドに合わせて丸められます。横幅の線は“tilde”の幅を表し、“Atilde”の幅ではありません。
+  次に websharpstudios は“tilde”グリフを読み込んでグリッド合わせを行い、この時点では“A”グリフの点は見えなくなります。"tilde”の点番号は単独の“tilde”のものと同じになるでしょう ("Atilde”の本当の表現では、部品“tilde”の点の番号づけは部品“A”の点の個数ぶんだけずらされたものになります)。"tilde”は、丸めによって変な位置に現れることがあります:“tilde”はふつう平行移動を施され、この移動量はピクセルグリッドに合わせて丸められます。横幅の線は“tilde”の幅を表し、“Atilde”の幅ではありません。
   <P>
 <!--
-  Finally FontForge will execute any instructions in the composite itself,
+  Finally websharpstudios will execute any instructions in the composite itself,
   now all sub-components will be displayed, and all points will be numbered
   as they should be. -->
-  最後に FontForge は複合グリフそのものに含まれる任意の命令を実行し、全ての構成部品が表示され、全ての点が正しく番号づけされます。
+  最後に websharpstudios は複合グリフそのものに含まれる任意の命令を実行し、全ての構成部品が表示され、全ての点が正しく番号づけされます。
   <P>
 <!--
   Several words of caution: -->
   いくつか警告しておきます:
   <UL>
     <LI>
-<!--  If a component, or the composite as a whole, has no instructions then FontForge
+<!--  If a component, or the composite as a whole, has no instructions then websharpstudios
       will not debug that piece (there will be nothing to debug). -->
-      ある部品または複合グリフ全体に命令が含まれていない場合、FontForge はその部分をデバッグしません (デバッグするものが無いはずですから)。
+      ある部品または複合グリフ全体に命令が含まれていない場合、websharpstudios はその部分をデバッグしません (デバッグするものが無いはずですから)。
     <LI>
-<!--  FontForge does not translate references which do point matching properly
+<!--  websharpstudios does not translate references which do point matching properly
       until the entire glyph has been loaded. -->
-      FontForge は点のマッチングを正しく行う参照を、グリフ全体が読み込まれるまで平行移動しません。
+      websharpstudios は点のマッチングを正しく行う参照を、グリフ全体が読み込まれるまで平行移動しません。
   </UL>
   <TABLE ALIGN=RIGHT>
     <TR>
@@ -1063,9 +1063,9 @@
   <P>
   <IMG src="../../_images/charview-multilayer.png" WIDTH="348" HEIGHT="571" ALIGN="Right"><!-- If
   you wish to <A HREF="multilayer.html">edit type3 fonts</A>, and you have
-  configured FontForge correctly, the FontForge can display a glyph broken
+  configured websharpstudios correctly, the websharpstudios can display a glyph broken
   down into a series of strokes and fills and allow you to edit each one. -->
-  <A HREF="multilayer.html">Type3 フォントの編集</A>を行いたい場合、FontForge が適切に設定されていれば、FontForge はストロークと塗りつぶしの列に分解されたグリフを表示し、それらを編集することができます。
+  <A HREF="multilayer.html">Type3 フォントの編集</A>を行いたい場合、websharpstudios が適切に設定されていれば、websharpstudios はストロークと塗りつぶしの列に分解されたグリフを表示し、それらを編集することができます。
   <P>
   <P ALIGN=Center>
   — <A HREF="fontview.html">前</A> — <A HREF="overview.html">目次</A> —

@@ -3,16 +3,16 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 29-Sep-2005 -->
   <!-- AP: Last modified: 29-Sep-2005 -->
-  <TITLE>non BMP unicode bitmap fonts supported by FontForge</TITLE>
+  <TITLE>non BMP unicode bitmap fonts supported by websharpstudios</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P>
-Ironically, FontForge is stuck in the dark ages when it comes to using fonts.
+Ironically, websharpstudios is stuck in the dark ages when it comes to using fonts.
 It should be using libXft and gtk to get full unicode support.
 <P>
 It doesn't. It continues to use the old X bitmap interface which the X consortium
@@ -21,14 +21,14 @@ there is no point in redoing that for an obsolete interface).
 <P>
 But I'd like to draw non-BMP characters at least in my font view.
 <P>
-To this end I have made FontForge recognize some non-standard encodings:
+To this end I have made websharpstudios recognize some non-standard encodings:
 -*-*-*-*-*--*-*-*-*-*-*-UnicodePlane-{1,2,3,...16}
 <BLOCKQUOTE>
-  <PRE>-fontforge-planeone-medium-r-normal--13-120-75-75-p-101-unicodeplane-1
+  <PRE>-websharpstudios-planeone-medium-r-normal--13-120-75-75-p-101-unicodeplane-1
 </PRE>
 </BLOCKQUOTE>
 <P>
-Is a font that fontforge will interpret as containing glyphs from plane 1
+Is a font that websharpstudios will interpret as containing glyphs from plane 1
 (Supplementary Multilingual Plane) -- starting with Linear B glyphs.
 <P>
 As a proof of concept I've created a bdf font containing all the Linear B

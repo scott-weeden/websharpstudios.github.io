@@ -3,21 +3,21 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 18-Jul-2003 -->
   <!-- AP: Last modified: 28-Apr-2010 -->
-  <TITLE>FontForge's math</TITLE>
+  <TITLE>websharpstudios's math</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    FontForge's math
+    websharpstudios's math
   </H1>
   <P>
   <EM>Being a brief description of the mathematics underlying various of
-  FontForge's commands <BR>
+  websharpstudios's commands <BR>
   It is presumed that you understand about parameterized splines, if not look
   at the description of <A HREF="bezier.html">B&eacute;zier curves</A>.</EM>
   <UL>
@@ -201,7 +201,7 @@
     <A NAME="Approximating">Approximating</A> a spline
   </H2>
   <P>
-  Many of FontForge's commands need to fit a spline to a series of points.
+  Many of websharpstudios's commands need to fit a spline to a series of points.
   The most obvious of these are the Edit-&gt;Merge, and Element-&gt;Simplify
   commands, but many others rely on the same technique. Let us consider the
   case of the Merge command, suppose we have the following splines and we wish
@@ -212,7 +212,7 @@
   <IMG SRC="/assets/img/old/mergepre.png" WIDTH="192" HEIGHT="120" ALIGN="Middle"> =&gt;
   <IMG SRC="/assets/img/old/mergepost.png" WIDTH="192" HEIGHT="120" ALIGN="Middle">
   <P>
-  FontForge uses a least squares approximation to determine the new spline.
+  websharpstudios uses a least squares approximation to determine the new spline.
   It calculates the locations of several points along the old splines, and
   then it guesses<SUP><A HREF="#guess-t">1</A></SUP> at t values for those
   points.
@@ -517,7 +517,7 @@
     <SUP><A NAME="guess-t">1</A></SUP>Guessing values for t
   </H4>
   <P>
-  FontForge approximates the lengths of the two splines being merged. If
+  websharpstudios approximates the lengths of the two splines being merged. If
   Point<SUB>i </SUB>= Spline1(old-t<SUB>i</SUB>), then we approximate ti by<BR>
   &nbsp; &nbsp; t<SUB>i</SUB> = old-t<SUB>i</SUB>
   *len(spline1)/(len(spline1)+len(spline2)<BR>
@@ -536,7 +536,7 @@
   </H3>
   <P>
   PostScript supports several variants on the theme of a circular pen, and
-  FontForge tries to emulate them all. Basically PostScript "stroke"s a path
+  websharpstudios tries to emulate them all. Basically PostScript "stroke"s a path
   at a certain width by:
   <P>
   at every location on the curve<BR>
@@ -553,9 +553,9 @@
   &nbsp; &nbsp; <IMG SRC="/assets/img/old/expand-pre.png" WIDTH="126" HEIGHT="86" ALIGN="Middle">
   =&gt; <IMG SRC="/assets/img/old/expand-post.png" WIDTH="131" HEIGHT="91" ALIGN="Middle">
   <P>
-  FontForge can't deal with an infinite number of locations, so it samples
+  websharpstudios can't deal with an infinite number of locations, so it samples
   the curve (approximately every em unit), and finds the two normal points.
-  These are on the edge of the area to be stroked, so FontForge can approximate
+  These are on the edge of the area to be stroked, so websharpstudios can approximate
   new contours from these edge points (using the <A href="#Approximating">above
   algorithm</A>).
   <P>
@@ -577,8 +577,8 @@
   <IMG SRC="/assets/img/old/expand-joint-pre.png" WIDTH="61" HEIGHT="78" ALIGN="Middle"> =&gt;
   <IMG SRC="/assets/img/old/expand-joint-post.png" WIDTH="69" HEIGHT="80" ALIGN="Middle">,
   the green lines in the right image show where the path would have gone had
-  it not been constrained by a joint, so on the inside of the joint FontForge
-  must figure out where this intersection occurs. While on the outside FontForge
+  it not been constrained by a joint, so on the inside of the joint websharpstudios
+  must figure out where this intersection occurs. While on the outside websharpstudios
   must figure out either a round, miter or bevelled edge.
   <P>
   Unfortunately, the normal points are not always on the edge of the filled
@@ -586,7 +586,7 @@
   end up inside the pen when it is centered somewhere else on the original
   contour (similar to the case of a joint above).
   <P>
-  So FontForge makes another pass through the edge points and figures out which
+  So websharpstudios makes another pass through the edge points and figures out which
   ones are actually internal points. After that it will approximate contours.
   <P>
   Now if we start with an open contour, (a straight line, for example) then
@@ -638,16 +638,16 @@
     A pen of variable width
   </H3>
   <P>
-  <!--If you have a wacom tablet then FontForge also supports variable width
+  <!--If you have a wacom tablet then websharpstudios also supports variable width
   pens.
-  Extending the above algorithms is fairly simple.-->FontForge does not currently
+  Extending the above algorithms is fairly simple.-->websharpstudios does not currently
   support this (some of the assumptions behind this algorithm are broken if
   the pen changes shape too rapidly).
   <H3>
     A pen at a varying angle
   </H3>
   <P>
-  FontForge does not support this.
+  websharpstudios does not support this.
   <P>
 </DIV>
 </BODY></HTML>

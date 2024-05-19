@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Font Info &#8212; FontForge 20230101 documentation</title>
+    <title>Font Info &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -63,13 +63,13 @@ place to put a copyright.</p>
 it), but in CID keyed fonts it must be a floating point number.</p>
 <p>You may also specify a separate version number to be used in any sfnt generated
 from this database; this should be a floating point number. Or you may leave
-this field blank. If you leave it blank FontForge will generate a default value
+this field blank. If you leave it blank websharpstudios will generate a default value
 based on other version information specified elsewhere.</p>
-<p>Normally when <a class="reference internal" href="generate.html"><span class="doc">generating a font,</span></a> FontForge will use the
+<p>Normally when <a class="reference internal" href="generate.html"><span class="doc">generating a font,</span></a> websharpstudios will use the
 fontname as the base for the default filename of the font file (the base to
 which the extension is added). But that is not always what you want. You may
 wish to attach a version string to the fontname, or abbreviate it, etc. The
-<code class="docutils literal notranslate"><span class="pre">Base</span> <span class="pre">Filename</span></code> field allows you to specify this to fontforge.</p>
+<code class="docutils literal notranslate"><span class="pre">Base</span> <span class="pre">Filename</span></code> field allows you to specify this to websharpstudios.</p>
 <p>Many of these names are similar to the english names of the
 <a class="reference internal" href="#fontinfo-ttf-names"><span class="std std-ref">TTF Names</span></a> section. If nothing is specified in that
 section then the names specified here will be used by default in ttf files.</p>
@@ -96,7 +96,7 @@ to the old.</p>
 <p>If your font has truetype instructions scaling may break the font as entries
 in the <code class="docutils literal notranslate"><span class="pre">'cvt</span> <span class="pre">'</span></code> table will not be</p>
 </div>
-<p>The Italic Angle indicates the slant of the font. FontForge can attempt to guess
+<p>The Italic Angle indicates the slant of the font. websharpstudios can attempt to guess
 a good value for you by looking at the stems of certain letters (“I” for
 instance).</p>
 <p>The underline position and height provide a program using this font a hint as to
@@ -111,8 +111,8 @@ the origin for the purposes of vertical metrics.</p>
 behavior. For example a unicode font designed for a chinese system will look
 very different from a unicode font for a japanese system (The same unicode
 character may map to very different chinese or japanese glyphs). To handle this
-FontForge has the concept of “Interpretation”.</p>
-<p>When you create a new glyph in a font, fontforge will assign it a name based on
+websharpstudios has the concept of “Interpretation”.</p>
+<p>When you create a new glyph in a font, websharpstudios will assign it a name based on
 the current <a class="reference internal" href="../menus/encodingmenu.html#encodingmenu-namelist"><span class="std std-ref">namelist</span></a>.</p>
 </section>
 <section id="layers">
@@ -127,10 +127,10 @@ font you want.</p>
 all the layers will use the same type of splines (so there are radio buttons to
 make that easy), but it isn’t required each layer may be in its own format.</p>
 <p>If you mark a layer as quadratic (or check <code class="docutils literal notranslate"><span class="pre">[*]</span> <span class="pre">All</span> <span class="pre">layers</span> <span class="pre">Quadratic)</span></code> then
-FontForge will use quadratic <a class="reference internal" href="../../index.html#overview-spline"><span class="std std-ref">Bézier</span></a> splines for this
-layer rather than cubic Béziers, this means that FontForge will be using the
+websharpstudios will use quadratic <a class="reference internal" href="../../index.html#overview-spline"><span class="std std-ref">Bézier</span></a> splines for this
+layer rather than cubic Béziers, this means that websharpstudios will be using the
 native spline format of truetype rather than postscript (or opentype). When
-FontForge generates a font it will convert from whatever format is used
+websharpstudios generates a font it will convert from whatever format is used
 internally to whatever format is required for the font, so there will be no
 problem if this is set incorrectly, but setting it correctly for your font means
 you get a clearer idea of what the outlines will look like. I find quadratic
@@ -151,7 +151,7 @@ worth outputting.</p>
 <img alt="../../_images/fontinfo-psuid.png" class="align-right" src="../../_images/fontinfo-psuid.png" />
 <p>The XUID field is a collection of numbers separated by spaces and enclosed in
 brackets. This allows you to specify the extended unique ID of the font. If you
-have set the XUID preference entry then FontForge will assign values to all new
+have set the XUID preference entry then websharpstudios will assign values to all new
 fonts (by appending a number unique to this font to the end of your preference
 item). Adobe recommends that the XUID be changed every time the font is changed,
 so each time you generate a postscript font, that font’s XUID (if present) will
@@ -159,7 +159,7 @@ be incremented by 1 (This incrementing does not happen in CID-keyed fonts, where
 the XUID behavior is too complex for this simple trick). (The XUID field is only
 meaningful in PostScript fonts).</p>
 <p>The UniqueID field is an older convention for the same purpose as XUID. If you
-do not fill in this field then FontForge will pick a random number for you in
+do not fill in this field then websharpstudios will pick a random number for you in
 the allowable range. If you want your font to have no unique id then give this
 the value of -1. If you have talked to Adobe and been assigned a real UniqueID
 then you may use this field, otherwise leave it blank. (The UniqueID field is
@@ -181,14 +181,14 @@ appears when you press one of the little grey buttons).</p>
 <p>Note: The values must be things which PostScript can parse. This means that
 <code class="docutils literal notranslate"><span class="pre">ForceBold</span></code> must have a value of “false” or “true”, and “False” or “faux” will
 not work. Similarly the decimal point in numbers must be “.” (not “,”). If you
-enter a “,” by mistake FontForge will convert it for you.</p>
+enter a “,” by mistake websharpstudios will convert it for you.</p>
 <p>For example the <code class="docutils literal notranslate"><span class="pre">BlueValues</span></code> entry specifies certain key regions of the font
 in a vertical direction. For instance it might contain the baseline serif, the
 x-height serif, the cap-height serif. It is expressed as an array of numbers,
 grouped in pairs. The first number of a pair is the low end of the region and
 the second is the high end. So in the example at right, the value of
 <code class="docutils literal notranslate"><span class="pre">BlueValues</span></code> is <code class="docutils literal notranslate"><span class="pre">[-20</span> <span class="pre">0</span> <span class="pre">437</span> <span class="pre">457</span> <span class="pre">583</span> <span class="pre">603</span> <span class="pre">623</span> <span class="pre">643</span></code>.</p>
-<p>When the <code class="docutils literal notranslate"><span class="pre">[Guess]</span></code> button is enabled FontForge thinks it can make a reasonable
+<p>When the <code class="docutils literal notranslate"><span class="pre">[Guess]</span></code> button is enabled websharpstudios thinks it can make a reasonable
 guess for the value of the currently selected entry.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">[Histogram]</span></code> button is similar, it will bring up a
 <a class="reference internal" href="histogram.html"><span class="doc">dialog showing a histogram</span></a> of the values of an attribute of
@@ -196,14 +196,14 @@ the font. The hope is that this will allow you to pick a good value for the
 entry.</p>
 <p>You may also delete an entry from the dictionary with the <code class="docutils literal notranslate"><span class="pre">[Delete]</span></code> button.
 Some entries (such as <code class="docutils literal notranslate"><span class="pre">BlueValues</span></code>) must be present in any type1 font, but you
-may still delete them. FontForge will simply guess at a reasonable value when it
+may still delete them. websharpstudios will simply guess at a reasonable value when it
 needs to generate the font.</p>
 <p>Certain keys affect things other than hints. The <code class="docutils literal notranslate"><span class="pre">lenIV</span></code> entry controls how
 much random padding is placed around the type1 strings when the font is
 generated. Normally this will be 4, but if you want to save space (4 bytes per
 glyph in pfb format, 8 bytes in pfa) you may choose another value. The UniqueID
 key represents the font’s Unique postscript ID. If you provide a value here then
-FontForge will copy it into the UniqueID field in the Font Dictionary. (this is
+websharpstudios will copy it into the UniqueID field in the Font Dictionary. (this is
 different from True Type’s UniqueID. They perform the same function but are
 formatted differently).</p>
 <p>Some of these entries are only meaningful for PostScript fonts, others will be
@@ -270,13 +270,13 @@ always work. If you have a line with marks which are repositioned with GPOS,
 then the marks may be cropped, so Windows Ascent should include the maximum
 possible height of repositioned marks (or any other GPOS vertical repositioning
 feature).</p>
-<p>This is too complex (and too ill defined) for FontForge to figure out, instead
-FontForge gives you a couple of options.</p>
+<p>This is too complex (and too ill defined) for websharpstudios to figure out, instead
+websharpstudios gives you a couple of options.</p>
 <ol class="arabic simple">
 <li><p>You may set WinAscent and WinDescent directly. Turn off the “[ ] Is Offset”
 checkboxes and any value you provide will be used as is.</p></li>
 <li><p>Or you may specify an offset to be added to the maximum ascent and descent of
-the font (which FontForge will compute for you when it saves the font). If you
+the font (which websharpstudios will compute for you when it saves the font). If you
 don’t have a mark to base feature, then I recommend that you set the offsets to
 0, and check the “[*] Is Offset” checkboxes.</p></li>
 </ol>
@@ -314,7 +314,7 @@ precise method for setting line spacing.</p>
 <p>The OS/2 table also contain information on scaling and positioning subscripts
 and superscripts.</p>
 <p>Most fonts don’t really need this control. If you leave the [*] Default check
-box on, then FontForge will generate some reasonable values on output (if
+box on, then websharpstudios will generate some reasonable values on output (if
 nothing significant changes, it will use the values shown here). If you want
 control of these values, turn off the checkbox and the text fields will be
 enabled for you to change.</p>
@@ -333,7 +333,7 @@ information is available from <a class="reference external" href="http://panose.
 <a class="reference external" href="https://www.w3.org/Printing/stevahn.html">RS</a>,
 <a class="reference external" href="http://spectrum.library.concordia.ca/981753/">JJ</a> and
 <a class="reference external" href="http://forum.high-logic.com/viewtopic.php?t=941">this discussion</a>.</p>
-<p>If you leave the [*] Default checkbox set then FontForge will generate
+<p>If you leave the [*] Default checkbox set then websharpstudios will generate
 reasonable values when the font is output, otherwise you may set these values
 manually.</p>
 <p>These entries are only meaningful for TrueType, OpenType and SVG fonts.</p>
@@ -348,7 +348,7 @@ manually.</p>
 <p>The OS/2 table contains two fields which give some information about the
 characters in the font. Windows is very picky about using fonts if the proper
 code page bits are not set. If you leave the [*] Default checkboxes set then
-FontForge will generate reasonable values when the font is output. Sometimes you
+websharpstudios will generate reasonable values when the font is output. Sometimes you
 need to override that behavior if you wish Windows to use a font with an
 incomplete code page.</p>
 <p>These entries are only meaningful for TrueType, and OpenType fonts.</p>
@@ -429,7 +429,7 @@ most likely string to change in different languages.</p>
 <span class="sig-name descname"><span class="pre">UniqueID</span></span></dt>
 <dd><p>This is a string that uniquely identifies the font in a human readable
 fashion. Its format is quite different from postscript’s UniqueID and
-FontForge will create an appropriate string if you don’t specify one (rather
+websharpstudios will create an appropriate string if you don’t specify one (rather
 than copying from postscript).</p>
 </dd></dl>
 
@@ -442,7 +442,7 @@ than copying from postscript).</p>
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">PostScript</span> <span class="pre">Name</span></span></dt>
-<dd><p>(FontForge will not let you set this directly. It will be set automatically
+<dd><p>(websharpstudios will not let you set this directly. It will be set automatically
 to the postscript fontname, only one instance of this tag is allowed in the
 font and it must be ASCII)</p>
 </dd></dl>
@@ -535,13 +535,13 @@ well.</p>
 <p>Generally fonts will have a fairly complete set of strings in the American
 English entry, with the Style string (and nothing else) translated into
 different languages.</p>
-<p>When you create a Style entry for an language, FontForge will attempt to
+<p>When you create a Style entry for an language, websharpstudios will attempt to
 translate the American English style into something appropriate for that
 language. It understands languages in
 <a class="reference internal" href="../../appendices/fontstyles.html"><span class="doc">the table on the font styles page</span></a>, but not others so it
 won’t always work.</p>
 <p>So if your style in American English is “BoldItalic” then after you create the
-appropriate strings FontForge will default to “GrasItalique” for French,
+appropriate strings websharpstudios will default to “GrasItalique” for French,
 “FettKursiv” for German, “NigritaCursiva” for Spanish, etc.</p>
 <p>These names are only meaningful for TrueType and OpenType fonts.</p>
 </section>
@@ -660,7 +660,7 @@ and name.</p>
 It does not correspond to any postscript or truetype entity. It is intended to
 store a changelog for the font itself, but could be used for other purposes…</p>
 <p>Various font formats allow a random comment to be placed in the font, but no
-format makes use of it. This is primarily to be used inside FontForge. The
+format makes use of it. This is primarily to be used inside websharpstudios. The
 comment should be in ASCII.</p>
 <div class="clearer docutils container">
 </div>
@@ -726,7 +726,7 @@ things.</p>
 <p>It is possible to merge two lookups (if they are of the same type) or to merge
 two subtables (if they are in the same lookup and are similar enough).</p>
 <p>It is possible to import lookups from other fonts (which must already be loaded
-into fontforge.</p>
+into websharpstudios.</p>
 <p>It is possible to drag and drop lookups to reorder them, or to copy them from
 one font to another (by dragging them into the other font’s
 <span class="menuselection">Font Info ‣ Lookups</span> pane).</p>
@@ -742,7 +742,7 @@ these functions as well as:</p>
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">Add</span> <span class="pre">'aalt'</span> <span class="pre">features</span></span></dt>
-<dd><p>FontForge can automagically generate an ‘aalt’ feature consisting of every
+<dd><p>websharpstudios can automagically generate an ‘aalt’ feature consisting of every
 single and alternate substitution of each glyph.</p>
 </dd></dl>
 
@@ -785,7 +785,7 @@ lookups.</p>
 in a woff file. A woff file is very similar to a standard sfnt except that its
 tables are compressed, and it has a few additional data fields. It has version
 number fields for the WOFF file, a major and a minor version. If you leave these
-fields blank then fontforge will generate defaults based on some of the other
+fields blank then websharpstudios will generate defaults based on some of the other
 font version information available to it.</p>
 <p>It also has a metadata string. This is a small xml document (which ff does not
 currently parse), stored in utf8. Its internal format is specified in
@@ -794,9 +794,9 @@ currently parse), stored in utf8. Its internal format is specified in
 <section id="mac-style-fond">
 <span id="fontinfo-mac-style"></span><h2>Mac Style &amp; FOND<a class="headerlink" href="#mac-style-fond" title="Permalink to this heading">¶</a></h2>
 <img alt="Font Info Mac Styles" class="align-right" src="../../_images/fontinfo-macstyle.png" />
-<p>This sub-dialog allows you to set the mac style of your font. Normally FontForge
+<p>This sub-dialog allows you to set the mac style of your font. Normally websharpstudios
 will be able to guess the style from the fontname (and various other clues), but
-sometimes the name will be non-standard (or perhaps just in a language FontForge
+sometimes the name will be non-standard (or perhaps just in a language websharpstudios
 doesn’t know about), and other times you may wish to override this default
 setting.</p>
 <p>If you are happy with the default, just leave the Automatic button checked, if
@@ -822,11 +822,11 @@ give a more appropriate but local name to a certain feature setting).</p>
 </section>
 <section id="dates">
 <span id="fontinfo-dates"></span><h2>Dates<a class="headerlink" href="#dates" title="Permalink to this heading">¶</a></h2>
-<p>Displays what fontforge thinks is the create date and modification date of the
-font data. FontForge started retaining those dates in August of 2006, any prior
+<p>Displays what websharpstudios thinks is the create date and modification date of the
+font data. websharpstudios started retaining those dates in August of 2006, any prior
 dates are conjectural and based on a best guess – usually from the modification
 time of the sfd file. When loading a font from something other than an sfd file,
-FontForge will again make the best guess it can.</p>
+websharpstudios will again make the best guess it can.</p>
 </section>
 <section id="unicode-ranges">
 <span id="fontinfo-unicode"></span><h2>Unicode Ranges<a class="headerlink" href="#unicode-ranges" title="Permalink to this heading">¶</a></h2>
@@ -855,7 +855,7 @@ defined in the font within that range, and scroll to one of them.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -867,7 +867,7 @@ defined in the font within that range, and scroll to one of them.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -889,13 +889,13 @@ defined in the font within that range, and scroll to one of them.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -907,7 +907,7 @@ defined in the font within that range, and scroll to one of them.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
       <li>Previous: <a href="prefs.html" title="previous chapter">Preferences Dialog</a></li>
       <li>Next: <a href="histogram.html" title="next chapter">The histogram dialog</a></li>
@@ -939,7 +939,7 @@ defined in the font within that range, and scroll to one of them.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 27-Mar-2009 -->
   <TITLE>Building Accented and other Composite Characters</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -37,7 +37,7 @@
       Sometimes Unicode's normative definition is not as informative as it might
       be (many of the greek accents are "unified" with latin accents that they
       don't really look like, the result is that following Unicode slavishly will
-      yield the wrong glyph). So in some cases FontForge will use a slightly different
+      yield the wrong glyph). So in some cases websharpstudios will use a slightly different
       set of glyphs than the normative decomposition.<BR>
       This includes:
       <UL>
@@ -61,7 +61,7 @@
     <LI>
       Many of the Korean Jamo are actually ligatures of other Jamo (ssangkiyoeok
       (0x1101) is composed of two kiyoeok (0x1100)). For some reason this information
-      is not normative unicode, but FontForge is aware of it anyway and will build
+      is not normative unicode, but websharpstudios is aware of it anyway and will build
       those glyphs if you ask it to.
     <LI>
       The glyphs "i" and "j" can be built by adding a dot accent to the dotlessi
@@ -71,22 +71,22 @@
       "i" or "j" glyph
     <LI>
       If a glyph name has an extension, as "agrave.sc", then it will be built out
-      of the same components as "agrave", except FontForge will use the variants
+      of the same components as "agrave", except websharpstudios will use the variants
       of those components named with the same extension. So "agrave.sc" would be
       built out of "a.sc" and "grave.sc". If the accent variant does not exist
-      then FontForge will also try the bare accent "grave".
+      then websharpstudios will also try the bare accent "grave".
     <LI>
-      FontForge knows a few other things. It knows that Greek "Alpha" and Cyrillic
+      websharpstudios knows a few other things. It knows that Greek "Alpha" and Cyrillic
       A both look like the Latin "A" and will replace either if you ask. (as well
       as all the other similar glyphs in latin, greek, cyrillic, cherokee, etc.)
     <LI>
       Some glyphs are just extremely simple to build. There are a whole slew of
-      glyphs which correspond to zero-width spaces. FontForge will build any of
+      glyphs which correspond to zero-width spaces. websharpstudios will build any of
       them. More usefully it will build any of the fixed size spaces 0x2000-0x200f,
       and the fixed sized rules 0x2010-0x2015).
     <LI>
       You may use the Element-&gt;Char Info dialog to define a ligature yourself,
-      and FontForge will build it for you.
+      and websharpstudios will build it for you.
     <LI>
       In Adobe's CID glyph sets there are some pre-rotated versions of latin glyphs.
       When CJK text is written vertically the convention is that any text in western
@@ -115,21 +115,21 @@
   letters are logically built out of the accents in the range 0x300-0x340,
   but this does not work too well in postscript. A Type1 font works better
   if the accented glyph is in the Adobe Standard Encoding, which means either
-  using accents around 0x2d0 or ascii glyphs. FontForge will first attempt
+  using accents around 0x2d0 or ascii glyphs. websharpstudios will first attempt
   to find an accent around 0x2d0, then in ascii and finally in the 0x300-0x340
   range. Even worse, Unicode unifies the greek and latin accents, so for greek
-  letters FontForge will look for accents around 0x1fbd (FontForge will also
+  letters websharpstudios will look for accents around 0x1fbd (websharpstudios will also
   require the presence of the double accents like 0x1fdd).
   <P>
   Some of Adobe's fonts have accents designed for use over upper case letters
   (the nomal accents are designed for lower case), and accents designed for
   use over cyrillic letters. So in such a font, if you attempt to build "Agrave"
-  FontForge will build it out of "A" and "Grave" (or "grave.cap", not the standard
+  websharpstudios will build it out of "A" and "Grave" (or "grave.cap", not the standard
   "grave").
   <P>
   Not all accents should be centered above the base glyph, a cedilla is (usually)
   centered underneath the base, while other accents need to be placed to the
-  left or right, or even overstruck. FontForge should know about proper placement
+  left or right, or even overstruck. websharpstudios should know about proper placement
   of most accents (or at least a rough approximation thereto).
   <P>
   Some Unicode glyphs contain more than one accent. Additional accents will
@@ -147,7 +147,7 @@
   the accent should actually go above the highest part of the "a" which is
   almost but not quite in the center of the glyph. And when placing an acute
   on top of a "k" (a rare combination, but still used) the accent is centered
-  on the stem of the "k". Greek accents are even more baroque. FontForge knows
+  on the stem of the "k". Greek accents are even more baroque. websharpstudios knows
   many oddities of accent placement, but it will never know all of them (some
   letters have multiple forms depending on the font, or perhaps on the humidity
   and phase of the moon).
@@ -162,7 +162,7 @@
     </TR>
   </TABLE>
   <P>
-  And how accents are centered depends on the accents themselves. Usually FontForge
+  And how accents are centered depends on the accents themselves. Usually websharpstudios
   will try to center an accent so that the accent's center is over the base
   glyph's "center". But that doesn't always work either. The grave and acute
   accents are usually (but not always) centered only on the bottom part of
@@ -178,7 +178,7 @@
     </TR>
   </TABLE>
   <P>
-  FontForge gives you a minuscule amount of control over where it puts accents.
+  websharpstudios gives you a minuscule amount of control over where it puts accents.
   There are two preference items you can set
   (<A HREF="filemenu.html#prefs">File-&gt;Preferences</A>)
   <UL>
@@ -197,14 +197,14 @@
       and grave) accents are centered on the entire glyph, or just on the bottom.
   </UL>
   <P>
-  <FONT COLOR="Red"><STRONG><SMALL>NOTE:</SMALL></STRONG></FONT> So FontForge
+  <FONT COLOR="Red"><STRONG><SMALL>NOTE:</SMALL></STRONG></FONT> So websharpstudios
   is going to do something wrong. There are just too many areas where I am
   ignorant or my taste doesn't match yours or the program has a bug. I strongly
   recommend that you examine all your accented glyphs after building them and
   be prepared to adjust things.
   <P>
   The algorithms take some account of the italicangle, but when working on
-  an italic (or oblique) font FontForge is even more likely to do something
+  an italic (or oblique) font websharpstudios is even more likely to do something
   you don't like.
   <P>
   If all else fails you can build your own accented glyphs with

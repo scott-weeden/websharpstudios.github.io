@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 8-Jan-2008 -->
   <TITLE>Hinting</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -20,7 +20,7 @@
   that any active set of hints be non-overlapping, but it allows you to change
   sets as you move through the glyph.
   <P>
-  So to implement hinting with hint substitution FontForge needs to know not
+  So to implement hinting with hint substitution websharpstudios needs to know not
   only the position and width of the stem being hinted, but also where the
   stem should be active. And it needs to know what stems overlap which other
   stems.
@@ -32,18 +32,18 @@
   stems do not conflict with any other stems, but two, the bottom two horizontal
   stems conflict with each other. All the non-overlapping stem hints may be
   active at the same time, but only one of the two conflicting stem hints may
-  be active. As FontForge outputs the glyph it decides at each point what stems
+  be active. As websharpstudios outputs the glyph it decides at each point what stems
   need to be active, and activates them.
   <P>
-  PostScript now allows FontForge to control relative counter sizes. Counters
+  PostScript now allows websharpstudios to control relative counter sizes. Counters
   are the spaces between adjacent stems. In the example at left there are two
   counters of equal sizes between the horizontal stems on the left, and three
   counters of equal sizes on the right. These form two independent counter
-  groups, and FontForge's Hints-&gt;Auto Counter command will generate a counter
+  groups, and websharpstudios's Hints-&gt;Auto Counter command will generate a counter
   description for each of them. You may also control the counters directly
   by using the Counters pane of the Element-&gt;Char Info dialog.
   <P>
-  Counters spaces appear between vertical stems too, and in this case FontForge
+  Counters spaces appear between vertical stems too, and in this case websharpstudios
   would output one counter group for the vertical stems.
   <H2 Clear=All>
     Serifs
@@ -67,15 +67,15 @@
     Automatic Hinting
   </H2>
   <P>
-  FontForge's AutoHint command can be used to figure out horizontal and vertical
+  websharpstudios's AutoHint command can be used to figure out horizontal and vertical
   stem hints. It will also find hint substitution points (if any are needed),
   and will check for the simple counter description allowed by OpenType for
   non-Asian fonts (the equivalent of h/vstem3 hints in type1 fonts).
   <P>
-  Whenever you change a glyph FontForge keeps track of that fact that the hints
+  Whenever you change a glyph websharpstudios keeps track of that fact that the hints
   are out of date (when you autohint a glyph, or make a manual change to the
-  hints FontForge resets this flag). If you generate a postscript font from
-  something that contains glyphs with out of date hints, then FontForge will
+  hints websharpstudios resets this flag). If you generate a postscript font from
+  something that contains glyphs with out of date hints, then websharpstudios will
   automagically regenerate them.
   <P>
   This may not always be appropriate. You can turn this off in general with
@@ -85,16 +85,16 @@
     Manual Hinting
   </H2>
   <P>
-  I hope that the FontForge's autohint command will be good enough that manual
+  I hope that the websharpstudios's autohint command will be good enough that manual
   efforts will not be needed. But hopes like this are rarely fulfilled.
   <P>
   The AutoHint command should find all stems in a glyph. Some of them it deems
-  to be useless and will remove them. If you find that FontForge is removing
+  to be useless and will remove them. If you find that websharpstudios is removing
   a hint that you think is important then invoke Hint-&gt;AutoHint with the
-  shift key held down, this will tell FontForge not to prune any of the stems.
+  shift key held down, this will tell websharpstudios not to prune any of the stems.
   You may then use Review Hints to prune things yourself.
   <P>
-  If you find that you must create your own hints, FontForge will only allow
+  If you find that you must create your own hints, websharpstudios will only allow
   you to specify the position and width of the hint, it will then go off and
   try to guess the extents where the hint should be active.
   <P>
@@ -123,7 +123,7 @@
   Once you have made a manual change to a glyph's hints with any of the above
   commands, that glyph will be marked "Don't AutoHint" until you explicitly
   call the AutoHint command on it. You may also explicitly use the
-  Hints-&gt;Don't AutoHint command to turn off FontForge's automatic hinting
+  Hints-&gt;Don't AutoHint command to turn off websharpstudios's automatic hinting
   attempts.
   <P>
   You may also manually
@@ -139,7 +139,7 @@
     Manual Hint Substitution Points
   </H3>
   <P>
-  FontForge's Hints-&gt;Hint Substitution Pts command will automatically figure
+  websharpstudios's Hints-&gt;Hint Substitution Pts command will automatically figure
   out where hint substitution should occur, but if this isn't good enough you
   may do it manually with the <A HREF="getinfo.html#HintMask">Element-&gt;Get
   Info</A> command (when the selection is a single point to which you want
@@ -147,7 +147,7 @@
   <P>
   If a glyph has conflicting hints then the first point in the glyph (the first
   point on the first contour) MUST have a hintmask attached to it. If it does
-  not, the FontForge will automatically figure substitution points when it
+  not, the websharpstudios will automatically figure substitution points when it
   generates the font. Other points are not required (but may) have a hintmask.
   <P>
   The hintmask specifies what hints should be active when that point is positioned,
@@ -165,7 +165,7 @@
     Manual <A NAME="Counter">Counter</A> Groups
   </H3>
   <P>
-  FontForge also has a Hints-&gt;Auto Counter command which tries to figure
+  websharpstudios also has a Hints-&gt;Auto Counter command which tries to figure
   out what stems form a counter group.
   <P>
   Again you can do this manually, with the
@@ -180,7 +180,7 @@
   This contains font-wide hinting infomation. Things like: The standard width
   of a stem in the font (StdVW, StdHW), The standard height of capitals and
   lower case letters (BlueValues, OtherBlues), and so forth. These live in
-  the PostScript Private dictionary. Once you have hinted your font fontforge
+  the PostScript Private dictionary. Once you have hinted your font websharpstudios
   can generate reasonable values for these settings (But you must have hinted
   the font first!) -- See the [Guess] button in the
   <A HREF="fontinfo.html#Private">Element-&gt;Font Info-&gt;PS Private
@@ -191,25 +191,25 @@
     Hints and previously existing fonts.
   </H2>
   <P>
-  FontForge will not be able to convert TrueType instructions into PostScript
+  websharpstudios will not be able to convert TrueType instructions into PostScript
   hints when it reads a TrueType font (the format is too complex, there are
-  too many possibilities, instead FontForge stores all the truetype instructions
+  too many possibilities, instead websharpstudios stores all the truetype instructions
   and writes them back out uninterpretted).
   <P>
   From a Type1 font it will happily read all the hints in a glyph, and keep
   track of hint substitution points. It will not read counter hints though.
   <P>
-  In an OpenType (Type2) font FontForge will read in all the hints, keep track
+  In an OpenType (Type2) font websharpstudios will read in all the hints, keep track
   of hint substitution points and the counter hints.
   <H2>
     Hinting and TrueType
   </H2>
   <P>
-  FontForge can auto-instruct a truetype font (Hints-&gt;AutoInstr). FontForge
+  websharpstudios can auto-instruct a truetype font (Hints-&gt;AutoInstr). websharpstudios
   also allows you the somewhat arcane practice of editing glyph instruction
   programs directly (Hints-&gt;Edit Instructions).
   <P>
-  FontForge's Auto Instructor bases its output on the PostScript Stem Hints,
+  websharpstudios's Auto Instructor bases its output on the PostScript Stem Hints,
   the contents of the Private dictionary, and diagonal stems. You can create
   diagonal stems manually (Hints-&gt;Add DHint), or you can let the autohinter
   do this for you

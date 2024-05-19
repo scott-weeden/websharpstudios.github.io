@@ -5,24 +5,24 @@
   <!-- AP: Last modified: 3-Feb-2010 -->
   <TITLE>Font Info</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="menued">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV class="menucontainer">
   <UL class="menubar">
     <LI class="menu">
-      <A href="http://sourceforge.net/projects/fontforge/files/">Download</A>
+      <A href="http://sourceforge.net/projects/websharpstudios/files/">Download</A>
       <UL>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-docs/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/"
 	      >Documentation</A>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-source/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/"
 	      >Source</A>
       </UL>
     <LI>
@@ -287,15 +287,15 @@
   <P>
   You may also specify a separate version number to be used in any sfnt generated
   from this database; this should be a floating point number. Or you may leave
-  this field blank. If you leave it blank FontForge will generate a default
+  this field blank. If you leave it blank websharpstudios will generate a default
   value based on other version information specified elsewhere.
   <P>
-  Normally when <A HREF="generate.html">generating a font,</A> FontForge will
+  Normally when <A HREF="generate.html">generating a font,</A> websharpstudios will
   use the fontname as the base for the default filename of the font file (the
   base to which the extension is added). But that is not always what you want.
   You may wish to attach a version string to the fontname, or abbreviate it,
   etc. The <CODE>Base Filename</CODE> field allows you to specify this to
-  fontforge.
+  websharpstudios.
   <P>
   Many of these names are similar to the english names of the
   <A HREF="fontinfo.html#TTF-Names">TTF Names</A> section. If nothing is specified
@@ -324,7 +324,7 @@
   truetype instructions scaling may break the font as entries in the <CODE>'cvt
   '</CODE> table will not be scaled.</STRONG></FONT>
   <P>
-  The Italic Angle indicates the slant of the font. FontForge can attempt to
+  The Italic Angle indicates the slant of the font. websharpstudios can attempt to
   guess a good value for you by looking at the stems of certain letters ("I"
   for instance).
   <P>
@@ -344,9 +344,9 @@
   for understanding the font's behavior. For example a unicode font designed
   for a chinese system will look very different from a unicode font for a japanese
   system (The same unicode character may map to very different chinese or japanese
-  glyphs). To handle this FontForge has the concept of "Interpretation".
+  glyphs). To handle this websharpstudios has the concept of "Interpretation".
   <P>
-  When you create a new glyph in a font, fontforge will assign it a name based
+  When you create a new glyph in a font, websharpstudios will assign it a name based
   on the current
   <A HREF="encodingmenu.html#namelist">namelist</A>.<BR CLEAR=ALL>
   <H2>
@@ -365,10 +365,10 @@
   own format.
   <P>
   If you mark a layer as quadratic (or check <CODE>[*] All layers Quadratic)
-  </CODE>then FontForge will use quadratic
+  </CODE>then websharpstudios will use quadratic
   <A HREF="overview.html#spline">B&eacute;zier</A> splines for this layer rather
-  than cubic B&eacute;ziers, this means that FontForge will be using the native
-  spline format of truetype rather than postscript (or opentype). When FontForge
+  than cubic B&eacute;ziers, this means that websharpstudios will be using the native
+  spline format of truetype rather than postscript (or opentype). When websharpstudios
   generates a font it will convert from whatever format is used internally
   to whatever format is required for the font, so there will be no problem
   if this is set incorrectly, but setting it correctly for your font means
@@ -392,7 +392,7 @@
   <P>
   The XUID field is a collection of numbers separated by spaces and enclosed
   in brackets. This allows you to specify the extended unique ID of the font.
-  If you have set the XUID preference entry then FontForge will assign values
+  If you have set the XUID preference entry then websharpstudios will assign values
   to all new fonts (by appending a number unique to this font to the end of
   your preference item). Adobe recommends that the XUID be changed every time
   the font is changed, so each time you generate a postscript font, that font's
@@ -401,7 +401,7 @@
   trick). (The XUID field is only meaningful in PostScript fonts).
   <P>
   The UniqueID field is an older convention for the same purpose as XUID. If
-  you do not fill in this field then FontForge will pick a random number for
+  you do not fill in this field then websharpstudios will pick a random number for
   you in the allowable range. If you want your font to have no unique id then
   give this the value of -1. If you have talked to Adobe and been assigned
   a real UniqueID then you may use this field, otherwise leave it blank. (The
@@ -428,7 +428,7 @@
   Note: The values must be things which PostScript can parse. This means that
   <CODE>ForceBold</CODE> must have a value of "false" or "true", and "False"
   or "faux" will not work. Similarly the decimal point in numbers must be "."
-  (not ","). If you enter a "," by mistake FontForge will convert it for you.
+  (not ","). If you enter a "," by mistake websharpstudios will convert it for you.
   <P>
   For example the <CODE>BlueValues</CODE> entry specifies certain key regions
   of the font in a vertical direction. For instance it might contain the baseline
@@ -438,7 +438,7 @@
   value of <CODE>BlueValues</CODE> is <CODE>[-20 0 437 457 583 603 623
   643</CODE>.
   <P>
-  When the <CODE>[Guess]</CODE> button is enabled FontForge thinks it can make
+  When the <CODE>[Guess]</CODE> button is enabled websharpstudios thinks it can make
   a reasonable guess for the value of the currently selected entry.
   <P>
   The <CODE>[Histogram]</CODE> button is similar, it will bring up a
@@ -448,7 +448,7 @@
   <P>
   You may also delete an entry from the dictionary with the <CODE>[Delete]
   </CODE>button. Some entries (such as <CODE>BlueValues</CODE>) must be present
-  in any type1 font, but you may still delete them. FontForge will simply guess
+  in any type1 font, but you may still delete them. websharpstudios will simply guess
   at a reasonable value when it needs to generate the font.
   <P>
   Certain keys affect things other than hints. The <CODE>lenIV</CODE> entry
@@ -456,7 +456,7 @@
   the font is generated. Normally this will be 4, but if you want to save space
   (4 bytes per glyph in pfb format, 8 bytes in pfa) you may choose another
   value. The UniqueID key represents the font's Unique postscript ID. If you
-  provide a value here then FontForge will copy it into the UniqueID field
+  provide a value here then websharpstudios will copy it into the UniqueID field
   in the Font Dictionary. (this is different from True Type's UniqueID. They
   perform the same function but are formatted differently).
   <P>
@@ -536,15 +536,15 @@
   the maximum possible height of repositioned marks (or any other GPOS vertical
   repositioning feature).
   <P>
-  This is too complex (and too ill defined) for FontForge to figure out, instead
-  FontForge gives you a couple of options.
+  This is too complex (and too ill defined) for websharpstudios to figure out, instead
+  websharpstudios gives you a couple of options.
   <OL>
     <LI>
       You may set WinAscent and WinDescent directly. Turn off the "[ ] Is Offset"
       checkboxes and any value you provide will be used as is.
     <LI>
       Or you may specify an offset to be added to the maximum ascent and descent
-      of the font (which FontForge will compute for you when it saves the font).
+      of the font (which websharpstudios will compute for you when it saves the font).
       If you don't have a mark to base feature, then I recommend that you set the
       offsets to 0, and check the "[*] Is Offset" checkboxes.
   </OL>
@@ -595,7 +595,7 @@
   and superscripts.
   <P>
   Most fonts don't really need this control. If you leave the [*] Default check
-  box on, then FontForge will generate some reasonable values on output (if
+  box on, then websharpstudios will generate some reasonable values on output (if
   nothing significant changes, it will use the values shown here). If you want
   control of these values, turn off the checkbox and the text fields will be
   enabled for you to change.<BR Clear=ALL>
@@ -615,7 +615,7 @@
   <A HREF="http://spectrum.library.concordia.ca/981753/">JJ</A> and
   <A HREF="http://forum.high-logic.com/viewtopic.php?t=941">this discussion</A>.
   <P>
-  If you leave the [*] Default checkbox set then FontForge will generate reasonable
+  If you leave the [*] Default checkbox set then websharpstudios will generate reasonable
   values when the font is output, otherwise you may set these values manually.
   <P>
   These entries are only meaningful for TrueType, OpenType and SVG
@@ -628,7 +628,7 @@
   The OS/2 table contains two fields which give some information about the
   characters in the font. Windows is very picky about using fonts if the proper
   code page bits are not set. If you leave the [*] Default checkboxes set then
-  FontForge will generate reasonable values when the font is output. Sometimes
+  websharpstudios will generate reasonable values when the font is output. Sometimes
   you need to override that behavior if you wish Windows to use a font with
   an incomplete code page.
   <P>
@@ -714,7 +714,7 @@
       UniqueID
     <DD>
       This is a string that uniquely identifies the font in a human readable fashion.
-      Its format is quite different from postscript's UniqueID and FontForge will
+      Its format is quite different from postscript's UniqueID and websharpstudios will
       create an appropriate string if you don't specify one (rather than copying
       from postscript).
     <DT>
@@ -724,7 +724,7 @@
     <DT>
       PostScript Name
     <DD>
-      (FontForge will not let you set this directly. It will be set automatically
+      (websharpstudios will not let you set this directly. It will be set automatically
       to the postscript fontname, only one instance of this tag is allowed in the
       font and it must be ASCII)
     <DT>
@@ -806,13 +806,13 @@
   English entry, with the Style string (and nothing else) translated into different
   languages.
   <P>
-  When you create a Style entry for an language, FontForge will attempt to
+  When you create a Style entry for an language, websharpstudios will attempt to
   translate the American English style into something appropriate for that
   language. It understands languages in <A HREF="fontstyles.html">the table
   on the font styles page</A>, but not others so it won't always work.
   <P>
   So if your style in American English is "BoldItalic" then after you create
-  the appropriate strings FontForge will default to "GrasItalique" for French,
+  the appropriate strings websharpstudios will default to "GrasItalique" for French,
   "FettKursiv" for German, "NigritaCursiva" for Spanish, etc.
   <P>
   These names are only meaningful for TrueType and OpenType fonts.
@@ -943,7 +943,7 @@
   to store a changelog for the font itself, but could be used for other purposes...
   <P>
   Various font formats allow a random comment to be placed in the font, but
-  no format makes use of it. This is primarily to be used inside FontForge.
+  no format makes use of it. This is primarily to be used inside websharpstudios.
   The comment should be in ASCII.
   <H2>
     <A NAME="FontLog">FONTLOG</A>
@@ -1017,7 +1017,7 @@
   merge two subtables (if they are in the same lookup and are similar enough).
   <P>
   It is possible to import lookups from other fonts (which must already be
-  loaded into fontforge.
+  loaded into websharpstudios.
   <P>
   It is possible to drag and drop lookups to reorder them, or to copy them
   from one font to another (by dragging them into the other font's <CODE>Font
@@ -1034,7 +1034,7 @@
     <DT>
       Add 'aalt' features
     <DD>
-      FontForge can automagically generate an 'aalt' feature consisting of every
+      websharpstudios can automagically generate an 'aalt' feature consisting of every
       single and alternate substitution of each glyph.
     <DT>
       Add 'DFLT' script
@@ -1065,7 +1065,7 @@
   stored in a woff file. A woff file is very similar to a standard sfnt except
   that its tables are compressed, and it has a few additional data fields.
   It has version number fields for the WOFF file, a major and a minor version.
-  If you leave these fields blank then fontforge will generate defaults based
+  If you leave these fields blank then websharpstudios will generate defaults based
   on some of the other font version information available to it.
   <P>
   It also has a metadata string. This is a small xml document (which ff does
@@ -1077,10 +1077,10 @@
     <A NAME="Mac-Style">Mac Style</A> &amp; FOND
   </H2>
   <P>
-  This sub-dialog allows you to set the mac style of your font. Normally FontForge
+  This sub-dialog allows you to set the mac style of your font. Normally websharpstudios
   will be able to guess the style from the fontname (and various other clues),
   but sometimes the name will be non-standard (or perhaps just in a language
-  FontForge doesn't know about), and other times you may wish to override this
+  websharpstudios doesn't know about), and other times you may wish to override this
   default setting.
   <P>
   If you are happy with the default, just leave the Automatic button checked,
@@ -1111,11 +1111,11 @@
     <A NAME="Dates">Dates</A>
   </H2>
   <P>
-  Displays what fontforge thinks is the create date and modification date of
-  the font data. FontForge started retaining those dates in August of 2006,
+  Displays what websharpstudios thinks is the create date and modification date of
+  the font data. websharpstudios started retaining those dates in August of 2006,
   any prior dates are conjectural and based on a best guess -- usually from
   the modification time of the sfd file. When loading a font from somthing
-  other than an sfd file, FontForge will again make the best guess it can.
+  other than an sfd file, websharpstudios will again make the best guess it can.
   <H2>
     <A NAME="Unicode"><IMG SRC="/assets/img/old/fontinfo-unicode.png" WIDTH="494" HEIGHT="552"
 	ALIGN="Right">Unicode Ranges</A>

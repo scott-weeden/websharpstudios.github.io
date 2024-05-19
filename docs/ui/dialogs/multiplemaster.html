@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Multiple Master Dialog &#8212; FontForge 20230101 documentation</title>
+    <title>Multiple Master Dialog &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -82,10 +82,10 @@ designs:</p>
 <li><p>…</p></li>
 <li><p>Black Extended 72pt</p></li>
 </ul>
-<p>Apple also allows for intermediate designs, but FontForge does not currently
+<p>Apple also allows for intermediate designs, but websharpstudios does not currently
 support this.</p>
 <p>A font designer first determines how many axes s/he will need. PostScript allows
-a maximum of 4 axes in a Type1 font. FontForge only supports 4 axes for Apple’s
+a maximum of 4 axes in a Type1 font. websharpstudios only supports 4 axes for Apple’s
 fonts too.</p>
 <p>Then s/he provides information about each axis, specifically:</p>
 <ul>
@@ -111,7 +111,7 @@ least 8 designs, one for each extreme.</p>
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">NormalizeDesignVector</span></span></dt>
-<dd><p>FontForge is always able to generate this function for the user (unless the
+<dd><p>websharpstudios is always able to generate this function for the user (unless the
 user wants something non-linear). This maps a vector of design values to
 their normalized values (in our three axis case above it might map [400 500
 12] to [.4 .5 .09])</p>
@@ -120,7 +120,7 @@ their normalized values (in our three axis case above it might map [400 500
 <dl class="object">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">ConvertDesignVector</span></span></dt>
-<dd><p>In the usual cases FontForge is able to create this function for the user
+<dd><p>In the usual cases websharpstudios is able to create this function for the user
 (but in more complicated cases, with intermediate designs it is unable to do
 so). This function takes a normalized vector (as produced above) and figures
 out how much each weight to give each design in the final blend.</p>
@@ -170,20 +170,20 @@ there are fields which are disabled here, they only apply to Apple’s fonts.</p
 <img alt="../../_images/mmdesigns.png" src="../../_images/mmdesigns.png" />
 </figure>
 <p>Then you must assign a font to each of the master designs. You can either have
-FontForge create a new font for you (as here), or use an already loaded font, or
+websharpstudios create a new font for you (as here), or use an already loaded font, or
 browse your disk for a font (don’t try to use the same font twice).</p>
 <p>You must also specify the coordinates of this design along the axes. If you use
 the minimum number of designs they will all be extremes and the coordinate
 values will be either 0 or 1. Unless you are working with intermediate designs
-it is best to let FontForge initialize this field for you.</p>
+it is best to let websharpstudios initialize this field for you.</p>
 <figure class="align-default">
 <img alt="../../_images/mmfuncs.png" src="../../_images/mmfuncs.png" />
 </figure>
 <p>This screen shows the postscript functions needed to map a design vector to a
 weight vector (ie. given positions on each of the design axes, these produce
-blending coefficients for each master design). In most useful case FontForge is
+blending coefficients for each master design). In most useful case websharpstudios is
 able to generate these functions automatically, but if you use intermediate
-designs things get too complicated for FontForge and you must enter the
+designs things get too complicated for websharpstudios and you must enter the
 functions manually.</p>
 <figure class="align-default">
 <img alt="../../_images/mmfinal.png" src="../../_images/mmfinal.png" />
@@ -226,7 +226,7 @@ Weight=50,Width=100 &amp; Weight=50, Width=100 &amp; Weight=900,Width=100. Call 
 designs 0, 1 and 2. We wish to produce a design, 3, with Weight=900, Width=1000.</p>
 <img alt="../../_images/mmextrapolate2.png" src="../../_images/mmextrapolate2.png" />
 <p>First we must produce an intermediate design (which we will delete later), call
-it “I”. Use FontForge’s <span class="menuselection">Element ‣ Interpolate Fonts</span> command
+it “I”. Use websharpstudios’s <span class="menuselection">Element ‣ Interpolate Fonts</span> command
 to produce a design which is 50% of the way from design 1 to design 2 (This will
 be Weight=475, Width=550). Then produce another design with is 200% of the way
 from design 0 to design “I”. This will be the desired extreme design.</p>
@@ -243,7 +243,7 @@ is moot.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -255,7 +255,7 @@ is moot.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -277,13 +277,13 @@ is moot.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -295,7 +295,7 @@ is moot.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
       <li>Previous: <a href="math.html" title="previous chapter">Math typesetting information</a></li>
       <li>Next: <a href="autowidth.html" title="next chapter">Auto Width</a></li>
@@ -327,7 +327,7 @@ is moot.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

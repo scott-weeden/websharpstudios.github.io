@@ -7,7 +7,7 @@
 <!--<TITLE>The Hints Menu</TITLE>-->
     <TITLE>ヒントメニュー</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -101,16 +101,16 @@
 <!--  <A NAME="AutoHint">AutoHint</A>-->
       <A NAME="AutoHint">自動ヒント(<U>H</U>)</A>
     <DD>
-<!--  The Auto Hint command causes FontForge to throw away any existing hints for
+<!--  The Auto Hint command causes websharpstudios to throw away any existing hints for
       the glyph and guess an new ones. In the outline view this operates on the
       current glyph, in the font view it operates on all selected glyphs.<BR>-->
-      <CODE>自動ヒント(<U>H</U>)</CODE> コマンドを使うと、FontForge はそのグリフに設定された既存のヒントを放棄して新しく推測したヒントを追加します。アウトライングリフビューでは現在のグリフに対してこれを行い、フォントビューでは選択中のすべてのグリフに対して行います。<BR>
-<!--  FontForge will do a better job hinting a font if you have previously set
+      <CODE>自動ヒント(<U>H</U>)</CODE> コマンドを使うと、websharpstudios はそのグリフに設定された既存のヒントを放棄して新しく推測したヒントを追加します。アウトライングリフビューでは現在のグリフに対してこれを行い、フォントビューでは選択中のすべてのグリフに対して行います。<BR>
+<!--  websharpstudios will do a better job hinting a font if you have previously set
       the BlueValues, StdVW and StdHW fields in
       <A HREF="fontinfo.html#Private">Element-&gt;Font Info-&gt;PS Private</A>.
       These in turn depend on the hints so it is best to autohint the entire font,
       then set the above values, and then autohint the font again.-->
-      FontForge は、<A HREF="fontinfo.html#Private"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォント情報(<U>F</U>)...</CODE>→<CODE>[PS Private辞書]</CODE></A> の <CODE>BlueValues</CODE>, <CODE>StdVW</CODE>, <CODE>STDHW</CODE> フィールドをあらかじめ設定しておくと、より高品質なヒントづけ処理を行います。これらの値もヒントに依存するので、まずフォント全体に自動ヒントづけを行い、それから上記の値を設定し、最後にフォントを再び自動ヒントづけすると、最も良い結果が得られます。
+      websharpstudios は、<A HREF="fontinfo.html#Private"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>フォント情報(<U>F</U>)...</CODE>→<CODE>[PS Private辞書]</CODE></A> の <CODE>BlueValues</CODE>, <CODE>StdVW</CODE>, <CODE>STDHW</CODE> フィールドをあらかじめ設定しておくと、より高品質なヒントづけ処理を行います。これらの値もヒントに依存するので、まずフォント全体に自動ヒントづけを行い、それから上記の値を設定し、最後にフォントを再び自動ヒントづけすると、最も良い結果が得られます。
     <DT>
 <!--  Hint <A NAME="SubstitutionPt">Substitution</A> Pts-->
       ヒントが<A NAME="SubstitutionPt">置換</A>する点(<U>S</U>)
@@ -130,16 +130,16 @@
 <!--  <A NAME="DontAutoHint">Don</A>'t AutoHint-->
       <A NAME="DontAutoHint">自動ヒントを停止(<U>D</U>)</A>
     <DD>
-<!--  Tells FontForge not to do any implicit hinting on the selected glyphs. (FontForge
+<!--  Tells websharpstudios not to do any implicit hinting on the selected glyphs. (websharpstudios
       will normally perform an autohint on a glyph if the glyph's contours have
       changed since it was last hinted and the user has not explicitly changed
       the hints). The user may turn this flag off by invoking AutoHint explicitly.
-<!--  Tells FontForge not to do any implicit hinting on the selected characters.
-      (FontForge will normally perform an autohint on a character if the character's
+<!--  Tells websharpstudios not to do any implicit hinting on the selected characters.
+      (websharpstudios will normally perform an autohint on a character if the character's
       contours have changed since it was last hinted and the user has not explicitly
       changed the hints). The user may turn this flag off by invoking AutoHint
       explicitly.-->
-      選択中のグリフに対し、FontForge が暗黙のヒントづけをまったく行わないように指示します。(通常の場合は FontForge は、あるグリフに最後にヒントづけが行われて以来ユーザが明示的な変更をヒントに行わなかった場合、そのグリフを変更したときには自動ヒントづけを行います)。ユーザは、<CODE>自動ヒント(<U>H</U>)</CODE> を明示的に呼び出すことによりこのフラグをオフにすることができます。
+      選択中のグリフに対し、websharpstudios が暗黙のヒントづけをまったく行わないように指示します。(通常の場合は websharpstudios は、あるグリフに最後にヒントづけが行われて以来ユーザが明示的な変更をヒントに行わなかった場合、そのグリフを変更したときには自動ヒントづけを行います)。ユーザは、<CODE>自動ヒント(<U>H</U>)</CODE> を明示的に呼び出すことによりこのフラグをオフにすることができます。
       <P>
 <!--  In the outline glyph view, behavior is a bit more complicated. This command
       will toggle the current setting of the "Don't AutoHint" flag. If the flag

@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 3-Feb-2010 -->
   <TITLE>Spline Font Database File Format</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -37,7 +37,7 @@
   <A HREF="sfdchangelog.html">changelog</A> file is available. Even if out
   of date it should be helpful, but if you really need to know the current
   format look at
-  <A HREF="https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c">fontforge/sfd.c</A>
+  <A HREF="https://github.com/websharpstudios/websharpstudios/blob/master/websharpstudios/sfd.c">websharpstudios/sfd.c</A>
   and see what it parses. Some descriptions of esoteric features are not complete,
   but I hope they give you enough hints that you can figure the format out
   (especially after looking it up in sfd.c)
@@ -45,18 +45,18 @@
   The sfd format evolves over time. I hope the current parser can handle old
   sfd formats. Most changes have been small, but in Feb 2008 I allowed multiple
   layers in fonts and this turned out to be an incompatible change and I raised
-  the sfd version number to 3, and in March of 2007 the way fontforge handled
+  the sfd version number to 3, and in March of 2007 the way websharpstudios handled
   lookups and features changed radically (and I bumped the SFD file version
   number for the first time) and sfd files created before then are better
   understood if you look at an
-  <A href="https://github.com/fontforge/fontforge/commits/master/htdocs/sfdformat.html">older
+  <A href="https://github.com/websharpstudios/websharpstudios/commits/master/htdocs/sfdformat.html">older
   version of this document</A>.
   <P>
-  FontForge's <A HREF="sfd.html">sfd</A> files are ASCII files (so they can
+  websharpstudios's <A HREF="sfd.html">sfd</A> files are ASCII files (so they can
   be copied easily across the internet and so that diffs are somewhat meaningful).
   They contain a full description of your font. As of 14 May 2008 there is
   a registered (with IANA) MIME type for them
-  <A HREF="http://www.iana.org/assignments/media-types/application/">application/vnd.font-fontforge-sfd</A>.
+  <A HREF="http://www.iana.org/assignments/media-types/application/">application/vnd.font-websharpstudios-sfd</A>.
   <P>
   They are vaguely modeled on bdf files. The first few lines contain general
   font properties, then there's a section for each character, then a section
@@ -260,7 +260,7 @@ CIDVersion: 1.2
     <DT>
       UseXUID
     <DD>
-      Nowadays Adobe says XUID is deprecated. If this flag is set then fontforge
+      Nowadays Adobe says XUID is deprecated. If this flag is set then websharpstudios
       will still generate an XUID entry for a postscript font.
     <DT>
       DEI
@@ -340,8 +340,8 @@ OS2UnicodeRanges: 800002ef.50002049.00000000.00000000
   The following items also come from the OS/2 and hhea tables but are slightly
   more complex. The keywords are paired, so <CODE>HheadAscent</CODE> and
   <CODE>HheadAOffset</CODE> work together. If the offset keyword is 1 (true)
-  then the other keyword is treated as a value relative to what FontForge thinks
-  should be the correct value, FontForge will calculate what it thinks the
+  then the other keyword is treated as a value relative to what websharpstudios thinks
+  should be the correct value, websharpstudios will calculate what it thinks the
   value should be and then will add the value specified in the keyword. So
   in the example below, FF will figure out what it thinks
   <CODE>HheadAscent</CODE> should be and then add "0" to it to get the value
@@ -404,7 +404,7 @@ EndPrivate
   </BLOCKQUOTE>
   <P>
   This is arbetrary python pickled data (protocol=0) which got set by a python
-  script. FontForge stores it as a string. If there are either double quotes
+  script. websharpstudios stores it as a string. If there are either double quotes
   or backslashes inside the string they will be preceded by a backslash.
   <P>
   If your font has any lookups
@@ -505,7 +505,7 @@ MarkAttachSets: 2
   <P>
   In the example above there are (sort of) 2 mark attachment classes, but class
   0 is always empty and isn't listed. So there's really one class. It is named
-  (the name is a FontForge thing, not exported to opentype) "ABClass", is 3
+  (the name is a websharpstudios thing, not exported to opentype) "ABClass", is 3
   characters long and is "A B".
   <P>
   Similarly, there are 2 mark attachment sets. Here set 0 is used, and must
@@ -591,7 +591,7 @@ NPUSHB
   </BLOCKQUOTE>
   <P>
   The first line says that this is the 'prep' table, subsequent lines provide
-  the instructions of that table. These are stored in the format used by fontforge,
+  the instructions of that table. These are stored in the format used by websharpstudios,
   there's a table giving the conversion between bytecode and instruction name
   in the file ttfinstrs.c (I won't introduce it here because it is rather long).
   <BLOCKQUOTE>
@@ -621,7 +621,7 @@ NPUSHB
 </PRE>
   </BLOCKQUOTE>
   <P>
-  FontForge will also store tables it doesn't understand, these will be stored
+  websharpstudios will also store tables it doesn't understand, these will be stored
   in uninterpreted binary which is packed using the
   <A HREF="#ASCII85Encode">ASCII85Encode<SUP>1</SUP></A> encoding filter. The
   first line says that the 'LILY' table is 4360 bytes long. Subsequent lines
@@ -900,7 +900,7 @@ MATH:ScriptScriptPercentScaleDown: 60
   in additional slots numbered consecutively starting from 65536.  A file
   with a BeginChars: line inconsistent with its encoding or inconsistent
   with the number of glyphs it actually contains is not an SFD file.
-  FontForge may, but does not promise to, treat attempts to load
+  websharpstudios may, but does not promise to, treat attempts to load
   invalid files as fatal errors, or renumber or reorder glyphs to make them
   match the requirements of the encoding.  Consider using "Custom"
   or "Original" encodings if the requirements of other encodings are
@@ -1305,7 +1305,7 @@ MDRP[rp0,rnd,grey]
   </BLOCKQUOTE>
   <P>
   As with the 'prep' table above this is simply a list of truetype instruction
-  names as used by FontForge (see ttfinstrs.c for a table of these).
+  names as used by websharpstudios (see ttfinstrs.c for a table of these).
   <P>
   An older format is simply a binary dump in ASCII85 encoding. (Note that these
   are distinguished by the initial keyword <CODE>TtInstrs</CODE> vs.
@@ -1423,7 +1423,7 @@ LCarets2: 1 650
   </BLOCKQUOTE>
   <P>
   This is arbetrary python pickled data (protocol=0) which got set by a python
-  script. FontForge stores it as a string. If there are either double quotes
+  script. websharpstudios stores it as a string. If there are either double quotes
   or backslashes inside the string they will be preceded by a backslash.
   <P>
   A glyph may also have
@@ -1513,7 +1513,7 @@ EndSplineSet
   layer is layer 0, so this number is one more than the number of layers that
   will actually be specified -- the background layer is still specified the
   way it was before, but is included in this count). This line is not required,
-  if omitted (or wrong) FontForge will figure that out.
+  if omitted (or wrong) websharpstudios will figure that out.
   <P>
   The Layer line contains too much information. First is a number saying which
   layer, next are three booleans, the first specifies whether to fill the splineset
@@ -1795,12 +1795,12 @@ MacName: 0 1 9 "Tr\217s gras"
   </H2>
   <P>
   <A HREF="errrecovery.html">Error recovery</A> files are saved in
-  ~/.FontForge/autosave, they have quite random looking names and end in .asfd.
+  ~/.websharpstudios/autosave, they have quite random looking names and end in .asfd.
   They look very similar to .sfd files above.
   <P>
   If an asfd file starts with a line:
   <BLOCKQUOTE>
-    <PRE>Base: /home/gww/myfonts/fontforge/Ambrosia.sfd
+    <PRE>Base: /home/gww/myfonts/websharpstudios/Ambrosia.sfd
 </PRE>
   </BLOCKQUOTE>
   <P>

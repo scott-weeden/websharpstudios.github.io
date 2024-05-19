@@ -7,7 +7,7 @@
 <!--<TITLE>Glossary of (some) typographical terms</TITLE>-->
     <TITLE>タイポグラフィ用語 (の一部) の事典</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY id="framed">
 <DIV id="framed-in">
@@ -383,8 +383,8 @@
 <!--	    In a scalable font the "em" is subdivided into units. In a postscript font
 	    there are usually 1000 units to the em. In a TrueType font there might be
 	    512, 1024 or 2048 units to the em. In an Ikarus font there are 15,000 units.
-	    FontForge uses these units as the basis of its coordinate system. -->
-    スケーラブルなフォントにおいては“em”はさらに細かい単位にまで分割される.  PostScript のフォントでは通常は 1000 で em となるようにする.  TrueType フォントでは 512 や 1024, さらには 2048 で em となる.  Ikarus においては 15000 である.  FontForge は座標系を定めるときにその単位を用いる.
+	    websharpstudios uses these units as the basis of its coordinate system. -->
+    スケーラブルなフォントにおいては“em”はさらに細かい単位にまで分割される.  PostScript のフォントでは通常は 1000 で em となるようにする.  TrueType フォントでは 512 や 1024, さらには 2048 で em となる.  Ikarus においては 15000 である.  websharpstudios は座標系を定めるときにその単位を用いる.
 	  <DT>
 	    <A NAME="en">en</A>
 	  <DD>
@@ -467,12 +467,12 @@
 	    before they are ready for display. These transformations are identified as
 	    font features and are tagged with (in OpenType) a 4 letter tag or (in Apple)
 	    a 2 number identfier. The meanings of these features are predefined by MicroSoft
-	    and Apple. FontForge's
+	    and Apple. websharpstudios's
 	    <A HREF="charinfo.html#Feature-Tag" TARGET="_top">Feature Tag </A>dialog
 	    (reachable from <A HREF="fontinfo.html" TARGET="_top">Element-&gt;Font Info</A>
 	    and <A HREF="charinfo.html" TARGET="_top">Element-&gt;Char Info</A>) can
 	    be used to produce new features. -->
-	    複雑な用字系のフォントを作成するときには (それほど複雑でない用字系のフォントですら)、画面に表示できるようにするためには、入力されたグリフに多数の変形 (合字のような) を適用する必要があります。これらの変形はフォント機能により識別され、(OpenType では) 4 文字のタグで、または (Apple 式では) 2 個の数値からなる識別子でタグづけされています。これらの機能の意味は Microsoft や Apple によりあらかじめ定義されています。FontForge では、新しい機能を作成するのに <A HREF="charinfo.html#Feature-Tag" TARGET="_top">機能タグ</A>ダイアログ (<A HREF="fontinfo.html" TARGET="_top"><CODE>エレメント(<U>L</U>)→<CODE>フォント情報(<U>F</U>)...</CODE></A> および <A HREF="charinfo.html" TARGET="_top"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE></A> で呼び出し可能) を、使用可能です。
+	    複雑な用字系のフォントを作成するときには (それほど複雑でない用字系のフォントですら)、画面に表示できるようにするためには、入力されたグリフに多数の変形 (合字のような) を適用する必要があります。これらの変形はフォント機能により識別され、(OpenType では) 4 文字のタグで、または (Apple 式では) 2 個の数値からなる識別子でタグづけされています。これらの機能の意味は Microsoft や Apple によりあらかじめ定義されています。websharpstudios では、新しい機能を作成するのに <A HREF="charinfo.html#Feature-Tag" TARGET="_top">機能タグ</A>ダイアログ (<A HREF="fontinfo.html" TARGET="_top"><CODE>エレメント(<U>L</U>)→<CODE>フォント情報(<U>F</U>)...</CODE></A> および <A HREF="charinfo.html" TARGET="_top"><CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE></A> で呼び出し可能) を、使用可能です。
 	  <DT>
 <!--	    Feature/Settings (Apple) -->
 	    機能/設定 (Apple) 
@@ -509,11 +509,11 @@
 	  <DT>
 	    <A NAME="FreeType" HREF="http://freetype.sf.net/">FreeType</A>
 	  <DD>
-<!--	    A library for rasterizing fonts. Used extensively in FontForge to understand
-	    the behavior of truetype fonts and to do better rasterization than FontForge
+<!--	    A library for rasterizing fonts. Used extensively in websharpstudios to understand
+	    the behavior of truetype fonts and to do better rasterization than websharpstudios
 	    could unaided. -->
    フォントの描画するためのライブラリ.  
-	     FontForge では、TrueType フォントのふるまいを理解するために広範に使用されており、 FontForge はこの助けを借りたときのほうが高品質の描画を行うことができる。
+	     websharpstudios では、TrueType フォントのふるまいを理解するために広範に使用されており、 websharpstudios はこの助けを借りたときのほうが高品質の描画を行うことができる。
 	  <DT>
 <!--	    <A NAME="fractur">Fractur</A> -->
   <A NAME="fractur">フラクトゥール Fractur</A>
@@ -854,14 +854,14 @@
 <!--	    <A NAME="multi-layered">Multi-layered</A> fonts -->
 	    <A NAME="multi-layered">複数レイヤ</A>フォント
 	  <DD>
-<!--	    (FontForge's own term) PostScript type3 fonts and SVG fonts allow for more
+<!--	    (websharpstudios's own term) PostScript type3 fonts and SVG fonts allow for more
 	    drawing possibilities than normal fonts. Normal fonts may only be filled
 	    with a single color inherited from the graphics environment. These two fonts
 	    may be filled with several different colors, stroked, and in the case of
-	    PostScript fonts may also draw bitmap images. FontForge can be configured
+	    PostScript fonts may also draw bitmap images. websharpstudios can be configured
 	    to support these fonts (it does not do so by default because this takes up
 	    more memory).
-	    (FontForge 独自の用語) PostScript Type3 フォントおよび SVG フォントでは、通常のフォントよりも豊富な描画能力を使用可能である。通常のフォントはグラフィック環境から引き継いだ単色で輪郭内を塗りつぶすことだけが可能である。これら 2 種類のフォントはいくつかの異なる色で塗りつぶし、輪郭を描き、PostScript フォントの場合はビットマップ画像を描画することができる。FontForge は、これらのフォントをサポートするように構築時に設定することができる (メモリ消費量が増えるので、これらはデフォルトではサポートしないようになっている)。
+	    (websharpstudios 独自の用語) PostScript Type3 フォントおよび SVG フォントでは、通常のフォントよりも豊富な描画能力を使用可能である。通常のフォントはグラフィック環境から引き継いだ単色で輪郭内を塗りつぶすことだけが可能である。これら 2 種類のフォントはいくつかの異なる色で塗りつぶし、輪郭を描き、PostScript フォントの場合はビットマップ画像を描画することができる。websharpstudios は、これらのフォントをサポートするように構築時に設定することができる (メモリ消費量が増えるので、これらはデフォルトではサポートしないようになっている)。
 	    <BLOCKQUOTE>
 	      <PRE>$ configure --with-multilayer
   $ make
@@ -894,12 +894,12 @@
   例えば違ったウエイトによるマルチプルマスターを定義することや違ったグリフ幅を持ったものによるマルチプルマスターを定義することが出来る.
   この仕組みを使うとひとつのフォントから  Normal, Semi-Bold, Bold, Condensed, Expanded, Bold-Condensed などのファミリーを生成することが可能となる.
 	    <P>
-<!--	    FontForge does not currently support multiple master fonts (and Adobe is
+<!--	    websharpstudios does not currently support multiple master fonts (and Adobe is
 	    no longer developing them either). -->
-   FontForge では今のところこのマルチプルマスターフォントをサポートしていない
+   websharpstudios では今のところこのマルチプルマスターフォントをサポートしていない
   (Adobe でももはや開発は続けられていない)
   <BR>訳注
-  <BR>この記述は古い。現在の FontForge におけるサポート状況については <a href="multiplemaster.html">multiplemaster.html</a> を参照のこと。
+  <BR>この記述は古い。現在の websharpstudios におけるサポート状況については <a href="multiplemaster.html">multiplemaster.html</a> を参照のこと。
 	</DL>
       </TD>
     </TR>
@@ -975,9 +975,9 @@
 	  <DD>
 <!--	    Each opentype font contains a collection of tables each of which contains
 	    a certain kind of information. See <A HREF="TrueOpenTables.html">here for
-	    the tables used by FontForge</A>. -->
+	    the tables used by websharpstudios</A>. -->
    OpenType フォントではさまざまな情報を持たせる為にテーブルが格納されている.
-  <A HREF="TrueOpenTables.html">FontForge で使われるテーブルに付いてのマニュアル<</A>を見よ.
+  <A HREF="TrueOpenTables.html">websharpstudios で使われるテーブルに付いてのマニュアル<</A>を見よ.
 	  <DT>
 <!--	    <A NAME="oblique">Oblique</A> -->
   オブリック <A NAME="oblique">Oblique</A>
@@ -1027,16 +1027,16 @@
   HP の <A HREF="http://www.panose.com/">PANOSE classification metrics guide</A> や AGFA の <A HREF="http://www.agfamonotype.com/hardware/pan1.asp">PANOSE classification metrics guide</A> や Microsoft の <A HREF="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdi/fontext_48aa.asp">PANOSE classification in Windows</A> を見よ.
   これを拡張した規格で <A HREF="http://www.w3.org/Fonts/Panose/pan2.html">Panose 2</A> がある.
 	    <P>
-<!--	    FontForge only knows about the classification scheme for Latin fonts. Other
+<!--	    websharpstudios only knows about the classification scheme for Latin fonts. Other
 	    schemes exist for other scripts. -->
-	    FontForge はラテン文字フォントの分類体系のみを知っています。その他の用字系にはその他の体系が存在します。
+	    websharpstudios はラテン文字フォントの分類体系のみを知っています。その他の用字系にはその他の体系が存在します。
 	  <DT>
 	    PfaEdit
 	  <DD>
-<!--	    This was the early name for FontForge. The original conception was that it
+<!--	    This was the early name for websharpstudios. The original conception was that it
 	    would only edit type1 fonts (hence then name), it quickly metamorphosed beyond
 	    that point, but it took me three years to rename it. -->
-	    これは、FontForge が初期に用いていた名前である。当初の考えでは、Type1 の編集機能のみを作るつもりだった (だからこの名前になった) が、すぐにその範囲を超えてしまった。だが、名前を変える気になるまで 3 年かかった。
+	    これは、websharpstudios が初期に用いていた名前である。当初の考えでは、Type1 の編集機能のみを作るつもりだった (だからこの名前になった) が、すぐにその範囲を超えてしまった。だが、名前を変える気になるまで 3 年かかった。
 	  <DT>
 	    Phantom points
 	  <DD>
@@ -1319,11 +1319,11 @@
   スプライン曲線	   <A NAME="spline">Spline</A>
 	  <DD>
 <!--	    A curved line segment. See the <A HREF="overview.html#intro">section in the
-	    manual on splines</A>. The splines used in FontForge are all second or third
+	    manual on splines</A>. The splines used in websharpstudios are all second or third
 	    order <A HREF="#bezier">B&eacute;zier</A> splines (quadratic or cubic). -->
    曲線を繋げたもの.
   マニュアルの<A HREF="overview.html#intro">スプライン曲線についての章</A>を参照せよ.
-  FontForge では 2 次 (quadratic) または 3 次 (cubic) の<A HREF="#bezier">ベジェ</A>曲線のみ使用する.
+  websharpstudios では 2 次 (quadratic) または 3 次 (cubic) の<A HREF="#bezier">ベジェ</A>曲線のみ使用する.
 	  <DT>
 	    SSP
 	  <DD>
@@ -1449,9 +1449,9 @@
 	  <DD>
 <!--	    Each truetype font contains a collection of tables each of which contains
 	    a certain kind of information. See <A HREF="TrueOpenTables.html">here for
-	    the tables used by FontForge</A>. -->
+	    the tables used by websharpstudios</A>. -->
    TrueType フォントにはさまざまな情報が入ったテーブルを持つことができる.
-  <A HREF="TrueOpenTables.html">FontForge によって使われるものについてはここの説明を</A>見よ.
+  <A HREF="TrueOpenTables.html">websharpstudios によって使われるものについてはここの説明を</A>見よ.
 	  <DT>
 	    <A NAME="type1">Type 1</A>
 	  <DD>

@@ -5,11 +5,11 @@
   <!-- AP: Last modified: 21-Sep-2008 -->
   <TITLE>Stylistic Transformations on Fonts</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -542,7 +542,7 @@
   same simple mathematical operation applied to the entire font. The italic
   transformation can be different for each glyph.
   <P>
-  Let me further add that FontForge will never be able to do everything that
+  Let me further add that websharpstudios will never be able to do everything that
   should be done to make a good italic font from an upright font. It may provide
   a helpful starting point. Some of my friends who know more about typography
   than I have urged me not to write this dialog, saying that each italic font
@@ -573,7 +573,7 @@
       condensed -- less obvious. Generally it will be condensed by about 90% which
       isn't noticeable unless you look hard. Stems may be condensed at a different
       percentage than counters (indeed, different stems may be condensed differently,
-      but fontforge doesn't support that because I don't find any consistency in
+      but websharpstudios doesn't support that because I don't find any consistency in
       behavior to emulate).
     <LI>
       smaller x-height -- because a slanted line that reaches from baseline to
@@ -608,7 +608,7 @@
   sans-serif fonts have an oblique font.
   <P>
   <IMG SRC="/assets/img/old/ItalicDlg.png" WIDTH="406" HEIGHT="715" ALIGN="Right">The italic
-  dialog attempts to give you control over as much of this as fontforge thinks
+  dialog attempts to give you control over as much of this as websharpstudios thinks
   it can do. The dialog displays the steps mentioned above, but backwards.
   <P>
   First there are a series of check boxes for gross letterform changes. The
@@ -618,24 +618,24 @@
   is extended below the baseline but the serif is removed.
   <P>
   In actual practice these changes are more complex. If examined closely the
-  bottom part of the f doesn't look precisely like the top. FontForge isn't
+  bottom part of the f doesn't look precisely like the top. websharpstudios isn't
   up to such subtleties however.
   <P>
   The [] f checkboxes control additional characters which are similar to "f",
   "long-s" for example, also the "fi", "fl", "ff", "ffi", "ffl", "longs_longs",
-  "longs_t", etc. ligatures. FontForge determines what glyphs it applies to
+  "longs_t", etc. ligatures. websharpstudios determines what glyphs it applies to
   by examining the glyph name and unicode encoding; it does NOT do a sophisticated
   analysis of the glyph's shape.
   <P>
   This does not exhaust the list of changes that could or should be done --
-  Merely the list of what FontForge thinks it can do. There should also be
+  Merely the list of what websharpstudios thinks it can do. There should also be
   checkboxes for:
   <IMG SRC="/assets/img/old/eItalic.png" WIDTH="68" HEIGHT="24"><IMG SRC="/assets/img/old/vItalic.png" WIDTH="68"
       HEIGHT="24"><IMG SRC="/assets/img/old/wItalic.png" WIDTH="68" HEIGHT="24"><IMG SRC="/assets/img/old/u432Italic.png"
       WIDTH="68" HEIGHT="24"><IMG SRC="/assets/img/old/u433Italic.png" WIDTH="68" HEIGHT="24">
   and many more.
   <P>
-  FontForge will change serifs in various places.
+  websharpstudios will change serifs in various places.
   <UL>
     <LI>
       baseline serifs -- The final stem of a glyph almost always undergoes a serif
@@ -673,7 +673,7 @@
   (in theory. It doesn't work too well with diagonal stems). You can make counters
   bigger or smaller by a percentage, or by adding a fixed amount to them.
   <P>
-  If the font has and Italic Angle specified in Font Info, then fontforge will
+  If the font has and Italic Angle specified in Font Info, then websharpstudios will
   first unskew the glyph in the hopes of getting some vertical stems, then
   Condense it, and the reskew it.<BR CLEAR=ALL>
   <H2>
@@ -750,12 +750,12 @@
   glyphs, instead it uses them to decide what glyphs to create (or if the glyphs
   already exist, what glyphs to change).
   <P>
-  So if you select "A" FontForge will create a glyph named "a.sc" copy the
+  So if you select "A" websharpstudios will create a glyph named "a.sc" copy the
   outlines of "A" into that glyph, and then modify them. If you select lower
-  case "a", FontForge will again create "a.sc" and will copy the outlines of
+  case "a", websharpstudios will again create "a.sc" and will copy the outlines of
   upper case "A".
   <P>
-  FontForge will also create two lookups, one which maps upper case letters
+  websharpstudios will also create two lookups, one which maps upper case letters
   to small caps variants, and the other which maps lower case letters to the
   small caps glyph. These will be bound to the "c2sc" and "smcp" features
   respectively.
@@ -799,7 +799,7 @@
   Instead it uses their outlines to create new glyphs (with the indicated glyph
   extension) and creates a lookup mapping the original glyph to the new glyph.
   <P>
-  So in the example at right, if you selected all the digits, then FontForge
+  So in the example at right, if you selected all the digits, then websharpstudios
   would create a new set of glyphs named "zero.superior", "one.superior" ...
   "nine.superior". It would create a new lookup bound to the feature "sups"
   which would map "zero" to "zero.superior", etc. By default each new glyph

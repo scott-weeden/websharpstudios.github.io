@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>7. Metrics, spacing and kerning &#8212; FontForge 20230101 documentation</title>
+    <title>7. Metrics, spacing and kerning &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -75,8 +75,8 @@ are generally reasonable approximations.</p>
 </div>
 <section id="vertical-metrics">
 <h3><span class="section-number">7.1.1. </span>Vertical Metrics<a class="headerlink" href="#vertical-metrics" title="Permalink to this heading">¶</a></h3>
-<p>FontForge provides some support for the vertical metrics needed for CJK fonts.
-First you must tell FontForge that this font should contain vertical metrics, do
+<p>websharpstudios provides some support for the vertical metrics needed for CJK fonts.
+First you must tell websharpstudios that this font should contain vertical metrics, do
 this with
 <span class="menuselection">Element ‣ Font Info ‣ General ‣ Has Vertical Metrics</span>.
 Then in each outline glyph enable VMetrics in the Layers palette.</p>
@@ -92,7 +92,7 @@ important quantity. Unfortunately there is not.</p>
 <span class="sig-name descname"><span class="pre">In</span> <span class="pre">a</span> <span class="pre">PostScript</span> <span class="pre">Type1</span> <span class="pre">font</span> <span class="pre">(or</span> <span class="pre">bare</span> <span class="pre">CFF</span> <span class="pre">font)</span></span></dt>
 <dd><p>There is no way to set this value.</p>
 <p>At all, ever.</p>
-<p>In traditional typography the inter-line spacing is 1em (which in FontForge
+<p>In traditional typography the inter-line spacing is 1em (which in websharpstudios
 is the ascent+descent of a font). Some applications will use this. Other
 applications will use the font’s bounding box (summing the maximum ascender
 height with the minimum descender depth) – a very bad, but very common
@@ -108,7 +108,7 @@ approach.</p>
 <span class="sig-name descname"><span class="pre">Mac</span></span></dt>
 <dd><p>On a mac the baseline to baseline spacing is determined again by the
 bounding box values of the font, specified in the ‘hhea’ table, possibly
-modified by a linegap (Which you can set in FontForge with
+modified by a linegap (Which you can set in websharpstudios with
 <a class="reference internal" href="../ui/dialogs/fontinfo.html"><span class="doc">Element-&gt;FontInfo-&gt;OS/2</span></a>.</p>
 </dd></dl>
 
@@ -118,7 +118,7 @@ modified by a linegap (Which you can set in FontForge with
 <dd><p>According to the OpenType spec, the baseline to baseline distance is set
 by the values of Typographic Ascent and Descent of the ‘OS/2’ table. These
 can be set with <a class="reference internal" href="../ui/dialogs/fontinfo.html"><span class="doc">Element-&gt;FontInfo-&gt;OS/2</span></a>, but are usually
-allowed to default to the Ascent and Descent values of FontForge – they
+allowed to default to the Ascent and Descent values of websharpstudios – they
 generally sum to 1em and are equivalent to the traditional unleaded
 default.</p>
 <p>Again this may be modified by a linegap field.</p>
@@ -175,14 +175,14 @@ you press <code class="docutils literal notranslate"><span class="pre">[Add</spa
 and the feature is “kern” (or perhaps “vkrn” if you want to do vertical
 kerning).</p>
 <p>Once you have created your lookup you again select it and press the [Add
-Subtable] button (which asks you to name the subtable). Then FontForge will ask
+Subtable] button (which asks you to name the subtable). Then websharpstudios will ask
 you whether you want a subtable of kerning pairs or kerning classes.</p>
 <p>If you have many glyphs which have similar kerning features you might wish to
 create a set of <a class="reference internal" href="../ui/mainviews/metricsview.html#metricsview-kernclass"><span class="std std-ref">kerning classes</span></a> (which might say
 that A, À, Á, Â, Â, Ã and Ä all kern alike). However for this example you want a
 kerning pair subtable.</p>
 <img alt="../_images/subtable-to.png" class="align-left" src="../_images/subtable-to.png" />
-<p>Then FontForge will popup a dialog allowing you to set the kerning subtable
+<p>Then websharpstudios will popup a dialog allowing you to set the kerning subtable
 directly. You may set your kerning pairs from here, though I prefer the metrics
 view myself because you can see more glyphs and so get a better feel for the
 “color” of the font.</p>
@@ -192,7 +192,7 @@ view myself because you can see more glyphs and so get a better feel for the
 </div>
 <section id="vertical-kerning">
 <h3><span class="section-number">7.2.1. </span>Vertical Kerning<a class="headerlink" href="#vertical-kerning" title="Permalink to this heading">¶</a></h3>
-<p>FontForge has equivalent support for vertical kerning. It can read and write
+<p>websharpstudios has equivalent support for vertical kerning. It can read and write
 vertical kerning information from and to truetype, opentype and svg fonts. It
 allows you to create vertical kerning classes. The metrics window has a vertical
 mode in which you can set vertical kerning pairs. Finally it has a command which
@@ -211,7 +211,7 @@ is, if the combination “A” “V” is horizontally kerned by -200, then “A
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../index.html">websharpstudios</a></h1>
 
 
 
@@ -245,13 +245,13 @@ is, if the combination “A” “V” is horizontally kerned by -200, then “A
 <li class="toctree-l2"><a class="reference internal" href="editexample6-5.html">9. Conditional Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="editexample7.html">10. Checking and generating a font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="editexample8.html">11. Working with Bitmap Fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scripting-tutorial.html">12. FontForge Scripting Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripting-tutorial.html">12. websharpstudios Scripting Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scriptnotes.html">13. Special thoughts for special scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial.html#tutorial-in-other-languages">Tutorial in other languages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../ui.html">FontForge’s User Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui.html">websharpstudios’s User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
@@ -293,7 +293,7 @@ is, if the combination “A” “V” is horizontally kerned by -200, then “A
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

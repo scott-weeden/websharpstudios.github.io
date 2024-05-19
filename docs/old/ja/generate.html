@@ -8,7 +8,7 @@
 <!--<TITLE>Generate Font Dialog</TITLE>-->
     <TITLE>フォント出力ダイアログ</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -70,7 +70,7 @@
       conversion. See the ttf2tfm man page for a description of these SUBFONT
       DEFINITION FILES. <A HREF="../Big5.txt">Here is an example of what the file
       should look like</A>) -->
-      複数のバイナリ形式 PostScript Type1 フォント (これは、2 バイトエンコーディングのフォントを、それぞれが 256 個のグリフを含む一連の小さな pfb (または pfa) ファイル群に変換するのに使用します。変換を指定するのに用いるファイルを指定するよう求められます。ファイルの書式は、ttf2tfm のマニュアルを見て、サブフォント定義ファイルの説明を参照してください。<A HREF="https://fontforge.org/downloads/Big5.txt">そのファイルがどのような物かがこの例で分かります。</A>)
+      複数のバイナリ形式 PostScript Type1 フォント (これは、2 バイトエンコーディングのフォントを、それぞれが 256 個のグリフを含む一連の小さな pfb (または pfa) ファイル群に変換するのに使用します。変換を指定するのに用いるファイルを指定するよう求められます。ファイルの書式は、ttf2tfm のマニュアルを見て、サブフォント定義ファイルの説明を参照してください。<A HREF="https://websharpstudios.org/downloads/Big5.txt">そのファイルがどのような物かがこの例で分かります。</A>)
     <LI>
 <!--  PostScript Type3 font (a .pt3 font, this is also used by printers and is
       not encrypted) -->
@@ -245,9 +245,9 @@
       generate bad truetype instructions, now it merely inserts whatever truetype
       instructions are stored with the glyph. If these have been read from another
       truetype font they will probably be reasonable. If they have been generated
-      with FontForge's AutoInstr menu command they will probably make your font
+      with websharpstudios's AutoInstr menu command they will probably make your font
       uglier. -->
-      <CODE>[] ヒント(<U>I</U>)</CODE> — TrueType のヒントを TrueType フォントに含めます。注意: これは以前は劣悪な TrueType 命令を出力していましたが、現在ではグリフとともに格納されている何らかの命令があったときに、それを挿入するだけにとどめています。それが他の TrueType フォントから読み込まれた物ならば、おそらく適切な物でしょう。もしそれらが FontForge の自動命令づけメニューコマンドによって生成された物ならば、おそらくフォントは余計汚くなるでしょう。
+      <CODE>[] ヒント(<U>I</U>)</CODE> — TrueType のヒントを TrueType フォントに含めます。注意: これは以前は劣悪な TrueType 命令を出力していましたが、現在ではグリフとともに格納されている何らかの命令があったときに、それを挿入するだけにとどめています。それが他の TrueType フォントから読み込まれた物ならば、おそらく適切な物でしょう。もしそれらが websharpstudios の自動命令づけメニューコマンドによって生成された物ならば、おそらくフォントは余計汚くなるでしょう。
       <UL>
 	<LI>
 <!--	  R C van Dalen's <A HREF="http://home.kabelfoon.nl/~slam/fonts/">truetype
@@ -394,10 +394,10 @@
   If you generate a TrueType or OpenType font with the OpenType mode set (note:
   the term "OpenType" means two things, a truetype wrapper around a postscript
   font, or a set of tables containing typographic information -- here the OpenType
-  mode refers to the typographic tables) then FontForge will generate
+  mode refers to the typographic tables) then websharpstudios will generate
   <A HREF="gposgsub.html">GPOS, GSUB, and GDEF tables</A>. These contain kerning,
   ligature information, arabic forms data, anchor points, etc. -->
-  OpenType モードを設定して TrueType または OpenType フォントを出力すると (注意:“OpenType”という用語は 2 つの意味があります。PostScript フォントに対する TrueType ラッパという意味と、組版用の情報を含んだテーブルのセットの意味です。——ここで言う OpenType モードとはテーブルのセットのことです) FontForge は <A HREF="gposgsub.html">GPOS, GSUB および GDEF テーブル</A>を出力します。これらはカーニング、合字情報、アラビア文字の位置依存の形情報、アンカーポイントなどを含みます。
+  OpenType モードを設定して TrueType または OpenType フォントを出力すると (注意:“OpenType”という用語は 2 つの意味があります。PostScript フォントに対する TrueType ラッパという意味と、組版用の情報を含んだテーブルのセットの意味です。——ここで言う OpenType モードとはテーブルのセットのことです) websharpstudios は <A HREF="gposgsub.html">GPOS, GSUB および GDEF テーブル</A>を出力します。これらはカーニング、合字情報、アラビア文字の位置依存の形情報、アンカーポイントなどを含みます。
   <P>
 <!--
   Apple does not support these OpenType layout tables. If you set Apple mode
@@ -427,20 +427,20 @@
   <IMG SRC="GenerateFamily.png" WIDTH="386" HEIGHT="413" ALIGN="Right">これは上に挙げたのと非常に似たダイアログを起動しますが、2, 3 の追加フィールドがあります。このダイアログは Mac ファミリーのためであり、Mac フォーマットのみがサポートされているからです。
   <P>
 <!--
-  Right above the [Save] button is a list of all fonts that FontForge thinks
+  Right above the [Save] button is a list of all fonts that websharpstudios thinks
   should be included in this family, along with their bitmap info. If you don't
   want a font to be in the family simply uncheck its checkbox. -->
-  <CODE>[保存(<U>S</U>)]</CODE> ボタンのそばには、このファミリーに含まれると FontForge が考えた全フォントのリストが、そのビットマップ情報と一緒に表示されています。そのファミリーに含めたくないフォントがある場合は、そのチェックボックスを空にしてください。
+  <CODE>[保存(<U>S</U>)]</CODE> ボタンのそばには、このファミリーに含まれると websharpstudios が考えた全フォントのリストが、そのビットマップ情報と一緒に表示されています。そのファミリーに含めたくないフォントがある場合は、そのチェックボックスを空にしてください。
   <P>
 <!--
   The font styles that are allowed in a family are limited by the capabilities
   of the mac 'FOND' resource which only allows one style of a given type and
   does not support the concepts of "Light", "Black" (if there is already a
   "Bold" style), "Oblique" (if there is already an "Italic" style), etc. Generally
-  FontForge will be able to figure out a font's style from its fontname, but
+  websharpstudios will be able to figure out a font's style from its fontname, but
   in some cases you may wish to override this by setting the
   <A HREF="fontinfo.html#Mac-Style">mac style </A>directly in fontinfo. -->
-  ファミリー内で使用可能なフォントスタイルは、特定のタイプにつき一つのスタイルのみが使用可能で、“Light”や“Black”といったスタイル (既に“Bold”スタイルがある場合) や“Oblique”(既に“Italic”がある場合) スタイルをサポートしていない&lsquo;FOND&rsquo;リソースの限界により制約されています。一般的に、FontForge はフォント名からそのフォントのスタイルを推測することが出来ますが、場合によってはその設定をフォント情報ダイアログの <A HREF="fontinfo.html#Mac-Style">Mac スタイル</A>で上書きしたくなることがあるでしょう。
+  ファミリー内で使用可能なフォントスタイルは、特定のタイプにつき一つのスタイルのみが使用可能で、“Light”や“Black”といったスタイル (既に“Bold”スタイルがある場合) や“Oblique”(既に“Italic”がある場合) スタイルをサポートしていない&lsquo;FOND&rsquo;リソースの限界により制約されています。一般的に、websharpstudios はフォント名からそのフォントのスタイルを推測することが出来ますが、場合によってはその設定をフォント情報ダイアログの <A HREF="fontinfo.html#Mac-Style">Mac スタイル</A>で上書きしたくなることがあるでしょう。
   <P>
 <!--
   For information on creating mac font families beyond the capabilities of
@@ -472,9 +472,9 @@
   第 2 のフォーマットでは、各グリフには、それを描画するのに必要なストロークおよび塗りつぶしのコマンドを含むことができます。
   <P>
 <!--
-  FontForge usually generates the first format, but for multi layered or stroked
+  websharpstudios usually generates the first format, but for multi layered or stroked
   fonts it will generate the second format. -->
-  FontForge は通常第 1 のフォーマットを出力しますが、複数レイヤーまたはストロークフォントに対しては、第 2 のフォーマットで出力します。
+  websharpstudios は通常第 1 のフォーマットを出力しますが、複数レイヤーまたはストロークフォントに対しては、第 2 のフォーマットで出力します。
   <P ALIGN=Center>
   — <A HREF="filemenu.html">前</A> — <A HREF="overview.html">目次</A> —
   <A HREF="filemenu.html">次</A> —

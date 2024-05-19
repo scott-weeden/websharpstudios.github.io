@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Manipulating OpenType Lookups &#8212; FontForge 20230101 documentation</title>
+    <title>Manipulating OpenType Lookups &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="The Kerning Pairs dialog" href="kernpairs.html" />
-    <link rel="prev" title="Viewing and Editing truetype instructions in FontForge." href="ttfinstrs.html" />
+    <link rel="prev" title="Viewing and Editing truetype instructions in websharpstudios." href="ttfinstrs.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -239,13 +239,13 @@ glyph is the one on the left – if the glyphs on the right appear together and
 in order then they will be replaced with the glyph on the left. So if an “f” is
 followed by an “f” then it will be replaced by an “ff” ligature glyph.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">[Populate]</span></code> button will fill the dialog with all glyphs in any of the
-scripts for which this dialog is active. If FontForge can figure out a default
+scripts for which this dialog is active. If websharpstudios can figure out a default
 replacement glyph then it will in provide that as the default value (if it can’t
 figure out a good replacement it will just leave the right side blank).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">[Add</span> <span class="pre">Selected]</span></code> button works in much the same way, but will only add
 glyphs selected in the font view.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">[Default</span> <span class="pre">Using</span> <span class="pre">Suffix:]</span></code> button will behave similarly (except it will
-only insert entries for which FontForge can find a replacement, and glyph name
+only insert entries for which websharpstudios can find a replacement, and glyph name
 of that replacement will be found by appending the specified suffix to the glyph
 name of the base glyph).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">[Remove</span> <span class="pre">Empty]</span></code> button will remove any entries with no replacement
@@ -314,17 +314,17 @@ same value as the first line.</p>
 <p>When you create a kerning subtable you will first be asked whether you want to
 create a kerning class subtable, or a kerning subtable with a list of glyph
 pairs.</p>
-<p>In either case, FontForge will ask if you want to it to automagically fill up
+<p>In either case, websharpstudios will ask if you want to it to automagically fill up
 the sub-table with guesses at appropriate kerning values. This is called
 “autokern”ing.</p>
-<p>In addition, FontForge can guess appropriate glyph classes for kerning by
+<p>In addition, websharpstudios can guess appropriate glyph classes for kerning by
 classes.</p>
 <p>If you aren’t interested in autokerning and want to do everything by hand, most
 of this dialog is irrelevant, you are only interested in the two radio buttons
 at the top and the [OK] button at the bottom.</p>
-<p>But if you are interested in autokerning, you need to tell FontForge how closely
+<p>But if you are interested in autokerning, you need to tell websharpstudios how closely
 it should kern glyphs, and what glyphs to kern. In addition if you want
-FontForge to pick kerning classes for you, you must specify the maximum
+websharpstudios to pick kerning classes for you, you must specify the maximum
 allowable amount of cumuliative error between two glyphs before they must be in
 separate classes.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Default</span> <span class="pre">Separation</span></code> and <code class="docutils literal notranslate"><span class="pre">Min</span> <span class="pre">Kern</span></code> fields are used in AutoKerning. The
@@ -334,12 +334,12 @@ constant, and the <code class="docutils literal notranslate"><span class="pre">D
 junk. If AutoKerning suggests that two glyphs should be kerned by 1 em unit then
 this won’t make any difference to the human eye and there is no point in
 including it. So if the kerning value (in absolute value) suggested by AutoKern
-is less than <code class="docutils literal notranslate"><span class="pre">Min</span> <span class="pre">Kern</span></code> then fontforge will ignore that value. Selecting
+is less than <code class="docutils literal notranslate"><span class="pre">Min</span> <span class="pre">Kern</span></code> then websharpstudios will ignore that value. Selecting
 <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Touching</span></code> makes AutoKerning work in a slightly different way, instead of
 trying to make the optical distance be the desired value this attempts to make
 the minimum separation be the desired value (This is rarely useful, but
 occasionally people want to set text where the letters actually touch one
-another). The <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Only</span> <span class="pre">kern</span> <span class="pre">glyphs</span> <span class="pre">closer</span></code> flag means that FontForge will only
+another). The <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Only</span> <span class="pre">kern</span> <span class="pre">glyphs</span> <span class="pre">closer</span></code> flag means that websharpstudios will only
 generate negative kerning offset, which will move glyphs closer together.</p>
 <p>Below these fields are two panes which look rather like fontviews. Here you may
 specify the selections you want to describe the glyphs being autokerned. There
@@ -347,7 +347,7 @@ are two of these panes because you usually have a slightly different set of
 glyphs of interest on the left and right sides of a kerning pair. In English, a
 capital letter will rarely occur in the middle of a word, so you don’t need it
 on the right side of a kerning pair. (Of course there are exceptions:
-“FontForge” uses an internal capital, but that is rare and if you want to save
+“websharpstudios” uses an internal capital, but that is rare and if you want to save
 space in your font tables you can ignore it). Similarly the closing quote
 character will almost never be on the left side of a kerning pair.</p>
 </section>
@@ -369,7 +369,7 @@ right text this is generally the horizontal advance of the first glyph
 is used instead, and for vertical top to bottom text the vertical advance of the
 first glyph (y_adv#1). Again, the [] Hide Unused Columns may be used to simplify
 the dialog.</p>
-<p>Each time you enter a new combination, FontForge will try to guess a kerning
+<p>Each time you enter a new combination, websharpstudios will try to guess a kerning
 offset for you (autokerning). So the <code class="docutils literal notranslate"><span class="pre">Separation</span></code> text fields have a similar
 meaning to that which they had above – with the exception that the <code class="docutils literal notranslate"><span class="pre">Min</span> <span class="pre">Kern</span></code>
 and <code class="docutils literal notranslate"><span class="pre">Only</span> <span class="pre">kern</span> <span class="pre">closer</span></code> fields will be ignored for individual pairs.</p>
@@ -454,7 +454,7 @@ Advanced Typography font.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -466,7 +466,7 @@ Advanced Typography font.</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -486,13 +486,13 @@ Advanced Typography font.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -504,9 +504,9 @@ Advanced Typography font.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
-      <li>Previous: <a href="ttfinstrs.html" title="previous chapter">Viewing and Editing truetype instructions in FontForge.</a></li>
+      <li>Previous: <a href="ttfinstrs.html" title="previous chapter">Viewing and Editing truetype instructions in websharpstudios.</a></li>
       <li>Next: <a href="kernpairs.html" title="next chapter">The Kerning Pairs dialog</a></li>
   </ul></li>
   </ul></li>
@@ -536,7 +536,7 @@ Advanced Typography font.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>

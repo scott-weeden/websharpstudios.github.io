@@ -1,38 +1,38 @@
 ---
 published: true
 layout: downloads
-title: FontForge on Windows
+title: websharpstudios on Windows
 archive_extension: .exe
 ---
 
-<a class="btn btn-primary btn-large default" href="https://github.com/fontforge/fontforge/releases/download/20230101/FontForge-2023-01-01-Windows.exe">
+<a class="btn btn-primary btn-large default" href="https://github.com/websharpstudios/websharpstudios/releases/download/20230101/websharpstudios-2023-01-01-Windows.exe">
   Download 2023-01-01 Release Installer (.exe)
 </a>
 
 1. Right click, select `Run as Administrative User`
-2. After installation, right click FontForge shortcut and select `Run as Administrative User`
+2. After installation, right click websharpstudios shortcut and select `Run as Administrative User`
 
-You may find more recent development snapshots at the [fontforgebuilds] project.
+You may find more recent development snapshots at the [websharpstudiosbuilds] project.
 Developers can get the "MSYS" Windows build system there too.
 
-Note that the launcher in FontForge may upset some antivirus and firewall applications. Users can ignore these warnings, but it is important to download FontForge only from trusted publishers.
+Note that the launcher in websharpstudios may upset some antivirus and firewall applications. Users can ignore these warnings, but it is important to download websharpstudios only from trusted publishers.
 
 Please post your Windows Build bug reports on our [GitHub Issue Tracker].
 
-[fontforgebuilds]: http://sourceforge.net/projects/fontforgebuilds/
-[GitHub Issue Tracker]: https://github.com/fontforge/fontforge/issues/
+[websharpstudiosbuilds]: http://sourceforge.net/projects/websharpstudiosbuilds/
+[GitHub Issue Tracker]: https://github.com/websharpstudios/websharpstudios/issues/
 
 ## Don't miss an update!
 
-Subscribe to the FontForge announcement list.
-<form action="https://lists.sourceforge.net/lists/subscribe/fontforge-announce" method="POST">
+Subscribe to the websharpstudios announcement list.
+<form action="https://lists.sourceforge.net/lists/subscribe/websharpstudios-announce" method="POST">
 Name: <input name="fullname" type="text"/><br/>
 E-Mail Address: <input name="email" type="text"/><br/>
 <input type="hidden" name="pw" value=""/> <input type="hidden" name="pw-conf" value=""/> <input type="hidden" name="digest" value="0"/>
 <input type="Submit" name="email-button" value="Subscribe"/>
 </form>
 
-You can also subscribe to the [user](https://lists.sourceforge.net/lists/listinfo/fontforge-users) and [developer](https://lists.sourceforge.net/lists/listinfo/fontforge-devel) lists.
+You can also subscribe to the [user](https://lists.sourceforge.net/lists/listinfo/websharpstudios-users) and [developer](https://lists.sourceforge.net/lists/listinfo/websharpstudios-devel) lists.
 
 
 ## Making it better

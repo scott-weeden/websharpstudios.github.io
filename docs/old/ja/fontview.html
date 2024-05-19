@@ -7,7 +7,7 @@
 <!--<TITLE>The Font View</TITLE>-->
     <TITLE>フォントビュー</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -270,7 +270,7 @@
   文字集合 (character set) は、一定の文字の集まりのことです (例えば、アルファベットに含まれる全ての文字は 1 個の文字集合となるでしょう)。エンコーディング (符号化方式) は、与えられた数値 (しばしば 0 から 255) を文字に対応づける関数です。しばしばこれら 2 つは同義的に用いられ、一般的には、あるエンコーディングにはある特定の文字集合が結びついているものと暗黙に前提されます。(厳密に言えば、文字集合は順序づけられていない集合であり、何らエンコーディングを暗示するものではありませんし、一部のエンコーディングは複数の文字集合に適用されて使用されます)。
   <P>
 <!--
-  All fonts in fontforge have both a character set and an encoding. The character
+  All fonts in websharpstudios have both a character set and an encoding. The character
   set is just the set of characters in the font. The encoding is the way those
   characters are ordered (or sometimes, the way the first 256 are ordered).
   The font info dialog allows you to chose the encoding (and character set)
@@ -282,19 +282,19 @@
   where it is possible to reencode a font at run time. Thus a font might have
   all the glyphs needed both for a cyrillic character set and for a latin one,
   but only one character set at a time would be encoded).-->
-  FontForge 内の全てのフォントは、文字集合とエンコーディングの両方を備えています。ここで文字集合は、単純にフォントの含む文字の集合のことです。エンコーディングは、それらの文字が並んでいる順番です (時には、最初の 256 文字が並んでいる順番のことを指すこともあります)。<CODE>フォント情報</CODE> ダイアログにより、フォントのエンコーディング (および文字集合) を選択することができます。1 個のフォントの中には、エンコーディングによって指定された文字集合に当てはまらない若干の追加グリフが含まれることがしばしばあります。それらのグリフはフォントの最後に配置され、フォントが出力される時 (例えば PostScript が生成される時やビットマップフォントが作成される時)、それらのグリフはフォント内に含まれますが符号化されません。(これは役に立つことがあります。特に、PostScript では実行時にフォントのエンコーディングを切り替えることができるので、1 個のフォントにキリル文字集合とラテン文字集合の両方がそれぞれ必要とするグリフを全て収録することができます。ただし、一度には 1 個の文字集合しか符号化することができません)。
+  websharpstudios 内の全てのフォントは、文字集合とエンコーディングの両方を備えています。ここで文字集合は、単純にフォントの含む文字の集合のことです。エンコーディングは、それらの文字が並んでいる順番です (時には、最初の 256 文字が並んでいる順番のことを指すこともあります)。<CODE>フォント情報</CODE> ダイアログにより、フォントのエンコーディング (および文字集合) を選択することができます。1 個のフォントの中には、エンコーディングによって指定された文字集合に当てはまらない若干の追加グリフが含まれることがしばしばあります。それらのグリフはフォントの最後に配置され、フォントが出力される時 (例えば PostScript が生成される時やビットマップフォントが作成される時)、それらのグリフはフォント内に含まれますが符号化されません。(これは役に立つことがあります。特に、PostScript では実行時にフォントのエンコーディングを切り替えることができるので、1 個のフォントにキリル文字集合とラテン文字集合の両方がそれぞれ必要とするグリフを全て収録することができます。ただし、一度には 1 個の文字集合しか符号化することができません)。
   <P>
 <!--
   It is possible for an encoding not to be one-to-one. That is there may be
   several characters that might lead to the same underlying glyph (the classic
   example is the non-breaking space which often uses the same glyph as the
-  breaking space). When FontForge encounters such an encoding it will create
+  breaking space). When websharpstudios encounters such an encoding it will create
   a character structure for each entry, one of those structures will contain
   the data for drawing the glyph, the other(s) will contain a reference to
-  the one real character. All characters will have the same name. When FontForge
+  the one real character. All characters will have the same name. When websharpstudios
   generates a font it looks for this case and turns it into a font whose encoding
   vector contains multiple references to a glyph. -->
-  エンコーディングによって、1 対 1 でない対応づけを行うことも可能です。というのも、文字に伴うグリフを二、三の文字が共有することも可能だからです (古典的な例としては、改行不能の空白がしばしば改行可能の空白と同じグリフを共有していることがあります)。FontForge がこのようなエンコーディングに出会ったときは、それぞれの項目に対して文字の構造体を作成し、それらの構造体の一つにグリフを描画するためのデータを格納し、その他の文字には文字の実体に対する参照を格納します。それら全ての文字は同じ名前を持つことになります。FontForge がフォントを生成する時はこのような場合を探し出し、1 個のグリフに対して複数の参照を含むエンコーディングベクタをもつフォントに変換します。
+  エンコーディングによって、1 対 1 でない対応づけを行うことも可能です。というのも、文字に伴うグリフを二、三の文字が共有することも可能だからです (古典的な例としては、改行不能の空白がしばしば改行可能の空白と同じグリフを共有していることがあります)。websharpstudios がこのようなエンコーディングに出会ったときは、それぞれの項目に対して文字の構造体を作成し、それらの構造体の一つにグリフを描画するためのデータを格納し、その他の文字には文字の実体に対する参照を格納します。それら全ての文字は同じ名前を持つことになります。websharpstudios がフォントを生成する時はこのような場合を探し出し、1 個のグリフに対して複数の参照を含むエンコーディングベクタをもつフォントに変換します。
   <P>
 <!--  It is also possible to have an encoding where a single character can lead
   to several different glyphs depending on the context. In arabic, for example,
@@ -344,12 +344,12 @@
 <!--
   CID fonts (see <A HREF="#CID">below</A>) have no encodings. Instead they
   are designed to be associated with one or several cmap files which provide
-  encodings in a general way. cmap files are beyond the scope of FontForge.
+  encodings in a general way. cmap files are beyond the scope of websharpstudios.
   Adobe has defined many which are freely
   <A HREF="http://www.adobe.com/products/acrobat/acrrasianfontpack.html">available</A>. -->
   CIDフォント (<a href="#CID">下記</a>参照) にはエンコーディングがありません。
   その代わり、エンコーディングを一般的なやり方で供給する、1 種類ないし数種類の CMap ファイルと一緒に使用するように設計されています。
-  CMap ファイルは FontForge のスコープ外です。
+  CMap ファイルは websharpstudios のスコープ外です。
   Adobe は、無料で<A HREF="http://www.adobe.com/products/acrobat/acrrasianfontpack.html">入手可能</a>なファイルを数多く提供しています。
   <P>
 <!--
@@ -381,14 +381,14 @@
   first 256 character positions of unicode and ISO 8859-1 (ISO Latin1) are
   the same. However the PostScript encoding of ISOLatin1 is slightly different
   from that specified for unicode. I cannot explain the reasoning behind this.
-  FontForge does not use PostScript's ISOLatin1 Encoding vector, instead it
+  websharpstudios does not use PostScript's ISOLatin1 Encoding vector, instead it
   uses the first 256 code positions of the unicode encoding vector (slightly
   modified by me to conform to Unicode conventions rather than PostScript.
   So I include nobreak space and the soft-hyphen). -->
-  <A HREF="http://www.unicode.org/">Unicode の Web サイト</A>によると、Unicode の最初 256 文字は ISO 8859-1 (ISO ラテン 1) と同じです。しかしながら、PostScript の ISOLatin1 エンコーディングは、Unicode で指定されている物とわずかな差があります。私はこの背景にある理由を説明できません。FontForge は PostScript の ISOLatin1 エンコーディングベクターを使わず、その代わりに Unicode エンコーディングベクターの最初の 256 個のコード位置を使用します (PostScript ではなく Unicode の習慣に適合するようにわずかに変更してあります。そういうわけで、私はノーブレークスペースとソフトハイフンを含めています。
+  <A HREF="http://www.unicode.org/">Unicode の Web サイト</A>によると、Unicode の最初 256 文字は ISO 8859-1 (ISO ラテン 1) と同じです。しかしながら、PostScript の ISOLatin1 エンコーディングは、Unicode で指定されている物とわずかな差があります。私はこの背景にある理由を説明できません。websharpstudios は PostScript の ISOLatin1 エンコーディングベクターを使わず、その代わりに Unicode エンコーディングベクターの最初の 256 個のコード位置を使用します (PostScript ではなく Unicode の習慣に適合するようにわずかに変更してあります。そういうわけで、私はノーブレークスペースとソフトハイフンを含めています。
   <P>
 <!--
-  FontForge supports two slightly different unicode encodings. The first contains
+  websharpstudios supports two slightly different unicode encodings. The first contains
   only the first 65536 characters of unicode (those in the
   <A HREF="http://www.unicode.org/roadmaps/bmp.html">Basic Multilingual
   Plane</A>, or BMP), while the second can contain as many characters as you
@@ -401,7 +401,7 @@
   Ideographic Plane</A>, U+20000-U+2ffff), and Plane 14
   (<A HREF="http://www.unicode.org/roadmaps/ssp.html">SSP Supplementary
   Special-purpose Plane</A>, U+e0000-U+effff). -->
-  FontForge は 2 つの微妙に異なる Unicode のエンコーディングをサポートしています。第 1 は、Unicode の最初の 65536 文字 (<A HREF="http://www.unicode.org/roadmaps/bmp.html">基本多言語面 (BMP)</A>) のみを含み、2 番目はメモリの許す限り多くの文字を含むことができます。BMP の外側では文字定義は非常に疎らなので、さしあたり BMP だけしか使いたいと思わないでしょう。今のところ、文字が定義されているのは、第 0 面 (BMP, U+0000〜U+FFFF), 第 1 面 (SMP, 第二多言語面, U+1000〜U+1FFFF)、第 2 面 (SIP, 補助漢字面、U+20000〜U+2FFF) および第 14 面 (SSP, 補助特殊用途面, U+E0000〜U+EFFFF) だけです。
+  websharpstudios は 2 つの微妙に異なる Unicode のエンコーディングをサポートしています。第 1 は、Unicode の最初の 65536 文字 (<A HREF="http://www.unicode.org/roadmaps/bmp.html">基本多言語面 (BMP)</A>) のみを含み、2 番目はメモリの許す限り多くの文字を含むことができます。BMP の外側では文字定義は非常に疎らなので、さしあたり BMP だけしか使いたいと思わないでしょう。今のところ、文字が定義されているのは、第 0 面 (BMP, U+0000〜U+FFFF), 第 1 面 (SMP, 第二多言語面, U+1000〜U+1FFFF)、第 2 面 (SIP, 補助漢字面、U+20000〜U+2FFF) および第 14 面 (SSP, 補助特殊用途面, U+E0000〜U+EFFFF) だけです。
   <H2>
 <!--   <A NAME="CID">CID keyed fonts</A> -->
        <A NAME="CID">CID キー指定フォント</A>
@@ -417,17 +417,17 @@
   PostScript の標準のメカニズムはアルファベットと音節文字に対しては割合うまく働きますが、CJK (中国語・日本語・韓国語) フォントは、厖大な文字数を必要とするため、より複雑なたくらみを必要とします。Adobe の現在の解決法は <A HREF="cidmenu.html#CID">CID キー指定フォント</A>と呼ばれ、それぞれがグリフ記述の集合体であるいくつかのサブフォントからなる 1 個のフォントで、それらのグリフにはエンコーディングも定められておらず名前もついていません。
   <P>
 <!--
-  If FontForge loads in a CID keyed font it will enable a special menu called
+  If websharpstudios loads in a CID keyed font it will enable a special menu called
   <A HREF="cidmenu.html">CID</A> which (among other things) displays the list
-  of all the sub-fonts in the font. When it starts up FontForge will pick
+  of all the sub-fonts in the font. When it starts up websharpstudios will pick
   (practically at random) a sub-font to display in the font view. You may change
   which font is displayed by the CID menu. -->
-  FontForge が CID フォントを読み込むと、<A HREF="cidmenu.html">CID</A>という名の特殊メニューを表示し、そこには (他の項目に加えて) フォント内に含まれる全てのサブフォントのリストを表示します。起動時には、FontForge は (事実上ランダムな) 1 個のサブフォントを選んでフォントビューに表示します。CID メニューによってどのフォントが表示されているかを変更することができます。
+  websharpstudios が CID フォントを読み込むと、<A HREF="cidmenu.html">CID</A>という名の特殊メニューを表示し、そこには (他の項目に加えて) フォント内に含まれる全てのサブフォントのリストを表示します。起動時には、websharpstudios は (事実上ランダムな) 1 個のサブフォントを選んでフォントビューに表示します。CID メニューによってどのフォントが表示されているかを変更することができます。
   <P>
 <!--
   The CID menu also allows you to turn a normal font into a CID keyed font.
   It creates a collection containing just the original font (you may add other
-  fonts, or blank fonts, later). But before it can create a collection FontForge
+  fonts, or blank fonts, later). But before it can create a collection websharpstudios
   needs to know what glyph set you will be using. A glyph set is just a collection
   of glyphs, and you may define your own if you wish (but if you do you have
   to define your own cmap files, etc and it's probably not worth it). Adobe
@@ -436,12 +436,12 @@
   (Big5) and Simplified Chinese (GB2312). Although these glyph sets are based
   on the standards mentioned, they each have many additional glyphs. Adobe
   also defines a glyph set that works for Unicode, but it is called "Identity"
-  instead. FontForge does not have these glyph sets built in to it, each must
+  instead. websharpstudios does not have these glyph sets built in to it, each must
   be loaded the first time it is used. I provide one file for each of the above
   glyph sets, they have an extension of ".cidmap", and you may download them
   all <A HREF="cidmaps.tgz">from here</A>.
   -->
-  CID メニューでは、通常のフォントを CID キー指定フォントに変換することもできます。それはオリジナルフォント 1 個のみを含むコレクションを作成します (後で他のフォントを追加したり、空のフォントを挿入したりできます)。しかし、コレクションを作成する前に、FontForge はどのグリフセットを使うのか知っていなければなりません。グリフセットは単なるグリフの集まりで、もし新しいセットを定義したいならそうすることもできます (ただし、その場合は自分自身の CMap ファイル等を定義する必要があり、恐らくそうするだけの価値はないでしょう)。Adobe は日本語用のグリフセット (実際には 2 種類あります。一つは JIS X 0208 に対応し、もう一つは JIS X 0212 です)、韓国語用 (Wansung と Johab)、繁体字中国語 (Big5) と簡体字中国語 (GB2312) を既に定義しています。これらのグリフセットは上に挙げた規格に基づいていますが、それぞれのセットには追加のグリフがたくさんあります。Adobe は Unicode 用に動作するグリフセットも定義していますが、ただしそれは“Identity”と呼ばれています。FontForge はこれらのグリフセットを組み込んでいないので、それを最初に使用するときに読み込まなければなりません。
+  CID メニューでは、通常のフォントを CID キー指定フォントに変換することもできます。それはオリジナルフォント 1 個のみを含むコレクションを作成します (後で他のフォントを追加したり、空のフォントを挿入したりできます)。しかし、コレクションを作成する前に、websharpstudios はどのグリフセットを使うのか知っていなければなりません。グリフセットは単なるグリフの集まりで、もし新しいセットを定義したいならそうすることもできます (ただし、その場合は自分自身の CMap ファイル等を定義する必要があり、恐らくそうするだけの価値はないでしょう)。Adobe は日本語用のグリフセット (実際には 2 種類あります。一つは JIS X 0208 に対応し、もう一つは JIS X 0212 です)、韓国語用 (Wansung と Johab)、繁体字中国語 (Big5) と簡体字中国語 (GB2312) を既に定義しています。これらのグリフセットは上に挙げた規格に基づいていますが、それぞれのセットには追加のグリフがたくさんあります。Adobe は Unicode 用に動作するグリフセットも定義していますが、ただしそれは“Identity”と呼ばれています。websharpstudios はこれらのグリフセットを組み込んでいないので、それを最初に使用するときに読み込まなければなりません。
   以上のグリフセットのそれぞれに 1 個ずつの定義ファイルが用意されていて、“.cidmap”という拡張子が付けられています。これらは全部<A HREF="cidmaps.tgz">ここから</A>ダウンロードすることができます。
   <P>
 <!--
@@ -465,18 +465,18 @@
   <P>
 <!--
   <FONT COLOR="Red"><STRONG><BIG>Warning:</BIG></STRONG></FONT> CID keyed fonts
-  (actually any CJK font) use massive amounts of memory in FontForge. I am
+  (actually any CJK font) use massive amounts of memory in websharpstudios. I am
   able to work on many of them on my 256M machine with 384M of swap space. -->
   <FONT COLOR="Red"><STRONG><BIG>警告:</BIG></STRONG></FONT> CID フォント 
-  (実際には全ての CJK フォント) を FontForge で編集するには厖大な量のメモリを必要とします。
+  (実際には全ての CJK フォント) を websharpstudios で編集するには厖大な量のメモリを必要とします。
   多くの物が 256MB のメモリと 384MB のスワップ容量をもつマシンで編集できるのを確認しています。
   <P>
 <!--
   The <A HREF="editmenu.html#Remove-Undoes">Remove Undoes </A>command will
-  allow you to free up memory if you think you may be running short. FontForge
+  allow you to free up memory if you think you may be running short. websharpstudios
   is not always able to protect itself against running out of memory, sometimes
   the OS just sends it a SIGKILL signal. -->
-  メモリが不足しそうなときには、<A HREF="editmenu.html#Remove-Undoes"><CODE>アンドゥ履歴のクリア(<U>V</U>)</CODE></A> コマンドを使えばメモリを開放することができます。FontForge はメモリを使い果たしてしまう危険から常に守られているわけではなく、場合によっては OS からいきなり SIGKILL シグナルを送られてしまうことがあります。
+  メモリが不足しそうなときには、<A HREF="editmenu.html#Remove-Undoes"><CODE>アンドゥ履歴のクリア(<U>V</U>)</CODE></A> コマンドを使えばメモリを開放することができます。websharpstudios はメモリを使い果たしてしまう危険から常に守られているわけではなく、場合によっては OS からいきなり SIGKILL シグナルを送られてしまうことがあります。
   <H2>
 <!--   <A NAME="MM">Multiple Master Fonts</A> -->
        <A NAME="MM">マルチプルマスターフォント</A>
@@ -497,10 +497,10 @@
   <P>
 <!--
   CJK fonts generally should have vertical metrics. Latin (Cyrillic, Greek)
-  fonts generally should not. If FontForge reads in a font with vertical metrics
-  it will retain those metrics, but when FontForge creates a new font then
+  fonts generally should not. If websharpstudios reads in a font with vertical metrics
+  it will retain those metrics, but when websharpstudios creates a new font then
   that font will not have vertical metrics enabled. -->
-  CJK フォントは通常縦書き用のメトリックを備えている必要があります。ラテン文字 (やキリル文字、ギリシャ文字) のフォントは一般的にそれを含んでいてはなりません。FontForge が縦書きメトリックを含むフォントを読み込むと、それらのメトリックを保持しますが、FontForge が新しいフォントを作成した時には、そのフォントでは縦書きのメトリックが使用可能にはなっていません。
+  CJK フォントは通常縦書き用のメトリックを備えている必要があります。ラテン文字 (やキリル文字、ギリシャ文字) のフォントは一般的にそれを含んでいてはなりません。websharpstudios が縦書きメトリックを含むフォントを読み込むと、それらのメトリックを保持しますが、websharpstudios が新しいフォントを作成した時には、そのフォントでは縦書きのメトリックが使用可能にはなっていません。
   <P>
 <!--
   To enable vertical metrics for a font go to

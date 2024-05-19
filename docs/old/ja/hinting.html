@@ -7,7 +7,7 @@
 <!--<TITLE>Hinting</TITLE>-->
     <TITLE>ヒントづけ</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -23,11 +23,11 @@ sets as you move through the glyph. -->
 PostScript では元来、ヒント同士が重なり合わない必要がありました。現在では、有効なヒントのセットには常に重なり合うものが無い必要がありますが、グリフ内を移動しながらセットを変更することができます。
 <P>
 <!--
-So to implement hinting with hint substitution FontForge needs to know not
+So to implement hinting with hint substitution websharpstudios needs to know not
 only the position and width of the stem being hinted, but also where the
 stem should be active. And it needs to know what stems overlap which other
 stems. -->
-そのため、ヒント置換を伴うヒントづけ処理を実装するためには、FontForge はヒントづけを行なうステムの位置と幅を知るだけでなく、どこで有効化するかを知る必要があります。また、どのステムが他のステムと重なり合うかも知る必要があります。
+そのため、ヒント置換を伴うヒントづけ処理を実装するためには、websharpstudios はヒントづけを行なうステムの位置と幅を知るだけでなく、どこで有効化するかを知る必要があります。また、どのステムが他のステムと重なり合うかも知る必要があります。
 <P>
 <IMG src="../../_images/Hints.png" WIDTH="406" HEIGHT="399" ALIGN="Left"> <!--The horizontal
 stems are drawn in light green. The vertical stems are drawn in light blue.
@@ -36,24 +36,24 @@ of that area the stems' outlines are drawn with dotted lines. Most of these
 stems do not conflict with any other stems, but two, the bottom two horizontal
 stems conflict with each other. All the non-overlapping stem hints may be
 active at the same time, but only one of the two conflicting stem hints may
-be active. As FontForge outputs the glyph it decides at each point what stems
+be active. As websharpstudios outputs the glyph it decides at each point what stems
 need to be active, and activates them. -->
-水平ステムは明るい緑で表示されています。垂直ステムは明るい青で表示されています。ステムが有効化されている領域は長方形として塗りつぶされ、その領域の外側では、ステムのアウトラインは点線で描かれています。これらのステムのほとんどは他のステムと衝突しませんが、2 つだけ、いちばん下の 2 個の水平ステムは互いに衝突し合っています。他と重なり合わないステムヒントはすべて同時に有効化することができますが、2 個の衝突ステムヒントのうち、有効化できるのは片方だけです。FontForge がグリフを出力するときには、各点でどのステムが有効化する必要があるかを判断して、必要なものを有効化します。
+水平ステムは明るい緑で表示されています。垂直ステムは明るい青で表示されています。ステムが有効化されている領域は長方形として塗りつぶされ、その領域の外側では、ステムのアウトラインは点線で描かれています。これらのステムのほとんどは他のステムと衝突しませんが、2 つだけ、いちばん下の 2 個の水平ステムは互いに衝突し合っています。他と重なり合わないステムヒントはすべて同時に有効化することができますが、2 個の衝突ステムヒントのうち、有効化できるのは片方だけです。websharpstudios がグリフを出力するときには、各点でどのステムが有効化する必要があるかを判断して、必要なものを有効化します。
 <P>
 <!--
-Postscript now allows FontForge to control relative counter sizes. Counters
+Postscript now allows websharpstudios to control relative counter sizes. Counters
 are the spaces between adjacent stems. In the example at left there are two
 counters of equal sizes between the horizontal stems on the left, and three
 counters of equal sizes on the right. These form two independent counter
-groups, and FontForge's Hints-&gt;Auto Counter command will generate a counter
+groups, and websharpstudios's Hints-&gt;Auto Counter command will generate a counter
 description for each of them. You may also control the counters directly
 by using the Counters pane of the Element-&gt;Char Info dialog. -->
-現在の PostScript の仕様により、FontForge は相対カウンタサイズを制御することができます。カウンタとは、隣接するステムの間の空間のことです。左の例では、偏を構成する水平ステムの間に、サイズの等しい 2 個のカウンタが存在し、旁の側には 3 個の均等なステムが存在します。これらは 2 個の独立したカウンタグループを構成しており、FontForge の <CODE>ヒント(<U>I</U>)</CODE>→<CODE>自動カウンタヒント(<U>C</U>)</CODE> コマンドを実行するとそのそれぞれに対するカウンタ記述が生成されます。カウンタの大きさは、<CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE> ダイアログの <CODE>[カウンタ]</CODE> ペインで直接指定することもできます。
+現在の PostScript の仕様により、websharpstudios は相対カウンタサイズを制御することができます。カウンタとは、隣接するステムの間の空間のことです。左の例では、偏を構成する水平ステムの間に、サイズの等しい 2 個のカウンタが存在し、旁の側には 3 個の均等なステムが存在します。これらは 2 個の独立したカウンタグループを構成しており、websharpstudios の <CODE>ヒント(<U>I</U>)</CODE>→<CODE>自動カウンタヒント(<U>C</U>)</CODE> コマンドを実行するとそのそれぞれに対するカウンタ記述が生成されます。カウンタの大きさは、<CODE>エレメント(<U>L</U>)</CODE>→<CODE>グリフ情報(<U>I</U>)...</CODE> ダイアログの <CODE>[カウンタ]</CODE> ペインで直接指定することもできます。
 <P>
 <!--
-Counters spaces appear between vertical stems too, and in this case FontForge
+Counters spaces appear between vertical stems too, and in this case websharpstudios
 would output one counter group for the vertical stems. -->
-カウンタ空間は垂直ステム間にも現れていて、この場合は FontForge は垂直ステムに対する 1 個のカウンタグループを出力します。
+カウンタ空間は垂直ステム間にも現れていて、この場合は websharpstudios は垂直ステムに対する 1 個のカウンタグループを出力します。
 <H2 Clear=All>
 <!--Serifs-->
     セリフ
@@ -81,19 +81,19 @@ time. <SMALL>I think</SMALL> -->
 </H2>
 <P>
 <!--
-FontForge's AutoHint command can be used to figure out horizontal and vertical
+websharpstudios's AutoHint command can be used to figure out horizontal and vertical
 stem hints. It will also find hint substitution points (if any are needed),
 and will check for the simple counter description allowed by OpenType for
 non-Asian fonts (the equivalent of h/vstem3 hints in type1 fonts). -->
-FontForge の <CODE>自動ヒント(<U>H</U>)</CODE> コマンドを使うと、水平ステムヒントおよび垂直ステムヒントを算出することができます。また、ヒント置換を行なう点も (必要な場合) 発見され、アジア以外の OpenType フォントで使用可能な、単純なカウンタ記述 (これは Type1 フォントの h/vstem3 ヒントと等価です) のチェックが行なわれます。
+websharpstudios の <CODE>自動ヒント(<U>H</U>)</CODE> コマンドを使うと、水平ステムヒントおよび垂直ステムヒントを算出することができます。また、ヒント置換を行なう点も (必要な場合) 発見され、アジア以外の OpenType フォントで使用可能な、単純なカウンタ記述 (これは Type1 フォントの h/vstem3 ヒントと等価です) のチェックが行なわれます。
 <P>
 <!--
-Whenever you change a glyph FontForge keeps track of that fact that the hints
+Whenever you change a glyph websharpstudios keeps track of that fact that the hints
 are out of date (when you autohint a glyph, or make a manual change to the
-hints FontForge resets this flag). If you generate a postscript font from
-something that contains glyphs with out of date hints, then FontForge will
+hints websharpstudios resets this flag). If you generate a postscript font from
+something that contains glyphs with out of date hints, then websharpstudios will
 automagically regenerate them. -->
-グリフの変更を行なったときは常に、そのヒントが古くなったことが FontForge に記録されています (グリフの自動ヒントづけを行なった時、またはヒントを手で編集した時に FontForge はこのフラグを戻します)。古いヒントがついたグリフを含むデータから PostScript フォントを出力すると、FontForge は自動的にヒントを生成し直します。
+グリフの変更を行なったときは常に、そのヒントが古くなったことが websharpstudios に記録されています (グリフの自動ヒントづけを行なった時、またはヒントを手で編集した時に websharpstudios はこのフラグを戻します)。古いヒントがついたグリフを含むデータから PostScript フォントを出力すると、websharpstudios は自動的にヒントを生成し直します。
 <P>
 <!--
 This may not always be appropriate. You can turn this off in general with
@@ -106,23 +106,23 @@ with the Hints-&gt;Don't AutoHint command. -->
 </H2>
 <P>
 <!--
-I hope that the FontForge's autohint command will be good enough that manual
+I hope that the websharpstudios's autohint command will be good enough that manual
 efforts will not be needed. But hopes like this are rarely fulfilled. -->
-私は、FontForge の自動ヒントコマンドが手動調整を必要としないほど優秀であることを願っています。しかしこの手の願いは滅多に叶えられないものです。
+私は、websharpstudios の自動ヒントコマンドが手動調整を必要としないほど優秀であることを願っています。しかしこの手の願いは滅多に叶えられないものです。
 <P>
 <!--
 The AutoHint command should find all stems in a glyph. Some of them it deems
-to be useless and will remove them. If you find that FontForge is removing
+to be useless and will remove them. If you find that websharpstudios is removing
 a hint that you think is important then invoke Hint-&gt;AutoHint with the
-shift key held down, this will tell FontForge not to prune any of the stems.
+shift key held down, this will tell websharpstudios not to prune any of the stems.
 You may then use Review Hints to prune things yourself. -->
-<CODE>自動ヒント(<U>H</U>)</CODE> コマンドはグリフ内のすべてのステムを抽出します。そのうちの一部が不要であると判断されれば削除されます。あなたが重要だと考えるヒントを FontForge が削除しているのに気づいたときは、Shift キーを押したまま <CODE>ヒント(<U>I</U>)</CODE>→<CODE>自動ヒント(<U>H</U>)</CODE> を呼び出すと、FontForge にステムの削除を一切行わないように通知したこと名になります。その後、手動でヒントを削除するには <CODE>ヒントを確認(<U>R</U>)...</CODE> を使用してください。
+<CODE>自動ヒント(<U>H</U>)</CODE> コマンドはグリフ内のすべてのステムを抽出します。そのうちの一部が不要であると判断されれば削除されます。あなたが重要だと考えるヒントを websharpstudios が削除しているのに気づいたときは、Shift キーを押したまま <CODE>ヒント(<U>I</U>)</CODE>→<CODE>自動ヒント(<U>H</U>)</CODE> を呼び出すと、websharpstudios にステムの削除を一切行わないように通知したこと名になります。その後、手動でヒントを削除するには <CODE>ヒントを確認(<U>R</U>)...</CODE> を使用してください。
 <P>
 <!--
-If you find that you must create your own hints, FontForge will only allow
+If you find that you must create your own hints, websharpstudios will only allow
 you to specify the position and width of the hint, it will then go off and
 try to guess the extents where the hint should be active. -->
-自分でヒントを作成する必要があるときに、操作可能なのはヒントの位置と幅だけです。それらを指定すると、FontForge はヒントが有効化されるべき範囲の推測を自動で行ないます。
+自分でヒントを作成する必要があるときに、操作可能なのはヒントの位置と幅だけです。それらを指定すると、websharpstudios はヒントが有効化されるべき範囲の推測を自動で行ないます。
 <P>
 <!--
 You may manually: -->
@@ -159,7 +159,7 @@ You may manually: -->
 Once you have made a manual change to a glyph's hints with any of the above
 commands, that glyph will be marked "Don't AutoHint" until you explicitly
 call the AutoHint command on it. You may also explicitly use the
-Hints-&gt;Don't AutoHint command to turn off FontForge's automatic hinting
+Hints-&gt;Don't AutoHint command to turn off websharpstudios's automatic hinting
 attempts. -->
 グリフのヒントに手動で変更を加えれば、グリフは「自動ヒントを停止」と印づけされ、その文字に明示的に <CODE>自動ヒント(<U>H</U>)</CODE> コマンドを呼ばない限り
 <P>
@@ -184,19 +184,19 @@ These do not set the "Don't AutoHint" bit.-->
 </H3>
 <P>
 <!--
-FontForge's Hints-&gt;Hint Substitution Pts command will automatically figure
+websharpstudios's Hints-&gt;Hint Substitution Pts command will automatically figure
 out where hint substitution should occur, but if this isn't good enough you
 may do it manually with the <A HREF="getinfo.html#HintMask">Element-&gt;Get
 Info</A> command (when the selection is a single point to which you want
 to attach a hintmask). -->
-FontForge の <CODE>ヒント(<U>I</U>)</CODE>→<CODE>ヒントが置換する点(<U>S</U>)</CODE> コマンドは、ヒント置換が起こる点を自動的に検出しますが、これが十分うまく働いていないときは、(ヒントマスクに所属させたい点 1 個だけをあらかじめ選択してあれば) <A HREF="getinfo.html#HintMask"><CODE>エレメント(<U>L</U>)<CODE>→<CODE>情報を得る(<U>I</U>)</CODE></A> コマンドから手動で設定を行うことができます。
+websharpstudios の <CODE>ヒント(<U>I</U>)</CODE>→<CODE>ヒントが置換する点(<U>S</U>)</CODE> コマンドは、ヒント置換が起こる点を自動的に検出しますが、これが十分うまく働いていないときは、(ヒントマスクに所属させたい点 1 個だけをあらかじめ選択してあれば) <A HREF="getinfo.html#HintMask"><CODE>エレメント(<U>L</U>)<CODE>→<CODE>情報を得る(<U>I</U>)</CODE></A> コマンドから手動で設定を行うことができます。
 <P>
 <!--
 If a glyph has conflicting hints then the first point in the glyph (the first
 point on the first contour) MUST have a hintmask attached to it. If it does
-not, the FontForge will automatically figure substitution points when it
+not, the websharpstudios will automatically figure substitution points when it
 generates the font. Other points are not required (but may) have a hintmask.-->
-1 個のグリフ内にお互いに衝突するヒントが含まれている場合、グリフの最初の点 (最初の輪郭の最初の点) には、その点が所属するヒントマスクが存在しなければなりません。そうなっていない場合、FontForge はフォントを出力する時に、置換する点を自動検出します。他の点はヒントマスクに所属している必要はありません (してもかまいません)。
+1 個のグリフ内にお互いに衝突するヒントが含まれている場合、グリフの最初の点 (最初の輪郭の最初の点) には、その点が所属するヒントマスクが存在しなければなりません。そうなっていない場合、websharpstudios はフォントを出力する時に、置換する点を自動検出します。他の点はヒントマスクに所属している必要はありません (してもかまいません)。
 <P>
 <!--
 The hintmask specifies what hints should be active when that point is positioned,
@@ -221,9 +221,9 @@ selections.<BR CLEAR=ALL> -->
 </H3>
 <P>
 <!--
-FontForge also has a Hints-&gt;Auto Counter command which tries to figure
+websharpstudios also has a Hints-&gt;Auto Counter command which tries to figure
 out what stems form a counter group. -->
-FontForge には、カウンタグループを構成するステムを検出するための <CODE>ヒント(<U>I</U>)</CODE>→<CODE>自動カウンタヒント(<U>C</U>)</CODE> コマンドも用意されています。
+websharpstudios には、カウンタグループを構成するステムを検出するための <CODE>ヒント(<U>I</U>)</CODE>→<CODE>自動カウンタヒント(<U>C</U>)</CODE> コマンドも用意されています。
 <P>
 <!--
 Again you can do this manually, with the
@@ -238,11 +238,11 @@ bound a set of counters. -->
 </H2>
 <P>
 <!--
-FontForge will not be able to convert TrueType instructions into PostScript
+websharpstudios will not be able to convert TrueType instructions into PostScript
 hints when it reads a TrueType font (the format is too complex, there are
-too many possibilities, instead FontForge stores all the truetype instructions
+too many possibilities, instead websharpstudios stores all the truetype instructions
 and writes them back out uninterpretted). -->
-FontForge は TrueType フォントの読み込み時には、 TrueType の命令を PostScript ヒントに変換しません (そのフォーマットは複雑すぎてあまりに多数の可能性が考えられるからです。その代わりに、FontForge はすべての TrueType 命令を保存して、解釈せずにそのまま書き戻します)。
+websharpstudios は TrueType フォントの読み込み時には、 TrueType の命令を PostScript ヒントに変換しません (そのフォーマットは複雑すぎてあまりに多数の可能性が考えられるからです。その代わりに、websharpstudios はすべての TrueType 命令を保存して、解釈せずにそのまま書き戻します)。
 <P>
 <!--
 From a Type1 font it will happily read all the hints in a glyph, and keep
@@ -250,19 +250,19 @@ track of hint substitution points. It will not read counter hints though. -->
 Type1 フォントからは、グリフに存在するすべてのヒントを問題なく読み込み、ヒントが置換する点を記録しています。ただし、カウンタヒントは読み込みません。
 <P>
 <!--
-In an OpenType (Type2) font FontForge will read in all the hints, keep track
+In an OpenType (Type2) font websharpstudios will read in all the hints, keep track
 of hint substitution points and the counter hints. -->
-OpenType (Type2) フォントからは、FontForge はすべてのヒントを読み込み、ヒント置換点とカウンタヒントを記録しています。
+OpenType (Type2) フォントからは、websharpstudios はすべてのヒントを読み込み、ヒント置換点とカウンタヒントを記録しています。
 <H2>
 <!--Hinting and TrueType-->
     ヒントづけと TrueType
 </H2>
 <P>
 <!--
-FontForge does a really bad job of "hinting" (actually generating instructions
+websharpstudios does a really bad job of "hinting" (actually generating instructions
 for) truetype. Generally you will get better results with unhinted glyphs
-than with glyphs autoinstructed by fontforge. -->
-FontForge が TrueType フォントに対して行う「ヒントづけ」 (実際に命令を生成します) はまったくひどい物です。一般的に、ヒントづけしないグリフの方が FontForge によって自動ヒントづけされたグリフよりもよい結果が得られるでしょう。
+than with glyphs autoinstructed by websharpstudios. -->
+websharpstudios が TrueType フォントに対して行う「ヒントづけ」 (実際に命令を生成します) はまったくひどい物です。一般的に、ヒントづけしないグリフの方が websharpstudios によって自動ヒントづけされたグリフよりもよい結果が得られるでしょう。
 <P>
 <!--
 Hinting TrueType fonts opens a far wider range of possibilities. I have added

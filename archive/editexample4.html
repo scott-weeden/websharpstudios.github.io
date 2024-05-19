@@ -5,14 +5,14 @@
   <!-- AP: Last modified: 15-Nov-2008 -->
   <TITLE>Building accented glyphs</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV id="in">
   <H1 ALIGN=Center>
     Tutorial #4
@@ -68,7 +68,7 @@
     <LI>
       <FORM method=GET action="http://www.google.com/search">
 	Searching the documentation:
-	<INPUT type=hidden name="as_sitesearch" value="fontforge.sourceforge.net">
+	<INPUT type=hidden name="as_sitesearch" value="websharpstudios.sourceforge.net">
 	<INPUT type=text name="as_q">
 	<INPUT type=submit name="btnG" value="Search">(Powered by
 	<A HREF="http://www.google.com/">Google</A>)
@@ -79,7 +79,7 @@
   </H2>
   <P>
   Latin, Greek and Cyrillic all have a large complement of accented glyphs.
-  FontForge provides several ways to build accented glyphs out of base glyphs.
+  websharpstudios provides several ways to build accented glyphs out of base glyphs.
   <P>
   The most obvious mechanism is simple copy and paste:
   <A HREF="editmenu.html#Copy">Copy</A> the letter "A" and
@@ -93,7 +93,7 @@
   <P>
   This mechanism is not particularly efficient, if you change the shape of
   the letter "A" you will need to regenerate all the accented glyphs built
-  from it. FontForge has the concept of a
+  from it. websharpstudios has the concept of a
   <A HREF="overview.html#References">Reference</A> to a glyph. So you can Copy
   a Reference to "A", and Paste it, the Copy a Reference to tilde and Paste
   it Into, and then again adjust the position of the accent over the A.
@@ -101,11 +101,11 @@
   Then if you change the shape of the A the shape of the A in "&Atilde;" will
   be updated automagically -- as will the width of "&Atilde;".
   <P>
-  But FontForge knows that "&Atilde;" is built out of "A" and the tilde accent,
+  But websharpstudios knows that "&Atilde;" is built out of "A" and the tilde accent,
   and it can easily create your accented glyphs itself by placing the references
   in "&Atilde;" and then positioning the accent over the "A". (The Unicode
   consortium provides a database which lists the components of every accented
-  glyph in Unicode and FontForge uses this).
+  glyph in Unicode and websharpstudios uses this).
   <P>
   As an example, open the file: tutorial/Ambrosia.sfd, then select all the
   glyphs at encodings 0xc0-0xff, and then press
@@ -113,7 +113,7 @@
   all the accented glyphs will magically appear (there are a few glyphs in
   this range which are not accented, and they will remain blank).
   <P>
-  FontForge has a heuristic for positioning accents (most accents are centered
+  websharpstudios has a heuristic for positioning accents (most accents are centered
   over the highest point of the glyph), sometimes this will produce bad results
   (if the one of the two stems of "u" is slightly taller than the other the
   accent will be placed over it rather than being centered over the glyph),
@@ -128,7 +128,7 @@
   OE, fi, etc. while in arabic there are hundreds). Again Unicode provides
   a database listing the components of each standard ligature.
   <P>
-  FontForge cannot create a nice ligature for you, but what it can do is put
+  websharpstudios cannot create a nice ligature for you, but what it can do is put
   all the components of the ligature into the glyph with
   <A HREF="elementmenu.html#Accented">Element-&gt;Build-&gt;Build Composite</A>.
   This makes it slightly easier (at least in latin) to design a ligature.
@@ -172,10 +172,10 @@
   with a ligature and sees behavior very similar to what s/he would see if
   the components were present. But if the word processor is to be able to do
   this it must have some information from the font designer giving the locations
-  of appropriate caret positions. As soon as FontForge notices that a glyph
+  of appropriate caret positions. As soon as websharpstudios notices that a glyph
   is a ligature it will insert in it enough caret location lines to fit between
-  the ligature's components. FontForge places these on the origin, if you leave
-  them on the origin FontForge will ignore them. But once you have built your
+  the ligature's components. websharpstudios places these on the origin, if you leave
+  them on the origin websharpstudios will ignore them. But once you have built your
   ligature you might want to move the pointer tool over to the origin line,
   press the button and drag one of the caret lines to its correct location.
   (Only Apple Advanced Typography and OpenType support this).
@@ -185,7 +185,7 @@
   is not part of Unicode you may do so. First <A HREF="faq.html#new-name">add
   an unencoded glyph to your font</A> (or if your font is a Unicode font, you
   could use a code point in the private use area), and name the glyph. The
-  name is important, if you name it correctly FontForge will be able to figure
+  name is important, if you name it correctly websharpstudios will be able to figure
   out that it is a ligature and what its components are. If you want to build
   a ligature out of the glyphs "longs", "longs" and "l" then name it
   "longs_longs_l", if you want to build a ligature out of Unicode 0D15, 0D4D

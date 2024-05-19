@@ -3,23 +3,23 @@
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 18-Jan-2002 -->
   <!-- AP: Last modified: 11-Sep-2009 -->
-  <TITLE>Writing scripts to change fonts in FontForge</TITLE>
+  <TITLE>Writing scripts to change fonts in websharpstudios</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
-    Writing scripts to change fonts in FontForge
+    Writing scripts to change fonts in websharpstudios
   </H1>
   <P>
-  FontForge includes two interpreters so you can write scripts to modify fonts.
+  websharpstudios includes two interpreters so you can write scripts to modify fonts.
   One of these interpreters is <A HREF="python.html">python</A>, one is a legacy
-  language I came up with. FontForge may be configured with either or both
-  of these. If configured with both then fontforge will make a guess at which
+  language I came up with. websharpstudios may be configured with either or both
+  of these. If configured with both then websharpstudios will make a guess at which
   to use based on the script file's extension ("py" means use the python
   interpreter, "ff" or "pe" means use the old interpreter)
   <UL>
@@ -49,32 +49,32 @@
     <A NAME="Starting">Invoking scripts</A>
   </H2>
   <P>
-  If you start fontforge with a script on the command line it will not put
+  If you start websharpstudios with a script on the command line it will not put
   up any windows and it will exit when the script is done. The script can be
   in a file, or just a string presented as an argument. You may need to specify
   which interpreter to use with the -lang argument.
   <BLOCKQUOTE>
-    <PRE>$ fontforge -script scriptfile.pe {arguments}
-$ fontforge -c "script-string" {arguments}
-$ fontforge -lang={ff|py} -c "script-string"
+    <PRE>$ websharpstudios -script scriptfile.pe {arguments}
+$ websharpstudios -c "script-string" {arguments}
+$ websharpstudios -lang={ff|py} -c "script-string"
 </PRE>
   </BLOCKQUOTE>
   <P>
-  FontForge can also be used as an interpreter to which the shell will
+  websharpstudios can also be used as an interpreter to which the shell will
   automatically pass scripts. If you a mark your script files as executable<BR>
   <CODE>&nbsp; &nbsp; $ chmod +x scriptfile.pe</CODE><BR>
   and begin each one with the line<BR>
-  <CODE>&nbsp; &nbsp; #!/usr/local/bin/fontforge</CODE><BR>
-  (or wherever fontforge happens to reside on your system) then you can invoke
+  <CODE>&nbsp; &nbsp; #!/usr/local/bin/websharpstudios</CODE><BR>
+  (or wherever websharpstudios happens to reside on your system) then you can invoke
   the script just by typing<BR>
   <CODE>&nbsp; &nbsp; $ scriptfile.pe {fontnames}</CODE>
   <P>
-  If you wish FontForge to read a script from stdin then you can use "-" as
-  a "filename" for stdin. (If you build FontForge without X11 then fontforge
+  If you wish websharpstudios to read a script from stdin then you can use "-" as
+  a "filename" for stdin. (If you build websharpstudios without X11 then websharpstudios
   will attempt to read a script file from <CODE>stdin</CODE> if none is given
   on the command line.)
   <P>
-  You can also start a script from within FontForge with
+  You can also start a script from within websharpstudios with
   <CODE>File-&gt;Execute Script</CODE>, and you can use the Preference Dlg
   to define a set of frequently used scripts which can be invoked directly
   by menu.
@@ -85,11 +85,11 @@ $ fontforge -lang={ff|py} -c "script-string"
   it in for you). It does not provide commands for building up a glyph out
   of splines, instead it allows you to do high level modifications to glyphs.
   <P>
-  If you set the environment variable <CODE>FONTFORGE_VERBOSE</CODE> (it doesn't
-  need a value, just needs to be set) then FontForge will print scripts to
+  If you set the environment variable <CODE>websharpstudios_VERBOSE</CODE> (it doesn't
+  need a value, just needs to be set) then websharpstudios will print scripts to
   stdout as it executes them.
   <P>
-  You may set the environment variable <CODE>FONTFORGE_LANGUAGE</CODE> to either
+  You may set the environment variable <CODE>websharpstudios_LANGUAGE</CODE> to either
   "py" (for python) or "ff" or "pe" (for native scripting) as another way to
   determne what interpreter to use.
   <H2>
@@ -207,9 +207,9 @@ $ fontforge -lang={ff|py} -c "script-string"
   "and" and "or" has been simplified, as has that of the assignment operators.
   <P>
   Procedure calls may be applied either to a name token, or to a string. If
-  the name or string is recognized as one of FontForge's internal procedures
+  the name or string is recognized as one of websharpstudios's internal procedures
   it will be executed, otherwise it will be assumed to be a filename containing
-  another fontforge script file, this file will be invoked (since filenames
+  another websharpstudios script file, this file will be invoked (since filenames
   can contain characters not legal in name tokens it is important to allow
   general strings to specify filenames). If the procedure name does not contain
   a directory then it is assumed to be in the same directory as the current
@@ -278,15 +278,15 @@ endloop
 </PRE>
   </BLOCKQUOTE>
   <P>
-  FontForge maintains the concept of a "current font"-- almost all commands
+  websharpstudios maintains the concept of a "current font"-- almost all commands
   refer only to the current font (and require that there be a font). If you
   start a script with File-&gt;Execute Script, the font you were editing will
   be current, otherwise there will be no initial current font. The Open(),
-  New() and Close() commands all change the current font. FontForge also maintains
+  New() and Close() commands all change the current font. websharpstudios also maintains
   a list of all fonts that are currently open. This list is in no particular
   order. The list starts with $firstfont.
   <P>
-  Similarly when working with cid keyed fonts, FontForge works in the "current
+  Similarly when working with cid keyed fonts, websharpstudios works in the "current
   sub font", and most commands refer to this font. The CIDChangeSubFont() command
   can alter that.
   <P>
@@ -314,7 +314,7 @@ endloop
       <CODE>$firstfont </CODE>the name of the filename of the font which is first
       on the font list (Can be used by Open()), if there are no fonts loaded this
       returns an empty string. This can be used to determine if any font at all
-      is loaded into fontforge.
+      is loaded into websharpstudios.
     <LI>
       <CODE>$nextfont </CODE>the name of the filename of the font which follows
       the current font on the list (or the empty string if the current font is
@@ -395,11 +395,11 @@ endloop
       <CODE>$panose</CODE> returns an array containing the 10 panose values for
       the font.
     <LI>
-      <CODE>$trace</CODE> if this is set to one then FontForge will trace each
+      <CODE>$trace</CODE> if this is set to one then websharpstudios will trace each
       procedure call.
     <LI>
       <CODE>$version</CODE> returns a string containing the current version of
-      fontforge. This should look something like "20050817".
+      websharpstudios. This should look something like "20050817".
     <LI>
       <CODE>$haspython</CODE> returns 1 if python scripting is available, 0 if
       it is not.
@@ -1425,7 +1425,7 @@ endloop
   </H2>
   <UL>
     <LI>
-      <A HREF="https://github.com/fontforge/fontforge/tree/master/test">FontForge's
+      <A HREF="https://github.com/websharpstudios/websharpstudios/tree/master/test">websharpstudios's
       testsuite in the test subdirectory</A> (such as it is)
     <LI>
       <A HREF="scripts/">Directory of donated scripts</A>
@@ -1443,7 +1443,7 @@ endloop
   </H3>
   <BLOCKQUOTE>
     <PRE>#Set the color of all selected glyphs to be yellow
-#designed to be run within an interactive fontforge session.
+#designed to be run within an interactive websharpstudios session.
 foreach
   SetCharColor(0xffff00)
 endloop
@@ -1453,11 +1453,11 @@ endloop
     Example 2:
   </H3>
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 #This is the sfddiff script which compares two fonts
 
 if ( Strtol($version) &lt; 20060330 )
-  Error( "Please upgrade to a more recent version of fontforge" )
+  Error( "Please upgrade to a more recent version of websharpstudios" )
 endif
 
 flags=0x789
@@ -1532,10 +1532,10 @@ endif
     Example 3:
   </H3>
   <BLOCKQUOTE>
-    <PRE>#!/usr/local/bin/fontforge
+    <PRE>#!/usr/local/bin/websharpstudios
 #Take a Latin font and apply some simple transformations to it
 #prior to adding cyrillic letters.
-#can be run in a non-interactive fontforge session.
+#can be run in a non-interactive websharpstudios session.
 Open($1);
 Reencode("KOI8-R");
 Select(0xa0,0xff);
@@ -1613,7 +1613,7 @@ Quit(0);
     The <A NAME="Execute">Execute</A> Script dialog
   </H2>
   <P>
-  This dialog allows you to type a script directly in to FontForge and then
+  This dialog allows you to type a script directly in to websharpstudios and then
   run it. Of course the most common case is that you'll have a script file
   somewhere that you want to execute, so there's a button [Call] down at the
   bottom of the dlg. Pressing [Call] will bring up a file picker dlg looking
@@ -1623,11 +1623,11 @@ Quit(0);
   area.
   <P>
   The current font of the script will be set to whatever font you invoked it
-  from (in python this is <CODE>fontforge.activeFontInUI()</CODE>).
+  from (in python this is <CODE>websharpstudios.activeFontInUI()</CODE>).
   <P>
   Note that if you try to print from a script the output will go to stdout.
-  If you have invoked fontforge from a window manager's menu stdout will often
-  be bound to /dev/null and not useful. Try starting fontforge from the command
+  If you have invoked websharpstudios from a window manager's menu stdout will often
+  be bound to /dev/null and not useful. Try starting websharpstudios from the command
   line instead.
   <H2>
     The Scripts <A NAME="menu">Menu</A>

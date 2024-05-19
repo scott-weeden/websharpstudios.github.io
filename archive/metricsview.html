@@ -5,24 +5,24 @@
   <!-- AP: Last modified: 11-Nov-2009 -->
   <TITLE>The Metrics View</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
 </HEAD>
 <BODY id="menued">
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <P ALIGN=CENTER>
-<IMG SRC="/assets/img/old/fontforge-banner-420.jpeg" WIDTH=420 HEIGHT=80>
+<IMG SRC="/assets/img/old/websharpstudios-banner-420.jpeg" WIDTH=420 HEIGHT=80>
 <DIV class="menucontainer">
   <UL class="menubar">
     <LI class="menu">
-      <A href="http://sourceforge.net/projects/fontforge/files/">Download</A>
+      <A href="http://sourceforge.net/projects/websharpstudios/files/">Download</A>
       <UL>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-docs/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-docs/"
 	      >Documentation</A>
 	<LI>
-	  <A href="http://sourceforge.net/projects/fontforge/files/fontforge-source/"
+	  <A href="http://sourceforge.net/projects/websharpstudios/files/websharpstudios-source/"
 	      >Source</A>
       </UL>
     <LI>
@@ -239,7 +239,7 @@
       open the metrics view, when you do open it the characters will appear in
       the order you selected them
     <LI>
-      FontForge has its own funky <A HREF="#Entering">input method</A>
+      websharpstudios has its own funky <A HREF="#Entering">input method</A>
   </OL>
   <P>
   The mid portion of the view is taken up with the displayed glyphs. For outline
@@ -313,7 +313,7 @@
   enabled, Element-&gt;Font Info-&gt;General-&gt;Has Vertical Metrics). In
   this mode you can change vertical width, vertical kerning, etc.
   <P>
-  If you double click on one of the displayed glyphs then FontForge will bring
+  If you double click on one of the displayed glyphs then websharpstudios will bring
   up a outline glyph view to allow you to edit that glyph.
   <P>
   <IMG SRC="/assets/img/old/MetricsView-features.png" WIDTH="463" HEIGHT="330" ALIGN="Left"><BR
@@ -337,7 +337,7 @@
   of unicode characters be entered?
   <P>
   X supplies a sophisticated mechanism for entering characters via stand-alone
-  <A HREF="xim.html">input method servers</A>. FontForge supports this to some
+  <A HREF="xim.html">input method servers</A>. websharpstudios supports this to some
   extent now.
   <P>
   Aside from that, many versions of X supply a "Compose Character" key, or
@@ -709,10 +709,10 @@
   When you create a kerning subtable you will be asked whether you want a set
   of individual kerning pairs or a matrix based on kerning classes.
   <P>
-  If you choose the latter then you may have fontforge try to guess a good
+  If you choose the latter then you may have websharpstudios try to guess a good
   set of classes for you (it will look at the glyphs selected and divide them
   into classes). The <CODE>Intra Class Distance</CODE> gives you some control
-  over how picky fontforge will be about what goes into a class. (This can
+  over how picky websharpstudios will be about what goes into a class. (This can
   be thought of as being in em-units and being, roughly, the average error
   in how two different glyphs interact with other glyphs). A value of 1 is
   very picky and almost all classes will have one member. A value of 20 (in
@@ -726,13 +726,13 @@
   suggests that two glyphs should be kerned by 1 em unit then this won't make
   any difference to the human eye and there is no point in including it. So
   if the kerning value (in absolute value) suggested by AutoKern is less than
-  <CODE>Min Kern</CODE> then fontforge will ignore that value. Selecting <CODE>[]
+  <CODE>Min Kern</CODE> then websharpstudios will ignore that value. Selecting <CODE>[]
   Touching</CODE> makes AutoKerning work in a slightly different way, instead
   of trying to make the optical distance be the desired value this attempts
   to make the minimum separation be the desired value (This is rarely useful,
   but occasionally people want to set text where the letters actually touch
   one another). The <CODE>[] Only kern glyphs closer </CODE>flag means that
-  FontForge will only generate negative kerning offsets, that is, offsets which
+  websharpstudios will only generate negative kerning offsets, that is, offsets which
   will move glyphs closer together.<BR clear="all">
   <P>
   <IMG SRC="/assets/img/old/kerningclass.png" WIDTH="1037" HEIGHT="588" ALIGN="Top">Each kerning
@@ -743,7 +743,7 @@
   consists of two sets of classes -- one set for the first glyph of the pair
   and one for the second glyph of the pair. A glyph class consists of a space
   separated list of glyph names (For most glyphs you may also enter the unicode
-  character itself, and fontforge will convert that to a glyph name).
+  character itself, and websharpstudios will convert that to a glyph name).
   <P>
   To edit a class, simply type in it (at the very bottom of the class list
   is an entry called <FONT COLOR="Blue">&lt;New&gt;</FONT>, clicking here will

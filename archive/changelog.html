@@ -2,14 +2,14 @@
 <HEAD>
   <!-- Created with AOLpress/2.0 -->
   <!-- AP: Created on: 27-Aug-2002 -->
-  <TITLE>Change log for FontForge</TITLE>
+  <TITLE>Change log for websharpstudios</TITLE>
   <LINK REL="icon" href="/assets/img/old/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="/assets/css/old/websharpstudios.css">
   <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </HEAD>
 <BODY>
 <div style="margin:0; height: 4	em; padding: 0.5em; background: red; color:yellow; text-align:center; font-size:1em; font-family: sans-serif;">
-	<p><a href="http://fontforge.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
+	<p><a href="http://websharpstudios.github.io" style="padding: 0.5em; color: yellow; font-weight: bold; text-decoration: none;" onmouseover="this.style.background='black';" onmouseout="this.style.background='red';" >This is part of the old website, it is no longer updated.</a></p>
 </div>
 <DIV id="in">
   <H1 ALIGN=Center>
@@ -17,7 +17,7 @@
   </H1>
   <P>
   To get the latest changes, for now, take a look at
-  <A HREF="https://github.com/fontforge/fontforge/commits/master">https://github.com/fontforge/fontforge/commits/master</A>.
+  <A HREF="https://github.com/websharpstudios/websharpstudios/commits/master">https://github.com/websharpstudios/websharpstudios/commits/master</A>.
   <BLOCKQUOTE ID="lit">
     <TABLE>
       <TR>
@@ -57,7 +57,7 @@
         <LI>
           Fix bug that caused incorrectly dumping some context substitution format 1
           lookups to feature files. We were also accepting the broken lookups we were
-          generated and FontForge would crash later, now they are rejected, too.
+          generated and websharpstudios would crash later, now they are rejected, too.
         <LI>
           "TeX Names" is now accepted internally as an alias for "ΤεΧ Names" when
           specifying a name list by name.
@@ -75,7 +75,7 @@
         <LI>
           Fixed a crash in EPS import.
         <LI>
-          FontForge is internally using doubles by default now, but can be still
+          websharpstudios is internally using doubles by default now, but can be still
           configured to use floats. Support for log doubles have been removed.
         <LI>
           Thanks to Lu Wang, fonts can now be loaded from PDF files using
@@ -101,7 +101,7 @@
           Char view palettes are now docked by default.
         <LI>
           A default resource file will be loaded at startup from
-          <CODE>$prefix/share/fontforge/resources/fontforge.resource</CODE>.
+          <CODE>$prefix/share/websharpstudios/resources/websharpstudios.resource</CODE>.
         <LI>
           There is now a possibility to have a quick preview in glyph window
           by holding [`] key down. This doesn't work if quick navigation is
@@ -148,7 +148,7 @@
           (which means less possible buffer overruns and memory allocation
           failures) and better documented.
         <LI>
-          FontForge now takes x-www-browser, Google Chrome and Konqueror
+          websharpstudios now takes x-www-browser, Google Chrome and Konqueror
           into account when trying to open help pages.
         <LI>
           Improved compatibility with UFO workflow with Robofab based apps
@@ -169,17 +169,17 @@
           Patch by Sourceforge user serval2412 to fix some resource leaks.
         <LI>
           Patch by Khaled Hosny for calculating wrong x and cap height for some fonts.
-          If glyphs checked don't have flat surfaces at the top, FontForge takes the
+          If glyphs checked don't have flat surfaces at the top, websharpstudios takes the
           mean. But it was dividing by the wrong value.
         <LI>
-          FontForge didn't build on some systems where /bin/sh is synonymous with dash,
+          websharpstudios didn't build on some systems where /bin/sh is synonymous with dash,
           yet the usual user shell is bash. Configure and libtool were thus using
           different shells, that turned out to be incompatible. Luigi Scarso suggested
           patching the makefiles with explicitly setting the SHELL variable.
         <LI>
            Path by Steve White to enable support for ASMO 708 codepage.
         <LI>
-          <a href="http://sourceforge.net/mailarchive/forum.php?thread_name=4F37E48C.4020508%40newtypography.co.uk&forum_name=fontforge-devel">We needed to go back to old implementation of the fsType table.</a>
+          <a href="http://sourceforge.net/mailarchive/forum.php?thread_name=4F37E48C.4020508%40newtypography.co.uk&forum_name=websharpstudios-devel">We needed to go back to old implementation of the fsType table.</a>
         <LI>
           Patch by Michael Terry to fix crashes for pngs having NULL for trans_alpha;
         <LI>
@@ -259,7 +259,7 @@
         <LI>
           Fixed handling of he symetrical smoothing flag bits for gasp.
         <LI>
-          FontForge checks at configure to see if libintl and libintl.h are on
+          websharpstudios checks at configure to see if libintl and libintl.h are on
           the system. It did NOT check whether msgfmt was in the path. So if
           a user has installed macports/fink but not added the appropriate bin
           directory to their path the configure script would think all was well
@@ -325,14 +325,14 @@
           who is responsible for specifying the kerning in the right order and for
           adjusting the right values. But this makes things predictable.
         <LI>
-          FontForge was trying to output "pos" rules for the marks themselves,
+          websharpstudios was trying to output "pos" rules for the marks themselves,
           not base glyphs. It was also outputting the mark once for the base
           anchor (correct) and once for the mark anchor (wrong).
         <LI>
-          FontForge will, from now, handle new, unescaped syntax for mark lookup
+          websharpstudios will, from now, handle new, unescaped syntax for mark lookup
           tags in feature files.
         <LI>
-          FontForge escaped 'mark' feature tag when exporting feature files.
+          websharpstudios escaped 'mark' feature tag when exporting feature files.
           According to the specification, escaping is only for glyph names
           and CID indices.
         <LI>
@@ -374,7 +374,7 @@
         <LI>
           <B>UI fixes and additions:</B>
         <LI>
-          Zvi Gilboa pointed out that for FontForge to be listed under "show other
+          Zvi Gilboa pointed out that for websharpstudios to be listed under "show other
           applications", the <CODE>exec=</CODE> line in .desktop file needs to be
           terminated by <CODE>%U</CODE>.
         <LI>
@@ -541,7 +541,7 @@
 	<LI>
 	  Add a miterlimit to stroking code.
 	<LI>
-	  FontForge was using the wrong MIME type for svg files. W3C has changed it
+	  websharpstudios was using the wrong MIME type for svg files. W3C has changed it
 	  and it's now "image/svg+xml" not "image/svg-xml" or "image/svg".
 	<LI>
 	  Since Inkscape images tend to be at unexpected y positions, force the view
@@ -643,7 +643,7 @@
 	    too, but I think the code affected by this patch is self contained.'
 	  </BLOCKQUOTE>
 	<LI>
-	  Fixed a crash when FontForge was given NULL glyph name in python script.
+	  Fixed a crash when websharpstudios was given NULL glyph name in python script.
 	<LI>
 	  Fixed misinterpretation of '+-' in UTF-7 strings read from sfd files. Spotted
 	  by Paul Flo Williams.
@@ -677,7 +677,7 @@
 	  Ctrl+A in background layer (in charview window) picked up anchor points from
 	  foreground layers, too.
 	<LI>
-	  Fontforge forgot to categorize points after importing a svg font.
+	  websharpstudios forgot to categorize points after importing a svg font.
 	<LI>
 	  Patch by Philipp Stephani, to fix wrong interpretation of most top accent
 	  data for newer versions of Cambria Math.
@@ -699,7 +699,7 @@
 	<LI>
 	  Khaled Hosny spots a paragraph in the docs that's no longer valid.
 	<LI>
-	  Cleanup the fontforge desktop file.
+	  Cleanup the websharpstudios desktop file.
 	<LI>
 	  Freehand tool was very broken.
 	<LI>
@@ -933,7 +933,7 @@
 	  fonts in the same family with the same weight and style but with different
 	  design sizes.
 	  <P>
-	  Fontforge was not very good about warning the user when s/he created something
+	  websharpstudios was not very good about warning the user when s/he created something
 	  which had some but not all of these attributes. (ie. a design range but no
 	  style name). So add some error messages to the fontinfo dlg which makes these
 	  checks.
@@ -1049,7 +1049,7 @@
 	  d binderman points out a missing closedir.<BR>
 	  Also d binderman points out that I was missing an fclose in archive processing.
 	<LI>
-	  FontForge failed to handle archives with double extensions (like ".tar.bz2").
+	  websharpstudios failed to handle archives with double extensions (like ".tar.bz2").
 	<LI>
 	  Typo in code for parsing extenders in tfm file.
 	<LI>
@@ -1071,13 +1071,13 @@
 	<LI>
 	  Khaled Hosny spots duplicate "Descent" fields written to sfd files.
 	<LI>
-	  When generating a cursive attachment anchor lookup fontforge did two passes
+	  When generating a cursive attachment anchor lookup websharpstudios did two passes
 	  through the glyph list. The first did everything needed. And the second thought
 	  it was handling marks (rather than cursives) and produced garbage.
 	<LI>
 	  The clockwise check sometimes gave up when it should not have.
 	<LI>
-	  When generating a feature file for a mark to mark lookup fontforge could
+	  When generating a feature file for a mark to mark lookup websharpstudios could
 	  generate gibberish.
 	<LI>
 	  Three bugs in reading feature files:
@@ -1143,7 +1143,7 @@
 	  Updated Vietnamese translation from Clytie. He also fixes various typos on
 	  my part.
 	<LI>
-	  Added a new python function to the module: fontforge.unitShape(n) which returns
+	  Added a new python function to the module: websharpstudios.unitShape(n) which returns
 	  a contour containing a regular n-gon.
 	<LI>
 	  Grab many patches from the mingw build. I did not grab the winmmap files
@@ -1183,9 +1183,9 @@
 	<LI>
 	  Unicode 5.2
 	<LI>
-	  FontForge had no error checking for bad GIDs in the JSTF table.
+	  websharpstudios had no error checking for bad GIDs in the JSTF table.
 	<LI>
-	  A bad 'kern' table could send fontforge into an infinite loop.
+	  A bad 'kern' table could send websharpstudios into an infinite loop.
 	<LI>
 	  Patch from Stephen Hartke, contour slicing still not working properly.
 	<LI>
@@ -1213,9 +1213,9 @@
 	  Patch by Khaled to add some missing feature tags.
 	<LI>
 	  Allow the user to provide a python routine which will calculate the optical
-	  spacing between two glyphs. Used to override fontforge's default routine
+	  spacing between two glyphs. Used to override websharpstudios's default routine
 	  when calculating autokern, autowidth and left and right optical bounds.<BR>
-	  fontforge.registerGlyphSeparationHook
+	  websharpstudios.registerGlyphSeparationHook
 	<LI>
 	  I recently broke loading sfd files which contain multiple kerning subtables.
 	<LI>
@@ -1296,7 +1296,7 @@
       11-Sept-2009
       <UL>
 	<LI>
-	  FontForge will now generate ttc files. It has two options:
+	  websharpstudios will now generate ttc files. It has two options:
 	  <UL>
 	    <LI>
 	      share a common glyf table (not always possible)
@@ -1428,12 +1428,12 @@
 	<LI>
 	  Patch by Alexandre Prokoudine to make an error message translatable.
 	<LI>
-	  Patch by Stephen Hartke to make contour splicing (in fontforge's python module)
+	  Patch by Stephen Hartke to make contour splicing (in websharpstudios's python module)
 	  work the way splicing normally does in python.
 	<LI>
 	  Back in the dark ages adobe provide a set of encodings for the PUA. For instance
 	  A.small was encoded into PUA. Nowadays it is thought better to leave A.small
-	  unencoded. But if a modern font contained an A.small glyph FontForge would
+	  unencoded. But if a modern font contained an A.small glyph websharpstudios would
 	  think it should be encoded into the PUA. So I added a preference item to
 	  turn off adobe's obsolete names.
 	  <P>
@@ -1810,7 +1810,7 @@
       <TABLE BGCOLOR="#8080ff" ALIGN="center" WIDTH="80%">
 	<TR>
 	  <TD>I wish to thank Michal Nowakowski for fixing my bugs these last few months.
-	    I no longer have as much time for FontForge as I have in the past, and my
+	    I no longer have as much time for websharpstudios as I have in the past, and my
 	    attention to the project is spotty.
 	    <P>
 	    Currently I am training to run a
@@ -1860,7 +1860,7 @@
 	  (while, I hope, retaining the ability to read version 1.6). Fix a number
 	  of bugs in parsing feature files.
 	  <P>
-	  FontForge now supports the 'BASE' table (in feature files).
+	  websharpstudios now supports the 'BASE' table (in feature files).
 	  <P>
 	  The new format is considerably better than the old and can now be used to
 	  express almost all of OpenType.
@@ -1881,10 +1881,10 @@
 	      [Incompatible change]
 	    <LI>
 	      The syntax for contextual lookups has been extended to allow them to reference
-	      lookups by name. [FontForge has always done this. When I suggested to Adobe
+	      lookups by name. [websharpstudios has always done this. When I suggested to Adobe
 	      that they follow suit they said they would not. They have now followed suit
 	      but have used an incompatible syntax to accomplish the same ends. So this
-	      is an Incompatible change for FontForge]
+	      is an Incompatible change for websharpstudios]
 	    <LI>
 	      The syntax for contextual lookups has been extended to allow for the new
 	      mark lookups.
@@ -1892,7 +1892,7 @@
 	      It is now possible to specify a reverse chaining substitution lookup.
 	    <LI>
 	      It is now possible to specify descriptive names for the ss00-ss99 features.
-	      FontForge doesn't support this but will parse and ignore it
+	      websharpstudios doesn't support this but will parse and ignore it
 	  </UL>
 	<LI>
 	  Last release Werner asked me to put in checks for glyphs that exceded various
@@ -1918,7 +1918,7 @@
 	<LI>
 	  Metrics view had problems with cid fonts.
 	<LI>
-	  FontForge was supposed to check that the compile time (include file) freetype
+	  websharpstudios was supposed to check that the compile time (include file) freetype
 	  library version number matched the installed version number. But it didn't.
 	  Only matters in the debugger, but is important there.
 	<LI>
@@ -1970,7 +1970,7 @@
 	  Werner wants to know what version of freetype ff is using. So the debug window
 	  now shows this on the info line (I presume that's where it is most important).
 	<LI>
-	  Andreas Neustifter provided a FontForge icon with a transparent background
+	  Andreas Neustifter provided a websharpstudios icon with a transparent background
 	  (or the mac).
 	<LI>
 	  In TrueType debugging Werner originally asked to mark pixels which changed
@@ -2041,9 +2041,9 @@
 		appears fixed in 10.5.6 (It may have been fixed earlier, but I don't have
 		a machine on which I can test that).
 		<P>
-		The problem only affects fontforge it if uses pango or cairo.
+		The problem only affects websharpstudios it if uses pango or cairo.
 		<P>
-		This release of fontforge tries to check for a buggy system, and if it thinks
+		This release of websharpstudios tries to check for a buggy system, and if it thinks
 		it is running on one, then it will refuse to use Pango and Cairo.
 		<P>
 		The problem does not affect Mac 10.4.* 
@@ -2060,7 +2060,7 @@
 	<LI>
 	  If a font were missing a .notdef glyph. If the user tried to display a font
 	  sample of text which included a character not in the font. Then (after the
-	  recent patches for grid-fit metrics in Print dlg) fontforge would crash.
+	  recent patches for grid-fit metrics in Print dlg) websharpstudios would crash.
 	<LI>
 	  Fix a bug in old cubic to quadratic conversion.
 	<LI>
@@ -2204,7 +2204,7 @@
       15-Nov-2008
       <UL>
 	<LI>
-	  FontForge will now use libpango and libcairo if these libraries are present.
+	  websharpstudios will now use libpango and libcairo if these libraries are present.
 	  Pango provides support for drawing opentype text in any language, so it should
 	  now be possible to provide po files for the Arabic and Indic languages. Pango
 	  also draws anti-aliased text so the user interface should look nicer.
@@ -2225,7 +2225,7 @@
 	  If you find these libraries too slow to be useable you may turn either off
 	  in Preferences. (You may also turn them off at configure time).
 	  <P>
-	  The first time fontforge starts with pango (I think it's pango) enabled,
+	  The first time websharpstudios starts with pango (I think it's pango) enabled,
 	  initialization is very slow -- several minutes -- do not be alarmed, it only
 	  happens once.
 	  <P>
@@ -2233,7 +2233,7 @@
 	  either pango or cairo.
 	  <P>
 	  The version of cairo available from fink on the mac (1.0) is too old for
-	  it to work with fontforge (which needs at least 1.2). So the mac builds do
+	  it to work with websharpstudios (which needs at least 1.2). So the mac builds do
 	  not ship with cairo.
 	  <P>
 	  The default initialization of fontconfig on the mac doesn't seem to find
@@ -2265,7 +2265,7 @@
 	    <LI>
 	      GNumericFieldSpinner.Box...
 	    <LI>
-	      fontforge.View.Background.
+	      websharpstudios.View.Background.
 	    <LI>
 	      ...Box.GradientBG
 	    <LI>
@@ -2288,17 +2288,17 @@
 	<LI>
 	  Boxify the TeX More Params dialog of fontinfo.
 	<LI>
-	  When a point was exactly midway between its control points, FontForge would
+	  When a point was exactly midway between its control points, websharpstudios would
 	  not detect that it was a curve point after recent work. As this happens
 	  frequently in TrueType (all interpolated points) we shouldn't do that.
 	<LI>
 	  Fix some more cases where the "link" buttons in the FontInfo-&gt;UnicodeRanges
 	  and Generate Fonts dlgs looked wrong.
 	<LI>
-	  FontForge has been generating bad bounding box information for BDF fonts.
+	  websharpstudios has been generating bad bounding box information for BDF fonts.
 	<LI>
 	  Adobe doesn't define how big a spline must be for the "no extrema" restriction
-	  to apply. Phillip Poll suggests that fontforge have a command that defines
+	  to apply. Phillip Poll suggests that websharpstudios have a command that defines
 	  this on a per-font basis. Element-&gt;Validation-&gt;Set Extremum Bound.
 	<LI>
 	  More accurate catagorization of whether a point is curve or tangent.
@@ -2402,7 +2402,7 @@
 	  the display every minute or so.
 	<LI>
 	  Nicolas Spalinger points out that a license search in the oflib dialog (of
-	  fontforge) finds exactly the opposite of what was asked for (searching for
+	  websharpstudios) finds exactly the opposite of what was asked for (searching for
 	  PD finds OFL and vice versa).
 	<LI>
 	  There exist sfds where the width of a glyph does not match that specified
@@ -2610,7 +2610,7 @@
 	  if all other foreground layers are empty, so the clear command should only
 	  reset the width in similar conditions.
 	<LI>
-	  Internal conversion from fontforge splinesets to ff python contours would
+	  Internal conversion from websharpstudios splinesets to ff python contours would
 	  often leave interpolated points showing in the contour.
 	<LI>
 	  When FF generated a default name for a lookup when adding a new lookup from
@@ -2676,7 +2676,7 @@
 	<LI>
 	  Fixed a bug in parsing old style CID files. (those with type1 charstrings)
 	<LI>
-	  FontForge's OpenType layout engine probably didn't do the right thing in
+	  websharpstudios's OpenType layout engine probably didn't do the right thing in
 	  anchor positioning of mark-to-base lookups when the base glyph had been moved
 	  by a previous GPOS lookup.
 	<LI>
@@ -2711,7 +2711,7 @@
   <P>
   <A HREF="oldchangelog.html">Earlier Changes </A><BR>
   <A HREF="pfaeditchangelog.html">Changes to PfaEdit (predecessor to
-  FontForge)</A><BR>
+  websharpstudios)</A><BR>
   <A HREF="sfdchangelog.html">Changes to the sfd format.</A>
 </DIV>
 </BODY></HTML>

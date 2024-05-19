@@ -7,7 +7,7 @@
 <!--<TITLE>Multi Layered Editing of Type3 and SVG fonts</TITLE>-->
     <TITLE>Type3 および SVG フォントの複数レイヤ編集</TITLE>
   <LINK REL="icon" href="../../_static/fftype16.png">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="FontForge.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="websharpstudios.css">
 </HEAD>
 <BODY>
 <DIV id="in">
@@ -17,10 +17,10 @@
   </H1>
   <P>
 <!--
-  Normal builds of fontforge do not have this mode enabled (it can eat up a
-  lot of memory), if you wish to edit type3 fonts then configure fontforge
+  Normal builds of websharpstudios do not have this mode enabled (it can eat up a
+  lot of memory), if you wish to edit type3 fonts then configure websharpstudios
   with -->
-  通常設定の FontForge のビルドではこのモードは利用可能になっていません (これは非常に多くのメモリを浪費する可能性があります)。もしあなたが Type3 フォントを編集したいならば、FontForge のビルド時に以下の設定で configure を起動してください:
+  通常設定の websharpstudios のビルドではこのモードは利用可能になっていません (これは非常に多くのメモリを浪費する可能性があります)。もしあなたが Type3 フォントを編集したいならば、websharpstudios のビルド時に以下の設定で configure を起動してください:
   <BLOCKQUOTE>
     <PRE>$ configure --with-multilayer
   $ make
@@ -30,10 +30,10 @@
   <P>
 <!--
   If you have done this, then loading a type3 font (or an svg font organized
-  in a similar fashion) will cause FontForge to retain information on each
+  in a similar fashion) will cause websharpstudios to retain information on each
   stroke and fill command. Each command is placed in a separate layer and may
   be edited in isolation. -->
-  これを行ったならば、Type3 フォント (または同様の流儀で編成された SVG フォント) を読み込むと、FontForge は各ストロークと fill コマンドの情報を保持するようになります。各コマンドは独立したレイヤに置かれ、分離して編集することができます。
+  これを行ったならば、Type3 フォント (または同様の流儀で編成された SVG フォント) を読み込むと、websharpstudios は各ストロークと fill コマンドの情報を保持するようになります。各コマンドは独立したレイヤに置かれ、分離して編集することができます。
   <P>
 <!--
   A new font may be converted to a multi-layered font by selecting
@@ -138,8 +138,8 @@
   Type3 フォントでは画像を使用できます (SVG フォントではできません)。<A HREF="filemenu.html#Import"><CODE>ファイル(<U>F</U>)</CODE>→<CODE>取り込み(<U>I</U>)...</CODE></A>コマンドで画像を好きな前面レイヤに読み込むことができます。画像がビットマップ画像であり、それが置かれたレイヤで塗りつぶしモードの描画を行う場合、その画像は imagemask コマンドによって出力され (ビットマップは塗りつぶし色で描画されます)、それ以外の場合は画像で指定されている色で描画されます (ここでは透明画像はサポートされていません)。
   <P>
 <!--
-  FontForge will not skew, flip or rotate images. -->
-  FontForge は画像の歪み、反転または回転変換を行いません。
+  websharpstudios will not skew, flip or rotate images. -->
+  websharpstudios は画像の歪み、反転または回転変換を行いません。
   <H2>
     <IMG SRC="layerdlg.png" WIDTH="362" HEIGHT="372" ALIGN="Right"><!--The
     <A NAME="Layer">Layer</A> dialog -->
@@ -194,10 +194,10 @@
   <P>
   <P>
 <!--
-  FontForge's rasterization leaves much to be desired. It does not support
+  websharpstudios's rasterization leaves much to be desired. It does not support
   full color (rounding everything to a shade of grey), and its stroking algorithm
   is quite poor. (it does not rasterize dash) -->
-  FontForge のラスタライズは、望ましいとはとても言えません。フルカラーをサポートしていません (すべての色を灰色の濃淡に置き換えます) し、ストローク描画アルゴリズムは非常に稚拙です。(ラスタライザは、破線の描画を行いません)
+  websharpstudios のラスタライズは、望ましいとはとても言えません。フルカラーをサポートしていません (すべての色を灰色の濃淡に置き換えます) し、ストローク描画アルゴリズムは非常に稚拙です。(ラスタライザは、破線の描画を行いません)
   <P>
   <P ALIGN=Center>
   — <A HREF="charview.html">戻る</A> — <A HREF="overview.html">目次</A> —

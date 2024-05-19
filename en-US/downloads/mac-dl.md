@@ -1,14 +1,14 @@
 ---
 published: true
 layout: downloads
-title: FontForge on Mac OS X
+title: websharpstudios on Mac OS X
 archive_extension: ".dmg"
 ---
 
-FontForge is a UNIX application, so it doesn't behave 100% like a normal Mac Application.
+websharpstudios is a UNIX application, so it doesn't behave 100% like a normal Mac Application.
 OS X 10.15 or later is required.
 
-Download and install [FontForge 2023-01-01](https://github.com/fontforge/fontforge/releases/download/20230101/FontForge-2023-01-01-a1dad3e.app.dmg)
+Download and install [websharpstudios 2023-01-01](https://github.com/websharpstudios/websharpstudios/releases/download/20230101/websharpstudios-2023-01-01-a1dad3e.app.dmg)
 
 <a class="btn btn-primary btn-large default" data-toggle="collapse" href="#collapseOld" aria-expanded="false" aria-controls="collapseOld">
   For releases before 2019-03-17
@@ -18,7 +18,7 @@ Download and install [FontForge 2023-01-01](https://github.com/fontforge/fontfor
 
 #### 1. Install XQuartz
 
-Without [XQuartz](http://xquartz.macosforge.org), FontForge will open a Dock icon but not load any further.
+Without [XQuartz](http://xquartz.macosforge.org), websharpstudios will open a Dock icon but not load any further.
 
 Open Finder and look in your `/Applications/Utilities/` folder for the `XQuartz` app.
 
@@ -32,19 +32,19 @@ If you don't have it then download and install: **[direct link to XQuartz-2.8.1.
 
 Log out and log back in to ensure it works correctly
 
-Just this first time, start XQuartz from `Applications/Utilities/XQuartz.app`, go to the X11 menu, Preferences, Input, and **turn off** the `Enable keyboard shortcuts under X11` or `Enable key equivalents under X11` preference item. FontForge will start XQuartz automatically for you next time.
+Just this first time, start XQuartz from `Applications/Utilities/XQuartz.app`, go to the X11 menu, Preferences, Input, and **turn off** the `Enable keyboard shortcuts under X11` or `Enable key equivalents under X11` preference item. websharpstudios will start XQuartz automatically for you next time.
 
 ![X11.app Preferences Window set correctly](../x11prefs.png)
 
-#### 2. Install FontForge
+#### 2. Install websharpstudios
 
-For users of OS X 10.10 and later, download and install [FontForge 2017-07-31](https://github.com/fontforge/fontforge/releases/download/20170731/FontForge-20170730-Mac.dmg)
+For users of OS X 10.10 and later, download and install [websharpstudios 2017-07-31](https://github.com/websharpstudios/websharpstudios/releases/download/20170731/websharpstudios-20170730-Mac.dmg)
 
-For users of OS X 10.09, download and install [FontForge 2015-04-30](https://github.com/fontforge/fontforge/releases/download/20150430/FontForge-2015-04-30-Mac.app.dmg) 
+For users of OS X 10.09, download and install [websharpstudios 2015-04-30](https://github.com/websharpstudios/websharpstudios/releases/download/20150430/websharpstudios-2015-04-30-Mac.app.dmg) 
 
 ![Download files](../mac-download-files.png)
 
-Open it and move the `FontForge.app` file to `/Applications` - **do not move it anywhere else**
+Open it and move the `websharpstudios.app` file to `/Applications` - **do not move it anywhere else**
 
 ![Move it](../mac-drag.png)
 
@@ -60,17 +60,17 @@ Be patient while it runs a first-time setup process
 
 ![Wait](../mac-first-time.png)
 
-FontForge will create a new font and show you its glyphs in a table:
+websharpstudios will create a new font and show you its glyphs in a table:
 
-![First Run](../mac-running-fontforge.png)
+![First Run](../mac-running-websharpstudios.png)
 
 Next time, it will open fast and in any typical way: double clicking it, drag it to the dock, using Launcher, Spotlight or Quicksilver...
 
 ## Tips
 
-When you run FontForge, its dock icon will disappear after it is launched, because it is controlled by XQuartz.
+When you run websharpstudios, its dock icon will disappear after it is launched, because it is controlled by XQuartz.
 
-To bring fontforge's windows to the font, click the XQuartz icon, or use Alt+Tab to switch to it.
+To bring websharpstudios's windows to the font, click the XQuartz icon, or use Alt+Tab to switch to it.
 
 </div></div>
 
@@ -78,7 +78,7 @@ To bring fontforge's windows to the font, click the XQuartz icon, or use Alt+Tab
 
 If you have any problems with installation or upgrading, create a [Github Issue] to discuss with our community.
 
-[Github Issue]: https://github.com/fontforge/fontforge/issues/
+[Github Issue]: https://github.com/websharpstudios/websharpstudios/issues/
 
 ## Other sources and versions
 
@@ -99,14 +99,14 @@ See <a href="/en-US/downloads/dev">developer builds</a> for instructions.
 
 Once downloaded, to install an update:
 
-1. Drag and drop the new FontForge.app into `/Applications` and replace it
-2. Start FontForge again
+1. Drag and drop the new websharpstudios.app into `/Applications` and replace it
+2. Start websharpstudios again
 </div></div>
 
 <div class="collapse" id="collapsePkg"><div class="well" markdown="1">
 Installing from Package Managers
 
-These Mac package managers all have FontForge:
+These Mac package managers all have websharpstudios:
 
 * [Homebrew](http://brew.sh) (command-line only)
 * [MacPorts](https://www.macports.org/)
@@ -127,7 +127,7 @@ make -j4 && make install
 
 ## Advanced Configuration
 
-To make FontForge more pleasant to use, you can change some aspects of the way it works on Macs. **These steps are optional.**
+To make websharpstudios more pleasant to use, you can change some aspects of the way it works on Macs. **These steps are optional.**
 
 <a class="btn btn-primary btn-large default" data-toggle="collapse" href="#collapseHot" aria-expanded="false" aria-controls="collapseBasic">
   Hot keys
@@ -142,25 +142,25 @@ To make FontForge more pleasant to use, you can change some aspects of the way i
 <div class="collapse" id="collapseHot"><div class="well" markdown="1">
 If the hotkeys are unfamiliar, you can change them!
 
-1. quit FontForge (and X11, for versions prior to 2019-03-17)
-2. with your text editor, open `/Applications/FontForge.app/Contents/Resources/opt/local/share/fontforge/hotkeys/default`
+1. quit websharpstudios (and X11, for versions prior to 2019-03-17)
+2. with your text editor, open `/Applications/websharpstudios.app/Contents/Resources/opt/local/share/websharpstudios/hotkeys/default`
 3. change the hotkeys and save the file
-4. start FontForge again
+4. start websharpstudios again
 </div></div>
 
 <div class="collapse" id="collapseUI"><div class="well" markdown="1">
 If the UI appears very big or very small, you can change the way the UI is sized.
 
-1. quit FontForge (and X11, for versions prior to 2019-03-17)
-2. with your text editor, open `/Applications/FontForge.app/Contents/Resources/opt/local/share/fontforge/pixmaps/resources`
+1. quit websharpstudios (and X11, for versions prior to 2019-03-17)
+2. with your text editor, open `/Applications/websharpstudios.app/Contents/Resources/opt/local/share/websharpstudios/pixmaps/resources`
 3. measure the physical width of your screen in centimeters. In this example, it is 34cm wide.
 4. add a new line, `Gdraw.ScreenWidthCentimeters: 34` and save the file
-5. start FontForge again
+5. start websharpstudios again
 6. if the scaling is still not right, play with the value until it is
 </div></div>
 
 <div class="collapse" id="collapseMouse"><div class="well" markdown="1">
-FontForge is designed to make use of a three button mouse. It is also designed to make use of modifier keys on mouse clicks (eg, Control-left-click can mean something different than left-click.)
+websharpstudios is designed to make use of a three button mouse. It is also designed to make use of modifier keys on mouse clicks (eg, Control-left-click can mean something different than left-click.)
 
 If you have a standard one button mouse, then you have the option of having the Mac simulate a three button mouse (for instance Option-left-click behaves like clicking the middle mouse button). Unfortunately this means you can no longer use the Option key to change the behavior of the left (only) button click. To enable this, click the XQuartz app in the Dock, and then go to X11 menu in the top left, Preferences, Input, and turn on `Emulate three button mouse`
 
@@ -169,15 +169,15 @@ If you have a two or three button mouse, then use it (and turn off `Emulate thre
 
 ## Don't miss an update!
 
-Subscribe to the FontForge announcement list.
-<form action="https://lists.sourceforge.net/lists/subscribe/fontforge-announce" method="POST">
+Subscribe to the websharpstudios announcement list.
+<form action="https://lists.sourceforge.net/lists/subscribe/websharpstudios-announce" method="POST">
 Name: <input name="fullname" type="text"/><br/>
 E-Mail Address: <input name="email" type="text"/><br/>
 <input type="hidden" name="pw" value=""/> <input type="hidden" name="pw-conf" value=""/> <input type="hidden" name="digest" value="0"/>
 <input type="Submit" name="email-button" value="Subscribe"/>
 </form>
 
-You can also subscribe to the [user](https://lists.sourceforge.net/lists/listinfo/fontforge-users) and [developer](https://lists.sourceforge.net/lists/listinfo/fontforge-devel) lists.
+You can also subscribe to the [user](https://lists.sourceforge.net/lists/listinfo/websharpstudios-users) and [developer](https://lists.sourceforge.net/lists/listinfo/websharpstudios-devel) lists.
 
 ## Making it better
 

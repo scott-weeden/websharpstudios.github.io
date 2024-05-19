@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Glyph Info &#8212; FontForge 20230101 documentation</title>
+    <title>Glyph Info &#8212; websharpstudios 20230101 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -41,8 +41,8 @@
 <section id="encoding-and-unicode-data">
 <h2>Encoding and Unicode data<a class="headerlink" href="#encoding-and-unicode-data" title="Permalink to this heading">¶</a></h2>
 <p>This dialog allows you to set the name and unicode encoding of a given glyph. If
-you know the name of the glyph then FontForge can tell you the encoding (if you
-press Set From Name), similarly if you know the encoding then FontForge can tell
+you know the name of the glyph then websharpstudios can tell you the encoding (if you
+press Set From Name), similarly if you know the encoding then websharpstudios can tell
 you the name.</p>
 <p>The name field contains a pull down list with (possibly) several synonyms for
 the name of this unicode code point.</p>
@@ -62,8 +62,8 @@ the appropriate variation selector (as in the example above).</p>
 then set the <code class="docutils literal notranslate"><span class="pre">Unicode</span> <span class="pre">Value</span></code> field to -1, while entering the appropriate code
 point and variation selector below.</p>
 <p>The Glyph class field is for the opentype ‘GDEF’ table. You can usually leave it
-set to automatic. FontForge will then figure out the class, and whether it
-should be output into GDEF. You can see what FontForge does in
+set to automatic. websharpstudios will then figure out the class, and whether it
+should be output into GDEF. You can see what websharpstudios does in
 <a class="reference internal" href="showatt.html"><span class="doc">View-&gt;Show ATT</span></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">Mark</span> <span class="pre">for</span> <span class="pre">Unlink,</span> <span class="pre">Remove</span> <span class="pre">Overlap</span> <span class="pre">Before</span> <span class="pre">Save</span></code> checkbox sounds absurdly
 complicated. Consider the glyphs Aring, Ccedilla, and Oogonek. In traditional
@@ -105,7 +105,7 @@ em-units, while the second subtable will move it down by 560 em-units.
 Positioning subtables can also move glyphs horizontally and can adjust the
 horizontal and vertical advances of the glyph. You can also add device tables
 for pixel level corrections to these adjustments. Most subtables will use only a
-few of the possibilities open to them and FontForge generally hides unused
+few of the possibilities open to them and websharpstudios generally hides unused
 columns – but if you want to see them just turn off [*] Hide Unused Columns.</p>
 <p>A new entry in the list may be created by pressing the &lt;New&gt; button and a popup
 menu will appear with all possible lookup subtables you could add data to.</p>
@@ -145,8 +145,8 @@ as to which glyph is to be chosen.</p>
 <section id="glyph-ligature-substitution">
 <span id="charinfo-ligature"></span><h2>Glyph Ligature Substitution<a class="headerlink" href="#glyph-ligature-substitution" title="Permalink to this heading">¶</a></h2>
 <img alt="../../_images/charinfo-lig.png" class="align-right" src="../../_images/charinfo-lig.png" />
-<p>The ligature pane allows you to tell FontForge that the current glyph is a
-ligature composed of several other glyphs. FontForge will sometimes be able to
+<p>The ligature pane allows you to tell websharpstudios that the current glyph is a
+ligature composed of several other glyphs. websharpstudios will sometimes be able to
 fill this in with the right default value, but not always. The value should be a
 list of postscript glyph names separated by spaces. If a glyph may be viewed as
 two different ligatures then they may both be specified in different lines. For
@@ -168,7 +168,7 @@ counter masks, and only in very controlled conditions. See the description of
 <p>Some glyphs (ligatures, accented glyphs, Hangul syllables, etc.) are built up
 out of other glyphs (at least according to unicode). This pane of the dlg shows
 the components that Unicode says make up the current glyph, if those components
-are in the font then you can use FontForge’s
+are in the font then you can use websharpstudios’s
 <span class="menuselection">Element ‣ Build ‣ Build Accented</span> or
 <span class="menuselection">Element ‣ Build ‣ Build Composite</span> commands to create the
 current glyph. The information displayed here is informative only, you may not
@@ -184,7 +184,7 @@ glyph name associated with this glyph).</p>
 </figure>
 <p>The TeX pane allows you to specify glyph specific information used in TeX tmf
 files. The height and depth fields are often the same as the glyph’s bounding
-box (if you don’t fill these in that’s what fontforge will use by default), but
+box (if you don’t fill these in that’s what websharpstudios will use by default), but
 they should be corrected for optical distortion, so in glyphs like “o” these
 fields should be clipped to the x-height and baseline (ff will attempt to do
 this when you press <code class="docutils literal notranslate"><span class="pre">[Guess]</span></code>).</p>
@@ -250,7 +250,7 @@ example, you need to enter encodings for a range of glyphs).</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">FontForge</a></h1>
+<h1 class="logo"><a href="../../index.html">websharpstudios</a></h1>
 
 
 
@@ -262,7 +262,7 @@ example, you need to enter encodings for a range of glyphs).</p>
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">FontForge’s User Interface</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ui.html">websharpstudios’s User Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../mainviews.html">Main Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dialogs.html">Dialogs</a><ul class="current">
@@ -284,13 +284,13 @@ example, you need to enter encodings for a range of glyphs).</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/HotKeys.html">Hot Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/fontforge-themes.html">FontForge color schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/websharpstudios-themes.html">websharpstudios color schemes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/resedit.html">Appearance Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/xim.html">X Input Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing FontForge’s UI Appearance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/xres.html">Changing websharpstudios’s UI Appearance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting FontForge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scripting/scripting.html">Scripting websharpstudios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../techref.html">Technical References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fontutils.html">Utilities for examining fonts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
@@ -302,7 +302,7 @@ example, you need to enter encodings for a range of glyphs).</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../../ui.html">FontForge’s User Interface</a><ul>
+  <li><a href="../../ui.html">websharpstudios’s User Interface</a><ul>
   <li><a href="../dialogs.html">Dialogs</a><ul>
       <li>Previous: <a href="histogram.html" title="previous chapter">The histogram dialog</a></li>
       <li>Next: <a href="getinfo.html" title="next chapter">Get Info</a></li>
@@ -334,7 +334,7 @@ example, you need to enter encodings for a range of glyphs).</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2000-2012 by George Williams, 2012-2020 by FontForge authors.
+      &copy;2000-2012 by George Williams, 2012-2020 by websharpstudios authors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>
